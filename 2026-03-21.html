@@ -48,6 +48,12 @@
   .market-change { font-size: 0.72rem; font-weight: 600; }
   .up { color: #48bb78; } .down { color: #fc8181; } .neutral { color: #718096; }
 
+  /* At-a-glance strip */
+  .glance-bar { background: #10274f; border-bottom: 1px solid #1a3560; }
+  .glance-inner { max-width: 1200px; margin: 0 auto; padding: 8px 32px; display: flex; gap: 22px; flex-wrap: wrap; }
+  .glance-item { font-size: 0.74rem; color: #dce6f7; }
+  .glance-item strong { color: #ffffff; }
+
   /* Layout */
   .container { max-width: 1200px; margin: 0 auto; padding: 24px 32px; display: grid; grid-template-columns: 1fr 310px; gap: 20px; }
 
@@ -162,9 +168,29 @@
   </div>
 </div>
 
+<div class="glance-bar">
+  <div class="glance-inner">
+    <div class="glance-item"><strong>🆕 New intel:</strong> 9 items</div>
+    <div class="glance-item"><strong>♻️ Ongoing intel:</strong> 14 items</div>
+    <div class="glance-item"><strong>🚨 High-risk items:</strong> 3</div>
+  </div>
+</div>
+
 <!-- Content -->
 <div class="container">
 <div class="main">
+
+  <!-- New vs Ongoing -->
+  <div class="card">
+    <div class="card-header"><span>🆕</span><h2>What Changed Since Yesterday</h2></div>
+    <div class="card-body">
+      <div class="list-item"><strong>New:</strong> ETU protected action ballot timelines sharpened (vote close date now explicit).</div>
+      <div class="list-item"><strong>New:</strong> AWU escalated bargaining-delay issue with formal relist posture at FWC.</div>
+      <div class="list-item"><strong>New:</strong> Fresh market move: iron ore majors sold off with broader risk sentiment.</div>
+      <div class="list-item"><strong>Ongoing:</strong> WMWA extreme heat campaign still active and cross-amplified by AWU.</div>
+      <div class="list-item"><strong>Ongoing:</strong> Union framing battle remains active across Facebook/X/industry media.</div>
+    </div>
+  </div>
 
   <!-- Priority Alerts -->
   <div class="card card-priority">
@@ -175,24 +201,28 @@
         <span class="badge badge-red">BHP · ETU · Industrial Action</span>
         <h3>ETU Protected Action Ballot — BHP Pilbara · Vote closes 25 March</h3>
         <p>60 high-voltage electricians filing for protected action ballot — first potential Pilbara industrial action since the Fair Work Act commenced in 2009. Workers on individual contracts for 20+ years with 30%+ pay variance between those doing the same job. Bargaining stalled 12 months. Proposed actions include switching bans, on-call/overtime bans, high-risk work bans, and stoppages up to 48 hours. ETU WA Secretary: <em>"They thought the days of industrial action in the Pilbara were history. They were wrong."</em> MEU Pilbara Lodge declared solidarity.</p>
+        <p><strong>So what:</strong> Escalation risk window is now short-term and operationally material for Pilbara reliability planning.</p>
       </div>
 
       <div class="alert-item">
         <span class="badge badge-red">BHP · AWU · Good Faith Bargaining</span>
         <h3>AWU Puts BHP on Notice — MAC &amp; South Flank Bargaining Delays</h3>
         <p>AWU formally wrote to BHP regarding continuing delays in setting bargaining meetings at MAC and South Flank operations. AWU intends to relist matter before the FWC. States BHP conduct inconsistent with good faith bargaining obligations under the Fair Work Act.</p>
+        <p><strong>So what:</strong> Litigation/regulatory pressure is shifting from rhetoric to process leverage.</p>
       </div>
 
       <div class="alert-item">
         <span class="badge badge-orange">Pilbara · WMWA · Safety Campaign</span>
         <h3>WMWA Extreme Heat Campaign — Gaining Momentum</h3>
         <p>Survey: 50%+ of Pilbara workers have been pressured to work in extreme heat; 75% experienced heat exhaustion effects. WMWA seeking new safety protocols placing onus on employer. Campaign being misrepresented in media as "tools down at 36°C" — WMWA publicly pushing back. AWU amplifying the survey.</p>
+        <p><strong>So what:</strong> Heat management is becoming a bargaining and reputational risk, not just a safety narrative.</p>
       </div>
 
       <div class="alert-item">
         <span class="badge badge-blue">BHP · CEO Succession · ASX</span>
         <h3>Brandon Craig to Succeed Mike Henry as BHP CEO</h3>
         <p>Announced via ASX on 18 March. Major leadership transition with potential implications for ER strategy and bargaining posture across BHP's Australian operations. BHP shares fell 5.23% on the week amid broader market weakness.</p>
+        <p><strong>So what:</strong> Expect a short policy-reset period where union and market narratives test leadership intent.</p>
       </div>
 
     </div>
@@ -221,8 +251,8 @@
   <div class="card">
     <div class="card-header"><span>🔴</span><h2>Union Activity</h2></div>
     <div class="card-body">
-      <div class="list-item"><span class="badge badge-red">ETU WA</span> <strong>TKE workers secure industry-leading EBA</strong> after 27 full stoppages + 7 weeks of bans. Key wins: super increases, job security clause, 4-hr paid callouts from 2027, double-time overtime.</div>
-      <div class="list-item"><span class="badge badge-orange">WMWA</span> Actively visiting Pilbara sites this week: Cloudbreak, Solomon, Nelson Point, Tom Price, Para. BHP complained about access — WMWA dismissed concerns publicly.</div>
+      <div class="list-item"><span class="badge badge-red">ETU WA</span> <strong>TKE workers secure industry-leading EBA</strong> after 27 full stoppages + 7 weeks of bans. Key wins: super increases, job security clause, 4-hr paid callouts from 2027, double-time overtime. <strong>Confidence:</strong> 🔵 Union claim.</div>
+      <div class="list-item"><span class="badge badge-orange">WMWA</span> Actively visiting Pilbara sites this week: Cloudbreak, Solomon, Nelson Point, Tom Price, Para. BHP complained about access — WMWA dismissed concerns publicly. <strong>Confidence:</strong> 🟡 Corroborated.</div>
       <div class="list-item"><span class="badge badge-orange">AWU WA</span> Branch signals readiness to fight "on-site, in the FWC and courts." Amplifying WMWA extreme heat survey.</div>
       <div class="list-item"><span class="badge badge-blue">MUA WA</span> <strong>Sealink crew 80%+ voted NO</strong> to proposed EA. MUA now going for more. EA campaign also running at Cape Preston (TAMS/SRG, ~120 workers).</div>
       <div class="list-item"><span class="badge badge-blue">MUA WA</span> Deep Ocean (Alkimos desalination): company accused of blacklisting workers who contacted union; MUA alleging underpayment of allowances.</div>
@@ -249,23 +279,12 @@
     <div class="card-header"><span>💬</span><h2>Social Chatter</h2></div>
     <div class="card-body">
 
-      <div class="list-item" style="font-size:0.67rem;font-weight:800;color:#a0aec0;text-transform:uppercase;letter-spacing:0.5px;padding-bottom:4px;">Reddit</div>
-      <div class="list-item"><a href="https://www.reddit.com/r/AusElectricians/comments/1rxob29/" target="_blank"><strong>r/AusElectricians:</strong> "BHP faces union demands to double pay amid threat of historic strike action"</a> — active community discussion on ETU ballot. <span class="source-tag">[42h ago]</span></div>
-      <div class="list-item"><a href="https://www.reddit.com/r/LaborPartyofAustralia/" target="_blank"><strong>r/LaborPartyofAustralia:</strong> "Big evil ETU picking on poor little BHP"</a> — political commentary gaining traction. <span class="source-tag">[44h ago]</span></div>
-
-      <div class="list-item" style="font-size:0.67rem;font-weight:800;color:#a0aec0;text-transform:uppercase;letter-spacing:0.5px;padding:10px 0 4px;">Disputes Report (Substack · Sarah Missen)</div>
-      <div class="list-item"><a href="https://disputesreport.substack.com/p/industrial-disputes-and-news-18-march" target="_blank"><strong>18 March edition:</strong></a> ETU/BHP Pilbara ballot covered in national industrial disputes roundup — weekly summary of every significant dispute in Australia. Highly recommended reading. <span class="source-tag">[disputesreport.substack.com]</span></div>
-
-      <div class="list-item" style="font-size:0.67rem;font-weight:800;color:#a0aec0;text-transform:uppercase;letter-spacing:0.5px;padding:10px 0 4px;">X / Industry Media</div>
-      <div class="list-item"><a href="https://thewest.com.au/business/mining/unions-just-weeks-away-from-downing-tools-at-bhp-wa-iron-ore-mines-in-a-century-first-move-c-21919345" target="_blank"><strong>The West Australian:</strong> "Unions just weeks away from downing tools at BHP WA iron ore mines in a century-first move"</a> — widely circulated in IR circles. <span class="source-tag">[thewest.com.au]</span></div>
-      <div class="list-item"><a href="https://disputesreport.substack.com/p/industrial-disputes-and-news-18-march" target="_blank"><strong>Disputes Report (Substack):</strong></a> ETU/BHP ballot covered in 18 March industrial disputes roundup — reaching IR practitioners nationally. <span class="source-tag">[substack.com]</span></div>
-      <div class="list-item"><a href="https://www.argusmedia.com/en/news-and-insights/latest-market-news/2799986-australia-s-bhp-iron-ore-site-staff-launch-strike-vote" target="_blank"><strong>Argus Media:</strong></a> ETU/BHP ballot picked up by global commodity media — international investor attention on Pilbara IR risk. <span class="source-tag">[argusmedia.com]</span></div>
-      <div class="list-item"><a href="https://x.com/miningcomau" target="_blank"><strong>@miningcomau:</strong></a> "BHP says it has no choice but to negotiate with unions over employee pay and conditions at Pilbara iron ore operations under new IR rules." <span class="source-tag">[X, @miningcomau]</span></div>
-
-      <div class="list-item" style="font-size:0.67rem;font-weight:800;color:#a0aec0;text-transform:uppercase;letter-spacing:0.5px;padding:10px 0 4px;">Facebook Comments</div>
-      <div class="list-item"><strong>WMWA post on heat campaign:</strong> <em>"Most of the miners have just got on with it, but BHP would rather waste time complaining about WMWA visiting sites."</em> — WMWA admin responding to criticism. <span class="source-tag">[WMWA Facebook]</span></div>
-      <div class="list-item"><strong>ETU WA on TKE EBA:</strong> Comment — <em>"If a service mechanic was doing call outs and worked while his brothers were out on strike, is he eligible for the benefits of the new EBA?"</em> — member concern about solidarity during dispute. <span class="source-tag">[ETU WA Facebook]</span></div>
-      <div class="list-item"><strong>MUA WA on Sealink NO vote:</strong> <em>"This result shows what happens when workers stand together and have their say. We won't stop until they come back with a better deal."</em> <span class="source-tag">[MUA WA Facebook]</span></div>
+      <div class="list-item" style="font-size:0.67rem;font-weight:800;color:#a0aec0;text-transform:uppercase;letter-spacing:0.5px;padding-bottom:4px;">Top 5 Signal Items</div>
+      <div class="list-item"><a href="https://www.reddit.com/r/AusElectricians/comments/1rxob29/" target="_blank"><strong>r/AusElectricians:</strong> "BHP faces union demands to double pay amid threat of historic strike action"</a> — active ETU ballot sentiment. <span class="source-tag">[42h ago]</span></div>
+      <div class="list-item"><a href="https://disputesreport.substack.com/p/industrial-disputes-and-news-18-march" target="_blank"><strong>Disputes Report:</strong></a> ETU/BHP ballot now in national disputes tracking. <span class="source-tag">[substack]</span></div>
+      <div class="list-item"><a href="https://thewest.com.au/business/mining/unions-just-weeks-away-from-downing-tools-at-bhp-wa-iron-ore-mines-in-a-century-first-move-c-21919345" target="_blank"><strong>The West:</strong> Pilbara strike risk narrative gaining mainstream reach.</a> <span class="source-tag">[thewest.com.au]</span></div>
+      <div class="list-item"><a href="https://www.argusmedia.com/en/news-and-insights/latest-market-news/2799986-australia-s-bhp-iron-ore-site-staff-launch-strike-vote" target="_blank"><strong>Argus Media:</strong></a> international commodity audience now tracking Pilbara IR risk. <span class="source-tag">[argusmedia.com]</span></div>
+      <div class="list-item"><strong>WMWA heat-campaign comments:</strong> member engagement remains high and adversarial toward BHP management narrative. <span class="source-tag">[WMWA Facebook]</span></div>
 
     </div>
   </div>
