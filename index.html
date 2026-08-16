@@ -2,10 +2,393 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=2026-03-21.html">
-<title>Briefer — Redirecting...</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Briefer — 21 March 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f2f5; color: #1a1a2e; }
+
+  /* Header */
+  .hero {
+    background: #0f2044;
+  }
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero-logo {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: white;
+  }
+  .hero-logo span { color: #e94560; }
+  .hero-meta {
+    text-align: right;
+  }
+  .hero-date { font-size: 1rem; font-weight: 700; color: white; }
+  .hero-sub { font-size: 0.72rem; color: rgba(255,255,255,0.5); margin-top: 3px; }
+
+  /* Market bar */
+  .market-bar { background: #0f2044; border-bottom: 1px solid #1a3560; }
+  .market-bar-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 10px 32px;
+    display: flex; gap: 32px; overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .market-bar-inner::-webkit-scrollbar { display: none; }
+  .market-item { display: flex; flex-direction: column; white-space: nowrap; min-width: fit-content; }
+  .market-label { font-size: 0.62rem; color: #5b7aa8; text-transform: uppercase; letter-spacing: 0.6px; }
+  .market-price { font-size: 0.88rem; font-weight: 600; color: #e2e8f0; margin: 1px 0; }
+  .market-change { font-size: 0.72rem; font-weight: 600; }
+  .up { color: #48bb78; } .down { color: #fc8181; } .neutral { color: #718096; }
+
+  /* At-a-glance strip */
+  .glance-bar { background: #10274f; border-bottom: 1px solid #1a3560; }
+  .glance-inner { max-width: 1200px; margin: 0 auto; padding: 8px 32px; display: flex; gap: 22px; flex-wrap: wrap; }
+  .glance-item { font-size: 0.74rem; color: #dce6f7; }
+  .glance-item strong { color: #ffffff; }
+
+  /* Layout */
+  .container { max-width: 1200px; margin: 0 auto; padding: 24px 32px; display: grid; grid-template-columns: 1fr 310px; gap: 20px; }
+
+  /* Cards */
+  .card { background: white; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); margin-bottom: 18px; overflow: hidden; }
+  .card-header { padding: 12px 18px; border-bottom: 1px solid #f0f2f5; display: flex; align-items: center; gap: 8px; }
+  .card-header h2 { font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.6px; color: #4a5568; }
+  .card-body { padding: 14px 18px; }
+
+  /* Priority */
+  .card-priority { border-left: 4px solid #e53e3e; }
+  .card-priority .card-header { background: #fff5f5; }
+  .card-priority .card-header h2 { color: #c53030; }
+
+  .alert-item { padding: 11px 0; border-bottom: 1px solid #f7f8fa; }
+  .alert-item:last-child { border-bottom: none; }
+  .alert-item h3 { font-size: 0.85rem; font-weight: 700; color: #1a1a2e; margin: 4px 0; line-height: 1.4; }
+  .alert-item p { font-size: 0.79rem; color: #4a5568; line-height: 1.55; }
+
+  .badge {
+    display: inline-block; font-size: 0.6rem; font-weight: 700;
+    padding: 2px 7px; border-radius: 4px; margin-bottom: 4px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .badge-red { background: #fed7d7; color: #c53030; }
+  .badge-orange { background: #feebc8; color: #c05621; }
+  .badge-blue { background: #bee3f8; color: #2b6cb0; }
+  .badge-green { background: #c6f6d5; color: #276749; }
+  .badge-purple { background: #e9d8fd; color: #6b46c1; }
+
+  .list-item { padding: 7px 0; border-bottom: 1px solid #f7f8fa; font-size: 0.8rem; color: #2d3748; line-height: 1.55; }
+  .list-item:last-child { border-bottom: none; }
+  .list-item strong { color: #1a202c; }
+  .source-tag { font-size: 0.68rem; color: #a0aec0; }
+  a { color: #2b6cb0; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card-body a { color: #2b6cb0; }
+  .ea-matter a { color: #718096; font-weight: 700; font-size: 0.67rem; }
+  .sidebar a { color: #2b6cb0; }
+
+  /* Sidebar */
+  .ea-item { padding: 7px 0; border-bottom: 1px solid #f7f8fa; font-size: 0.76rem; }
+  .ea-item:last-child { border-bottom: none; }
+  .ea-matter { font-weight: 700; color: #718096; font-size: 0.67rem; }
+  .ea-title { color: #2d3748; margin: 2px 0; line-height: 1.4; }
+  .ea-meta { color: #a0aec0; font-size: 0.67rem; margin-top: 2px; }
+  .status-pill { display: inline-block; font-size: 0.62rem; padding: 1px 6px; border-radius: 8px; font-weight: 700; }
+  .status-initial { background: #bee3f8; color: #2b6cb0; }
+  .status-member { background: #feebc8; color: #c05621; }
+  .industry-divider { font-size: 0.65rem; font-weight: 800; color: #a0aec0; text-transform: uppercase; letter-spacing: 0.5px; margin: 10px 0 5px; }
+
+  /* Footer */
+  .footer { background: #0f2044; color: #5b7aa8; text-align: center; padding: 18px 32px; font-size: 0.72rem; line-height: 1.6; margin-top: 8px; }
+  .footer a { color: #7aa8d8; text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .container { grid-template-columns: 1fr; }
+    .hero-content { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .hero-meta { text-align: left; }
+  }
+</style>
 </head>
 <body>
-<p>Redirecting to latest briefing...</p>
+
+<!-- Header -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-logo">
+      brief<span>er</span>
+      <div style="font-size:0.7rem;font-weight:400;color:rgba(255,255,255,0.45);letter-spacing:0;margin-top:3px;">The Resources Industry Intelligence Service</div>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-date">Saturday, 21 March 2026</div>
+      <div class="hero-sub">Generated 11:45 AWST</div>
+    </div>
+  </div>
+</div>
+
+<!-- Market Bar -->
+<div class="market-bar">
+  <div class="market-bar-inner">
+    <div class="market-item">
+      <span class="market-label">Iron Ore</span>
+      <span class="market-price">$105.89/t</span>
+      <span class="market-change neutral">—</span>
+    </div>
+    <div class="market-item">
+      <span class="market-label">BHP (ASX)</span>
+      <span class="market-price">$47.47</span>
+      <span class="market-change down">▼ -5.23%</span>
+    </div>
+    <div class="market-item">
+      <span class="market-label">Rio Tinto</span>
+      <span class="market-price">$146.92</span>
+      <span class="market-change down">▼ -6.05%</span>
+    </div>
+    <div class="market-item">
+      <span class="market-label">Fortescue</span>
+      <span class="market-price">$18.96</span>
+      <span class="market-change down">▼ -3.76%</span>
+    </div>
+    <div class="market-item">
+      <span class="market-label">AUD/USD</span>
+      <span class="market-price">0.7024</span>
+      <span class="market-change down">▼ -0.09%</span>
+    </div>
+    <div class="market-item">
+      <span class="market-label">ASX All Ords</span>
+      <span class="market-price">8,124</span>
+      <span class="market-change down">▼ -1.82%</span>
+    </div>
+  </div>
+</div>
+
+<div class="glance-bar">
+  <div class="glance-inner">
+    <div class="glance-item"><strong>🆕 New intel:</strong> 9 items</div>
+    <div class="glance-item"><strong>♻️ Ongoing intel:</strong> 14 items</div>
+    <div class="glance-item"><strong>🚨 High-risk items:</strong> 3</div>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="container">
+<div class="main">
+
+  <!-- New vs Ongoing -->
+  <div class="card">
+    <div class="card-header"><span>🆕</span><h2>What Changed Since Yesterday</h2></div>
+    <div class="card-body">
+      <div class="list-item"><strong>New:</strong> ETU protected action ballot timelines sharpened (vote close date now explicit).</div>
+      <div class="list-item"><strong>New:</strong> AWU escalated bargaining-delay issue with formal relist posture at FWC.</div>
+      <div class="list-item"><strong>New:</strong> Fresh market move: iron ore majors sold off with broader risk sentiment.</div>
+      <div class="list-item"><strong>Ongoing:</strong> WMWA extreme heat campaign still active and cross-amplified by AWU.</div>
+      <div class="list-item"><strong>Ongoing:</strong> Union framing battle remains active across Facebook/X/industry media.</div>
+    </div>
+  </div>
+
+  <!-- Priority Alerts -->
+  <div class="card card-priority">
+    <div class="card-header"><span>🚨</span><h2>Priority Alerts</h2></div>
+    <div class="card-body">
+
+      <div class="alert-item">
+        <span class="badge badge-red">BHP · ETU · Industrial Action</span>
+        <h3>ETU Protected Action Ballot — BHP Pilbara · Vote closes 25 March</h3>
+        <p>60 high-voltage electricians filing for protected action ballot — first potential Pilbara industrial action since the Fair Work Act commenced in 2009. Workers on individual contracts for 20+ years with 30%+ pay variance between those doing the same job. Bargaining stalled 12 months. Proposed actions include switching bans, on-call/overtime bans, high-risk work bans, and stoppages up to 48 hours. ETU WA Secretary: <em>"They thought the days of industrial action in the Pilbara were history. They were wrong."</em> MEU Pilbara Lodge declared solidarity.</p>
+        <p><strong>So what:</strong> Escalation risk window is now short-term and operationally material for Pilbara reliability planning.</p>
+      </div>
+
+      <div class="alert-item">
+        <span class="badge badge-red">BHP · AWU · Good Faith Bargaining</span>
+        <h3>AWU Puts BHP on Notice — MAC &amp; South Flank Bargaining Delays</h3>
+        <p>AWU formally wrote to BHP regarding continuing delays in setting bargaining meetings at MAC and South Flank operations. AWU intends to relist matter before the FWC. States BHP conduct inconsistent with good faith bargaining obligations under the Fair Work Act.</p>
+        <p><strong>So what:</strong> Litigation/regulatory pressure is shifting from rhetoric to process leverage.</p>
+      </div>
+
+      <div class="alert-item">
+        <span class="badge badge-orange">Pilbara · WMWA · Safety Campaign</span>
+        <h3>WMWA Extreme Heat Campaign — Gaining Momentum</h3>
+        <p>Survey: 50%+ of Pilbara workers have been pressured to work in extreme heat; 75% experienced heat exhaustion effects. WMWA seeking new safety protocols placing onus on employer. Campaign being misrepresented in media as "tools down at 36°C" — WMWA publicly pushing back. AWU amplifying the survey.</p>
+        <p><strong>So what:</strong> Heat management is becoming a bargaining and reputational risk, not just a safety narrative.</p>
+      </div>
+
+      <div class="alert-item">
+        <span class="badge badge-blue">BHP · CEO Succession · ASX</span>
+        <h3>Brandon Craig to Succeed Mike Henry as BHP CEO</h3>
+        <p>Announced via ASX on 18 March. Major leadership transition with potential implications for ER strategy and bargaining posture across BHP's Australian operations. BHP shares fell 5.23% on the week amid broader market weakness.</p>
+        <p><strong>So what:</strong> Expect a short policy-reset period where union and market narratives test leadership intent.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Industry News -->
+  <div class="card">
+    <div class="card-header"><span>📰</span><h2>Industry &amp; News</h2></div>
+    <div class="card-body">
+      <div class="list-item"><a href="https://www.watoday.com.au/world/middle-east/" target="_blank"><strong>US-Iran war:</strong></a> Fuel/oil supply disruption continuing — driving heavy falls across iron ore majors today. Trump calling for Australian involvement. <span class="source-tag">[WA Today]</span></div>
+      <div class="list-item"><a href="https://www2.asx.com.au/markets/company/WDS" target="_blank"><strong>Woodside:</strong> Liz Westcott appointed CEO (18 Mar)</a> — second major sector leadership change in a week. <span class="source-tag">[ASX]</span></div>
+      <div class="list-item"><a href="https://www2.asx.com.au/markets/company/S32" target="_blank"><strong>South32:</strong> Mozal Aluminium placed on care &amp; maintenance (16 Mar)</a> — operational contraction in Mozambique. <span class="source-tag">[ASX]</span></div>
+      <div class="list-item"><a href="https://www2.asx.com.au/markets/company/FMG" target="_blank"><strong>Fortescue:</strong> Completed acquisition of Alta Copper (10 Mar)</a> — continued diversification. <span class="source-tag">[ASX]</span></div>
+      <div class="list-item"><strong>Collie coal closure:</strong> AMWU calling for federal investment in replacement industries; no new jobs announced yet.</div>
+    </div>
+  </div>
+
+  <!-- Union Activity -->
+  <div class="card">
+    <div class="card-header"><span>🔴</span><h2>Union Activity</h2></div>
+    <div class="card-body">
+      <div class="list-item"><span class="badge badge-red">ETU WA</span> <strong>TKE workers secure industry-leading EBA</strong> after 27 full stoppages + 7 weeks of bans. Key wins: super increases, job security clause, 4-hr paid callouts from 2027, double-time overtime. <strong>Confidence:</strong> 🔵 Union claim.</div>
+      <div class="list-item"><span class="badge badge-orange">WMWA</span> Actively visiting Pilbara sites this week: Cloudbreak, Solomon, Nelson Point, Tom Price, Para. BHP complained about access — WMWA dismissed concerns publicly. <strong>Confidence:</strong> 🟡 Corroborated.</div>
+      <div class="list-item"><span class="badge badge-orange">AWU WA</span> Branch signals readiness to fight "on-site, in the FWC and courts." Amplifying WMWA extreme heat survey.</div>
+      <div class="list-item"><span class="badge badge-blue">MUA WA</span> <strong>Sealink crew 80%+ voted NO</strong> to proposed EA. MUA now going for more. EA campaign also running at Cape Preston (TAMS/SRG, ~120 workers).</div>
+      <div class="list-item"><span class="badge badge-blue">MUA WA</span> Deep Ocean (Alkimos desalination): company accused of blacklisting workers who contacted union; MUA alleging underpayment of allowances.</div>
+      <div class="list-item"><span class="badge badge-green">AMWU WA</span> "Exploitopia" campaign targeting iron ore maintenance worker bonuses and site food conditions. Unresolved Clough construction site safety hazards also flagged.</div>
+      <div class="list-item"><span class="badge badge-green">MEU</span> Tahmoor Colliery (NSW) liquidated; pushing for sale respecting entitlements. Glencore accused of "phantom EA levels" to cut labour hire pay.</div>
+      <div class="list-item"><span class="badge badge-red">Pilbara Rail</span> BHP CEO Mike Henry quoted fearing "explosion" of union activity will stifle Pilbara investment.</div>
+    </div>
+  </div>
+
+  <!-- Legal, Regulatory & Decisions -->
+  <div class="card">
+    <div class="card-header"><span>⚖️</span><h2>Legal, Regulatory &amp; Decisions</h2></div>
+    <div class="card-body">
+      <div class="list-item" style="font-size:0.67rem;font-weight:800;color:#a0aec0;text-transform:uppercase;letter-spacing:0.5px;padding-bottom:4px;">FWC &amp; Federal Court</div>
+      <div class="list-item"><a href="https://www.fwc.gov.au/document-view/media/download/846499" target="_blank"><strong>[2026] FWC 953 — Rehman v Portier Pacific (Uber)</strong></a>: Unfair deactivation upheld. Worker reinstated with lost pay. Gig economy regulated worker provisions confirmed operative. DP Beaumont, Perth, 20 Mar.</div>
+      <div class="list-item"><a href="https://www.judgments.fedcourt.gov.au/judgments/Judgments/fca/full/2026/2026fcafc0025" target="_blank"><strong>FWO v Jats Joint Pty Ltd [2026] FCAFC 25</strong></a> — FWO enforcement, Full Court. 19 Mar.</div>
+      <div class="list-item"><a href="https://www.judgments.fedcourt.gov.au/judgments/Judgments/fca/full/2026/2026fcafc0017" target="_blank"><strong>FWO v Torrens University Australia [2026] FCAFC 17</strong></a> — FWO enforcement, Full Court. 19 Mar.</div>
+      <div class="list-item"><a href="https://www.judgments.fedcourt.gov.au/judgments/Judgments/fca/single/2026/2026fca0266" target="_blank"><strong>Dept Employment v Howell (Castel Electronics) (No 3) [2026] FCA 266</strong></a> — 17 Mar.</div>
+      <div class="list-item" style="font-size:0.67rem;font-weight:800;color:#a0aec0;text-transform:uppercase;letter-spacing:0.5px;padding:10px 0 4px;">News &amp; Policy</div>
+      <div class="list-item"><a href="https://www.workplaceexpress.com.au" target="_blank"><strong>FWC: "Ungovernable" AI-assisted worker dismissed</strong></a> — employer flooded with AI-generated "dense, repetitive and often rambling" emails; dismissal upheld. <span class="source-tag">[WE]</span></div>
+      <div class="list-item"><a href="https://www.workplaceexpress.com.au" target="_blank"><strong>FWC — Iran war fuel price crisis:</strong></a> Scheduling further conference; exploring whether FWC has powers to intervene on fuel price spike affecting transport. <span class="source-tag">[WE]</span></div>
+      <div class="list-item"><a href="https://www.workplaceexpress.com.au" target="_blank"><strong>FWC may unilaterally amend EAs</strong></a> to cure 7-day dispute escalation clause — potential restriction on workers' right to escalate grievances. <span class="source-tag">[WE]</span></div>
+      <div class="list-item"><a href="https://www.workplaceexpress.com.au" target="_blank"><strong>Closing Loopholes review</strong></a> — Centre for Future Work: regular casuals should get paid leave; genuinely casual workers get "unpredictability bonus." <span class="source-tag">[WE]</span></div>
+      <div class="list-item"><a href="https://www.workplaceexpress.com.au" target="_blank"><strong>Same job same pay</strong></a> — FAAA warns offshoring being used to sidestep the regime; calling for tighter reforms. <span class="source-tag">[WE]</span></div>
+      <div class="list-item"><a href="https://www.workplaceexpress.com.au" target="_blank"><strong>CFMEU Senate inquiry submission:</strong></a> 20 recommendations for construction efficiency — notably silent on criminality/corruption issues. <span class="source-tag">[WE]</span></div>
+    </div>
+  </div>
+
+  <!-- Social Chatter -->
+  <div class="card">
+    <div class="card-header"><span>💬</span><h2>Social Chatter</h2></div>
+    <div class="card-body">
+
+      <div class="list-item" style="font-size:0.67rem;font-weight:800;color:#a0aec0;text-transform:uppercase;letter-spacing:0.5px;padding-bottom:4px;">Top 5 Signal Items</div>
+      <div class="list-item"><a href="https://www.reddit.com/r/AusElectricians/comments/1rxob29/" target="_blank"><strong>r/AusElectricians:</strong> "BHP faces union demands to double pay amid threat of historic strike action"</a> — active ETU ballot sentiment. <span class="source-tag">[42h ago]</span></div>
+      <div class="list-item"><a href="https://disputesreport.substack.com/p/industrial-disputes-and-news-18-march" target="_blank"><strong>Disputes Report:</strong></a> ETU/BHP ballot now in national disputes tracking. <span class="source-tag">[substack]</span></div>
+      <div class="list-item"><a href="https://thewest.com.au/business/mining/unions-just-weeks-away-from-downing-tools-at-bhp-wa-iron-ore-mines-in-a-century-first-move-c-21919345" target="_blank"><strong>The West:</strong> Pilbara strike risk narrative gaining mainstream reach.</a> <span class="source-tag">[thewest.com.au]</span></div>
+      <div class="list-item"><a href="https://www.argusmedia.com/en/news-and-insights/latest-market-news/2799986-australia-s-bhp-iron-ore-site-staff-launch-strike-vote" target="_blank"><strong>Argus Media:</strong></a> international commodity audience now tracking Pilbara IR risk. <span class="source-tag">[argusmedia.com]</span></div>
+      <div class="list-item"><strong>WMWA heat-campaign comments:</strong> member engagement remains high and adversarial toward BHP management narrative. <span class="source-tag">[WMWA Facebook]</span></div>
+
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+  <!-- ASX Announcements -->
+  <div class="card">
+    <div class="card-header"><span>📢</span><h2>ASX Announcements</h2></div>
+    <div class="card-body">
+      <div class="list-item"><span class="badge badge-red">BHP 18 Mar</span> <a href="https://www2.asx.com.au/markets/company/BHP" target="_blank">Brandon Craig to succeed Mike Henry as CEO 🚨</a></div>
+      <div class="list-item"><span class="badge badge-blue">WDS 18 Mar</span> <a href="https://www2.asx.com.au/markets/company/WDS" target="_blank">Liz Westcott appointed Woodside CEO</a></div>
+      <div class="list-item"><span class="badge badge-green">FMG 10 Mar</span> <a href="https://www2.asx.com.au/markets/company/FMG" target="_blank">Fortescue completes Alta Copper acquisition</a></div>
+      <div class="list-item"><span class="badge badge-orange">S32 16 Mar</span> <a href="https://www2.asx.com.au/markets/company/S32" target="_blank">Mozal Aluminium on care &amp; maintenance</a></div>
+      <div class="list-item"><span class="badge badge-orange">S32 2 Mar</span> <a href="https://www2.asx.com.au/markets/company/S32" target="_blank">Chair succession announced</a></div>
+      <div class="list-item"><span class="badge badge-blue">RIO 20 Mar</span> <a href="https://www2.asx.com.au/markets/company/RIO" target="_blank">2026 AGM notice released</a></div>
+    </div>
+  </div>
+
+  <!-- EA Pipeline -->
+  <div class="card">
+    <div class="card-header"><span>📁</span><h2>EA Pipeline</h2></div>
+    <div class="card-body">
+
+      <div class="industry-divider">Mining</div>
+      <div class="ea-item">
+        <div class="ea-matter"><a href="https://www.fwc.gov.au/document-search?search-ui=decisions&query=AG2026/511" target="_blank">AG2026/511</a></div>
+        <div class="ea-title">Byerwen Enterprise Agreement 2026</div>
+        <div class="ea-meta">Sedgman · 17/03 · <span class="status-pill status-initial">Initial</span></div>
+      </div>
+      <div class="ea-item">
+        <div class="ea-matter"><a href="https://www.fwc.gov.au/document-search?search-ui=decisions&query=AG2026/463" target="_blank">AG2026/463</a></div>
+        <div class="ea-title">Thiess Curragh Mine EA 2026</div>
+        <div class="ea-meta">12/03 · <span class="status-pill status-member">Member</span></div>
+      </div>
+      <div class="ea-item">
+        <div class="ea-matter"><a href="https://www.fwc.gov.au/document-search?search-ui=decisions&query=AG2026/389" target="_blank">AG2026/389</a></div>
+        <div class="ea-title">Alkimos Desalination Greenfields (CFMEU)</div>
+        <div class="ea-meta">06/03 · <span class="status-pill status-member">Member</span></div>
+      </div>
+
+      <div class="industry-divider">Port Authorities (WA)</div>
+      <div class="ea-item">
+        <div class="ea-matter"><a href="https://www.fwc.gov.au/document-search?search-ui=decisions&query=AG2026/426" target="_blank">AG2026/426</a></div>
+        <div class="ea-title">Fremantle Ports Bulk &amp; General Stevedoring EA</div>
+        <div class="ea-meta">11/03 · <span class="status-pill status-member">Member</span></div>
+      </div>
+      <div class="ea-item">
+        <div class="ea-matter"><a href="https://www.fwc.gov.au/document-search?search-ui=decisions&query=AG2026/418" target="_blank">AG2026/418</a></div>
+        <div class="ea-title">Fremantle Ports Operations &amp; Services EA</div>
+        <div class="ea-meta">10/03 · <span class="status-pill status-member">Member</span></div>
+      </div>
+
+      <div class="industry-divider">Electrical Power</div>
+      <div class="ea-item">
+        <div class="ea-matter"><a href="https://www.fwc.gov.au/document-search?search-ui=decisions&query=AG2026/557" target="_blank">AG2026/557</a></div>
+        <div class="ea-title">Synergy Sites Enterprise Agreement 2025</div>
+        <div class="ea-meta">19/03 · <span class="status-pill status-initial">Initial</span></div>
+      </div>
+      <div class="ea-item">
+        <div class="ea-matter"><a href="https://www.fwc.gov.au/document-search?search-ui=decisions&query=AG2026/486" target="_blank">AG2026/486</a></div>
+        <div class="ea-title">BMC HV Electrical + ETU — Yallourn Power Station</div>
+        <div class="ea-meta">13/03 · <span class="status-pill status-initial">Initial</span></div>
+      </div>
+
+      <div class="industry-divider">Rail</div>
+      <div class="ea-item">
+        <div class="ea-matter"><a href="https://www.fwc.gov.au/document-search?search-ui=decisions&query=AG2026/529" target="_blank">AG2026/529</a></div>
+        <div class="ea-title">Arc Infrastructure EA 2025 (WA freight rail)</div>
+        <div class="ea-meta">18/03 · <span class="status-pill status-initial">Initial</span></div>
+      </div>
+
+      <div class="industry-divider">Maritime</div>
+      <div class="ea-item">
+        <div class="ea-matter"><a href="https://www.fwc.gov.au/document-search?search-ui=decisions&query=AG2026/118" target="_blank">AG2026/118</a></div>
+        <div class="ea-title">Bhagwan Marine + MUA North West Inshore Agreement</div>
+        <div class="ea-meta">02/02 · <span class="status-pill status-initial">Initial</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FWC Perth Hearings -->
+  <div class="card">
+    <div class="card-header"><span>📅</span><h2>FWC Perth Hearings</h2></div>
+    <div class="card-body">
+      <div class="list-item" style="color:#a0aec0;font-style:italic;font-size:0.78rem;">Saturday — no matters listed</div>
+    </div>
+  </div>
+
+</div><!-- /sidebar -->
+</div><!-- /container -->
+
+<div class="footer">
+  copyright Briefer 2026<br>
+  Generated 2026-03-21 11:45 AWST by Tele 🌀
+</div>
+
+
+<div id="automation-publication-status" style="margin:24px auto;max-width:1100px;padding:12px 16px;border:1px solid rgba(255,255,255,.15);border-radius:8px;text-align:center;font:12px/1.4 system-ui;color:#aab4c3;background:#101722">
+  Automated publication verified · 2026-08-16T14:47:19+0800
+</div>
 </body>
 </html>
