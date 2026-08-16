@@ -73,6 +73,21 @@
   .cycle-switch span { padding: 7px 10px; color: var(--faint); font: 500 11px var(--mono); border-radius: 5px; }
   .cycle-switch .active { color: var(--ink); background: var(--panel-3); }
 
+  .market-snapshot { margin-bottom: 18px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--panel); overflow: hidden; }
+  .market-head { padding: 9px 13px; display: flex; justify-content: space-between; gap: 14px; border-bottom: 1px solid var(--line); color: var(--faint); font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
+  .market-grid { display: grid; grid-template-columns: repeat(6, minmax(145px,1fr)); }
+  .market-item { padding: 13px 14px 12px; border-right: 1px solid var(--line); text-decoration: none; min-width: 0; }
+  .market-item:last-child { border-right: 0; }
+  .market-item:hover { background: rgba(255,255,255,.02); }
+  .market-label { color: var(--muted); font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .04em; }
+  .market-line { margin-top: 5px; display: flex; align-items: baseline; gap: 8px; }
+  .market-value { color: var(--ink); font: 500 18px var(--mono); letter-spacing: -.55px; }
+  .market-change { font: 500 10px var(--mono); }
+  .market-change.up { color: var(--green); }
+  .market-change.down { color: #ef7182; }
+  .market-asof { margin-top: 4px; color: var(--faint); font: 400 8.5px var(--mono); }
+  .market-note { padding: 8px 13px; border-top: 1px solid var(--line); color: var(--faint); font: 400 8.5px var(--mono); }
+
   .posture-band {
     display: grid; grid-template-columns: repeat(4, minmax(130px,1fr));
     border: 1px solid var(--line-strong); border-radius: var(--radius); overflow: hidden; background: var(--panel);
@@ -205,12 +220,15 @@
     .layout { grid-template-columns: 1fr; }
     .aside { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
     .posture-band { grid-template-columns: repeat(4,1fr); }
+    .market-grid { overflow-x: auto; grid-template-columns: repeat(6, minmax(155px,1fr)); }
   }
   @media (max-width: 760px) {
     .shell { padding-inline: 14px; }
     .topbar-inner { padding-inline: 14px; }
     .product-name, .edition span:not(.live-dot) { display: none; }
     .masthead { align-items: start; flex-direction: column; padding-top: 24px; }
+    .market-head { align-items: flex-start; flex-direction: column; gap: 3px; }
+    .market-grid { margin-bottom: -1px; }
     .posture-band { grid-template-columns: 1fr 1fr; }
     .metric { border-top: 1px solid var(--line); }
     .metric:nth-child(odd) { border-left: 0; }
@@ -242,6 +260,43 @@
       <p class="masthead-copy">A matter-based record of bargaining, industrial action, workforce campaigns and regulatory developments affecting the Pilbara and adjacent resources operations.</p>
     </div>
     <div class="cycle-switch" aria-label="Edition cycle"><span>7 AM</span><span class="active">3 PM</span></div>
+  </section>
+
+  <section class="market-snapshot" id="market-snapshot" aria-label="Market snapshot">
+    <div class="market-head"><span>Market snapshot</span><span>Latest available · source-linked · delayed quotes</span></div>
+    <div class="market-grid">
+      <a class="market-item" href="https://tradingeconomics.com/commodity/iron-ore" target="_blank" rel="noopener" data-value="95.17" data-asof="2026-08-14">
+        <div class="market-label">Iron ore 62% Fe</div>
+        <div class="market-line"><data class="market-value" value="95.17">US$95.17/t</data><span class="market-change up">+0.13%</span></div>
+        <div class="market-asof">14 Aug · benchmark-tracking CFD ↗</div>
+      </a>
+      <a class="market-item" href="https://finance.yahoo.com/quote/BHP.AX/" target="_blank" rel="noopener" data-value="61.35" data-asof="2026-08-14">
+        <div class="market-label">BHP · ASX</div>
+        <div class="market-line"><data class="market-value" value="61.35">A$61.35</data><span class="market-change down">−3.31%</span></div>
+        <div class="market-asof">14 Aug close ↗</div>
+      </a>
+      <a class="market-item" href="https://finance.yahoo.com/quote/RIO.AX/" target="_blank" rel="noopener" data-value="167.59" data-asof="2026-08-14">
+        <div class="market-label">Rio Tinto · ASX</div>
+        <div class="market-line"><data class="market-value" value="167.59">A$167.59</data><span class="market-change down">−3.14%</span></div>
+        <div class="market-asof">14 Aug close ↗</div>
+      </a>
+      <a class="market-item" href="https://finance.yahoo.com/quote/FMG.AX/" target="_blank" rel="noopener" data-value="17.64" data-asof="2026-08-14">
+        <div class="market-label">Fortescue · ASX</div>
+        <div class="market-line"><data class="market-value" value="17.64">A$17.64</data><span class="market-change down">−1.34%</span></div>
+        <div class="market-asof">14 Aug close ↗</div>
+      </a>
+      <a class="market-item" href="https://finance.yahoo.com/quote/AUDUSD=X/" target="_blank" rel="noopener" data-value="0.7087" data-asof="2026-08-16">
+        <div class="market-label">AUD/USD</div>
+        <div class="market-line"><data class="market-value" value="0.7087">0.7087</data><span class="market-change up">+0.39%</span></div>
+        <div class="market-asof">16 Aug delayed quote ↗</div>
+      </a>
+      <a class="market-item" href="https://finance.yahoo.com/quote/%5EAORD/" target="_blank" rel="noopener" data-value="9313.20" data-asof="2026-08-14">
+        <div class="market-label">All Ordinaries</div>
+        <div class="market-line"><data class="market-value" value="9313.20">9,313.20</data><span class="market-change down">−0.73%</span></div>
+        <div class="market-asof">14 Aug close ↗</div>
+      </a>
+    </div>
+    <div class="market-note">Shares and index in AUD. Share and index changes are against the prior ASX close on 14 August 2026. Iron ore is USD/t; FX is the latest delayed quote available on 16 August 2026.</div>
   </section>
 
   <section class="posture-band" id="executive-situation">
@@ -433,13 +488,14 @@
       <div class="coverage-item"><div class="coverage-source">Regulatory sources</div><div class="coverage-status"><span class="status-dot ok"></span>Manual official-source baseline</div></div>
       <div class="coverage-item"><div class="coverage-source">Company announcements — not connected</div><div class="coverage-status"><span class="status-dot"></span>No inference drawn</div></div>
       <div class="coverage-item"><div class="coverage-source">FWC feed — not connected</div><div class="coverage-status"><span class="status-dot"></span>Orders not independently acquired</div></div>
-      <div class="coverage-item"><div class="coverage-source">Market and production</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
+      <div class="coverage-item"><div class="coverage-source">Market snapshot</div><div class="coverage-status"><span class="status-dot ok"></span>Manual · current source-linked baseline</div></div>
+      <div class="coverage-item"><div class="coverage-source">Production and operating data</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
       <div class="coverage-item"><div class="coverage-source">News and specialist media</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
     </div>
     <div class="method-note">Evidence window collected 16 August 2026, approximately 2:28 PM AWST. Publication dates unavailable in the current Facebook DOM and therefore not inferred. Source text, URLs, screenshots and collection timestamps remain in the private evidence layer on MS64.</div>
   </section>
 
-  <footer><span>Pilbara Watch · by Briefer · refinement 1</span><span>Generated 16 August 2026 · 3 PM cycle · source weight made explicit</span></footer>
+  <footer><span>Pilbara Watch · by Briefer · refinement 2</span><span>Generated 16 August 2026 · 3 PM cycle · market facts restored</span></footer>
 </main>
 <script>
   const buttons = [...document.querySelectorAll('.filter')];
@@ -454,7 +510,7 @@
 </script>
 
 <div id="automation-publication-status" style="margin:24px auto;max-width:1100px;padding:12px 16px;border:1px solid rgba(255,255,255,.15);border-radius:8px;text-align:center;font:12px/1.4 system-ui;color:#aab4c3;background:#101722">
-  Automated publication verified · 2026-08-16T15:23:40+0800
+  Automated publication verified · 2026-08-16T15:36:25+0800
 </div>
 </body>
 </html>
