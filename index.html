@@ -42,33 +42,16 @@
   a { color: inherit; }
   button { font: inherit; }
   .shell { max-width: 1460px; margin: 0 auto; padding: 0 28px 56px; }
-  .topbar {
-    position: sticky; top: 0; z-index: 30;
-    background: rgba(8,10,13,.94);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--line);
-  }
-  .topbar-inner {
-    max-width: 1460px; margin: 0 auto; padding: 12px 28px;
-    display: flex; align-items: center; justify-content: space-between; gap: 24px;
-  }
-  .brand { display: grid; gap: 1px; min-width: 0; }
-  .watch-name { font-size: 17px; font-weight: 600; letter-spacing: -.35px; }
-  .brand-byline { display: flex; align-items: baseline; gap: 7px; color: var(--faint); font: 400 8px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
-  .wordmark { font-family: var(--sans); font-size: 12px; font-weight: 650; letter-spacing: -.35px; text-transform: none; }
+  .wordmark { font-family: var(--sans); font-size: 17px; font-weight: 650; letter-spacing: -.45px; text-transform: none; }
   .wordmark i { color: var(--red); font-style: normal; }
-  .product-name {
-    border-left: 1px solid var(--line-strong); padding-left: 16px;
-    color: var(--muted); font-family: var(--mono); font-size: 11px; letter-spacing: .075em; text-transform: uppercase;
-  }
   .edition { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 12px; white-space: nowrap; }
   .edition strong { color: var(--soft); font-weight: 500; }
   .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px var(--green-soft); }
 
-  .masthead { padding: 32px 0 22px; display: flex; justify-content: space-between; align-items: end; gap: 24px; }
-  .eyebrow { font: 500 11px/1 var(--mono); color: var(--amber); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 9px; }
-  h1 { margin: 0; font-size: clamp(30px, 4vw, 48px); line-height: 1.02; font-weight: 500; letter-spacing: -1.7px; }
-  .masthead-copy { margin: 10px 0 0; max-width: 720px; color: var(--muted); font-size: 14px; }
+  .masthead { padding: 27px 0 21px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  h1 { margin: 0; font-size: clamp(32px, 4vw, 46px); line-height: 1.02; font-weight: 550; letter-spacing: -1.55px; }
+  .masthead-byline { margin-top: 6px; display: flex; align-items: baseline; gap: 8px; color: var(--faint); font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
+  .masthead-tools { display: grid; justify-items: end; gap: 9px; }
   .cycle-switch { display: flex; padding: 3px; border: 1px solid var(--line); border-radius: 7px; background: var(--panel); }
   .cycle-switch span { padding: 7px 10px; color: var(--faint); font: 500 11px var(--mono); border-radius: 5px; }
   .cycle-switch .active { color: var(--ink); background: var(--panel-3); }
@@ -224,9 +207,9 @@
   }
   @media (max-width: 760px) {
     .shell { padding-inline: 14px; }
-    .topbar-inner { padding-inline: 14px; }
-    .product-name, .edition span:not(.live-dot) { display: none; }
+    .edition span:not(.live-dot) { display: none; }
     .masthead { align-items: start; flex-direction: column; padding-top: 24px; }
+    .masthead-tools { justify-items: start; }
     .market-head { align-items: flex-start; flex-direction: column; gap: 3px; }
     .market-grid { margin-bottom: -1px; }
     .posture-band { grid-template-columns: 1fr 1fr; }
@@ -242,24 +225,16 @@
 </style>
 </head>
 <body>
-<header class="topbar">
-  <div class="topbar-inner">
-    <div class="brand">
-      <div class="watch-name">Pilbara Watch</div>
-      <div class="brand-byline">by <span class="wordmark">brief<i>er</i></span></div>
-    </div>
-    <div class="edition"><span class="live-dot"></span><span><strong>3 PM edition</strong> · Sunday, 16 August 2026 · AWST</span></div>
-  </div>
-</header>
-
 <main class="shell">
   <section class="masthead">
     <div>
-      <div class="eyebrow">Industrial relations intelligence · structured baseline</div>
-      <h1>Pilbara industrial matters</h1>
-      <p class="masthead-copy">A matter-based record of bargaining, industrial action, workforce campaigns and regulatory developments affecting the Pilbara and adjacent resources operations.</p>
+      <h1>Pilbara Watch</h1>
+      <div class="masthead-byline">by <span class="wordmark">brief<i>er</i></span></div>
     </div>
-    <div class="cycle-switch" aria-label="Edition cycle"><span>7 AM</span><span class="active">3 PM</span></div>
+    <div class="masthead-tools">
+      <div class="edition"><span class="live-dot"></span><span><strong>3 PM edition</strong> · Sunday, 16 August 2026 · AWST</span></div>
+      <div class="cycle-switch" aria-label="Edition cycle"><span>7 AM</span><span class="active">3 PM</span></div>
+    </div>
   </section>
 
   <section class="market-snapshot" id="market-snapshot" aria-label="Market snapshot">
@@ -510,7 +485,7 @@
 </script>
 
 <div id="automation-publication-status" style="margin:24px auto;max-width:1100px;padding:12px 16px;border:1px solid rgba(255,255,255,.15);border-radius:8px;text-align:center;font:12px/1.4 system-ui;color:#aab4c3;background:#101722">
-  Automated publication verified · 2026-08-16T15:36:25+0800
+  Automated publication verified · 2026-08-16T15:41:41+0800
 </div>
 </body>
 </html>
