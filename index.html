@@ -51,10 +51,7 @@
   .masthead { padding: 27px 0 21px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
   h1 { margin: 0; font-size: clamp(32px, 4vw, 46px); line-height: 1.02; font-weight: 550; letter-spacing: -1.55px; }
   .masthead-byline { margin-top: 6px; display: flex; align-items: baseline; gap: 8px; color: var(--faint); font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
-  .masthead-tools { display: grid; justify-items: end; gap: 9px; }
-  .cycle-switch { display: flex; padding: 3px; border: 1px solid var(--line); border-radius: 7px; background: var(--panel); }
-  .cycle-switch span { padding: 7px 10px; color: var(--faint); font: 500 11px var(--mono); border-radius: 5px; }
-  .cycle-switch .active { color: var(--ink); background: var(--panel-3); }
+  .masthead-tools { display: grid; justify-items: end; }
 
   .market-snapshot { margin-bottom: 18px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--panel); overflow: hidden; }
   .market-head { padding: 9px 13px; display: flex; justify-content: space-between; gap: 14px; border-bottom: 1px solid var(--line); color: var(--faint); font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
@@ -110,6 +107,16 @@
   .baseline-glyph { flex: 0 0 23px; height: 23px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: 50%; color: var(--amber); font: 500 11px var(--mono); }
   .baseline strong { display: block; font-size: 13px; font-weight: 550; }
   .baseline p { margin: 5px 0 0; color: var(--muted); font-size: 12px; }
+  .delta-panel { margin-bottom: 18px; }
+
+  .active-register { padding: 10px; }
+  .active-matter summary { padding: 16px 17px; }
+  .matter-overview { min-width: 0; }
+  .matter-brief { margin-top: 8px; max-width: 960px; color: var(--muted); font-size: 12px; }
+  .matter-flags { margin-top: 9px; display: flex; gap: 7px; flex-wrap: wrap; }
+  .matter-flag { padding: 3px 6px; border-radius: 4px; background: var(--panel-3); color: var(--soft); font: 500 9px var(--mono); text-transform: uppercase; }
+  .matter-flag.caution { color: #efaa77; background: var(--amber-soft); }
+  .matter-flag.unverified { color: #ff8696; background: var(--red-soft); }
 
   .filters { display: flex; gap: 5px; flex-wrap: wrap; }
   .filter { border: 1px solid transparent; background: none; color: var(--faint); padding: 5px 8px; border-radius: 5px; cursor: pointer; font: 500 10px var(--mono); }
@@ -197,6 +204,14 @@
   .status-dot.ok { background: var(--green); }
 
   .method-note { padding: 13px 16px; border-top: 1px solid var(--line); color: var(--faint); font-size: 10.5px; }
+  .assurance { margin-top: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); overflow: hidden; }
+  .assurance > summary { min-height: 49px; padding: 13px 17px; display: flex; justify-content: space-between; gap: 20px; color: var(--soft); }
+  .assurance > summary strong { font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
+  .assurance-summary { color: var(--faint); font: 400 9px var(--mono); text-align: right; }
+  .assurance > summary::after { content: "+"; color: var(--muted); font: 500 15px var(--mono); }
+  .assurance[open] > summary::after { content: "−"; }
+  .assurance-body { border-top: 1px solid var(--line); }
+  .source-boundary { padding: 13px 16px; color: var(--muted); font-size: 11px; border-bottom: 1px solid var(--line); }
   footer { margin-top: 18px; display: flex; justify-content: space-between; gap: 20px; color: var(--faint); font: 400 9px var(--mono); }
 
   @media (max-width: 1080px) {
@@ -207,7 +222,6 @@
   }
   @media (max-width: 760px) {
     .shell { padding-inline: 14px; }
-    .edition span:not(.live-dot) { display: none; }
     .masthead { align-items: start; flex-direction: column; padding-top: 24px; }
     .masthead-tools { justify-items: start; }
     .market-head { align-items: flex-start; flex-direction: column; gap: 3px; }
@@ -218,8 +232,13 @@
     .aside { grid-template-columns: 1fr; }
     .signal-grid, .coverage-grid, .regulatory-grid { grid-template-columns: 1fr; }
     .issue, .coverage-item, .reg-item { border-right: 0; border-bottom: 1px solid var(--line); }
+    #active-matters .panel-head { align-items: flex-start; flex-direction: column; }
+    .active-matter summary { grid-template-columns: 1fr; }
+    .matter-state { justify-content: space-between; }
     .chronology-row { grid-template-columns: 1fr; gap: 4px; }
     .confidence { width: 100%; margin-left: 0; }
+    .assurance > summary { align-items: flex-start; }
+    .assurance-summary { display: none; }
     footer { flex-direction: column; }
   }
 </style>
@@ -233,7 +252,6 @@
     </div>
     <div class="masthead-tools">
       <div class="edition"><span class="live-dot"></span><span><strong>3 PM edition</strong> · Sunday, 16 August 2026 · AWST</span></div>
-      <div class="cycle-switch" aria-label="Edition cycle"><span>7 AM</span><span class="active">3 PM</span></div>
     </div>
   </section>
 
@@ -274,157 +292,104 @@
     <div class="market-note">Shares and index in AUD. Share and index changes are against the prior ASX close on 14 August 2026. Iron ore is USD/t; FX is the latest delayed quote available on 16 August 2026.</div>
   </section>
 
-  <section class="posture-band" id="executive-situation">
-    <div class="metric"><div class="metric-number">4</div><div class="metric-label">Active material matters</div><div class="metric-note">2 bargaining · 2 campaign signals</div></div>
-    <div class="metric"><div class="metric-number">2</div><div class="metric-label">Formal action pathways reported</div><div class="metric-note">BHP PIA · Worsley ballot order</div></div>
-    <div class="metric"><div class="metric-number">2/8</div><div class="metric-label">Union pages checked</div><div class="metric-note">ETU WA · WMWA</div></div>
-    <div class="metric"><div class="metric-number">0</div><div class="metric-label">Claims independently corroborated</div><div class="metric-note">Employer and FWC feeds not connected</div></div>
+  <section class="panel delta-panel" id="edition-delta">
+    <div class="panel-head"><h2 class="panel-title">What changed since the previous edition</h2><span class="panel-kicker">3 PM · baseline edition</span></div>
+    <div class="panel-body baseline">
+      <div class="baseline-glyph">B</div>
+      <div><strong>First structured baseline established</strong><p>No earlier structured edition exists against which to calculate a genuine change. Pilbara Watch will report additions, reversals and verified status changes here from the next acquisition cycle rather than manufacture a morning-to-afternoon delta.</p></div>
+    </div>
   </section>
 
-  <div class="layout">
-    <div class="stack">
-      <section class="panel">
-        <div class="panel-head"><h2 class="panel-title">The three things that matter now</h2><span class="panel-kicker">ranked by materiality</span></div>
-        <div class="panel-body top-three">
-          <article class="signal">
-            <div class="signal-index">01</div>
-            <div><h3>BHP Ports action completed; effect remains unverified</h3><p>Union pages report coordinated protected action and operational disruption at Port Hedland. No employer, production or independent source is connected, so the scale and bargaining effect cannot yet be established.</p></div>
-            <span class="signal-tag tag-red">Union claim</span>
-          </article>
-          <article class="signal">
-            <div class="signal-index">02</div>
-            <div><h3>ETU reports a Worsley protected-action ballot order</h3><p>If confirmed from the Commission record, this is a formal procedural step toward protected action. The order, timetable and employee support have not yet been independently verified.</p></div>
-            <span class="signal-tag tag-red">Verify</span>
-          </article>
-          <article class="signal">
-            <div class="signal-index">03</div>
-            <div><h3>WMWA is promoting a broader Pilbara safety platform</h3><p>Posts concerning silica, toxic exposure and FIFO mental health show the issues the alliance wants to foreground. They do not establish workforce traction, employer response or regulatory significance.</p></div>
-            <span class="signal-tag tag-amber">Advocacy</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel" id="material-changes">
-        <div class="panel-head"><h2 class="panel-title">Changes since 7 AM</h2><span class="panel-kicker">delta view</span></div>
-        <div class="panel-body baseline">
-          <div class="baseline-glyph">B</div>
-          <div><strong>First structured baseline established</strong><p>This prototype creates the matter register against which the next acquisition cycle can calculate genuine changes. No earlier structured state exists, so it does not manufacture a morning-to-afternoon delta.</p></div>
-        </div>
-      </section>
-
-      <section class="panel" id="situation-board">
-        <div class="panel-head">
-          <h2 class="panel-title">Industrial situation board</h2>
-          <div class="filters" aria-label="Matter filters">
-            <button class="filter active" data-filter="all">All</button>
-            <button class="filter" data-filter="bhp">BHP</button>
-            <button class="filter" data-filter="south32">South32</button>
-            <button class="filter" data-filter="cross">Cross-industry</button>
-          </div>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>Matter</th><th>Footprint</th><th>Stage</th><th>Source status</th><th>Latest signal</th><th>Next verification point</th></tr></thead>
-            <tbody>
-              <tr data-company="bhp"><td>BHP Port Operations bargaining</td><td>Port Hedland · port operations</td><td><span class="stage">PIA + bargaining</span></td><td><span class="direction escalating">Union-only</span></td><td>Union pages say action concluded and affected operations</td><td>Employer or operational evidence; next bargaining event</td></tr>
-              <tr data-company="south32"><td>South32 Worsley Alumina</td><td>South West WA · alumina</td><td><span class="stage">PABO reported</span></td><td><span class="direction escalating">Union-only</span></td><td>ETU says the FWC made a ballot order</td><td>Acquire the order and ballot timetable</td></tr>
-              <tr data-company="cross"><td>Rio unionisation narrative</td><td>Pilbara · iron ore system</td><td><span class="stage">Campaign framing</span></td><td><span class="direction active">Advocacy</span></td><td>WMWA disputes an investment narrative attributed to Rio</td><td>Original remarks, Rio response or organising evidence</td></tr>
-              <tr data-company="cross"><td>Pilbara safety campaigns</td><td>Multi-employer · mines/FIFO</td><td><span class="stage">Issue promotion</span></td><td><span class="direction active">Advocacy</span></td><td>WMWA promotes silica, exposure and mental-health issues</td><td>Regulator, HSR, employer or workplace evidence</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="panel" id="matter-detail">
-        <div class="panel-head"><h2 class="panel-title">Material matter chronologies</h2><span class="panel-kicker">source-labelled event sequences</span></div>
-        <div class="panel-body matter-grid">
-          <div class="source-caveat"><strong>Source treatment:</strong> Union-authored posts are advocacy material. They are direct evidence of what a union is asserting or promoting. Union-authored material does not establish operational impact, bargaining strength or influence without independent corroboration.</div>
-          <details class="matter" data-company="bhp" open>
-            <summary><div><div class="matter-name">BHP Port Operations bargaining</div><div class="matter-meta">BHP · AWU / ETU / AMWU · Port Hedland</div></div><div class="matter-state">High materiality</div></summary>
-            <div class="matter-content">
-              <div class="chronology">
-                <div class="chronology-row"><div class="chronology-step">Sequence 01</div><div class="chronology-text">WMWA reported an 11th bargaining meeting with BHP, conducted with Fair Work Commission assistance.<small>Union-authored account · displayed publication date unavailable</small></div></div>
-                <div class="chronology-row"><div class="chronology-step">Sequence 02</div><div class="chronology-text">ETU and WMWA posts described coordinated protected action, including a 48-hour window and bans concerning ship-loader movements.<small>Two aligned union sources · no employer or operational source connected</small></div></div>
-                <div class="chronology-row"><div class="chronology-step">Sequence 03</div><div class="chronology-text">The unions subsequently said the action had concluded and claimed operational effects. Those effects and any resulting bargaining movement remain unverified.<small>Current evidence boundary · effect must not be inferred</small></div></div>
-              </div>
-              <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1664477375684269&set=a.507507878047897" target="_blank">WMWA bargaining #11</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1519930930149638&set=a.166072128868865" target="_blank">ETU action post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1670598881738785&set=a.507507878047897" target="_blank">WMWA action post</a><span class="confidence">Source weight: direct union position · low for claimed effect</span></div>
-            </div>
-          </details>
-
-          <details class="matter" data-company="south32">
-            <summary><div><div class="matter-name">South32 Worsley Alumina bargaining</div><div class="matter-meta">South32 · ETU · Worsley Alumina</div></div><div class="matter-state">Verification required</div></summary>
-            <div class="matter-content">
-              <div class="chronology">
-                <div class="chronology-row"><div class="chronology-step">Sequence 01</div><div class="chronology-text">ETU said it had applied for a protected-action ballot order in the Worsley bargaining.<small>Union-authored account · date unavailable</small></div></div>
-                <div class="chronology-row"><div class="chronology-step">Sequence 02</div><div class="chronology-text">ETU later said the Commission had made the ballot order and continued to frame an Alcoa wage comparison as a bargaining issue.<small>Single union source · order not yet acquired</small></div></div>
-                <div class="chronology-row"><div class="chronology-step">Evidence state</div><div class="chronology-text">The Commission order, ballot agent, timetable and South32 position are not in the evidence set.<small>Procedural status remains provisional</small></div></div>
-              </div>
-              <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1521453453330719&set=a.166072115535533" target="_blank">ETU ballot-order post</a><span class="confidence">Source weight: provisional until Commission record acquired</span></div>
-            </div>
-          </details>
-
-          <details class="matter" data-company="cross">
-            <summary><div><div class="matter-name">Rio Pilbara unionisation and investment narrative</div><div class="matter-meta">Rio Tinto · WMWA · Pilbara</div></div><div class="matter-state">Advocacy signal</div></summary>
-            <div class="matter-content">
-              <div class="chronology">
-                <div class="chronology-row"><div class="chronology-step">Sequence 01</div><div class="chronology-text">WMWA attributed comments to Rio Iron Ore chief Matthew Holcz concerning re-unionisation and investment.<small>Original Rio remarks not in evidence set</small></div></div>
-                <div class="chronology-row"><div class="chronology-step">Sequence 02</div><div class="chronology-text">WMWA countered that proposition by pointing to continuing Pilbara capital investment.<small>Union campaign framing · not evidence of organising strength</small></div></div>
-                <div class="chronology-row"><div class="chronology-step">Evidence state</div><div class="chronology-text">No employer response, bargaining notice, access dispute or independently observed organising activity has been acquired.<small>No active Rio dispute should be inferred</small></div></div>
-              </div>
-              <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1671717254960281&set=a.507507878047897" target="_blank">WMWA post</a><span class="confidence">Source weight: advocacy only</span></div>
-            </div>
-          </details>
-
-          <details class="matter" data-company="cross">
-            <summary><div><div class="matter-name">Pilbara safety and workforce campaigns</div><div class="matter-meta">WMWA · multi-employer · mining/FIFO</div></div><div class="matter-state">Advocacy signal</div></summary>
-            <div class="matter-content">
-              <div class="chronology">
-                <div class="chronology-row"><div class="chronology-step">Captured item 01</div><div class="chronology-text">WMWA promoted a proposition concerning silica exposure and testing.<small>Displayed date unavailable · underlying exposure data not acquired</small></div></div>
-                <div class="chronology-row"><div class="chronology-step">Captured item 02</div><div class="chronology-text">WMWA published related claims concerning toxic chemical exposure.<small>Displayed date unavailable · no regulator or employer response acquired</small></div></div>
-                <div class="chronology-row"><div class="chronology-step">Captured item 03</div><div class="chronology-text">WMWA promoted suicide-prevention and mental-health concerns for resources and FIFO workers.<small>Displayed date unavailable · workforce traction not established</small></div></div>
-              </div>
-              <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1673583661440307&set=a.507507878047897" target="_blank">Silica post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1671463784985628&set=a.507507878047897" target="_blank">Chemical exposure post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1675523597912980&set=a.507507878047897" target="_blank">FIFO mental-health post</a><span class="confidence">Source weight: issue promotion only</span></div>
-            </div>
-          </details>
-        </div>
-      </section>
+  <section class="panel" id="active-matters">
+    <div class="panel-head">
+      <div><h2 class="panel-title">Active matters</h2><span class="panel-kicker">four matters · expand for source-labelled chronology</span></div>
+      <div class="filters" aria-label="Matter filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="bhp">BHP</button>
+        <button class="filter" data-filter="south32">South32</button>
+        <button class="filter" data-filter="cross">Cross-industry</button>
+      </div>
     </div>
-
-    <aside class="stack aside">
-      <section class="panel" id="next-seven-days">
-        <div class="panel-head"><h2 class="panel-title">Next seven days</h2><span class="panel-kicker">known watchpoints</span></div>
-        <div class="panel-body horizon">
-          <div class="horizon-item"><div class="horizon-date">Pending date</div><div class="horizon-title">Worsley PABO ballot timetable</div><div class="horizon-copy">Acquire the FWC order and ballot schedule; convert to a fixed milestone when verified.</div></div>
-          <div class="horizon-item"><div class="horizon-date">Expected next update</div><div class="horizon-title">BHP Ports post-action position</div><div class="horizon-copy">Watch union member communications, further bargaining and any BHP response.</div></div>
-          <div class="horizon-item"><div class="horizon-date">No fixed date captured</div><div class="horizon-title">Pilbara safety campaign response</div><div class="horizon-copy">Look for regulator, employer or HSR adoption of the silica and chemical-exposure agenda.</div></div>
+    <div class="matter-grid active-register">
+      <details class="matter active-matter" data-company="bhp" open>
+        <summary>
+          <div class="matter-overview">
+            <div class="matter-name">BHP Port Operations bargaining</div>
+            <div class="matter-meta">BHP · AWU / ETU / AMWU · Port Hedland</div>
+            <div class="matter-brief">Union pages say protected action concluded and affected operations. Operational effect and resulting bargaining movement remain unverified.</div>
+            <div class="matter-flags"><span class="matter-flag">PIA + bargaining</span><span class="matter-flag unverified">Union-only</span></div>
+          </div>
+          <div class="matter-state">High materiality</div>
+        </summary>
+        <div class="matter-content">
+          <div class="chronology">
+            <div class="chronology-row"><div class="chronology-step">Sequence 01</div><div class="chronology-text">WMWA reported an 11th bargaining meeting with BHP, conducted with Fair Work Commission assistance.<small>Union-authored account · displayed publication date unavailable</small></div></div>
+            <div class="chronology-row"><div class="chronology-step">Sequence 02</div><div class="chronology-text">ETU and WMWA posts described coordinated protected action, including a 48-hour window and bans concerning ship-loader movements.<small>Two aligned union sources · no employer or operational source connected</small></div></div>
+            <div class="chronology-row"><div class="chronology-step">Sequence 03</div><div class="chronology-text">The unions subsequently said the action had concluded and claimed operational effects. Those effects and any resulting bargaining movement remain unverified.<small>Current evidence boundary · effect must not be inferred</small></div></div>
+          </div>
+          <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1664477375684269&set=a.507507878047897" target="_blank">WMWA bargaining #11</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1519930930149638&set=a.166072128868865" target="_blank">ETU action post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1670598881738785&set=a.507507878047897" target="_blank">WMWA action post</a><span class="confidence">Source weight: direct union position · low for claimed effect</span></div>
         </div>
-      </section>
+      </details>
 
-      <section class="panel" id="company-watch">
-        <div class="panel-head"><h2 class="panel-title">Company watch</h2><span class="panel-kicker">current evidence state</span></div>
-        <div class="panel-body company-list">
-          <div class="company"><div class="company-name">BHP</div><div class="company-copy">Union pages say Port Operations action concluded; effect unverified.</div><div class="company-count">1 matter</div></div>
-          <div class="company"><div class="company-name">South32</div><div class="company-copy">ETU says Worsley has reached ballot-order stage; order not acquired.</div><div class="company-count">1 matter</div></div>
-          <div class="company"><div class="company-name">Rio Tinto</div><div class="company-copy">One WMWA advocacy signal; no active dispute or organising strength verified.</div><div class="company-count">1 signal</div></div>
-          <div class="company"><div class="company-name">Fortescue</div><div class="company-copy">No conclusion available: relevant sources are not yet connected.</div><div class="company-count">coverage gap</div></div>
+      <details class="matter active-matter" data-company="south32">
+        <summary>
+          <div class="matter-overview">
+            <div class="matter-name">South32 Worsley Alumina bargaining</div>
+            <div class="matter-meta">South32 · ETU · Worsley Alumina</div>
+            <div class="matter-brief">ETU says the Commission made a protected-action ballot order. The order, timetable and South32 position are not yet in the evidence set.</div>
+            <div class="matter-flags"><span class="matter-flag">PABO reported</span><span class="matter-flag unverified">Verification required</span></div>
+          </div>
+          <div class="matter-state">Formal pathway</div>
+        </summary>
+        <div class="matter-content">
+          <div class="chronology">
+            <div class="chronology-row"><div class="chronology-step">Sequence 01</div><div class="chronology-text">ETU said it had applied for a protected-action ballot order in the Worsley bargaining.<small>Union-authored account · date unavailable</small></div></div>
+            <div class="chronology-row"><div class="chronology-step">Sequence 02</div><div class="chronology-text">ETU later said the Commission had made the ballot order and continued to frame an Alcoa wage comparison as a bargaining issue.<small>Single union source · order not yet acquired</small></div></div>
+            <div class="chronology-row"><div class="chronology-step">Evidence state</div><div class="chronology-text">The Commission order, ballot agent, timetable and South32 position are not in the evidence set.<small>Procedural status remains provisional</small></div></div>
+          </div>
+          <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1521453453330719&set=a.166072115535533" target="_blank">ETU ballot-order post</a><span class="confidence">Source weight: provisional until Commission record acquired</span></div>
         </div>
-      </section>
+      </details>
 
-      <section class="panel">
-        <div class="panel-head"><h2 class="panel-title">Union-source boundary</h2></div>
-        <div class="panel-body" style="color:var(--muted);font-size:11.5px;">
-          Union Facebook is useful for identifying claims, campaign themes and procedural assertions. It is usually promotional material. Pilbara Watch does not treat reach, rhetoric, claimed disruption or multiple aligned union posts as proof of influence, workforce support or industrial effect. Employer, FWC case, production and independent media feeds are not yet integrated.
+      <details class="matter active-matter" data-company="cross">
+        <summary>
+          <div class="matter-overview">
+            <div class="matter-name">Rio Pilbara unionisation and investment narrative</div>
+            <div class="matter-meta">Rio Tinto · WMWA · Pilbara</div>
+            <div class="matter-brief">WMWA disputes an investment narrative attributed to Rio. No original remarks, employer response or independently observed organising activity has been acquired.</div>
+            <div class="matter-flags"><span class="matter-flag">Campaign framing</span><span class="matter-flag caution">Advocacy</span></div>
+          </div>
+          <div class="matter-state">Campaign signal</div>
+        </summary>
+        <div class="matter-content">
+          <div class="chronology">
+            <div class="chronology-row"><div class="chronology-step">Sequence 01</div><div class="chronology-text">WMWA attributed comments to Rio Iron Ore chief Matthew Holcz concerning re-unionisation and investment.<small>Original Rio remarks not in evidence set</small></div></div>
+            <div class="chronology-row"><div class="chronology-step">Sequence 02</div><div class="chronology-text">WMWA countered that proposition by pointing to continuing Pilbara capital investment.<small>Union campaign framing · not evidence of organising strength</small></div></div>
+            <div class="chronology-row"><div class="chronology-step">Evidence state</div><div class="chronology-text">No employer response, bargaining notice, access dispute or independently observed organising activity has been acquired.<small>No active Rio dispute should be inferred</small></div></div>
+          </div>
+          <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1671717254960281&set=a.507507878047897" target="_blank">WMWA post</a><span class="confidence">Source weight: advocacy only</span></div>
         </div>
-      </section>
-    </aside>
-  </div>
+      </details>
 
-  <section class="panel" id="industry-signals" style="margin-top:18px;">
-    <div class="panel-head"><h2 class="panel-title">Claims and campaign themes</h2><span class="panel-kicker">what union sources are choosing to promote</span></div>
-    <div class="signal-grid">
-      <article class="issue"><div class="issue-label">Industrial action</div><h3>Coordination is being emphasised</h3><p>ETU and WMWA both promote multi-union BHP Ports action. Alignment of messaging is visible; operational efficacy and member depth are not.</p></article>
-      <article class="issue"><div class="issue-label">Pay architecture</div><h3>Classification and comparator claims</h3><p>BHP posts emphasise progression, REM and allowances; Worsley campaigning invokes an Alcoa wage comparator. These are stated claims, not tested workforce priorities.</p></article>
-      <article class="issue"><div class="issue-label">Safety advocacy</div><h3>Several issues are being grouped</h3><p>Silica, chemical exposure and mental health are promoted as cross-employer concerns. No regulator response, workforce traction or employer change is yet established.</p></article>
+      <details class="matter active-matter" data-company="cross">
+        <summary>
+          <div class="matter-overview">
+            <div class="matter-name">Pilbara safety and workforce campaigns</div>
+            <div class="matter-meta">WMWA · multi-employer · mining/FIFO</div>
+            <div class="matter-brief">WMWA is promoting silica, chemical-exposure and FIFO mental-health issues. Regulator, employer and workplace adoption have not been established.</div>
+            <div class="matter-flags"><span class="matter-flag">Issue promotion</span><span class="matter-flag caution">Advocacy</span></div>
+          </div>
+          <div class="matter-state">Campaign signal</div>
+        </summary>
+        <div class="matter-content">
+          <div class="chronology">
+            <div class="chronology-row"><div class="chronology-step">Captured item 01</div><div class="chronology-text">WMWA promoted a proposition concerning silica exposure and testing.<small>Displayed date unavailable · underlying exposure data not acquired</small></div></div>
+            <div class="chronology-row"><div class="chronology-step">Captured item 02</div><div class="chronology-text">WMWA published related claims concerning toxic chemical exposure.<small>Displayed date unavailable · no regulator or employer response acquired</small></div></div>
+            <div class="chronology-row"><div class="chronology-step">Captured item 03</div><div class="chronology-text">WMWA promoted suicide-prevention and mental-health concerns for resources and FIFO workers.<small>Displayed date unavailable · workforce traction not established</small></div></div>
+          </div>
+          <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1673583661440307&set=a.507507878047897" target="_blank">Silica post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1671463784985628&set=a.507507878047897" target="_blank">Chemical exposure post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1675523597912980&set=a.507507878047897" target="_blank">FIFO mental-health post</a><span class="confidence">Source weight: issue promotion only</span></div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -455,37 +420,38 @@
     </div>
   </section>
 
-  <section class="panel" id="coverage-health" style="margin-top:18px;">
-    <div class="panel-head"><h2 class="panel-title">Coverage and collection health</h2><span class="panel-kicker">absence is not treated as silence</span></div>
-    <div class="coverage-grid">
-      <div class="coverage-item"><div class="coverage-source">Union Facebook</div><div class="coverage-status"><span class="status-dot partial"></span>Partial · 2 of 8 union pages</div></div>
-      <div class="coverage-item"><div class="coverage-source">Evidence persistence</div><div class="coverage-status"><span class="status-dot ok"></span>Healthy · duplicate-free rerun</div></div>
-      <div class="coverage-item"><div class="coverage-source">Regulatory sources</div><div class="coverage-status"><span class="status-dot ok"></span>Manual official-source baseline</div></div>
-      <div class="coverage-item"><div class="coverage-source">Company announcements — not connected</div><div class="coverage-status"><span class="status-dot"></span>No inference drawn</div></div>
-      <div class="coverage-item"><div class="coverage-source">FWC feed — not connected</div><div class="coverage-status"><span class="status-dot"></span>Orders not independently acquired</div></div>
-      <div class="coverage-item"><div class="coverage-source">Market snapshot</div><div class="coverage-status"><span class="status-dot ok"></span>Manual · current source-linked baseline</div></div>
-      <div class="coverage-item"><div class="coverage-source">Production and operating data</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
-      <div class="coverage-item"><div class="coverage-source">News and specialist media</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
+  <details class="assurance" id="assurance-footer">
+    <summary><strong>Method, coverage and collection health</strong><span class="assurance-summary">2/8 union pages · company and FWC feeds not connected · absence is not treated as silence</span></summary>
+    <div class="assurance-body">
+      <div class="source-boundary"><strong>Source boundary:</strong> Union-authored posts are advocacy material and direct evidence only of what a union is asserting or promoting. Union-authored material does not establish operational impact, bargaining strength or influence without independent corroboration.</div>
+      <div class="coverage-grid">
+        <div class="coverage-item"><div class="coverage-source">Union Facebook</div><div class="coverage-status"><span class="status-dot partial"></span>Partial · 2 of 8 union pages</div></div>
+        <div class="coverage-item"><div class="coverage-source">Evidence persistence</div><div class="coverage-status"><span class="status-dot ok"></span>Healthy · duplicate-free rerun</div></div>
+        <div class="coverage-item"><div class="coverage-source">Regulatory sources</div><div class="coverage-status"><span class="status-dot ok"></span>Manual official-source baseline</div></div>
+        <div class="coverage-item"><div class="coverage-source">Company announcements — not connected</div><div class="coverage-status"><span class="status-dot"></span>No inference drawn</div></div>
+        <div class="coverage-item"><div class="coverage-source">FWC feed — not connected</div><div class="coverage-status"><span class="status-dot"></span>Orders not independently acquired</div></div>
+        <div class="coverage-item"><div class="coverage-source">Market snapshot</div><div class="coverage-status"><span class="status-dot ok"></span>Manual · source-linked baseline</div></div>
+        <div class="coverage-item"><div class="coverage-source">Production and operating data</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
+        <div class="coverage-item"><div class="coverage-source">News and specialist media</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
+      </div>
+      <div class="method-note">Evidence window collected 16 August 2026, approximately 2:28 PM AWST. Publication dates unavailable in the current Facebook DOM and therefore not inferred. Source text, URLs, screenshots and collection timestamps remain in the private evidence layer on MS64.</div>
     </div>
-    <div class="method-note">Evidence window collected 16 August 2026, approximately 2:28 PM AWST. Publication dates unavailable in the current Facebook DOM and therefore not inferred. Source text, URLs, screenshots and collection timestamps remain in the private evidence layer on MS64.</div>
-  </section>
+  </details>
 
-  <footer><span>Pilbara Watch · by Briefer · refinement 2</span><span>Generated 16 August 2026 · 3 PM cycle · market facts restored</span></footer>
+  <footer><span>Pilbara Watch · by Briefer · refinement 3</span><span>Generated 16 August 2026 · 3 PM cycle · market facts restored</span></footer>
 </main>
 <script>
   const buttons = [...document.querySelectorAll('.filter')];
-  const rows = [...document.querySelectorAll('#situation-board tbody tr')];
   const matters = [...document.querySelectorAll('details.matter')];
   buttons.forEach(button => button.addEventListener('click', () => {
     buttons.forEach(item => item.classList.toggle('active', item === button));
     const filter = button.dataset.filter;
-    rows.forEach(row => row.hidden = filter !== 'all' && !row.dataset.company.split(' ').includes(filter));
     matters.forEach(matter => matter.classList.toggle('hidden', filter !== 'all' && !matter.dataset.company.split(' ').includes(filter)));
   }));
 </script>
 
 <div id="automation-publication-status" style="margin:24px auto;max-width:1100px;padding:12px 16px;border:1px solid rgba(255,255,255,.15);border-radius:8px;text-align:center;font:12px/1.4 system-ui;color:#aab4c3;background:#101722">
-  Automated publication verified · 2026-08-16T15:41:41+0800
+  Automated publication verified · 2026-08-17T05:02:28+0800
 </div>
 </body>
 </html>
