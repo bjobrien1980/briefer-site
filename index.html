@@ -160,6 +160,32 @@
   .source-link:hover { border-color: var(--line-strong); color: var(--ink); }
   .confidence { margin-left: auto; color: var(--muted); font: 400 9px var(--mono); }
 
+  .union-post-evidence { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .union-post-section-head { margin-bottom: 10px; display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+  .union-post-section-head h3 { margin: 0; font: 600 10px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
+  .union-post-section-head span { color: var(--faint); font: 400 9px var(--mono); }
+  .union-post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 10px; }
+  details.union-post-exhibit { min-width: 0; border: 1px solid var(--line); border-radius: 7px; background: #0c0f13; overflow: hidden; }
+  details.union-post-exhibit[open] { border-color: var(--line-strong); }
+  .union-post-exhibit > summary { padding: 0; display: grid; grid-template-columns: 148px minmax(0,1fr); gap: 0; align-items: stretch; }
+  .union-post-exhibit > summary::after { content: "+"; position: absolute; right: 12px; bottom: 11px; color: var(--muted); font: 500 14px var(--mono); }
+  .union-post-exhibit[open] > summary::after { content: "−"; }
+  .union-post-exhibit > summary { position: relative; }
+  .union-post-graphic { width: 148px; height: 148px; object-fit: cover; display: block; border-right: 1px solid var(--line); }
+  .union-post-header { min-width: 0; padding: 13px 32px 13px 13px; }
+  .union-post-label { color: var(--amber); font: 500 8.5px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+  .union-post-title { margin-top: 7px; color: var(--ink); font-size: 12.5px; font-weight: 550; line-height: 1.3; }
+  .union-post-meta { margin-top: 6px; color: var(--faint); font: 400 8.5px/1.45 var(--mono); }
+  .union-post-access { margin-top: 9px; color: var(--soft); font: 500 8.5px var(--mono); }
+  .union-post-full { padding: 15px; border-top: 1px solid var(--line); }
+  .union-post-full-label { margin-bottom: 10px; color: var(--amber); font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+  .union-post-text { color: var(--soft); font-size: 11.5px; line-height: 1.55; }
+  .union-post-text p { margin: 0 0 10px; }
+  .union-post-text p:last-child { margin-bottom: 0; }
+  .union-post-foot { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 12px; color: var(--faint); font: 400 8.5px var(--mono); }
+  .union-post-foot a { color: var(--soft); text-decoration: none; }
+  .union-post-foot a:hover { color: var(--ink); }
+
   .horizon { display: grid; }
   .horizon-item { position: relative; padding: 0 0 17px 21px; }
   .horizon-item:last-child { padding-bottom: 0; }
@@ -233,8 +259,13 @@
     .signal-grid, .coverage-grid, .regulatory-grid { grid-template-columns: 1fr; }
     .issue, .coverage-item, .reg-item { border-right: 0; border-bottom: 1px solid var(--line); }
     #active-matters .panel-head { align-items: flex-start; flex-direction: column; }
-    .active-matter summary { grid-template-columns: 1fr; }
+    .active-matter > summary { grid-template-columns: 1fr; }
     .matter-state { justify-content: space-between; }
+    .union-post-section-head { align-items: flex-start; flex-direction: column; }
+    .union-post-grid { grid-template-columns: 1fr; }
+    .union-post-exhibit > summary { grid-template-columns: 112px minmax(0,1fr); }
+    .union-post-graphic { width: 112px; height: 112px; }
+    .union-post-foot { flex-direction: column; }
     .chronology-row { grid-template-columns: 1fr; gap: 4px; }
     .confidence { width: 100%; margin-left: 0; }
     .assurance > summary { align-items: flex-start; }
@@ -328,6 +359,32 @@
             <div class="chronology-row"><div class="chronology-step">Sequence 03</div><div class="chronology-text">The unions subsequently said the action had concluded and claimed operational effects. Those effects and any resulting bargaining movement remain unverified.<small>Current evidence boundary · effect must not be inferred</small></div></div>
           </div>
           <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1664477375684269&set=a.507507878047897" target="_blank">WMWA bargaining #11</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1519930930149638&set=a.166072128868865" target="_blank">ETU action post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1670598881738785&set=a.507507878047897" target="_blank">WMWA action post</a><span class="confidence">Source weight: direct union position · low for claimed effect</span></div>
+          <section class="union-post-evidence" aria-label="Union Facebook source posts">
+            <div class="union-post-section-head"><h3>Union Facebook source posts</h3><span>Graphics and full post text · no Facebook account required</span></div>
+            <div class="union-post-grid">
+            <details class="union-post-exhibit" data-post-id="1664477375684269">
+              <summary>
+                <img class="union-post-graphic" loading="lazy" src="assets/union-posts/1664477375684269.jpg" alt="WMWA graphic reading ‘BHP, the ball is in your court’, bargaining meeting 11 on today.">
+                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">BHP Ports bargaining meeting 11</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
+              </summary>
+              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>WMWA partner Union the AWU, along with the ETU and AMWU, are back at the bargaining table today for the 11th BHP Ports Bargaining meeting. Today&#x27;s meeting is being conducted with the assistance of the FWC.</p><p>This comes off the back of last week&#x27;s meeting, where the lack of any substantive progress seen the combined ports unions (AWU, ETU and AMWU) notify BHP of their intention to take Protected Industrial Action this Saturday and Sunday.</p><p>Workers at Port Hedland are highly skilled, and engage in high risk/high volume work, 24 hours a day, every day of the year. These workers are simply asking for a fair deal.</p><p>Today&#x27;s Ports bargaining meeting is another chance for BHP to make a substantive offer to address important things like:</p><p>A proposed REM models that is fair for all workers at Port Hedland</p><p>Allowances to fairly compensate both FIFO and Reso workers</p><p>A decent classification structure that promotes competency-based progression</p><p>The Ports Unions and our members want BHP to come to the table today with a substantive proposal that addresses our members concerns.</p><p>We will update members on the outcomes from today&#x27;s meeting by email, and as always, our members will get to determine what deal is acceptable or what isn’t.</p><p>Your organisers will be in Port Hedland and onsite this Thursday, and Friday to talk to members about this weekend&#x27;s proposed actions and answer any questions.</p><p>WMWA Fighting for Fair for in the Pilbara!</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1664477375684269&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
+            </details>
+            <details class="union-post-exhibit" data-post-id="1667801645351842">
+              <summary>
+                <img class="union-post-graphic" loading="lazy" src="assets/union-posts/1667801645351842.jpg" alt="Combined BHP Port Unions graphic reading ‘BHP Port Ops members are fighting back’.">
+                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">BHP Port Operations protected action notice</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
+              </summary>
+              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>From 0530 tomorrow, members from WMWA partner union the AWU will take a combined 48 hours of protected industrial Action at BHP Port Operations. They&#x27;ll be joined by members from the AMWU - Australian Manufacturing Workers&#x27; Union and ETU - The Electrical Trades Union from 0530 Sunday!</p><p>Our members are fed up of BHP&#x27;s months of delays and denial at the bargaining table. We&#x27;re stepping up the fight for a fair enterprise agreement that includes decent base rate wage increases, a fair classification structure with career progression and fair conditions to recognise the highly skilled, high volume, high risk work our members do, 24 hours a day 365 days a year.</p><p>Port Ops members, check your inbox for more info about this weekend&#x27;s protected action!</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1667801645351842&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
+            </details>
+            <details class="union-post-exhibit" data-post-id="1670598881738785">
+              <summary>
+                <img class="union-post-graphic" loading="lazy" src="assets/union-posts/1670598881738785.jpg" alt="Union graphic reproducing a Financial Review headline about BHP workers staging a weekend-long walkout.">
+                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">Union account after BHP Ports action</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
+              </summary>
+              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>Over the weekend, hundreds of members from the combined BHP Port Ops unions - WMWA partner union the AWU, The AMWU - Australian Manufacturing Workers&#x27; Union and the ETU - The Electrical Trades Union downed tools in our fight for a fair EA!</p><p>Our members know that our action had a huge impact at Port Hedland - and so does BHP.</p><p>We hope this action does exactly what it&#x27;s intended to do, and sharpen everyone’s mind on finding a solution that works for everyone, fast.</p><p>Thank you to every member who stood strong with us last weekend - your action made a big difference in our fight!</p><p>WMWA BHP Ports members, keep an eye on your inbox for updates.</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1670598881738785&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
+            </details>
+            </div>
+          </section>
         </div>
       </details>
 
@@ -348,6 +405,18 @@
             <div class="chronology-row"><div class="chronology-step">Evidence state</div><div class="chronology-text">The Commission order, ballot agent, timetable and South32 position are not in the evidence set.<small>Procedural status remains provisional</small></div></div>
           </div>
           <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1521453453330719&set=a.166072115535533" target="_blank">ETU ballot-order post</a><span class="confidence">Source weight: provisional until Commission record acquired</span></div>
+          <section class="union-post-evidence" aria-label="Union Facebook source posts">
+            <div class="union-post-section-head"><h3>Union Facebook source posts</h3><span>Graphics and full post text · no Facebook account required</span></div>
+            <div class="union-post-grid">
+            <details class="union-post-exhibit" data-post-id="1521453453330719">
+              <summary>
+                <img class="union-post-graphic" loading="lazy" src="assets/union-posts/1521453453330719.jpg" alt="ETU WA graphic reading ‘South32 PABO filed’ and ‘PABO ordered’.">
+                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">Worsley Alumina protected-action ballot order</div><div class="union-post-meta">ETU WA Branch · collected 15 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
+              </summary>
+              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>𝐒𝐎𝐔𝐓𝐇𝟑𝟐 𝐖𝐎𝐑𝐒𝐋𝐄𝐘 𝐀𝐋𝐔𝐌𝐈𝐍𝐀 𝐏𝐀𝐁𝐎 𝐎𝐑𝐃𝐄𝐑𝐄𝐃 — 𝐓𝐇𝐄 𝐅𝐈𝐆𝐇𝐓 𝐈𝐒 𝐎𝐍!</p><p>South32 Worsley Alumina members have filed for PABO, and the Fair Work Commission has made orders to conduct a ballot of members — the second step towards securing the right to take protected industrial action.</p><p>At the last meeting, South32 rolled out a document that rejected almost all of our claims. There wasn’t even an opportunity to properly review the agreement and negotiate its terms further. The Company decided to roll the dice and put it to a vote.</p><p>We expect South32 to bargain in good faith and stop looking for the exit ramp now that Alcoa has acquired Worsley Alumina.</p><p>Members are ready to get in the trenches. Has South32 learned anything from the previous agreement? Time will tell, with the current agreement set to expire on 1 September 2026.</p><p>𝐓𝐢𝐜𝐤 𝐭𝐨𝐜𝐤. 𝐓𝐢𝐜𝐤 𝐭𝐨𝐜𝐤. 𝐓𝐡𝐞 𝐜𝐥𝐨𝐜𝐤 𝐢𝐬 𝐫𝐮𝐧𝐧𝐢𝐧𝐠.</p><p>𝐓𝐡𝐞 𝐝𝐞𝐚𝐝𝐥𝐢𝐧𝐞 𝐢𝐬 𝐜𝐨𝐦𝐢𝐧𝐠. 𝐓𝐡𝐞 𝐩𝐫𝐞𝐬𝐬𝐮𝐫𝐞 𝐢𝐬 𝐛𝐮𝐢𝐥𝐝𝐢𝐧𝐠.</p><p>𝐈𝐟 𝐲𝐨𝐮 𝐝𝐨𝐧’𝐭 𝐟𝐢𝐠𝐡𝐭, 𝐲𝐨𝐮 𝐥𝐨𝐬𝐞!</p><p>Brezo - Organiser Kwinana &amp; South West</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1521453453330719&amp;set=a.166072115535533" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
+            </details>
+            </div>
+          </section>
         </div>
       </details>
 
@@ -368,6 +437,18 @@
             <div class="chronology-row"><div class="chronology-step">Evidence state</div><div class="chronology-text">No employer response, bargaining notice, access dispute or independently observed organising activity has been acquired.<small>No active Rio dispute should be inferred</small></div></div>
           </div>
           <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1671717254960281&set=a.507507878047897" target="_blank">WMWA post</a><span class="confidence">Source weight: advocacy only</span></div>
+          <section class="union-post-evidence" aria-label="Union Facebook source posts">
+            <div class="union-post-section-head"><h3>Union Facebook source posts</h3><span>Graphics and full post text · no Facebook account required</span></div>
+            <div class="union-post-grid">
+            <details class="union-post-exhibit" data-post-id="1671717254960281">
+              <summary>
+                <img class="union-post-graphic" loading="lazy" src="assets/union-posts/1671717254960281.jpg" alt="WMWA graphic contrasting a reported Rio warning about unions with Pilbara investment.">
+                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">Rio unionisation and investment claim</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
+              </summary>
+              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>RIO warns about unionisation in the Pilbara - but backs in Iron Ore futures all in the same week.</p><p>Rio Iron Ore chief Matthew Holcz was reported last week as saying that the re-unionisation of the Pilbara may have an impact on future investment.</p><p>But last week at the Melbourne Mining Club in Melbourne Town Hall, he also said despite ongoing demand about China’s maturing steel industry and rising scrap steel usage, the demise of iron ore is “very much being exaggerated”.</p><p>While China is approaching peak steelmaking capacity, Holcz said Rio Tinto expects Chinese iron ore consumption to remain relatively stable through to 2030, with some decline after that.</p><p>Meanwhile, the firm is betting that growth in emerging markets is expected to offset some of that pressure.</p><p>Whilst the contradiction can be hard to understand for outsiders, workers know that actions always speak louder than words.</p><p>Rio workers are watching the comapny spend billions in the Pilbara  on their New Hope Downs and Greater Brockman sites, as well as the expansion of the West Ang mine sites.</p><p>You can read up more here: https://www.investordaily.com.au/rio-tinto-bets-on-india.../</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1671717254960281&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
+            </details>
+            </div>
+          </section>
         </div>
       </details>
 
@@ -388,6 +469,32 @@
             <div class="chronology-row"><div class="chronology-step">Captured item 03</div><div class="chronology-text">WMWA promoted suicide-prevention and mental-health concerns for resources and FIFO workers.<small>Displayed date unavailable · workforce traction not established</small></div></div>
           </div>
           <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1673583661440307&set=a.507507878047897" target="_blank">Silica post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1671463784985628&set=a.507507878047897" target="_blank">Chemical exposure post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1675523597912980&set=a.507507878047897" target="_blank">FIFO mental-health post</a><span class="confidence">Source weight: issue promotion only</span></div>
+          <section class="union-post-evidence" aria-label="Union Facebook source posts">
+            <div class="union-post-section-head"><h3>Union Facebook source posts</h3><span>Graphics and full post text · no Facebook account required</span></div>
+            <div class="union-post-grid">
+            <details class="union-post-exhibit" data-post-id="1673583661440307">
+              <summary>
+                <img class="union-post-graphic" loading="lazy" src="assets/union-posts/1673583661440307.jpg" alt="WMWA graphic reading ‘It’s not just a bit of dust. Silica dust kills’.">
+                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">Silica testing campaign</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
+              </summary>
+              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>It might seem like just a bit of dust - but exposure to respirable crystalline silica can be deadly.</p><p>WMWA is currently working with HSRs and Safety in the fight for mandatory testing in WA mining. It&#x27;s time our sector caught up with the rest of Australia.</p><p>If you think you are being exposed to asbestos or silica, don&#x27;t just let it slide. Speak up, record it and contact your organiser. DM us if you need more info!</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1673583661440307&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
+            </details>
+            <details class="union-post-exhibit" data-post-id="1671463784985628">
+              <summary>
+                <img class="union-post-graphic" loading="lazy" src="assets/union-posts/1671463784985628.jpg" alt="WMWA graphic reading ‘Danger: toxic chemicals — is your workplace safe?’.">
+                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">Toxic-chemical exposure campaign</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
+              </summary>
+              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>Are you exposed to toxic chemicals at work?</p><p>WHS Ministers have rejected or delayed safer exposure limits for 9 chemicals, some of which are onsite across Pilbara mines:</p><p>Benzene</p><p>Chlorine</p><p>Copper</p><p>Formaldehyde</p><p>Hydrogen cyanide</p><p>Hydrogen sulphide</p><p>Nitrogen dioxide</p><p>Silica dust (RCS)</p><p>Titanium dioxide</p><p>We’re fighting for safer limits — but that won’t change unless we can show how these chemicals are actually being managed on Australian worksites.</p><p>Please take a few minutes to complete our survey and tell us what’s really going on at work. The more examples we have, the stronger our case. Every response is confidential, and we won’t share your details with anybody.</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1671463784985628&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
+            </details>
+            <details class="union-post-exhibit" data-post-id="1675523597912980">
+              <summary>
+                <img class="union-post-graphic" loading="lazy" src="assets/union-posts/1675523597912980.jpg" alt="WMWA graphic reading ‘Suicide prevention is everyone’s business’.">
+                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">FIFO suicide-prevention campaign</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
+              </summary>
+              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>Suicide Prevention is about people and in Australia, we lose about nine people to suicide every day - that&#x27;s nine people too many. Unfortunately, the resource sector and FIFO workers are disproportionally represented in these numbers.</p><p>Suicide prevention is everyone’s business, and your union takes it seriously.</p><p>Our members work long hours in gruelling conditions, away from family and friends, and often face a workplace culture that tells many to simply “harden up” or “push through”. That culture is costing lives.</p><p>WMWA partner unions the AWU and MEU play an important role. We are a trusted resource for workers, we are on the ground and we hear the quiet conversations.</p><p>Unions are not a replacement for clinical or crisis services, but we are often the first conversation, and we know the resource sector has a problem.</p><p>This isn’t about making tough industries soft. It’s about making them strong as a mentally healthy workforce is a safer workforce.</p><p>Suicide prevention must be built into the safety system - because every worker deserves to come home in one piece, body and mind.</p><p>If somethings not right, or you just need someone to talk to, your GP is always a good place to start. Otherwise there are plenty of good confidential services, like Lifeline  131114 or Yarn on 139276.</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1675523597912980&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
+            </details>
+            </div>
+          </section>
         </div>
       </details>
     </div>
@@ -423,7 +530,7 @@
   <details class="assurance" id="assurance-footer">
     <summary><strong>Method, coverage and collection health</strong><span class="assurance-summary">2/8 union pages · company and FWC feeds not connected · absence is not treated as silence</span></summary>
     <div class="assurance-body">
-      <div class="source-boundary"><strong>Source boundary:</strong> Union-authored posts are advocacy material and direct evidence only of what a union is asserting or promoting. Union-authored material does not establish operational impact, bargaining strength or influence without independent corroboration.</div>
+      <div class="source-boundary"><strong>Source boundary:</strong> Union-authored posts are advocacy material and direct evidence only of what a union is asserting or promoting. Union-authored material does not establish operational impact, bargaining strength or influence without independent corroboration. Pilbara Watch reproduces the captured union graphic and full visible post text for account-free access; Facebook interface labels are removed while the source wording is retained.</div>
       <div class="coverage-grid">
         <div class="coverage-item"><div class="coverage-source">Union Facebook</div><div class="coverage-status"><span class="status-dot partial"></span>Partial · 2 of 8 union pages</div></div>
         <div class="coverage-item"><div class="coverage-source">Evidence persistence</div><div class="coverage-status"><span class="status-dot ok"></span>Healthy · duplicate-free rerun</div></div>
@@ -438,7 +545,7 @@
     </div>
   </details>
 
-  <footer><span>Pilbara Watch · by Briefer · refinement 3</span><span>Generated 16 August 2026 · 3 PM cycle · market facts restored</span></footer>
+  <footer><span>Pilbara Watch · by Briefer · refinement 4</span><span>Generated 16 August 2026 · 3 PM cycle · union source access added</span></footer>
 </main>
 <script>
   const buttons = [...document.querySelectorAll('.filter')];
@@ -451,7 +558,7 @@
 </script>
 
 <div id="automation-publication-status" style="margin:24px auto;max-width:1100px;padding:12px 16px;border:1px solid rgba(255,255,255,.15);border-radius:8px;text-align:center;font:12px/1.4 system-ui;color:#aab4c3;background:#101722">
-  Automated publication verified · 2026-08-17T05:02:28+0800
+  Automated publication verified · 2026-08-17T05:41:07+0800
 </div>
 </body>
 </html>
