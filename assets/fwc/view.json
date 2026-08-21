@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-21T06:58:06.408Z",
+  "source": {
+    "label": "Fair Work Commission · Agreements in Progress",
+    "url": "https://www.fwc.gov.au/work-conditions/enterprise-agreements/find-enterprise-agreement/agreements-progress",
+    "snapshot_id": "2026-08-21T06-58-06.408Z",
+    "unique_matter_count": 332
+  },
+  "baseline_change": {
+    "kind": "fwc_evidence_baseline",
+    "title": "FWC evidence baseline connected",
+    "summary": "Three BHP ballot streams and the separate Mining Area C and South Flank agreement application are connected to official records. Worsley’s reported order remains unresolved."
+  },
+  "campaigns": [
+    {
+      "campaign_id": "bhp-port-operations-bargaining-2026",
+      "evidence_summary": {
+        "connected": 7,
+        "partially_connected": 2,
+        "unresolved": 0
+      },
+      "events": {
+        "BHP-002": [
+          {
+            "link_id": "BHP-LEGAL-001",
+            "record_type": "pabo_order",
+            "status": "connected",
+            "status_label": "Commission order connected",
+            "summary": "AMWU's BHP Port Operations protected-action-ballot proceeding is connected to an official Commission decision and order.",
+            "matter_numbers": [
+              "B2026/581"
+            ],
+            "facts_established": [
+              "The Commission made the AMWU protected action ballot order on 3 June 2026 in B2026/581.",
+              "The order expressly names the AMWU member list as the BHP Port Operations member list.",
+              "CiVS was appointed ballot agent and voting was to close on 11 June 2026.",
+              "The ballot question asked whether voters authorised stoppages between 30 minutes and 24 hours; the order imposed five working days' notice."
+            ],
+            "not_established": [
+              "The Commission documents do not establish that the application was filed on the exact publication date of the 30 May union post.",
+              "The order does not establish bargaining strength, operational effect or subsequent use of the authorised action."
+            ],
+            "official_records": [
+              {
+                "record_type": "pabo_decision",
+                "matter_no": "B2026/581",
+                "citation": "[2026] FWC 2061",
+                "date": "2026-06-03",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/852667"
+              },
+              {
+                "record_type": "pabo_order",
+                "matter_no": "B2026/581",
+                "citation": null,
+                "date": "2026-06-03",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/852668"
+              }
+            ]
+          }
+        ],
+        "BHP-003": [
+          {
+            "link_id": "BHP-LEGAL-002",
+            "record_type": "ballot_result",
+            "status": "connected",
+            "status_label": "Ballot result connected",
+            "summary": "The ETU/CEPU ballot campaign is connected to the official CEPU order and published ballot result.",
+            "matter_numbers": [
+              "B2026/585"
+            ],
+            "facts_established": [
+              "The Commission made the CEPU protected action ballot order on 2 June 2026.",
+              "CiVS was appointed ballot agent and voting closed on 11 June 2026.",
+              "The published result records 102 eligible voters, 89 participants and 89 yes votes to the stoppage question."
+            ],
+            "not_established": [
+              "The result does not establish support among employees outside the 102 eligible voters.",
+              "The ballot result does not establish that industrial action was subsequently taken or caused operational effects."
+            ],
+            "official_records": [
+              {
+                "record_type": "pabo_decision",
+                "matter_no": "B2026/585",
+                "citation": "[2026] FWC 2029",
+                "date": "2026-06-02",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/852566"
+              },
+              {
+                "record_type": "pabo_order",
+                "matter_no": "B2026/585",
+                "citation": null,
+                "date": "2026-06-02",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/852560"
+              },
+              {
+                "record_type": "ballot_result",
+                "matter_no": "B2026/585",
+                "citation": null,
+                "date": "2026-06-11",
+                "source_url": "https://www.fwc.gov.au/documents/ballot-results/cepu_2026585.pdf"
+              }
+            ]
+          }
+        ],
+        "BHP-005": [
+          {
+            "link_id": "BHP-LEGAL-003",
+            "record_type": "pabo_order",
+            "status": "connected",
+            "status_label": "Commission order connected",
+            "summary": "The WMWA post's AWU-linked PABO claim is connected to the official AWU decision and order.",
+            "matter_numbers": [
+              "B2026/702"
+            ],
+            "facts_established": [
+              "The Commission record says BHP did not object to the amended AWU application on 19 June 2026.",
+              "The Commission made the AWU protected action ballot order on 22 June 2026.",
+              "The ballot covered AWU members within the proposed agreement and was to close on 6 July 2026.",
+              "The questions covered stoppages and bans on vessel-loading activities."
+            ],
+            "not_established": [
+              "The official applicant is the AWU; the Commission record does not use WMWA as a legal applicant name.",
+              "The order does not establish bargaining strength, operational effect or workforce-wide support."
+            ],
+            "official_records": [
+              {
+                "record_type": "pabo_decision",
+                "matter_no": "B2026/702",
+                "citation": "[2026] FWC 2301",
+                "date": "2026-06-22",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/857145"
+              },
+              {
+                "record_type": "pabo_order",
+                "matter_no": "B2026/702",
+                "citation": null,
+                "date": "2026-06-22",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/857146"
+              }
+            ]
+          }
+        ],
+        "BHP-009": [
+          {
+            "link_id": "BHP-LEGAL-004",
+            "record_type": "ballot_result",
+            "status": "connected",
+            "status_label": "Ballot result connected",
+            "summary": "The AWU ballot result reported by WMWA is connected to the official declaration, and its denominator is now established.",
+            "matter_numbers": [
+              "B2026/702"
+            ],
+            "facts_established": [
+              "The published declaration records 87 eligible voters and 69 participants, a participation rate of 79.3%.",
+              "For each of the two questions, 67 participants voted yes and two voted no, producing 97.1% yes among participants who answered.",
+              "The first question covered stoppages between 30 minutes and 24 hours; the second covered bans on vessel-loading activities."
+            ],
+            "not_established": [
+              "The 97.1% figure is not 97.1% of all eligible voters and not 97.1% of the broader BHP Port Operations workforce.",
+              "The result does not establish participation or support outside AWU members eligible for this ballot."
+            ],
+            "official_records": [
+              {
+                "record_type": "ballot_result",
+                "matter_no": "B2026/702",
+                "citation": null,
+                "date": "2026-07-06",
+                "source_url": "https://www.fwc.gov.au/documents/ballot-results/awu_2026702.pdf"
+              }
+            ]
+          }
+        ],
+        "BHP-017": [
+          {
+            "link_id": "BHP-LEGAL-006",
+            "record_type": "fwc_assisted_bargaining",
+            "status": "partially_connected",
+            "status_label": "Partially connected",
+            "summary": "The PABO decisions establish that compulsory s.448A conciliation was to be programmed, but they do not independently verify the union-reported August meeting dates or bargaining substance.",
+            "matter_numbers": [
+              "B2026/585",
+              "B2026/581",
+              "B2026/702"
+            ],
+            "facts_established": [
+              "Each PABO decision states that a compulsory s.448A conciliation conference would be programmed or assigned and that bargaining representatives would be required to attend."
+            ],
+            "not_established": [
+              "No connected official record independently establishes that the claimed meetings occurred on 4 August or 19–20 August 2026.",
+              "No connected official record establishes BHP's offer, the parties' positions at those meetings, or any bargaining movement."
+            ],
+            "official_records": [
+              {
+                "record_type": "pabo_decision",
+                "matter_no": "B2026/585",
+                "citation": "[2026] FWC 2029",
+                "date": "2026-06-02",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/852566"
+              },
+              {
+                "record_type": "pabo_decision",
+                "matter_no": "B2026/581",
+                "citation": "[2026] FWC 2061",
+                "date": "2026-06-03",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/852667"
+              },
+              {
+                "record_type": "pabo_decision",
+                "matter_no": "B2026/702",
+                "citation": "[2026] FWC 2301",
+                "date": "2026-06-22",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/857145"
+              }
+            ]
+          }
+        ],
+        "BHP-020": [
+          {
+            "link_id": "BHP-LEGAL-006",
+            "record_type": "fwc_assisted_bargaining",
+            "status": "partially_connected",
+            "status_label": "Partially connected",
+            "summary": "The PABO decisions establish that compulsory s.448A conciliation was to be programmed, but they do not independently verify the union-reported August meeting dates or bargaining substance.",
+            "matter_numbers": [
+              "B2026/585",
+              "B2026/581",
+              "B2026/702"
+            ],
+            "facts_established": [
+              "Each PABO decision states that a compulsory s.448A conciliation conference would be programmed or assigned and that bargaining representatives would be required to attend."
+            ],
+            "not_established": [
+              "No connected official record independently establishes that the claimed meetings occurred on 4 August or 19–20 August 2026.",
+              "No connected official record establishes BHP's offer, the parties' positions at those meetings, or any bargaining movement."
+            ],
+            "official_records": [
+              {
+                "record_type": "pabo_decision",
+                "matter_no": "B2026/585",
+                "citation": "[2026] FWC 2029",
+                "date": "2026-06-02",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/852566"
+              },
+              {
+                "record_type": "pabo_decision",
+                "matter_no": "B2026/581",
+                "citation": "[2026] FWC 2061",
+                "date": "2026-06-03",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/852667"
+              },
+              {
+                "record_type": "pabo_decision",
+                "matter_no": "B2026/702",
+                "citation": "[2026] FWC 2301",
+                "date": "2026-06-22",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/857145"
+              }
+            ]
+          }
+        ],
+        "BHP-014": [
+          {
+            "link_id": "BHP-LEGAL-007",
+            "record_type": "agreement_application",
+            "status": "connected",
+            "status_label": "Agreement application connected",
+            "summary": "The separate Mining Area C and South Flank agreement is connected to the official Agreements in Progress registry and lodged agreement PDF.",
+            "matter_numbers": [
+              "AG2026/1877"
+            ],
+            "facts_established": [
+              "The frozen 21 August 2026 registry snapshot records AG2026/1877 for the BHP Mining Area C and South Flank Operations Agreement 2026, lodged on 15 July 2026.",
+              "At the frozen 21 August snapshot the matter was listed as Member consideration.",
+              "The lodged agreement covers employees working exclusively at Mining Area C or South Flank on-site mining operations and excludes Infrastructure and Services teams."
+            ],
+            "not_established": [
+              "The pending registry does not establish that the agreement has been approved.",
+              "The agreement is adjacent context and is not the proposed BHP Port Operations agreement."
+            ],
+            "official_records": [
+              {
+                "record_type": "lodged_agreement_pdf",
+                "matter_no": "AG2026/1877",
+                "citation": null,
+                "date": "2026-07-15",
+                "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_1877.pdf"
+              }
+            ]
+          }
+        ],
+        "BHP-008": [
+          {
+            "link_id": "BHP-LEGAL-009",
+            "record_type": "agreement_application",
+            "status": "partially_connected",
+            "status_label": "Partially connected",
+            "summary": "The separate Mining Area C and South Flank agreement is identified, but the union-reported employee vote result is not independently connected.",
+            "matter_numbers": [
+              "AG2026/1877"
+            ],
+            "facts_established": [
+              "The lodged agreement PDF identifies the separate Mining Area C and South Flank Operations Agreement 2026.",
+              "The frozen registry snapshot records its later approval application as AG2026/1877."
+            ],
+            "not_established": [
+              "Neither the registry snapshot nor the lodged agreement PDF establishes the reported 58% vote result.",
+              "Neither source establishes the reported denominator of approximately 1,800 workers.",
+              "The separate agreement does not establish any Port Operations bargaining outcome."
+            ],
+            "official_records": [
+              {
+                "record_type": "lodged_agreement_pdf",
+                "matter_no": "AG2026/1877",
+                "citation": null,
+                "date": "2026-07-15",
+                "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_1877.pdf"
+              }
+            ]
+          }
+        ]
+      },
+      "campaign_context": [
+        {
+          "link_id": "BHP-LEGAL-008",
+          "record_type": "ballot_result",
+          "status": "connected",
+          "status_label": "Ballot result connected",
+          "summary": "The official AMWU ballot declaration independently records the participation denominator and unanimous yes result among participants.",
+          "matter_numbers": [
+            "B2026/581"
+          ],
+          "facts_established": [
+            "The published declaration records 47 eligible voters and 42 participants, a participation rate of 89.4%.",
+            "All 42 participants voted yes and none voted no to the stoppage question."
+          ],
+          "not_established": [
+            "The result does not establish support among employees outside the 47 eligible AMWU voters.",
+            "The ballot result does not establish that industrial action was subsequently taken or caused operational effects."
+          ],
+          "official_records": [
+            {
+              "record_type": "ballot_result",
+              "matter_no": "B2026/581",
+              "citation": null,
+              "date": "2026-06-11",
+              "source_url": "https://www.fwc.gov.au/documents/ballot-results/amwu_2026581.pdf"
+            }
+          ]
+        },
+        {
+          "link_id": "BHP-LEGAL-005",
+          "record_type": "action_period_extension",
+          "status": "connected",
+          "status_label": "Authorisation extension connected",
+          "summary": "The Commission extended the statutory periods for commencing protected action under all three union ballots.",
+          "matter_numbers": [
+            "B2026/775",
+            "B2026/782",
+            "B2026/916"
+          ],
+          "facts_established": [
+            "The CEPU and AMWU periods were each extended by 30 days, with the extension orders operating from 11 July 2026.",
+            "The AWU period was extended by 30 days, with the order operating from 10 August 2026.",
+            "BHP advised the Commission it did not object to each extension application."
+          ],
+          "not_established": [
+            "Extension of an authorisation period does not establish that protected action occurred, its duration, or any operational effect."
+          ],
+          "official_records": [
+            {
+              "record_type": "action_period_extension_decision",
+              "matter_no": "B2026/775",
+              "citation": "[2026] FWC 2584",
+              "date": "2026-07-07",
+              "source_url": "https://www.fwc.gov.au/document-view/media/download/863438"
+            },
+            {
+              "record_type": "action_period_extension_decision",
+              "matter_no": "B2026/782",
+              "citation": "[2026] FWC 2615",
+              "date": "2026-07-09",
+              "source_url": "https://www.fwc.gov.au/document-view/media/download/863837"
+            },
+            {
+              "record_type": "action_period_extension_decision",
+              "matter_no": "B2026/916",
+              "citation": "[2026] FWC 3018",
+              "date": "2026-08-10",
+              "source_url": "https://www.fwc.gov.au/document-view/media/download/877750"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaign_id": "south32-worsley-alumina-bargaining-2026",
+      "evidence_summary": {
+        "connected": 0,
+        "partially_connected": 0,
+        "unresolved": 2
+      },
+      "events": {
+        "WOR-002": [
+          {
+            "link_id": "WOR-LEGAL-001",
+            "record_type": "pabo_order",
+            "status": "unresolved",
+            "status_label": "Official record not yet connected",
+            "summary": "No matching public Commission record was located for the ETU's reported Worsley PABO application under the tested identities.",
+            "matter_numbers": [],
+            "facts_established": [],
+            "not_established": [
+              "The matter number, filing date, employees covered, ballot agent, questions and timetable remain unresolved from official sources.",
+              "The negative search result does not prove that no application exists; a recent or differently indexed record may not yet be publicly discoverable."
+            ],
+            "official_records": []
+          }
+        ],
+        "WOR-003": [
+          {
+            "link_id": "WOR-LEGAL-002",
+            "record_type": "pabo_order",
+            "status": "unresolved",
+            "status_label": "Official record not yet connected",
+            "summary": "The ETU's report that the Commission made a Worsley protected action ballot order is not yet connected to a public order or ballot result.",
+            "matter_numbers": [],
+            "facts_established": [],
+            "not_established": [
+              "No official order date, matter number, employee coverage, ballot agent, ballot questions or voting deadline was located.",
+              "No Worsley or South32 entry appeared in the Commission's current published ballot-results page at capture time.",
+              "The negative search result does not disprove the union report."
+            ],
+            "official_records": []
+          }
+        ]
+      },
+      "campaign_context": []
+    }
+  ],
+  "agreements": {
+    "direct_count": 10,
+    "secondary_count": 4,
+    "clusters": [
+      {
+        "cluster_id": "bhp-adjacent",
+        "title": "BHP adjacent agreement",
+        "description": "Separate Mining Area C and South Flank agreement; relevant as campaign context, not as the Port Operations agreement.",
+        "matters": [
+          {
+            "matter_no": "AG2026/1877",
+            "title": "BHP Mining Area C and South Flank Operations Agreement 2026",
+            "applicant": "BHP WAIO Pty Ltd",
+            "status": "Member consideration",
+            "lodged_at": "2026-07-15T15:51:00",
+            "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_1877.pdf",
+            "relevance": "BHP WAIO agreement expressly covers employees working exclusively at Mining Area C or South Flank on-site mining operations.",
+            "quality_flags": []
+          }
+        ]
+      },
+      {
+        "cluster_id": "port-stevedoring",
+        "title": "Port and stevedoring",
+        "description": "Pending agreements with express Dampier, Port Hedland or North West waterside coverage.",
+        "matters": [
+          {
+            "matter_no": "AG2026/2171",
+            "title": "LINX Dampier/Port Hedland Enterprise Agreement 2026",
+            "applicant": "Linx Cargo Care Pty Ltd Trading AS Linx Cargo Care",
+            "status": "Member consideration",
+            "lodged_at": "2026-08-10T15:17:00",
+            "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2171.pdf",
+            "relevance": "Agreement expressly covers LINX stevedoring operations at Dampier and Port Hedland.",
+            "quality_flags": []
+          },
+          {
+            "matter_no": "AG2026/2173",
+            "title": "Toll & MUA WA Stevedoring Agreement 2026",
+            "applicant": "Toll Transport Pty Limited",
+            "status": "Member consideration",
+            "lodged_at": "2026-08-10T15:50:00",
+            "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2173.pdf",
+            "relevance": "Agreement applies to waterside work in the North West, expressly defining Karratha, Dampier, South Hedland and Port Hedland within scope.",
+            "quality_flags": []
+          }
+        ]
+      },
+      {
+        "cluster_id": "karratha-burrup-operations",
+        "title": "Karratha and Burrup operations",
+        "description": "Maintenance and related work at Woodside-operated facilities in Karratha and the Burrup Peninsula.",
+        "matters": [
+          {
+            "matter_no": "AG2026/2077",
+            "title": "UGL Resources (Contracting) Pty Ltd Karratha Enterprise Agreement 2026",
+            "applicant": "UGL Resources (Contracting) Pty Ltd",
+            "status": "Member consideration",
+            "lodged_at": "2026-08-04T07:11:00",
+            "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2077.pdf",
+            "relevance": "Agreement scope covers work at Woodside-operated facilities in Karratha and the Burrup Peninsula.",
+            "quality_flags": []
+          }
+        ]
+      },
+      {
+        "cluster_id": "project-ceres",
+        "title": "Perdaman Project Ceres",
+        "description": "Five contractor greenfields agreements for construction and commissioning work at the Burrup Peninsula project near Karratha.",
+        "matters": [
+          {
+            "matter_no": "AG2026/1306",
+            "title": "Boyle Civil Contracting Pty Ltd Perdaman Ceres Project Greenfields Agreement 2024",
+            "applicant": "CFMEU (105N)",
+            "status": "Member consideration",
+            "lodged_at": "2026-06-01T10:16:00",
+            "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_1306.pdf",
+            "relevance": "Agreement covers Boyle Civil Contracting construction and commissioning work for Perdaman Project Ceres at the Burrup Peninsula near Karratha.",
+            "quality_flags": [
+              "The agreement body retains [Employer] and [insert ABN] placeholders, although the lodged title and project scope identify Boyle Civil Contracting and Perdaman Ceres."
+            ]
+          },
+          {
+            "matter_no": "AG2026/2213",
+            "title": "NEPEAN Power Pty Ltd Perdaman Ceres Project Greenfields Agreement 2024",
+            "applicant": "CFMEU (105N)",
+            "status": "Member consideration",
+            "lodged_at": "2026-08-13T09:25:00",
+            "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2213.pdf",
+            "relevance": "Greenfields agreement covers Perdaman Project Ceres construction and commissioning at the Burrup Peninsula near Karratha.",
+            "quality_flags": []
+          },
+          {
+            "matter_no": "AG2026/2214",
+            "title": "Six Star Projects Perdaman Ceres Project Greenfields Agreement 2024",
+            "applicant": "CFMEU (105N)",
+            "status": "Member consideration",
+            "lodged_at": "2026-08-13T10:32:00",
+            "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2214.pdf",
+            "relevance": "Agreement covers Six Star Projects construction and commissioning work for Perdaman Project Ceres at the Burrup Peninsula near Karratha.",
+            "quality_flags": []
+          },
+          {
+            "matter_no": "AG2026/2225",
+            "title": "AULDEC Solutions Pty Ltd Perdaman \r\nCeres Project Greenfields Agreement 2024",
+            "applicant": "Auldec Solutions Pty Ltd",
+            "status": "Initial assessment",
+            "lodged_at": "2026-08-14T10:02:00",
+            "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2225.pdf",
+            "relevance": "Agreement covers AULDEC Solutions construction and commissioning work for Perdaman Project Ceres at the Burrup Peninsula near Karratha.",
+            "quality_flags": [
+              "Clause 1 names KEC Power Pty Ltd T/As Genus Industrial Services, while the lodged title, parties clause and scope identify AULDEC Solutions and Perdaman Ceres."
+            ]
+          },
+          {
+            "matter_no": "AG2026/2252",
+            "title": "Link Civilcon Holdings Pty Ltd Perdaman Ceres Project Greenfields Agreement 2024",
+            "applicant": "CFMEU (105N)",
+            "status": "Initial assessment",
+            "lodged_at": "2026-08-18T14:07:00",
+            "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2252.pdf",
+            "relevance": "Agreement covers Link Civilcon construction and commissioning work for Perdaman Project Ceres at the Burrup Peninsula near Karratha.",
+            "quality_flags": []
+          }
+        ]
+      },
+      {
+        "cluster_id": "north-west-construction",
+        "title": "North West construction",
+        "description": "Large-project construction coverage at or north of the 26th parallel in Western Australia.",
+        "matters": [
+          {
+            "matter_no": "AG2026/2254",
+            "title": "Future Power WA Pty Ltd Enterprise Agreement 2026",
+            "applicant": "Future Power Wa Pty Ltd",
+            "status": "Initial assessment",
+            "lodged_at": "2026-08-18T16:19:00",
+            "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2254.pdf",
+            "relevance": "Agreement covers construction work at or north of the 26th parallel in Western Australia on contracts above $25 million.",
+            "quality_flags": []
+          }
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "matter_no": "AG2026/1085",
+        "title": "Axess Offshore Australia Enterprise Agreement 2026",
+        "applicant": "Axess Offshore Australia Pty Ltd Trading AS Axess Offshore Australia",
+        "status": "Member consideration",
+        "lodged_at": "2026-05-12T10:47:00",
+        "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_1085.pdf",
+        "relevance": "National agreement covers remote onshore and offshore oil-and-gas inspection and maintenance work; potentially relevant as an offshore/Pilbara comparator but no Pilbara location is specified.",
+        "quality_flags": []
+      },
+      {
+        "matter_no": "AG2026/2161",
+        "title": "John Holland Pty Ltd WA Rail Agreement 2025",
+        "applicant": "John Holland Pty Ltd",
+        "status": "Member consideration",
+        "lodged_at": "2026-08-10T14:03:00",
+        "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2161.pdf",
+        "relevance": "The ordinary application clause excludes the Pilbara, but covered employees may by mutual agreement take temporary Pilbara assignments with a project allowance; secondary monitoring is justified without treating it as a Pilbara agreement.",
+        "quality_flags": []
+      },
+      {
+        "matter_no": "AG2026/2196",
+        "title": "Oil and Gas Agreement 2026",
+        "applicant": "MPC Group Labour Pty Ltd",
+        "status": "Member consideration",
+        "lodged_at": "2026-08-12T09:44:00",
+        "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2196.pdf",
+        "relevance": "National MPC Group Labour agreement covers MPK oil-and-gas operations in Australia and remote-project rosters; potentially relevant as a comparator but not Pilbara-specific.",
+        "quality_flags": []
+      },
+      {
+        "matter_no": "AG2026/2232",
+        "title": "Sandvik Rock Processing Australia & Union Enterprise Agreement West Coast 2026",
+        "applicant": "Sandvik Rock Processing Australia Pty Limited",
+        "status": "Initial assessment",
+        "lodged_at": "2026-08-17T09:38:00",
+        "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2232.pdf",
+        "relevance": "Agreement covers Sandvik Rock Processing employees throughout Western Australia; materially adjacent to iron-ore operations but no Pilbara asset or location is specified.",
+        "quality_flags": []
+      }
+    ],
+    "boundary": "Pending applications are procedural observations. They do not establish approval, operational effect or an industrial causal relationship."
+  }
+}

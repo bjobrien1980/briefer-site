@@ -247,6 +247,57 @@
   .all-posts-head { margin-bottom: 11px; display: flex; justify-content: space-between; gap: 12px; color: var(--faint); font: 400 10.5px var(--mono); }
   .campaign-error { padding: 12px; border: 1px solid var(--red); border-radius: 6px; color: #ff8696; font-size: 13px; }
 
+  .campaign-official-summary { margin-top: 12px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--green-soft); }
+  .campaign-official-summary strong { color: var(--soft); font: 600 10.5px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+  .campaign-official-summary span { color: var(--muted); font: 400 10.5px var(--mono); }
+  details.official-evidence { margin-top: 11px; border: 1px solid var(--line); border-radius: 6px; background: #0a0d11; }
+  .official-evidence > summary { padding: 10px 11px; grid-template-columns: auto minmax(0,1fr) auto; gap: 10px; }
+  .evidence-status { padding: 4px 7px; border-radius: 99px; font: 600 9.5px var(--mono); white-space: nowrap; }
+  .evidence-status.connected { color: #86d2a6; background: var(--green-soft); }
+  .evidence-status.partially_connected { color: #efaa77; background: var(--amber-soft); }
+  .evidence-status.unresolved { color: #ff8696; background: var(--red-soft); }
+  .official-evidence-summary { color: var(--soft); font-size: 12.5px; }
+  .official-evidence-matter { color: var(--faint); font: 500 9.5px var(--mono); white-space: nowrap; }
+  .official-evidence-body { padding: 12px; border-top: 1px solid var(--line); }
+  .official-evidence-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .official-evidence-grid h5 { margin: 0 0 7px; color: var(--faint); font: 600 9.5px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+  .official-evidence-grid ul { margin: 0; padding-left: 17px; color: var(--muted); font-size: 12px; }
+  .official-evidence-grid li + li { margin-top: 5px; }
+  .official-record-links { margin-top: 11px; padding-top: 10px; border-top: 1px solid var(--line); display: flex; gap: 7px; flex-wrap: wrap; }
+  .official-record-link { padding: 5px 7px; border: 1px solid var(--line); border-radius: 4px; color: var(--soft); font: 500 9.5px var(--mono); text-decoration: none; }
+  .official-record-link:hover { border-color: var(--line-strong); color: var(--ink); }
+  details.campaign-legal-context { margin-top: 12px; border: 1px solid var(--line); border-radius: 7px; background: var(--green-soft); }
+  .campaign-legal-context > summary { padding: 11px 12px; color: var(--soft); font: 600 10.5px var(--mono); text-transform: uppercase; }
+  .campaign-legal-context-body { padding: 0 12px 12px; }
+
+  #agreements-progress { margin-top: 18px; }
+  .agreements-loading { padding: 16px 17px; color: var(--faint); font: 400 11px var(--mono); }
+  .agreement-clusters { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .agreement-cluster { min-width: 0; padding: 17px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .agreement-cluster:nth-child(2n) { border-right: 0; }
+  .agreement-cluster:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
+  .agreement-cluster-head { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; }
+  .agreement-cluster h3 { margin: 0; font-size: 15px; font-weight: 550; }
+  .agreement-count { color: var(--amber); font: 500 10px var(--mono); white-space: nowrap; }
+  .agreement-cluster-copy { margin-top: 6px; color: var(--muted); font-size: 12.5px; }
+  .agreement-list { margin-top: 12px; display: grid; gap: 7px; }
+  .agreement-matter { min-width: 0; padding: 10px 11px; border: 1px solid var(--line); border-radius: 6px; background: #0b0e12; }
+  .agreement-matter-top { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 10px; align-items: baseline; }
+  .agreement-number { color: var(--amber); font: 500 10px var(--mono); }
+  .agreement-title { min-width: 0; color: var(--soft); font-size: 12.5px; font-weight: 550; text-align: left; text-decoration: none; }
+  .agreement-title:hover { color: var(--ink); }
+  .agreement-status { color: var(--green); font: 500 9.5px var(--mono); white-space: nowrap; }
+  .agreement-meta { margin-top: 6px; color: var(--faint); font: 400 9.5px var(--mono); }
+  .agreement-relevance { margin-top: 7px; color: var(--muted); font-size: 11.5px; }
+  details.agreement-quality { margin-top: 7px; border-top: 1px solid var(--line); }
+  .agreement-quality > summary { padding: 7px 0 0; color: var(--amber); font: 500 9.5px var(--mono); display: flex; }
+  .agreement-quality-note { padding-top: 7px; color: var(--muted); font-size: 11px; }
+  .agreements-secondary { border-top: 1px solid var(--line); }
+  .agreements-secondary > summary { padding: 13px 17px; color: var(--soft); font: 600 10.5px var(--mono); text-transform: uppercase; }
+  .agreements-secondary-body { padding: 0 17px 15px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; }
+  .agreements-boundary { padding: 11px 17px; border-top: 1px solid var(--line); color: var(--faint); font-size: 11.5px; display: flex; justify-content: space-between; gap: 18px; }
+  .agreements-boundary a { color: var(--soft); text-decoration: none; white-space: nowrap; }
+
   .horizon { display: grid; }
   .horizon-item { position: relative; padding: 0 0 17px 21px; }
   .horizon-item:last-child { padding-bottom: 0; }
@@ -336,6 +387,14 @@
     .campaign-post-grid { grid-template-columns: 1fr; }
     .campaign-post-top { grid-template-columns: 96px minmax(0,1fr); }
     .campaign-post-image, .campaign-post-no-image { width: 96px; height: 96px; min-height: 96px; }
+    .official-evidence > summary { grid-template-columns: 1fr; }
+    .official-evidence-grid { grid-template-columns: 1fr; }
+    .campaign-official-summary { align-items: flex-start; flex-direction: column; }
+    .agreement-clusters, .agreements-secondary-body { grid-template-columns: 1fr; }
+    .agreement-cluster { border-right: 0; }
+    .agreement-cluster:last-child:nth-child(odd) { grid-column: auto; }
+    .agreement-matter-top { grid-template-columns: 1fr; gap: 4px; }
+    .agreements-boundary { align-items: flex-start; flex-direction: column; }
     .chronology-row { grid-template-columns: 1fr; gap: 4px; }
     .confidence { width: 100%; margin-left: 0; }
     .assurance > summary { align-items: flex-start; }
@@ -352,7 +411,7 @@
       <div class="masthead-byline">by <span class="wordmark">brief<i>er</i></span></div>
     </div>
     <div class="masthead-tools">
-      <div class="edition"><span class="live-dot"></span><span><strong>3 PM edition</strong> · Sunday, 16 August 2026 · AWST</span></div>
+      <div class="edition"><span class="live-dot"></span><span><strong>3 PM edition</strong> · Friday, 21 August 2026 · AWST</span></div>
     </div>
   </section>
 
@@ -394,10 +453,10 @@
   </section>
 
   <section class="panel delta-panel" id="edition-delta">
-    <div class="panel-head"><h2 class="panel-title">What changed since the previous edition</h2><span class="panel-kicker">3 PM · baseline edition</span></div>
+    <div class="panel-head"><h2 class="panel-title">What changed since the previous edition</h2><span class="panel-kicker">3 PM · evidence baseline</span></div>
     <div class="panel-body baseline">
-      <div class="baseline-glyph">B</div>
-      <div><strong>First structured baseline established</strong><p>No earlier structured edition exists against which to calculate a genuine change. Pilbara Watch will report additions, reversals and verified status changes here from the next acquisition cycle rather than manufacture a morning-to-afternoon delta.</p></div>
+      <div class="baseline-glyph">F</div>
+      <div><strong>FWC evidence baseline connected</strong><p>Three BHP ballot streams and the separate Mining Area C and South Flank agreement application are now linked to official records. Worsley’s reported protected-action ballot order remains unresolved. The pending-agreement register is a first snapshot, not a claim that every listed application is new.</p></div>
     </div>
   </section>
 
@@ -522,6 +581,11 @@
     </div>
   </section>
 
+  <section class="panel" id="agreements-progress">
+    <div class="panel-head"><div><h2 class="panel-title">Agreements in progress</h2><span class="panel-kicker">10 direct Pilbara matters · grouped by operational context</span></div><span class="panel-kicker">FWC snapshot · 21 August</span></div>
+    <div data-fwc-agreements><div class="agreements-loading">Loading reviewed pending-agreement register…</div></div>
+  </section>
+
   <section class="panel" id="regulatory-watch" style="margin-top:18px;">
     <div class="panel-head"><h2 class="panel-title">Regulatory and workplace developments</h2><span class="panel-kicker">official sources · relevance signalled, not overstated</span></div>
     <div class="regulatory-grid">
@@ -550,7 +614,7 @@
   </section>
 
   <details class="assurance" id="assurance-footer">
-    <summary><strong>Method, coverage and collection health</strong><span class="assurance-summary">6-page union corpus · 629 posts · company and FWC feeds not connected</span></summary>
+    <summary><strong>Method, coverage and collection health</strong><span class="assurance-summary">6-page union corpus · 629 posts · reviewed FWC baseline connected</span></summary>
     <div class="assurance-body">
       <div class="source-boundary"><strong>Source boundary:</strong> Union-authored posts are advocacy material and direct evidence only of what a union is asserting or promoting. Union-authored material does not establish operational impact, bargaining strength or influence without independent corroboration. Pilbara Watch reproduces the captured union graphic and full visible post text for account-free access; Facebook interface labels are removed while the source wording is retained.</div>
       <div class="coverage-grid">
@@ -558,7 +622,7 @@
         <div class="coverage-item"><div class="coverage-source">Evidence persistence</div><div class="coverage-status"><span class="status-dot ok"></span>Healthy · duplicate-free rerun</div></div>
         <div class="coverage-item"><div class="coverage-source">Regulatory sources</div><div class="coverage-status"><span class="status-dot ok"></span>Manual official-source baseline</div></div>
         <div class="coverage-item"><div class="coverage-source">Company announcements — not connected</div><div class="coverage-status"><span class="status-dot"></span>No inference drawn</div></div>
-        <div class="coverage-item"><div class="coverage-source">FWC feed — not connected</div><div class="coverage-status"><span class="status-dot"></span>Orders not independently acquired</div></div>
+        <div class="coverage-item"><div class="coverage-source">FWC legal records</div><div class="coverage-status"><span class="status-dot ok"></span>13 official documents · 332 pending matters</div></div>
         <div class="coverage-item"><div class="coverage-source">Market snapshot</div><div class="coverage-status"><span class="status-dot ok"></span>Manual · source-linked baseline</div></div>
         <div class="coverage-item"><div class="coverage-source">Production and operating data</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
         <div class="coverage-item"><div class="coverage-source">News and specialist media</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
@@ -567,7 +631,7 @@
     </div>
   </details>
 
-  <footer><span>Pilbara Watch · by Briefer · refinement 5</span><span>Reviewed campaign histories · milestone and full-post views</span></footer>
+  <footer><span>Pilbara Watch · by Briefer · refinement 6</span><span>Campaign histories · official evidence · pending agreements</span></footer>
 </main>
 <script>
   const buttons = [...document.querySelectorAll('.filter')];
@@ -581,6 +645,7 @@
   const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' })[character]);
   const dateRange = (start, end) => end && end !== start ? `${start}–${end}` : start;
   const safeFacebookUrl = value => /^https:\/\/www\.facebook\.com\//.test(value || '') ? value : null;
+  const safeFwcUrl = value => /^https:\/\/www\.fwc\.gov\.au\//.test(value || '') ? value : null;
 
   function postCard(post) {
     const graphic = post.graphics?.[0];
@@ -596,24 +661,38 @@
     </article>`;
   }
 
-  function eventCard(event) {
-    const sourceLabel = `${event.source_posts.length} source post${event.source_posts.length === 1 ? '' : 's'}`;
-    return `<details class="campaign-event"><summary><span class="event-date">${escapeHtml(dateRange(event.event_date, event.event_end_date))}</span><span class="event-summary">${escapeHtml(event.summary)}</span><span class="event-type">${escapeHtml(event.event_type.replaceAll('_', ' '))}</span></summary><div class="campaign-event-body"><div class="campaign-boundary">${escapeHtml(event.source_boundary)} · ${sourceLabel}${event.source_posts.length > 1 ? ' · aligned posts are not independent corroboration' : ''}</div><div class="campaign-post-grid">${event.source_posts.map(postCard).join('')}</div></div></details>`;
+  function officialEvidence(link) {
+    const records = (link.official_records || []).filter(record => safeFwcUrl(record.source_url));
+    const recordLinks = records.map(record => `<a class="official-record-link" href="${escapeHtml(record.source_url)}" target="_blank" rel="noopener">${escapeHtml(record.citation || record.matter_no || 'FWC record')} · ${escapeHtml((record.record_type || 'record').replaceAll('_', ' '))} ↗</a>`).join('');
+    const established = (link.facts_established || []).map(item => `<li>${escapeHtml(item)}</li>`).join('') || '<li>No additional official fact connected.</li>';
+    const boundary = (link.not_established || []).map(item => `<li>${escapeHtml(item)}</li>`).join('') || '<li>No additional boundary recorded.</li>';
+    return `<details class="official-evidence" data-evidence-status="${escapeHtml(link.status)}"><summary><span class="evidence-status ${escapeHtml(link.status)}">${escapeHtml(link.status_label)}</span><span class="official-evidence-summary">${escapeHtml(link.summary)}</span><span class="official-evidence-matter">${escapeHtml((link.matter_numbers || []).join(' · '))}</span></summary><div class="official-evidence-body"><div class="official-evidence-grid"><section><h5>Established by official record</h5><ul>${established}</ul></section><section><h5>Evidence boundary</h5><ul>${boundary}</ul></section></div>${recordLinks ? `<div class="official-record-links">${recordLinks}</div>` : ''}</div></details>`;
   }
 
-  function renderCampaign(panel, campaign) {
+  function eventCard(event, legalEvents = {}) {
+    const sourceLabel = `${event.source_posts.length} source post${event.source_posts.length === 1 ? '' : 's'}`;
+    const official = (legalEvents[event.event_id] || []).map(officialEvidence).join('');
+    return `<details class="campaign-event" data-event-id="${escapeHtml(event.event_id)}"><summary><span class="event-date">${escapeHtml(dateRange(event.event_date, event.event_end_date))}</span><span class="event-summary">${escapeHtml(event.summary)}</span><span class="event-type">${escapeHtml(event.event_type.replaceAll('_', ' '))}</span></summary><div class="campaign-event-body"><div class="campaign-boundary">${escapeHtml(event.source_boundary)} · ${sourceLabel}${event.source_posts.length > 1 ? ' · aligned posts are not independent corroboration' : ''}</div>${official}<div class="campaign-post-grid">${event.source_posts.map(postCard).join('')}</div></div></details>`;
+  }
+
+  function renderCampaign(panel, campaign, legalCampaign) {
     const latestIndex = Math.max(0, campaign.milestones.length - 1);
+    const legalEvents = legalCampaign?.events || {};
+    const summary = legalCampaign?.evidence_summary || { connected: 0, partially_connected: 0, unresolved: 0 };
+    const contextLinks = legalCampaign?.campaign_context || [];
     panel.innerHTML = `<div class="campaign-state-grid">
       <section class="campaign-state-block"><div class="campaign-eyebrow">Current position</div><div class="campaign-stage">${escapeHtml(campaign.current_stage.label)}</div><div class="campaign-basis">${escapeHtml(campaign.current_stage.basis)}</div></section>
       <section class="campaign-state-block"><div class="campaign-eyebrow">Latest material change</div><div class="campaign-state-copy">${escapeHtml(campaign.latest_change)}</div><div class="campaign-eyebrow" style="margin-top:12px">Principal union claims</div><ul class="campaign-list">${campaign.principal_claims.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>
       <section class="campaign-state-block"><div class="campaign-eyebrow">Open verification</div><ul class="campaign-list">${campaign.open_verification.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>
     </div>
+    <div class="campaign-official-summary"><strong>Official evidence</strong><span>${summary.connected} connected · ${summary.partially_connected} partially connected · ${summary.unresolved} unresolved</span></div>
     <div class="campaign-tabs" role="tablist"><button class="campaign-tab active" data-campaign-view="milestones">Milestones</button><button class="campaign-tab" data-campaign-view="posts">All campaign posts</button></div>
     <section class="campaign-view" data-view-panel="milestones">
       <div class="campaign-spine" style="--milestone-count:${campaign.milestones.length}">${campaign.milestones.map((milestone, index) => `<button class="milestone-marker ${index === latestIndex ? 'active' : ''}" data-milestone-index="${index}"><span class="milestone-date">${escapeHtml(dateRange(milestone.start_date, milestone.end_date))}</span><span class="milestone-title">${escapeHtml(milestone.title)}</span></button>`).join('')}</div>
-      <div class="milestone-details">${campaign.milestones.map((milestone, index) => `<article class="milestone-detail ${index === latestIndex ? 'active' : ''}" data-milestone-detail="${index}"><div class="milestone-detail-head"><div><h4>${escapeHtml(milestone.title)}</h4><div class="milestone-summary">${escapeHtml(milestone.summary)}</div></div><div class="milestone-evidence">${milestone.source_post_count} source posts<br>${escapeHtml(milestone.evidence_state)}</div></div><div class="campaign-events">${milestone.events.map(eventCard).join('')}</div></article>`).join('')}</div>
-      ${campaign.context_events.length ? `<aside class="context-lane"><h4>Adjacent agreement context</h4>${campaign.context_events.map(eventCard).join('')}</aside>` : ''}
+      <div class="milestone-details">${campaign.milestones.map((milestone, index) => `<article class="milestone-detail ${index === latestIndex ? 'active' : ''}" data-milestone-detail="${index}"><div class="milestone-detail-head"><div><h4>${escapeHtml(milestone.title)}</h4><div class="milestone-summary">${escapeHtml(milestone.summary)}</div></div><div class="milestone-evidence">${milestone.source_post_count} source posts<br>${escapeHtml(milestone.evidence_state)}</div></div><div class="campaign-events">${milestone.events.map(event => eventCard(event, legalEvents)).join('')}</div></article>`).join('')}</div>
+      ${campaign.context_events.length ? `<aside class="context-lane"><h4>Adjacent agreement context</h4>${campaign.context_events.map(event => eventCard(event, legalEvents)).join('')}</aside>` : ''}
       ${campaign.undated_exhibits.length ? `<aside class="undated-exhibits"><h4>Relevant undated campaign exhibit</h4><div class="campaign-post-grid">${campaign.undated_exhibits.map(item => postCard({ ...item, published_date: null, date_precision: null })).join('')}</div></aside>` : ''}
+      ${contextLinks.length ? `<details class="campaign-legal-context"><summary>Additional official campaign records · ${contextLinks.length}</summary><div class="campaign-legal-context-body">${contextLinks.map(officialEvidence).join('')}</div></details>` : ''}
     </section>
     <section class="campaign-view" data-view-panel="posts" hidden><div class="all-posts-head"><span>${campaign.all_posts.length} accepted source posts</span><span>Graphics and complete text · no Facebook account required</span></div><div class="campaign-post-grid">${campaign.all_posts.map(postCard).join('')}</div></section>`;
 
@@ -628,28 +707,47 @@
     }));
   }
 
+  function agreementMatter(item) {
+    const link = safeFwcUrl(item.source_url);
+    const quality = (item.quality_flags || []).length ? `<details class="agreement-quality"><summary>Document quality note</summary>${item.quality_flags.map(flag => `<div class="agreement-quality-note">${escapeHtml(flag)}</div>`).join('')}</details>` : '';
+    return `<article class="agreement-matter" data-matter-no="${escapeHtml(item.matter_no)}"><div class="agreement-matter-top"><span class="agreement-number">${escapeHtml(item.matter_no)}</span>${link ? `<a class="agreement-title" href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(item.title)} ↗</a>` : `<span class="agreement-title">${escapeHtml(item.title)}</span>`}<span class="agreement-status">${escapeHtml(item.status || 'Status unavailable')}</span></div><div class="agreement-meta">${escapeHtml(item.applicant || 'Applicant unavailable')} · lodged ${escapeHtml((item.lodged_at || '').slice(0, 10) || 'date unavailable')}</div><div class="agreement-relevance">${escapeHtml(item.relevance)}</div>${quality}</article>`;
+  }
+
+  function renderAgreements(target, data, source) {
+    target.innerHTML = `<div class="agreement-clusters">${data.clusters.map(cluster => `<article class="agreement-cluster" data-cluster-id="${escapeHtml(cluster.cluster_id)}"><div class="agreement-cluster-head"><h3>${escapeHtml(cluster.title)}</h3><span class="agreement-count">${cluster.matters.length} matter${cluster.matters.length === 1 ? '' : 's'}</span></div><div class="agreement-cluster-copy">${escapeHtml(cluster.description)}</div><div class="agreement-list">${cluster.matters.map(agreementMatter).join('')}</div></article>`).join('')}</div><details class="agreements-secondary"><summary>Broader WA and sector watch · ${data.secondary.length}</summary><div class="agreements-secondary-body">${data.secondary.map(agreementMatter).join('')}</div></details><div class="agreements-boundary"><span>${escapeHtml(data.boundary)}</span><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener">${escapeHtml(source.label)} · observed ${escapeHtml((source.observed_at || '').slice(0, 10))} ↗</a></div>`;
+  }
+
   async function initialiseCampaigns() {
     const panels = [...document.querySelectorAll('.campaign-panel[data-campaign-id]')];
-    if (!panels.length) return;
+    const agreementsTarget = document.querySelector('[data-fwc-agreements]');
+    if (!panels.length && !agreementsTarget) return;
     try {
-      const response = await fetch('assets/campaigns/view.json', { cache: 'no-store' });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const data = await response.json();
+      const [campaignResponse, fwcResponse] = await Promise.all([
+        fetch('assets/campaigns/view.json', { cache: 'no-store' }),
+        fetch('assets/fwc/view.json', { cache: 'no-store' })
+      ]);
+      if (!campaignResponse.ok) throw new Error(`Campaign view HTTP ${campaignResponse.status}`);
+      if (!fwcResponse.ok) throw new Error(`FWC view HTTP ${fwcResponse.status}`);
+      const [data, fwcData] = await Promise.all([campaignResponse.json(), fwcResponse.json()]);
       const byId = new Map(data.campaigns.map(campaign => [campaign.campaign_id, campaign]));
+      const legalById = new Map(fwcData.campaigns.map(campaign => [campaign.campaign_id, campaign]));
       for (const panel of panels) {
         const campaign = byId.get(panel.dataset.campaignId);
-        if (!campaign) throw new Error(`Missing ${panel.dataset.campaignId}`);
-        renderCampaign(panel, campaign);
+        const legalCampaign = legalById.get(panel.dataset.campaignId);
+        if (!campaign || !legalCampaign) throw new Error(`Missing ${panel.dataset.campaignId}`);
+        renderCampaign(panel, campaign, legalCampaign);
       }
+      if (agreementsTarget) renderAgreements(agreementsTarget, fwcData.agreements, { ...fwcData.source, observed_at: fwcData.observed_at });
     } catch (error) {
       panels.forEach(panel => { panel.innerHTML = `<div class="campaign-error">Campaign record unavailable: ${escapeHtml(error.message)}</div>`; });
+      if (agreementsTarget) agreementsTarget.innerHTML = `<div class="campaign-error" style="margin:16px">Agreement register unavailable: ${escapeHtml(error.message)}</div>`;
     }
   }
   initialiseCampaigns();
 </script>
 
 <div id="automation-publication-status" style="margin:24px auto;max-width:1100px;padding:12px 16px;border:1px solid rgba(255,255,255,.15);border-radius:8px;text-align:center;font:12px/1.4 system-ui;color:#aab4c3;background:#101722">
-  Automated publication verified · 2026-08-21T09:15:50+0800
+  Automated publication verified · 2026-08-21T16:13:36+0800
 </div>
 </body>
 </html>
