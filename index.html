@@ -134,7 +134,7 @@
   .direction.active::before { background: var(--blue); }
 
   .matter-grid { display: grid; gap: 10px; }
-  details.matter { background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; }
+  details.matter { min-width: 0; background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; }
   details.matter[open] { border-color: var(--line-strong); }
   details.matter.hidden { display: none; }
   summary { list-style: none; cursor: pointer; padding: 15px 16px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; }
@@ -185,6 +185,66 @@
   .union-post-foot { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 12px; color: var(--faint); font: 400 8.5px var(--mono); }
   .union-post-foot a { color: var(--soft); text-decoration: none; }
   .union-post-foot a:hover { color: var(--ink); }
+
+  .campaign-panel { min-width: 0; padding: 16px; }
+  .campaign-loading { color: var(--faint); font: 400 10px var(--mono); }
+  .campaign-state-grid { display: grid; grid-template-columns: 1.15fr 1.35fr 1fr; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .campaign-state-block { padding: 15px; border-right: 1px solid var(--line); background: #0c0f13; }
+  .campaign-state-block:last-child { border-right: 0; }
+  .campaign-eyebrow { color: var(--faint); font: 500 8.5px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
+  .campaign-stage { margin-top: 7px; color: var(--ink); font-size: 15px; font-weight: 550; line-height: 1.3; }
+  .campaign-basis { margin-top: 6px; color: var(--amber); font: 500 9px var(--mono); }
+  .campaign-state-copy { margin-top: 7px; color: var(--muted); font-size: 11.5px; }
+  .campaign-list { margin: 8px 0 0; padding-left: 16px; color: var(--muted); font-size: 11px; }
+  .campaign-list li + li { margin-top: 4px; }
+  .campaign-tabs { margin-top: 14px; display: flex; gap: 5px; }
+  .campaign-tab { border: 1px solid var(--line); border-radius: 5px; padding: 7px 10px; background: transparent; color: var(--faint); cursor: pointer; font: 500 9px var(--mono); }
+  .campaign-tab.active { background: var(--panel-3); color: var(--ink); border-color: var(--line-strong); }
+  .campaign-view { min-width: 0; margin-top: 12px; }
+  .campaign-view[hidden] { display: none; }
+  .campaign-spine { position: relative; width: 100%; min-width: 0; max-width: 100%; display: grid; grid-template-columns: repeat(var(--milestone-count), minmax(120px,1fr)); gap: 0; overflow-x: auto; padding: 4px 0 14px; }
+  .campaign-spine::before { content: ""; position: absolute; left: 7%; right: 7%; top: 17px; height: 1px; background: var(--line-strong); }
+  .milestone-marker { position: relative; min-width: 120px; padding: 30px 10px 8px; border: 0; background: transparent; color: var(--muted); text-align: left; cursor: pointer; }
+  .milestone-marker::before { content: ""; position: absolute; top: 10px; left: 12px; width: 11px; height: 11px; border-radius: 50%; background: var(--panel-2); border: 2px solid var(--faint); z-index: 1; }
+  .milestone-marker.active::before { border-color: var(--amber); background: var(--amber); box-shadow: 0 0 0 4px var(--amber-soft); }
+  .milestone-date { color: var(--faint); font: 500 8px var(--mono); }
+  .milestone-title { margin-top: 4px; color: var(--soft); font-size: 10.5px; line-height: 1.3; }
+  .milestone-marker.active .milestone-title { color: var(--ink); }
+  .milestone-detail { display: none; border: 1px solid var(--line); border-radius: 8px; background: #0c0f13; }
+  .milestone-detail.active { display: block; }
+  .milestone-detail-head { padding: 14px 15px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 18px; }
+  .milestone-detail h4 { margin: 0; font-size: 14px; font-weight: 550; }
+  .milestone-summary { margin-top: 5px; color: var(--muted); font-size: 11.5px; }
+  .milestone-evidence { flex: 0 0 auto; color: var(--amber); font: 500 8.5px var(--mono); text-align: right; }
+  .campaign-events { padding: 0 14px 14px; }
+  details.campaign-event { margin-top: 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel-2); }
+  .campaign-event > summary { padding: 11px 12px; grid-template-columns: 92px minmax(0,1fr) auto; }
+  .event-date { color: var(--amber); font: 500 8.5px var(--mono); }
+  .event-summary { color: var(--soft); font-size: 11.5px; }
+  .event-type { color: var(--faint); font: 500 8px var(--mono); text-transform: uppercase; }
+  .campaign-event-body { padding: 12px; border-top: 1px solid var(--line); }
+  .campaign-boundary { margin-bottom: 10px; color: var(--faint); font-size: 10px; }
+  .campaign-post-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 10px; }
+  .campaign-post { min-width: 0; border: 1px solid var(--line); border-radius: 6px; background: #090c10; overflow: hidden; }
+  .campaign-post-top { display: grid; grid-template-columns: 112px minmax(0,1fr); min-height: 112px; }
+  .campaign-post-image { width: 112px; height: 112px; object-fit: cover; border-right: 1px solid var(--line); }
+  .campaign-post-no-image { width: 112px; min-height: 112px; display: grid; place-items: center; border-right: 1px solid var(--line); color: var(--faint); font: 500 8px var(--mono); text-align: center; padding: 8px; }
+  .campaign-post-meta { padding: 11px; }
+  .campaign-post-source { color: var(--soft); font-size: 11px; font-weight: 550; }
+  .campaign-post-date { margin-top: 5px; color: var(--amber); font: 500 8.5px var(--mono); }
+  .campaign-post-precision { margin-top: 4px; color: var(--faint); font: 400 8px var(--mono); }
+  .campaign-post-link { display: inline-block; margin-top: 8px; color: var(--muted); font: 400 8.5px var(--mono); text-decoration: none; }
+  details.campaign-post-text { border-top: 1px solid var(--line); }
+  .campaign-post-text > summary { padding: 9px 11px; display: flex; color: var(--soft); font: 500 8.5px var(--mono); }
+  .campaign-post-full { padding: 12px; border-top: 1px solid var(--line); color: var(--soft); font-size: 11px; line-height: 1.55; white-space: pre-wrap; }
+  .context-lane, .undated-exhibits { margin-top: 12px; border: 1px solid var(--line); border-radius: 7px; padding: 12px; background: var(--blue-soft); }
+  .context-lane h4, .undated-exhibits h4 { margin: 0 0 8px; font: 600 9px var(--mono); text-transform: uppercase; color: #9db8e1; }
+  .context-item { padding: 8px 0; border-top: 1px solid var(--line); }
+  .context-item:first-of-type { border-top: 0; }
+  .context-title { color: var(--soft); font-size: 11.5px; }
+  .context-copy { margin-top: 4px; color: var(--muted); font-size: 10.5px; }
+  .all-posts-head { margin-bottom: 10px; display: flex; justify-content: space-between; gap: 12px; color: var(--faint); font: 400 9px var(--mono); }
+  .campaign-error { padding: 12px; border: 1px solid var(--red); border-radius: 6px; color: #ff8696; font-size: 11px; }
 
   .horizon { display: grid; }
   .horizon-item { position: relative; padding: 0 0 17px 21px; }
@@ -266,6 +326,15 @@
     .union-post-exhibit > summary { grid-template-columns: 112px minmax(0,1fr); }
     .union-post-graphic { width: 112px; height: 112px; }
     .union-post-foot { flex-direction: column; }
+    .campaign-state-grid { grid-template-columns: 1fr; }
+    .campaign-state-block { border-right: 0; border-bottom: 1px solid var(--line); }
+    .campaign-state-block:last-child { border-bottom: 0; }
+    .milestone-detail-head { flex-direction: column; }
+    .milestone-evidence { text-align: left; }
+    .campaign-event > summary { grid-template-columns: 1fr; }
+    .campaign-post-grid { grid-template-columns: 1fr; }
+    .campaign-post-top { grid-template-columns: 96px minmax(0,1fr); }
+    .campaign-post-image, .campaign-post-no-image { width: 96px; height: 96px; min-height: 96px; }
     .chronology-row { grid-template-columns: 1fr; gap: 4px; }
     .confidence { width: 100%; margin-left: 0; }
     .assurance > summary { align-items: flex-start; }
@@ -347,44 +416,13 @@
           <div class="matter-overview">
             <div class="matter-name">BHP Port Operations bargaining</div>
             <div class="matter-meta">BHP · AWU / ETU / AMWU · Port Hedland</div>
-            <div class="matter-brief">Union pages say protected action concluded and affected operations. Operational effect and resulting bargaining movement remain unverified.</div>
-            <div class="matter-flags"><span class="matter-flag">PIA + bargaining</span><span class="matter-flag unverified">Union-only</span></div>
+            <div class="matter-brief">FWC-assisted bargaining follows two protected-action programs. Union-claimed operational and bargaining effects remain unverified.</div>
+            <div class="matter-flags"><span class="matter-flag">Campaign history</span><span class="matter-flag unverified">Union accounts</span></div>
           </div>
-          <div class="matter-state">High materiality</div>
+          <div class="matter-state">21 events</div>
         </summary>
-        <div class="matter-content">
-          <div class="chronology">
-            <div class="chronology-row"><div class="chronology-step">Sequence 01</div><div class="chronology-text">WMWA reported an 11th bargaining meeting with BHP, conducted with Fair Work Commission assistance.<small>Union-authored account · displayed publication date unavailable</small></div></div>
-            <div class="chronology-row"><div class="chronology-step">Sequence 02</div><div class="chronology-text">ETU and WMWA posts described coordinated protected action, including a 48-hour window and bans concerning ship-loader movements.<small>Two aligned union sources · no employer or operational source connected</small></div></div>
-            <div class="chronology-row"><div class="chronology-step">Sequence 03</div><div class="chronology-text">The unions subsequently said the action had concluded and claimed operational effects. Those effects and any resulting bargaining movement remain unverified.<small>Current evidence boundary · effect must not be inferred</small></div></div>
-          </div>
-          <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1664477375684269&set=a.507507878047897" target="_blank">WMWA bargaining #11</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1519930930149638&set=a.166072128868865" target="_blank">ETU action post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1670598881738785&set=a.507507878047897" target="_blank">WMWA action post</a><span class="confidence">Source weight: direct union position · low for claimed effect</span></div>
-          <section class="union-post-evidence" aria-label="Union Facebook source posts">
-            <div class="union-post-section-head"><h3>Union Facebook source posts</h3><span>Graphics and full post text · no Facebook account required</span></div>
-            <div class="union-post-grid">
-            <details class="union-post-exhibit" data-post-id="1664477375684269">
-              <summary>
-                <img class="union-post-graphic" src="assets/union-posts/1664477375684269.jpg" alt="WMWA graphic reading ‘BHP, the ball is in your court’, bargaining meeting 11 on today.">
-                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">BHP Ports bargaining meeting 11</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
-              </summary>
-              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>WMWA partner Union the AWU, along with the ETU and AMWU, are back at the bargaining table today for the 11th BHP Ports Bargaining meeting. Today&#x27;s meeting is being conducted with the assistance of the FWC.</p><p>This comes off the back of last week&#x27;s meeting, where the lack of any substantive progress seen the combined ports unions (AWU, ETU and AMWU) notify BHP of their intention to take Protected Industrial Action this Saturday and Sunday.</p><p>Workers at Port Hedland are highly skilled, and engage in high risk/high volume work, 24 hours a day, every day of the year. These workers are simply asking for a fair deal.</p><p>Today&#x27;s Ports bargaining meeting is another chance for BHP to make a substantive offer to address important things like:</p><p>A proposed REM models that is fair for all workers at Port Hedland</p><p>Allowances to fairly compensate both FIFO and Reso workers</p><p>A decent classification structure that promotes competency-based progression</p><p>The Ports Unions and our members want BHP to come to the table today with a substantive proposal that addresses our members concerns.</p><p>We will update members on the outcomes from today&#x27;s meeting by email, and as always, our members will get to determine what deal is acceptable or what isn’t.</p><p>Your organisers will be in Port Hedland and onsite this Thursday, and Friday to talk to members about this weekend&#x27;s proposed actions and answer any questions.</p><p>WMWA Fighting for Fair for in the Pilbara!</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1664477375684269&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
-            </details>
-            <details class="union-post-exhibit" data-post-id="1667801645351842">
-              <summary>
-                <img class="union-post-graphic" src="assets/union-posts/1667801645351842.jpg" alt="Combined BHP Port Unions graphic reading ‘BHP Port Ops members are fighting back’.">
-                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">BHP Port Operations protected action notice</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
-              </summary>
-              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>From 0530 tomorrow, members from WMWA partner union the AWU will take a combined 48 hours of protected industrial Action at BHP Port Operations. They&#x27;ll be joined by members from the AMWU - Australian Manufacturing Workers&#x27; Union and ETU - The Electrical Trades Union from 0530 Sunday!</p><p>Our members are fed up of BHP&#x27;s months of delays and denial at the bargaining table. We&#x27;re stepping up the fight for a fair enterprise agreement that includes decent base rate wage increases, a fair classification structure with career progression and fair conditions to recognise the highly skilled, high volume, high risk work our members do, 24 hours a day 365 days a year.</p><p>Port Ops members, check your inbox for more info about this weekend&#x27;s protected action!</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1667801645351842&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
-            </details>
-            <details class="union-post-exhibit" data-post-id="1670598881738785">
-              <summary>
-                <img class="union-post-graphic" src="assets/union-posts/1670598881738785.jpg" alt="Union graphic reproducing a Financial Review headline about BHP workers staging a weekend-long walkout.">
-                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">Union account after BHP Ports action</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
-              </summary>
-              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>Over the weekend, hundreds of members from the combined BHP Port Ops unions - WMWA partner union the AWU, The AMWU - Australian Manufacturing Workers&#x27; Union and the ETU - The Electrical Trades Union downed tools in our fight for a fair EA!</p><p>Our members know that our action had a huge impact at Port Hedland - and so does BHP.</p><p>We hope this action does exactly what it&#x27;s intended to do, and sharpen everyone’s mind on finding a solution that works for everyone, fast.</p><p>Thank you to every member who stood strong with us last weekend - your action made a big difference in our fight!</p><p>WMWA BHP Ports members, keep an eye on your inbox for updates.</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1670598881738785&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
-            </details>
-            </div>
-          </section>
+        <div class="matter-content campaign-content">
+          <div class="campaign-panel" data-campaign-id="bhp-port-operations-bargaining-2026"><div class="campaign-loading">Loading reviewed campaign record…</div></div>
         </div>
       </details>
 
@@ -393,30 +431,13 @@
           <div class="matter-overview">
             <div class="matter-name">South32 Worsley Alumina bargaining</div>
             <div class="matter-meta">South32 · ETU · Worsley Alumina</div>
-            <div class="matter-brief">ETU says the Commission made a protected-action ballot order. The order, timetable and South32 position are not yet in the evidence set.</div>
-            <div class="matter-flags"><span class="matter-flag">PABO reported</span><span class="matter-flag unverified">Verification required</span></div>
+            <div class="matter-brief">ETU reports a protected-action ballot order. The order, ballot timetable and South32 position are not connected.</div>
+            <div class="matter-flags"><span class="matter-flag">2-event sequence</span><span class="matter-flag unverified">Verification required</span></div>
           </div>
-          <div class="matter-state">Formal pathway</div>
+          <div class="matter-state">PABO reported</div>
         </summary>
-        <div class="matter-content">
-          <div class="chronology">
-            <div class="chronology-row"><div class="chronology-step">Sequence 01</div><div class="chronology-text">ETU said it had applied for a protected-action ballot order in the Worsley bargaining.<small>Union-authored account · date unavailable</small></div></div>
-            <div class="chronology-row"><div class="chronology-step">Sequence 02</div><div class="chronology-text">ETU later said the Commission had made the ballot order and continued to frame an Alcoa wage comparison as a bargaining issue.<small>Single union source · order not yet acquired</small></div></div>
-            <div class="chronology-row"><div class="chronology-step">Evidence state</div><div class="chronology-text">The Commission order, ballot agent, timetable and South32 position are not in the evidence set.<small>Procedural status remains provisional</small></div></div>
-          </div>
-          <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1521453453330719&set=a.166072115535533" target="_blank">ETU ballot-order post</a><span class="confidence">Source weight: provisional until Commission record acquired</span></div>
-          <section class="union-post-evidence" aria-label="Union Facebook source posts">
-            <div class="union-post-section-head"><h3>Union Facebook source posts</h3><span>Graphics and full post text · no Facebook account required</span></div>
-            <div class="union-post-grid">
-            <details class="union-post-exhibit" data-post-id="1521453453330719">
-              <summary>
-                <img class="union-post-graphic" src="assets/union-posts/1521453453330719.jpg" alt="ETU WA graphic reading ‘South32 PABO filed’ and ‘PABO ordered’.">
-                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">Worsley Alumina protected-action ballot order</div><div class="union-post-meta">ETU WA Branch · collected 15 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
-              </summary>
-              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>𝐒𝐎𝐔𝐓𝐇𝟑𝟐 𝐖𝐎𝐑𝐒𝐋𝐄𝐘 𝐀𝐋𝐔𝐌𝐈𝐍𝐀 𝐏𝐀𝐁𝐎 𝐎𝐑𝐃𝐄𝐑𝐄𝐃 — 𝐓𝐇𝐄 𝐅𝐈𝐆𝐇𝐓 𝐈𝐒 𝐎𝐍!</p><p>South32 Worsley Alumina members have filed for PABO, and the Fair Work Commission has made orders to conduct a ballot of members — the second step towards securing the right to take protected industrial action.</p><p>At the last meeting, South32 rolled out a document that rejected almost all of our claims. There wasn’t even an opportunity to properly review the agreement and negotiate its terms further. The Company decided to roll the dice and put it to a vote.</p><p>We expect South32 to bargain in good faith and stop looking for the exit ramp now that Alcoa has acquired Worsley Alumina.</p><p>Members are ready to get in the trenches. Has South32 learned anything from the previous agreement? Time will tell, with the current agreement set to expire on 1 September 2026.</p><p>𝐓𝐢𝐜𝐤 𝐭𝐨𝐜𝐤. 𝐓𝐢𝐜𝐤 𝐭𝐨𝐜𝐤. 𝐓𝐡𝐞 𝐜𝐥𝐨𝐜𝐤 𝐢𝐬 𝐫𝐮𝐧𝐧𝐢𝐧𝐠.</p><p>𝐓𝐡𝐞 𝐝𝐞𝐚𝐝𝐥𝐢𝐧𝐞 𝐢𝐬 𝐜𝐨𝐦𝐢𝐧𝐠. 𝐓𝐡𝐞 𝐩𝐫𝐞𝐬𝐬𝐮𝐫𝐞 𝐢𝐬 𝐛𝐮𝐢𝐥𝐝𝐢𝐧𝐠.</p><p>𝐈𝐟 𝐲𝐨𝐮 𝐝𝐨𝐧’𝐭 𝐟𝐢𝐠𝐡𝐭, 𝐲𝐨𝐮 𝐥𝐨𝐬𝐞!</p><p>Brezo - Organiser Kwinana &amp; South West</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1521453453330719&amp;set=a.166072115535533" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
-            </details>
-            </div>
-          </section>
+        <div class="matter-content campaign-content">
+          <div class="campaign-panel" data-campaign-id="south32-worsley-alumina-bargaining-2026"><div class="campaign-loading">Loading reviewed campaign record…</div></div>
         </div>
       </details>
 
@@ -528,11 +549,11 @@
   </section>
 
   <details class="assurance" id="assurance-footer">
-    <summary><strong>Method, coverage and collection health</strong><span class="assurance-summary">2/8 union pages · company and FWC feeds not connected · absence is not treated as silence</span></summary>
+    <summary><strong>Method, coverage and collection health</strong><span class="assurance-summary">6-page union corpus · 629 posts · company and FWC feeds not connected</span></summary>
     <div class="assurance-body">
       <div class="source-boundary"><strong>Source boundary:</strong> Union-authored posts are advocacy material and direct evidence only of what a union is asserting or promoting. Union-authored material does not establish operational impact, bargaining strength or influence without independent corroboration. Pilbara Watch reproduces the captured union graphic and full visible post text for account-free access; Facebook interface labels are removed while the source wording is retained.</div>
       <div class="coverage-grid">
-        <div class="coverage-item"><div class="coverage-source">Union Facebook</div><div class="coverage-status"><span class="status-dot partial"></span>Partial · 2 of 8 union pages</div></div>
+        <div class="coverage-item"><div class="coverage-source">Union Facebook</div><div class="coverage-status"><span class="status-dot ok"></span>6 declared public pages · 629 posts</div></div>
         <div class="coverage-item"><div class="coverage-source">Evidence persistence</div><div class="coverage-status"><span class="status-dot ok"></span>Healthy · duplicate-free rerun</div></div>
         <div class="coverage-item"><div class="coverage-source">Regulatory sources</div><div class="coverage-status"><span class="status-dot ok"></span>Manual official-source baseline</div></div>
         <div class="coverage-item"><div class="coverage-source">Company announcements — not connected</div><div class="coverage-status"><span class="status-dot"></span>No inference drawn</div></div>
@@ -541,11 +562,11 @@
         <div class="coverage-item"><div class="coverage-source">Production and operating data</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
         <div class="coverage-item"><div class="coverage-source">News and specialist media</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
       </div>
-      <div class="method-note">Evidence window collected 16 August 2026, approximately 2:28 PM AWST. Publication dates unavailable in the current Facebook DOM and therefore not inferred. Source text, URLs, screenshots and collection timestamps remain in the private evidence layer on MS64.</div>
+      <div class="method-note">Frozen six-page corpus: 629 canonical posts; 597 dated from Facebook labels; 32 explicit date gaps. Reviewed campaign graphics and complete source text are published through a sanitized account-free layer. Raw HTML, full-page screenshots, comments, authentication state and private evidence paths remain on MS64.</div>
     </div>
   </details>
 
-  <footer><span>Pilbara Watch · by Briefer · refinement 4</span><span>Generated 16 August 2026 · 3 PM cycle · union source access added</span></footer>
+  <footer><span>Pilbara Watch · by Briefer · refinement 5</span><span>Reviewed campaign histories · milestone and full-post views</span></footer>
 </main>
 <script>
   const buttons = [...document.querySelectorAll('.filter')];
@@ -555,10 +576,79 @@
     const filter = button.dataset.filter;
     matters.forEach(matter => matter.classList.toggle('hidden', filter !== 'all' && !matter.dataset.company.split(' ').includes(filter)));
   }));
+
+  const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' })[character]);
+  const dateRange = (start, end) => end && end !== start ? `${start}–${end}` : start;
+  const safeFacebookUrl = value => /^https:\/\/www\.facebook\.com\//.test(value || '') ? value : null;
+
+  function postCard(post) {
+    const graphic = post.graphics?.[0];
+    const link = safeFacebookUrl(post.post_url);
+    const date = post.published_date || 'Undated';
+    const precision = post.date_precision ? `${post.date_precision} precision · ${post.displayed_date || 'label unavailable'}` : 'publication date unavailable';
+    return `<article class="campaign-post" data-post-id="${escapeHtml(post.post_id || post.candidate_id || '')}">
+      <div class="campaign-post-top">
+        ${graphic ? `<img class="campaign-post-image" src="${escapeHtml(graphic)}" alt="Union source graphic">` : '<div class="campaign-post-no-image">No source graphic captured</div>'}
+        <div class="campaign-post-meta"><div class="campaign-post-source">${escapeHtml(post.source_page)}</div><div class="campaign-post-date">${escapeHtml(date)}</div><div class="campaign-post-precision">${escapeHtml(precision)}</div>${link ? `<a class="campaign-post-link" href="${escapeHtml(link)}" target="_blank" rel="noopener">Original Facebook URL ↗</a>` : ''}</div>
+      </div>
+      <details class="campaign-post-text"><summary>Full text of union post</summary><div class="campaign-post-full">${escapeHtml(post.full_text)}</div></details>
+    </article>`;
+  }
+
+  function eventCard(event) {
+    const sourceLabel = `${event.source_posts.length} source post${event.source_posts.length === 1 ? '' : 's'}`;
+    return `<details class="campaign-event"><summary><span class="event-date">${escapeHtml(dateRange(event.event_date, event.event_end_date))}</span><span class="event-summary">${escapeHtml(event.summary)}</span><span class="event-type">${escapeHtml(event.event_type.replaceAll('_', ' '))}</span></summary><div class="campaign-event-body"><div class="campaign-boundary">${escapeHtml(event.source_boundary)} · ${sourceLabel}${event.source_posts.length > 1 ? ' · aligned posts are not independent corroboration' : ''}</div><div class="campaign-post-grid">${event.source_posts.map(postCard).join('')}</div></div></details>`;
+  }
+
+  function renderCampaign(panel, campaign) {
+    const latestIndex = Math.max(0, campaign.milestones.length - 1);
+    panel.innerHTML = `<div class="campaign-state-grid">
+      <section class="campaign-state-block"><div class="campaign-eyebrow">Current position</div><div class="campaign-stage">${escapeHtml(campaign.current_stage.label)}</div><div class="campaign-basis">${escapeHtml(campaign.current_stage.basis)}</div></section>
+      <section class="campaign-state-block"><div class="campaign-eyebrow">Latest material change</div><div class="campaign-state-copy">${escapeHtml(campaign.latest_change)}</div><div class="campaign-eyebrow" style="margin-top:12px">Principal union claims</div><ul class="campaign-list">${campaign.principal_claims.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>
+      <section class="campaign-state-block"><div class="campaign-eyebrow">Open verification</div><ul class="campaign-list">${campaign.open_verification.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>
+    </div>
+    <div class="campaign-tabs" role="tablist"><button class="campaign-tab active" data-campaign-view="milestones">Milestones</button><button class="campaign-tab" data-campaign-view="posts">All campaign posts</button></div>
+    <section class="campaign-view" data-view-panel="milestones">
+      <div class="campaign-spine" style="--milestone-count:${campaign.milestones.length}">${campaign.milestones.map((milestone, index) => `<button class="milestone-marker ${index === latestIndex ? 'active' : ''}" data-milestone-index="${index}"><span class="milestone-date">${escapeHtml(dateRange(milestone.start_date, milestone.end_date))}</span><span class="milestone-title">${escapeHtml(milestone.title)}</span></button>`).join('')}</div>
+      <div class="milestone-details">${campaign.milestones.map((milestone, index) => `<article class="milestone-detail ${index === latestIndex ? 'active' : ''}" data-milestone-detail="${index}"><div class="milestone-detail-head"><div><h4>${escapeHtml(milestone.title)}</h4><div class="milestone-summary">${escapeHtml(milestone.summary)}</div></div><div class="milestone-evidence">${milestone.source_post_count} source posts<br>${escapeHtml(milestone.evidence_state)}</div></div><div class="campaign-events">${milestone.events.map(eventCard).join('')}</div></article>`).join('')}</div>
+      ${campaign.context_events.length ? `<aside class="context-lane"><h4>Adjacent agreement context</h4>${campaign.context_events.map(eventCard).join('')}</aside>` : ''}
+      ${campaign.undated_exhibits.length ? `<aside class="undated-exhibits"><h4>Relevant undated campaign exhibit</h4><div class="campaign-post-grid">${campaign.undated_exhibits.map(item => postCard({ ...item, published_date: null, date_precision: null })).join('')}</div></aside>` : ''}
+    </section>
+    <section class="campaign-view" data-view-panel="posts" hidden><div class="all-posts-head"><span>${campaign.all_posts.length} accepted source posts</span><span>Graphics and complete text · no Facebook account required</span></div><div class="campaign-post-grid">${campaign.all_posts.map(postCard).join('')}</div></section>`;
+
+    const tabs = [...panel.querySelectorAll('.campaign-tab')];
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(item => item.classList.toggle('active', item === tab));
+      panel.querySelectorAll('[data-view-panel]').forEach(view => { view.hidden = view.dataset.viewPanel !== tab.dataset.campaignView; });
+    }));
+    panel.querySelectorAll('.milestone-marker').forEach(marker => marker.addEventListener('click', () => {
+      panel.querySelectorAll('.milestone-marker').forEach(item => item.classList.toggle('active', item === marker));
+      panel.querySelectorAll('[data-milestone-detail]').forEach(detail => detail.classList.toggle('active', detail.dataset.milestoneDetail === marker.dataset.milestoneIndex));
+    }));
+  }
+
+  async function initialiseCampaigns() {
+    const panels = [...document.querySelectorAll('.campaign-panel[data-campaign-id]')];
+    if (!panels.length) return;
+    try {
+      const response = await fetch('assets/campaigns/view.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      const byId = new Map(data.campaigns.map(campaign => [campaign.campaign_id, campaign]));
+      for (const panel of panels) {
+        const campaign = byId.get(panel.dataset.campaignId);
+        if (!campaign) throw new Error(`Missing ${panel.dataset.campaignId}`);
+        renderCampaign(panel, campaign);
+      }
+    } catch (error) {
+      panels.forEach(panel => { panel.innerHTML = `<div class="campaign-error">Campaign record unavailable: ${escapeHtml(error.message)}</div>`; });
+    }
+  }
+  initialiseCampaigns();
 </script>
 
 <div id="automation-publication-status" style="margin:24px auto;max-width:1100px;padding:12px 16px;border:1px solid rgba(255,255,255,.15);border-radius:8px;text-align:center;font:12px/1.4 system-ui;color:#aab4c3;background:#101722">
-  Automated publication verified · 2026-08-17T05:42:49+0800
+  Automated publication verified · 2026-08-21T08:34:05+0800
 </div>
 </body>
 </html>

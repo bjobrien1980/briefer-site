@@ -1,0 +1,1965 @@
+{
+  "schema_version": 1,
+  "campaigns": [
+    {
+      "campaign_id": "bhp-port-operations-bargaining-2026",
+      "slug": "bhp-ports",
+      "title": "BHP Port Operations bargaining campaign",
+      "current_stage": {
+        "label": "FWC-assisted bargaining following August protected action",
+        "basis": "Union accounts only"
+      },
+      "latest_change": "WMWA, AMWU and AWU reported a further meeting involving the Fair Work Commission on 19–20 August and criticised BHP's offer. No employer account or Commission record is connected.",
+      "principal_claims": [
+        "remuneration and allowances",
+        "classification structure and progression",
+        "FIFO and residential-workforce treatment",
+        "recognition of Port Operations work"
+      ],
+      "open_verification": [
+        "BHP's current offer and response",
+        "the Commission record and next procedural step",
+        "operational impact claimed by unions",
+        "bargaining movement following the August action"
+      ],
+      "milestones": [
+        {
+          "milestone_id": "BHP-M01",
+          "title": "Mobilisation and PABO applications",
+          "start_date": "2026-05-29",
+          "end_date": "2026-06-19",
+          "summary": "Site campaigning, union claim development and separate AMWU and WMWA accounts of PABO proceedings.",
+          "evidence_state": "Union accounts",
+          "source_post_count": 6,
+          "source_pages": [
+            "Western Mine Workers Alliance",
+            "AMWU Australian Manufacturing Workers' Union WA",
+            "ETU WA Branch"
+          ],
+          "events": [
+            {
+              "event_id": "BHP-001",
+              "event_date": "2026-05-29",
+              "event_end_date": "2026-06-01",
+              "event_type": "campaign_mobilisation",
+              "summary": "WMWA published campaign-next-step messaging and an on-site schedule for BHP Port Operations workers.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/1602670478531626-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "wmwa:51",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": null,
+                  "post_url": null,
+                  "displayed_date": "29 May",
+                  "published_date": "2026-05-29",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "From tomorrow, WMWA will be conducting site visits at BHP Port Operations during morning and lunch breaks. \nWe're looking forward to catching up with members about the bargaining process, and what the next steps in our campaign could look like. \nCome and say g'day at: \n30/05/26 - Nelson Point - Inflow and South Yard \n01/06/26 - Nelson Point - North Yard ,Locomotive Workshop and Rail Maintenance Workshop\n02/06/26 - Finucane Island - Operations \n02/06/26 - Nelson Point - Shutdown Yard and NPI \n03/06/26 - Nelson Point - Track machine Workshop and LV Workshop",
+                  "graphics": []
+                },
+                {
+                  "candidate_id": "wmwa:50",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1602670478531626",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1602670478531626&set=a.507507878047897",
+                  "displayed_date": "1 June",
+                  "published_date": "2026-06-01",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "WMWA has been out on site across BHP Port Ops this weekend, and we're out again this week! You can catch us at:\n01/06/26 - Nelson Point - North Yard, Locomotive Workshop and Rail Maintenance Workshop\n02/06/26 - Finucane Island - Operations\n02/06/26 - Nelson Point - Production techs crib \n03/06/26 - Nelson Point - Track machine Workshop and LV Workshop\nWe want your views on BHP’s approach so far and options for next steps.\nAs AWU WA Secretary Brad Gandy says, \"Pilbara mineworkers deserve the same chance for a say as millions of other EA workers around the country and BHP must do better to listen to its Port Hedland workforce.\"\nWorkers deserve transparency, a clear classification structure, and a decent pay increase. If you see us onsite over the next few days, please say g'day and tell us what you think about BHP's approach to bargaining!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1602670478531626-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-002",
+              "event_date": "2026-05-30",
+              "event_end_date": null,
+              "event_type": "pabo_application_claim",
+              "summary": "AMWU said it had commenced Fair Work Commission proceedings seeking a protected action ballot order at BHP Ports and framed its claims against the proposed Mining Area C and South Flank agreement.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/pfbid022Yidi9UNgvNNK5ZysvEfAd9PXtEfS4adJEPYWq7DRB7qvEuEamKfptVZ2nHFNp3vl-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "amwu-wa:33",
+                  "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+                  "post_id": "pfbid022Yidi9UNgvNNK5ZysvEfAd9PXtEfS4adJEPYWq7DRB7qvEuEamKfptVZ2nHFNp3vl",
+                  "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid022Yidi9UNgvNNK5ZysvEfAd9PXtEfS4adJEPYWq7DRB7qvEuEamKfptVZ2nHFNp3vl",
+                  "displayed_date": "30 May",
+                  "published_date": "2026-05-30",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "AMWU FILES FOR PROTECTED INDUSTRIAL ACTION AT BHP PORTS \nWhile others are telling Pilbara mine workers that BHP's proposed South Flank and Mining Area C Agreement is somehow a step forward, the AMWU is doing what it has always done — fighting hard for mechanical trades workers and organising to build real power.\nFor months, AMWU members at BHP port operations in Port Hedland have bargained in good faith. They have attended meetings, put forward claims, participated constructively and genuinely tried to reach an agreement that reflects the skills, experience and contribution of the mechanical maintenance workforce.\nOther unions in the Pilbara are busy selling workers minimum-rate agreements with no real career progression, weak protections and little certainty for the future. AMWU members at BHP ports are drawing a line in the sand.\nThe AMWU has now commenced proceedings in the Fair Work Commission seeking a Protected Action Ballot Order.\nThis is not a step workers take lightly.\nProtected industrial action is a lawful right. It exists for a reason. When workers have bargained honestly, reasonably and in good faith, they are entitled to have a meaningful mechanism available to apply pressure when negotiations stall.\nNow they are exercising their lawful rights.\nThe message from Port Hedland maintenance workers is loud and clear:\nEnough is enough.\nIf you're a mechanical tradesperson working for BHP in Port Hedland, South Flank, Mining Area C, Yandi, Jimblebar, Newman, Rail, Ports or anywhere across the Pilbara, now is the time to stand with the union that is actually fighting for mechanical maintenance workers.\nStand and deliver. Join the AMWU.\n United.\n Determined.\n Ready to fight for a fair deal.\n#AMWU #PortHedland #Pilbara #UnionStrong #MechanicalTrades #MaintenanceWorkers #ProtectedAction #FairAgreement #BHP",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid022Yidi9UNgvNNK5ZysvEfAd9PXtEfS4adJEPYWq7DRB7qvEuEamKfptVZ2nHFNp3vl-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-003",
+              "event_date": "2026-06-11",
+              "event_end_date": null,
+              "event_type": "protected_action_ballot_campaign",
+              "summary": "ETU said BHP Ports members were voting on whether to endorse protected industrial action.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/1469163505226381-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "etu-wa:71",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "1469163505226381",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1469163505226381&set=a.166072115535533",
+                  "displayed_date": "11 June",
+                  "published_date": "2026-06-11",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "𝐏𝐢𝐥𝐛𝐚𝐫𝐚 𝐖𝐨𝐫𝐤𝐞𝐫𝐬 𝐑𝐞𝐟𝐮𝐬𝐞 𝐓𝐨 𝐁𝐞 𝐓𝐫𝐞𝐚𝐭𝐞𝐝 𝐀𝐬 𝐒𝐞𝐜𝐨𝐧𝐝-𝐂𝐥𝐚𝐬𝐬 𝐖𝐨𝐫𝐤𝐞𝐫𝐬\nETU members at BHP  Ports are now voting on whether to endorse protected industrial action in support of their Enterprise Agreement campaign.\nLet's be clear about what this vote is about.\nOur members are not voting because they want conflict. They are voting because they are determined to ensure that their labour is not valued any less than the labour of their comrades in the South West.\nBHP and the paid-for media can spin this however they like, but workers know the reality.\nWorking in the Pilbara is no longer what it used to be.\nThe days when employers could expect workers to accept being left behind while company profits soar are over. FIFO life comes with sacrifices. Time away from family comes with sacrifices. Living and working in one of the most remote industrial regions in the country comes with sacrifices.\nWorkers are simply demanding that those sacrifices are properly recognised and fairly rewarded.\nThis Protected Action Ballot gives ETU members the opportunity to send a strong message to BHP: enough is enough.\n Every vote matters.\nUnder Australia's industrial laws, not voting has the same effect as voting NO. If members want a stronger bargaining position and want BHP to understand the strength of feeling across the Ports workforce, they need to participate in the ballot.\nThe vote is about giving workers a voice and giving workers options. Any future action will be determined by the members themselves.\nThe message to BHP is simple:\nIf you want industrial peace, bring a fair offer to the table.\nIf you want to undervalue Pilbara workers, expect resistance.\nVote. Participate. Stand together.\nIn Unity,\nETU North West Crew",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1469163505226381-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-004",
+              "event_date": "2026-06-14",
+              "event_end_date": null,
+              "event_type": "campaign_claims",
+              "summary": "ETU published its financial and bargaining case against BHP's position.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/pfbid02tB4SufGSoCTRQVLh2WrgtdifHk3t8W1H57jczdVn2h4NrZTD2du1MZ9g7zwhJKSfl-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "etu-wa:67",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "pfbid02tB4SufGSoCTRQVLh2WrgtdifHk3t8W1H57jczdVn2h4NrZTD2du1MZ9g7zwhJKSfl",
+                  "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid02tB4SufGSoCTRQVLh2WrgtdifHk3t8W1H57jczdVn2h4NrZTD2du1MZ9g7zwhJKSfl",
+                  "displayed_date": "14 June",
+                  "published_date": "2026-06-14",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "𝐁𝐇𝐏'𝐒 𝐍𝐔𝐌𝐁𝐄𝐑𝐒 𝐃𝐎𝐍'𝐓 𝐀𝐃𝐃 𝐔𝐏\nBHP  and their industry lobby group, the The Chamber of Minerals and Energy of Western Australia - CMEWA, an employer union, want workers to believe that asking for a fair Enterprise Agreement is somehow unreasonable.\nLet's do the maths.\nThe media is reporting that industrial action at Port Hedland could put around $𝟏𝟐𝟔 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐩𝐞𝐫 𝐝𝐚𝐲 in exports at risk.\nThere are approximately 𝟒𝟓𝟎 𝐰𝐨𝐫𝐤𝐞𝐫𝐬 covered by this agreement.\nBHP says workers are already on around $𝟐𝟎𝟎,𝟎𝟎𝟎 𝐩𝐞𝐫 𝐲𝐞𝐚𝐫 including allowances and bonuses.\n450 workers × $200,000 = $𝟗𝟎 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐩𝐞𝐫 𝐲𝐞𝐚𝐫\nLet's be generous and increase that figure.\n450 workers × $250,000 = $𝟏𝟏𝟐.𝟓 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐩𝐞𝐫 𝐲𝐞𝐚𝐫\nStill not there.\n450 workers × $280,000 = $𝟏𝟐𝟔 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐩𝐞𝐫 𝐲𝐞𝐚𝐫\nRead that again.\n𝐎𝐧𝐞 𝐞𝐧𝐭𝐢𝐫𝐞 𝐲𝐞𝐚𝐫'𝐬 𝐰𝐚𝐠𝐞𝐬 𝐢𝐧𝐜𝐫𝐞𝐚𝐬𝐞𝐝 𝐛𝐲 $𝟖𝟎𝐤 𝐟𝐨𝐫 𝐞𝐯𝐞𝐫𝐲 𝐰𝐨𝐫𝐤𝐞𝐫 𝐚𝐭 𝐭𝐡𝐞 𝐩𝐨𝐫𝐭 𝐰𝐨𝐮𝐥𝐝 𝐞𝐪𝐮𝐚𝐥 𝐣𝐮𝐬𝐭 𝐨𝐧𝐞 𝐝𝐚𝐲 𝐨𝐟 𝐞𝐱𝐩𝐨𝐫𝐭𝐬.\nYet BHP would rather threaten disruption, spend millions on lawyers, consultants and anti-union propaganda, and run to the media than sit down and negotiate an agreement that reflects the value workers create.\nAnd what about the outrageous claim being pushed that workers want salaries of $400,000 a year?\nLet's test that too.\n450 workers × $400,000 = $𝟏𝟖𝟎 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐩𝐞𝐫 𝐲𝐞𝐚𝐫.\nEven if that absurd claim were true, it would amount to about 𝟏.𝟒 𝐝𝐚𝐲𝐬 𝐨𝐟 𝐞𝐱𝐩𝐨𝐫𝐭𝐬.\nThat's it.\nThe remaining 𝟑𝟔𝟑.𝟔 𝐝𝐚𝐲𝐬 𝐨𝐟 𝐞𝐱𝐩𝐨𝐫𝐭𝐬 would still be flowing out of Port Hedland.\nSo let's stop pretending this dispute is about money.\nThis is about ideology.\nThis is about control.\nBHP wants workers to remain dependent on management deciding who gets rewarded and who doesn't. They want to continue offering wage outcomes that fail to keep pace with the cost of living while posting massive profits and shipping billions of dollars of Australian resources overseas.\nThe reality is that ETU members can earn the same money — and often more — in Perth and the South West while sleeping in their own bed every night, watching their kids grow up and being there for life's important moments.\nFIFO used to come with a genuine financial advantage.\nThat advantage has been eroded.\nWorkers know it.\nThat's why the Pilbara is unionising.\nWorkers are realising that the only way to stop falling behind is to stand together, join their union, organise collectively and, when necessary, exercise their lawful right to take protected industrial action.\nBHP didn't build the Pilbara.\nWorkers built the Pilbara.\nAnd workers deserve their fair share.\n𝐈𝐟 𝐁𝐇𝐏 𝐜𝐚𝐧 𝐚𝐟𝐟𝐨𝐫𝐝 𝐭𝐨 𝐥𝐨𝐬𝐞 $𝟏𝟐𝟔 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐚 𝐝𝐚𝐲 𝐟𝐢𝐠𝐡𝐭𝐢𝐧𝐠 𝐰𝐨𝐫𝐤𝐞𝐫𝐬, 𝐢𝐭 𝐜𝐚𝐧 𝐚𝐟𝐟𝐨𝐫𝐝 𝐭𝐨 𝐛𝐚𝐫𝐠𝐚𝐢𝐧 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞𝐦.\n ETU WA\n Organise. Unite. Win.",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid02tB4SufGSoCTRQVLh2WrgtdifHk3t8W1H57jczdVn2h4NrZTD2du1MZ9g7zwhJKSfl-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-005",
+              "event_date": "2026-06-19",
+              "event_end_date": null,
+              "event_type": "pabo_application_claim",
+              "summary": "WMWA said it had applied to the Fair Work Commission for a protected action ballot order covering BHP Port Operations members.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/1619054060226601-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "wmwa:43",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1619054060226601",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1619054060226601&set=a.507507878047897",
+                  "displayed_date": "19 June",
+                  "published_date": "2026-06-19",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "WMWA has today applied to the Fair Work Commission for a Protected Action Ballot Order for members at BHP Port Operations. \nAfter months of negotiations, BHP refuse to come to the table with a decent or fair EA offer. Our organisers have spoken extensively to members on site, and they're ready to step up and take action!\nAWU WA Acting Secretary Craig Beveridge says that \"BHP have been dismissive and non-committal about the concerns and claims of the workforce that generate immense profits for them at Port Hedland.  \n“Workers want an Enterprise Agreement that provides transparency, fair treatment and guaranteed conditions – not having their livelihood at the whim of individual managers.”",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1619054060226601-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "milestone_id": "BHP-M02",
+          "title": "Bargaining and ballot result",
+          "start_date": "2026-06-24",
+          "end_date": "2026-07-06",
+          "summary": "Aligned bargaining updates, ballot administration and WMWA's reported 97% endorsement result.",
+          "evidence_state": "Union accounts; denominator unverified",
+          "source_post_count": 6,
+          "source_pages": [
+            "AMWU Australian Manufacturing Workers' Union WA",
+            "AWU Western Australia",
+            "ETU WA Branch",
+            "Western Mine Workers Alliance"
+          ],
+          "events": [
+            {
+              "event_id": "BHP-006",
+              "event_date": "2026-06-24",
+              "event_end_date": null,
+              "event_type": "bargaining_update",
+              "summary": "Four aligned union pages reported a bargaining meeting, some progress and continuing disagreement about wages and conditions.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/pfbid0bexh2ssoeDia1zXtjVA6E3fK5HVxYt44e3xGnqMKmac9aDBrcvSC6EoXcimGPW1Gl-01.jpg",
+                "assets/campaigns/bhp-ports/pfbid0Q2okyou2pDsq6pEHLJ2wtixyAQDbWpcCRZni8Qny2BahcjyTQvkY6gepje9Seqinl-01.jpg",
+                "assets/campaigns/bhp-ports/pfbid0TL2vGgSQPeYk5kcj3VEE5zL2Kegz8DRWwGAcUmgzrMD8b4mBS6jYYpyqhPZjacYRl-01.jpg",
+                "assets/campaigns/bhp-ports/1624554586343215-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "amwu-wa:26",
+                  "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+                  "post_id": "pfbid0bexh2ssoeDia1zXtjVA6E3fK5HVxYt44e3xGnqMKmac9aDBrcvSC6EoXcimGPW1Gl",
+                  "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid0bexh2ssoeDia1zXtjVA6E3fK5HVxYt44e3xGnqMKmac9aDBrcvSC6EoXcimGPW1Gl",
+                  "displayed_date": "24 June",
+                  "published_date": "2026-06-24",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Yesterday, the AMWU, Western Mine Workers Alliance - WMWA, and ETU WA Branch met with BHP to discuss a range of issues with our members' wages and working conditions at Port Hedland Port Operations.\nWhile we made some progress, there's still a way to go before we reach an agreement that addresses the core concerns of our members.\nAll three unions are standing together as the Combined BHP Port Unions to fight for a fair EA at BHP Port Operations.\nWe remain ready, willing and able to continue negotiating with BHP, and a further bargaining meeting is scheduled for 7 July. The AWU WA's PABO application is underway, and members should stay tuned on details for voting!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid0bexh2ssoeDia1zXtjVA6E3fK5HVxYt44e3xGnqMKmac9aDBrcvSC6EoXcimGPW1Gl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "awu-wa:36",
+                  "source_page": "AWU Western Australia",
+                  "post_id": "pfbid0Q2okyou2pDsq6pEHLJ2wtixyAQDbWpcCRZni8Qny2BahcjyTQvkY6gepje9Seqinl",
+                  "post_url": "https://www.facebook.com/awuwesternaustralia/posts/pfbid0Q2okyou2pDsq6pEHLJ2wtixyAQDbWpcCRZni8Qny2BahcjyTQvkY6gepje9Seqinl",
+                  "displayed_date": "24 June",
+                  "published_date": "2026-06-24",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Yesterday, Western Mine Workers Alliance - WMWA, the AMWU Australian Manufacturing Workers' Union WA and the ETU WA Branch met with BHP to discuss a range of issues with our members' wages and working conditions at Port Hedland Port Operations.\nWhile we made some progress, there's still a way to go before we reach an agreement that addresses the core concerns of our members.\nAll three unions are standing together as the Combined BHP Port Unions to fight for a fair EA at BHP Port Operations.\nWe remain ready, willing and able to continue negotiating with BHP, and a further bargaining meeting is scheduled for 7 July.",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid0Q2okyou2pDsq6pEHLJ2wtixyAQDbWpcCRZni8Qny2BahcjyTQvkY6gepje9Seqinl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "etu-wa:55",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "pfbid0TL2vGgSQPeYk5kcj3VEE5zL2Kegz8DRWwGAcUmgzrMD8b4mBS6jYYpyqhPZjacYRl",
+                  "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0TL2vGgSQPeYk5kcj3VEE5zL2Kegz8DRWwGAcUmgzrMD8b4mBS6jYYpyqhPZjacYRl",
+                  "displayed_date": "24 June",
+                  "published_date": "2026-06-24",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Yesterday, Western Mine Workers Alliance - WMWA, the AMWU Australian Manufacturing Workers' Union WA and the ETU WA met with BHP to discuss a range of issues with our members' wages and working conditions at Port Hedland Port Operations.\nWhile we made some progress, there's still a way to go before we reach an agreement that addresses the core concerns of our members.\nAll three unions are standing together as the Combined BHP Port Unions to fight for a fair EA at BHP Port Operations.\nWe remain ready, willing and able to continue negotiating with BHP, and a further bargaining meeting is scheduled for 7 July. The AWU WA's PABO application is underway, and members should stay tuned on details for voting!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid0TL2vGgSQPeYk5kcj3VEE5zL2Kegz8DRWwGAcUmgzrMD8b4mBS6jYYpyqhPZjacYRl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "wmwa:39",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1624554586343215",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1624554586343215&set=a.507507878047897",
+                  "displayed_date": "24 June",
+                  "published_date": "2026-06-24",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Yesterday, WMWA, the AMWU Australian Manufacturing Workers' Union WA and ETU WA Branch met with BHP to discuss a range of issues with our members' wages and working conditions at Port Hedland Port Operations.\nWhile we made some progress, there's still a way to go before we reach an agreement that addresses the core concerns of our members. \nAll three unions are standing together as the Combined BHP Port Unions to fight for a fair EA at BHP Port Operations.  \nWe remain ready, willing and able to continue negotiating with BHP, and a further bargaining meeting is scheduled for 7 July. The AWU WA's PABO application is underway, and members should stay tuned on details for voting!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1624554586343215-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-007",
+              "event_date": "2026-06-29",
+              "event_end_date": null,
+              "event_type": "ballot_administration",
+              "summary": "WMWA told Port Operations members to check for protected-action ballot correspondence.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/1629294902535850-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "wmwa:35",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1629294902535850",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1629294902535850&set=a.507507878047897",
+                  "displayed_date": "29 June",
+                  "published_date": "2026-06-29",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "BHP Port Ops members - you have mail about the PABO vote. \nNothing in your inbox? Check your spam/junk folders, and if you still don't see anything, send us a DM!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1629294902535850-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-009",
+              "event_date": "2026-07-06",
+              "event_end_date": null,
+              "event_type": "ballot_result_claim",
+              "summary": "WMWA reported that members at BHP Port Hedland had voted 97% in favour of endorsing protected industrial action; the post does not establish the denominator or participation rate.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/1636343941830946-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "wmwa:32",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1636343941830946",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1636343941830946&set=a.507507878047897",
+                  "displayed_date": "6 July",
+                  "published_date": "2026-07-06",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Members at BHP Port Hedland have voted overwhelmingly (97%) to endorse protected industrial action. \nThe ballot results should send a clear message to BHP that they need to come to the eighth bargaining meeting tomorrow with actual proposals which address workers' concerns around conditions, classifications, career progression, pay and fairness.\nWMWA members want a deal that works for all parties, but we won't be walking away from the fight if BHP fails to deliver substantive and fair proposals.",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1636343941830946-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "milestone_id": "BHP-M03",
+          "title": "First protected action",
+          "start_date": "2026-07-08",
+          "end_date": "2026-07-17",
+          "summary": "Notice, pre-action campaigning, the 16 July action and subsequent union participation and effect claims.",
+          "evidence_state": "Action reported by aligned union pages; effect unverified",
+          "source_post_count": 13,
+          "source_pages": [
+            "AMWU Australian Manufacturing Workers' Union WA",
+            "AWU Western Australia",
+            "ETU WA Branch",
+            "Western Mine Workers Alliance",
+            "Pilbara Rail Round Up"
+          ],
+          "events": [
+            {
+              "event_id": "BHP-010",
+              "event_date": "2026-07-08",
+              "event_end_date": null,
+              "event_type": "protected_action_notice",
+              "summary": "Aligned union pages announced an eight-hour protected-action stoppage for 16 July.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/pfbid02Rhg84MSxrEtKvgsMYt12k8qAjR6hGNFeqM8fCWFAo2pCmS7wiXsBuL7GGHZXYNxJl-01.jpg",
+                "assets/campaigns/bhp-ports/1534251555385591-01.jpg",
+                "assets/campaigns/bhp-ports/pfbid0RAzJPruZFMYXDvGTZkvGNsF2yNSn5zZ2ZFV4KghMkozv2ngPdcSzsjUANt9XuKdcl-01.jpg",
+                "assets/campaigns/bhp-ports/1638204891644851-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "amwu-wa:19",
+                  "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+                  "post_id": "pfbid02Rhg84MSxrEtKvgsMYt12k8qAjR6hGNFeqM8fCWFAo2pCmS7wiXsBuL7GGHZXYNxJl",
+                  "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid02Rhg84MSxrEtKvgsMYt12k8qAjR6hGNFeqM8fCWFAo2pCmS7wiXsBuL7GGHZXYNxJl",
+                  "displayed_date": "8 July",
+                  "published_date": "2026-07-08",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "The AMWU WA, Western Mine Workers Alliance - WMWA Partner Union the AWU and ETU WA Branch have filed to take protected industrial action on the 16th of July at BHP Port Hedland.\nWorkers will down tools for eight hours, from 2pm to 10pm next Thursday as we step up our fight for a fair, safe and productive workplace in Port Hedland.\nWe're sending a message to BHP -- after over 6 months of negotiations, workers deserve a transparent, enforceable agreement that recognises their skills and commitment to keep the ports running!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid02Rhg84MSxrEtKvgsMYt12k8qAjR6hGNFeqM8fCWFAo2pCmS7wiXsBuL7GGHZXYNxJl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "awu-wa:32",
+                  "source_page": "AWU Western Australia",
+                  "post_id": "1534251555385591",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1534251555385591&set=a.370151778462247",
+                  "displayed_date": "8 July",
+                  "published_date": "2026-07-08",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Western Mine Workers Alliance - WMWA  Partner Union the AWU, the AMWU Australian Manufacturing Workers' Union WA and ETU WA Branch have filed to take protected industrial action on the 16th of July at BHP Port Hedland.\nWorkers will down tools for eight hours, from 2pm to 10pm next Thursday as we step up our fight for a fair, safe and productive workplace in Port Hedland.\nWe're sending a message to BHP -- after over 6 months of negotiations, workers deserve a transparent, enforceable agreement that recognises their skills and commitment to keep the ports running!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1534251555385591-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "etu-wa:40",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "pfbid0RAzJPruZFMYXDvGTZkvGNsF2yNSn5zZ2ZFV4KghMkozv2ngPdcSzsjUANt9XuKdcl",
+                  "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0RAzJPruZFMYXDvGTZkvGNsF2yNSn5zZ2ZFV4KghMkozv2ngPdcSzsjUANt9XuKdcl",
+                  "displayed_date": "8 July",
+                  "published_date": "2026-07-08",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Western Mine Workers Alliance - WMWA Partner Union the AWU, the AMWU Australian Manufacturing Workers' Union WA  and ETU WA Branch have filed to take protected industrial action on the 16th of July at BHP Port Hedland.\nWorkers will down tools for eight hours, from 2pm to 10pm next Thursday as we step up our fight for a fair, safe and productive workplace in Port Hedland.\nWe're sending a message to BHP - after over 6 months of negotiations, workers deserve a transparent, enforceable agreement that recognises their skills and commitment to keep the ports running!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid0RAzJPruZFMYXDvGTZkvGNsF2yNSn5zZ2ZFV4KghMkozv2ngPdcSzsjUANt9XuKdcl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "wmwa:30",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1638204891644851",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1638204891644851&set=a.507507878047897",
+                  "displayed_date": "8 July",
+                  "published_date": "2026-07-08",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "WMWA Partner Union the AWU, the AMWU Australian Manufacturing Workers' Union WA and the ETU WA Branch have filed to take protected industrial action on the 16th of July at BHP Port Hedland. \nWorkers will down tools for eight hours, from 2pm to 10pm next Thursday as we step up our fight for a fair, safe and productive workplace in Port Hedland. \nWe're sending a message to BHP -- after over 6 months of negotiations, workers deserve a transparent, enforceable agreement that recognises their skills and commitment to keep the ports running!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1638204891644851-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-011",
+              "event_date": "2026-07-15",
+              "event_end_date": null,
+              "event_type": "pre_action_campaign",
+              "summary": "AWU and WMWA published member-facing and public messaging immediately before the notified stoppage.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/pfbid026FRfjpvPhj1FCwuBcGpBc6oCLecRDEpJyT9VtttMcuxFMBmmcnWvrptCeHCx2fQGl-01.jpg",
+                "assets/campaigns/bhp-ports/pfbid0AZdKn8H8BwscauRN9ZMNyJgFrKyTjAX192omb7NcBm5nAvVcdKNGtWWM1424hWXtl-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "awu-wa:24",
+                  "source_page": "AWU Western Australia",
+                  "post_id": "pfbid026FRfjpvPhj1FCwuBcGpBc6oCLecRDEpJyT9VtttMcuxFMBmmcnWvrptCeHCx2fQGl",
+                  "post_url": "https://www.facebook.com/awuwesternaustralia/posts/pfbid026FRfjpvPhj1FCwuBcGpBc6oCLecRDEpJyT9VtttMcuxFMBmmcnWvrptCeHCx2fQGl",
+                  "displayed_date": "15 July",
+                  "published_date": "2026-07-15",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Some people are calling for politicians to step in and stop tomorrow’s strike in Port Hedland. \n \nUnfortunately for them, our WA Branch Secretary has a message for the mining lobby: we only listen to our members!\nThe message from our members has been clear. BHP has behaved poorly and not listened to them during negotiations, leaving them with no choice but to take lawful industrial action sanctioned by the Fair Work Commission, the industrial umpire.\nOur members are only asking for their fair share. A fair agreement that respects and rewards their hard work and protects their pay and conditions in a safe workplace.\nBHP makes billions in profits off our members and they deserve their fair share of these mega profits.\nNo matter where you work in WA, we’ve got your back and will always support your collective bargaining efforts!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid026FRfjpvPhj1FCwuBcGpBc6oCLecRDEpJyT9VtttMcuxFMBmmcnWvrptCeHCx2fQGl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "wmwa:25",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "pfbid0AZdKn8H8BwscauRN9ZMNyJgFrKyTjAX192omb7NcBm5nAvVcdKNGtWWM1424hWXtl",
+                  "post_url": "https://www.facebook.com/WesternMineWorkersAlliance/posts/pfbid0AZdKn8H8BwscauRN9ZMNyJgFrKyTjAX192omb7NcBm5nAvVcdKNGtWWM1424hWXtl",
+                  "displayed_date": "15 July",
+                  "published_date": "2026-07-15",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "WMWA members at BHP Ports - you've got an email about tomorrow's protected industrial action!\nNothing in your inbox? Check your spam/junk folders, and if you still don't see anything, send us a DM!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid0AZdKn8H8BwscauRN9ZMNyJgFrKyTjAX192omb7NcBm5nAvVcdKNGtWWM1424hWXtl-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-012",
+              "event_date": "2026-07-16",
+              "event_end_date": null,
+              "event_type": "protected_action_commenced",
+              "summary": "Union pages and Rail Round Up reported the first protected action at BHP Port Operations in decades and promoted cross-branch solidarity.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-01.jpg",
+                "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-02.jpg",
+                "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-03.jpg",
+                "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-04.jpg",
+                "assets/campaigns/bhp-ports/1463356569155698-01.jpg",
+                "assets/campaigns/bhp-ports/1463356569155698-02.jpg",
+                "assets/campaigns/bhp-ports/1463356569155698-03.jpg",
+                "assets/campaigns/bhp-ports/1463356569155698-04.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "amwu-wa:17",
+                  "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+                  "post_id": "pfbid02mCmKCcssoxJTENpXcpX2zf7JrVJVasA4eTPGy2SYPZYkaaCLvmm21cKMLbvRzsBYl",
+                  "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid02mCmKCcssoxJTENpXcpX2zf7JrVJVasA4eTPGy2SYPZYkaaCLvmm21cKMLbvRzsBYl",
+                  "displayed_date": "16 July",
+                  "published_date": "2026-07-16",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "This is what solidarity in action looks like.\nWhile AMWU members at BHP Ports took protected industrial action today, our fellow members from the AMWU Victorian Branch stood with us in support.\nThat’s the strength of our union. We back each other, no matter the distance, because every fight for fairness matters.\nTogether, we are stronger. Together, we win.\nIn unity. In solidarity. AMWU strong.",
+                  "graphics": []
+                },
+                {
+                  "candidate_id": "etu-wa:31",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl",
+                  "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl",
+                  "displayed_date": "16 July",
+                  "published_date": "2026-07-16",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "This is what unionism looks like. One union. Many branches. One fight.\nOur brothers and sisters in ETU - Electrical Trades Union of Australia, Victorian Branch and ETU Queensland & NT have stepped out to support us today in our fight for fairness at BHP Ports.\nNo matter where we work, we will always stand for fairness, safety and respect at work.\nUNION POWER!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-01.jpg",
+                    "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-02.jpg",
+                    "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-03.jpg",
+                    "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-04.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "etu-wa:32",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "1463356569155698",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1463356569155698&set=pcb.1463356609155694",
+                  "displayed_date": "16 July",
+                  "published_date": "2026-07-16",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "ETU QLD & NT members showed out to support AMWU and ETU WA Members in Port Hedland who are taking it to mining giant BHP, taking industrial action for the first time in decades. \nWe rallied out the front of BHP’s Brisbane Head office to show that this blue will be fought all across Australia.\nUnion members at BHP Port Hedland deserve fair wages & conditions and Queensland & Northern Territory stands with you all in solidarity.\nIf you don’t fight. You lose!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1463356569155698-01.jpg",
+                    "assets/campaigns/bhp-ports/1463356569155698-02.jpg",
+                    "assets/campaigns/bhp-ports/1463356569155698-03.jpg",
+                    "assets/campaigns/bhp-ports/1463356569155698-04.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "rail-roundup:9",
+                  "source_page": "Pilbara Rail Round Up",
+                  "post_id": null,
+                  "post_url": null,
+                  "displayed_date": "16 July",
+                  "published_date": "2026-07-16",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Today the BHP Port Operations workers have the opportunity to do a couple of very important things.\n1. Show BHP that you will not put up with an inferior agreement just because the company wants the same conditions implemented as Area C/ Southflank.\n2. To understand that withdrawing your labour and standing together is something that few people in our country are prepared to do. \nAs a collective, taking PIA provides the ability to influence the best outcome possible.\nIf you have the ability go down to the picket line and support your fellow workers, please make the effort.\nStand together, fight for what you deserve and be Proud to be Union.\nWarren Johncock",
+                  "graphics": []
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-013",
+              "event_date": "2026-07-17",
+              "event_end_date": null,
+              "event_type": "post_action_claims",
+              "summary": "ETU and WMWA described the 16 July action and promoted its participation and campaign significance; operational effect was not independently verified.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/pfbid02iUQihWsZqRjvkeswCaS546KdmUQRPyZBjT27SzaAFYN2EgrZZ7PzPAgmxat95t5Ll-01.webp",
+                "assets/campaigns/bhp-ports/1647255684073105-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "etu-wa:28",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "pfbid02iUQihWsZqRjvkeswCaS546KdmUQRPyZBjT27SzaAFYN2EgrZZ7PzPAgmxat95t5Ll",
+                  "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid02iUQihWsZqRjvkeswCaS546KdmUQRPyZBjT27SzaAFYN2EgrZZ7PzPAgmxat95t5Ll",
+                  "displayed_date": "17 July",
+                  "published_date": "2026-07-17",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "QLD ETU member stand in solidarity with the BHP Port Headland members.",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid02iUQihWsZqRjvkeswCaS546KdmUQRPyZBjT27SzaAFYN2EgrZZ7PzPAgmxat95t5Ll-01.webp"
+                  ]
+                },
+                {
+                  "candidate_id": "etu-wa:29",
+                  "source_page": "ETU WA Branch",
+                  "post_id": null,
+                  "post_url": null,
+                  "displayed_date": "17 July",
+                  "published_date": "2026-07-17",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "𝐓𝐡𝐞 𝐌𝐨𝐬𝐭 𝐄𝐱𝐩𝐞𝐧𝐬𝐢𝐯𝐞 𝐅𝐚𝐦𝐢𝐥𝐲 𝐁𝐁𝐐 𝐓𝐨 𝐃𝐚𝐭𝐞\nWorkers walked off the job yesterday for the first time in decades at a BHP iron ore operation.\nSome sections of the media spent days claiming the sky would fall and that industrial action would cripple production. Then, when the stoppage happened, many of those same voices claimed it had \"no impact.\"\nSo which is it?\nEarlier that day, a car dumper and a ship loader both suffered breakdowns. Union members worked hard to get the equipment back into service until 2:00 pm. Then they downed tools and made history.\nThe result was simple: ore stayed on the trains, the rail network backed up, stockpiles grew, and ship departures were delayed. It was another reminder of a basic truth that BHP too often forgets:\n𝐖𝐢𝐭𝐡𝐨𝐮𝐭 𝐰𝐨𝐫𝐤𝐞𝐫𝐬, 𝐧𝐨𝐭𝐡𝐢𝐧𝐠 𝐦𝐨𝐯𝐞𝐬.\nThis first stoppage was just the entrée - a small taste of what is to come if BHP refuses to negotiate a fair Union EBA that protects wages, conditions and secure career progression.\nThe main course will be far harder for BHP to digest. BHP will need more than some digestives to cure the indigestion.\n𝐖𝐨𝐫𝐤𝐞𝐫𝐬 𝐜𝐫𝐞𝐚𝐭𝐞 𝐭𝐡𝐞 𝐰𝐞𝐚𝐥𝐭𝐡. 𝐖𝐨𝐫𝐤𝐞𝐫𝐬 𝐝𝐞𝐬𝐞𝐫𝐯𝐞 𝐭𝐡𝐞𝐢𝐫 𝐟𝐚𝐢𝐫 𝐬𝐡𝐚𝐫𝐞.",
+                  "graphics": []
+                },
+                {
+                  "candidate_id": "wmwa:23",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1647255684073105",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1647255684073105&set=a.507507878047897",
+                  "displayed_date": "17 July",
+                  "published_date": "2026-07-17",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Yesterday, over 100 Ports Unions members joined the community picket in Port Hedland as part of yesterday's protected industrial action (PIA) where members from WMWA Partner Union the AWU undertook 4 consecutive 1 hour stoppages at the end of day shift and start of night shift, along with members from the ETU and AMWU. \nBHP Ports union members want BHP to take the negotiations for the new Ports agreement seriously, and they don't want to wait 2 years like MAC/South Flank employees had to. \nTaking PIA is never the first option and it's never easy - a big thank you to the Ports Unions members for standing together and standing up yesterday, including all those members who wanted to partake but had to remain at work for safety reasons. \nIf you don't fight you lose - WMWA fighting for Fair across the Pilbara!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1647255684073105-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "milestone_id": "BHP-M04",
+          "title": "Further action authorised",
+          "start_date": "2026-07-29",
+          "end_date": "2026-07-31",
+          "summary": "Member-meeting communication followed by union accounts of endorsement for further action.",
+          "evidence_state": "Union accounts",
+          "source_post_count": 5,
+          "source_pages": [
+            "Western Mine Workers Alliance",
+            "AMWU Australian Manufacturing Workers' Union WA",
+            "AWU Western Australia",
+            "ETU WA Branch"
+          ],
+          "events": [
+            {
+              "event_id": "BHP-015",
+              "event_date": "2026-07-29",
+              "event_end_date": null,
+              "event_type": "member_meeting_administration",
+              "summary": "WMWA directed members to an email about a Port Operations mass meeting.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/1658989719566368-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "wmwa:16",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1658989719566368",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1658989719566368&set=a.507507878047897",
+                  "displayed_date": "29 July at 19:45",
+                  "published_date": "2026-07-29",
+                  "published_at": "2026-07-29T11:45:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "WMWA members at BHP Ports - you've got an important email from your union! \nPlease check your inbox for an update about tomorrow's mass meeting.\nNothing in your inbox? Check your spam/junk folders, and if you still don't see anything, send us a DM!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1658989719566368-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-016",
+              "event_date": "2026-07-31",
+              "event_end_date": null,
+              "event_type": "second_action_endorsement_claim",
+              "summary": "Four union pages said members had overwhelmingly endorsed further protected action across 8 and 9 August.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/1660851812713492-01.jpg",
+                "assets/campaigns/bhp-ports/pfbid028PNwncuVZRBgvSSHg4kLWzZBDDk1dDbY5KkEGD4bDKbCWhBJaXsaf2EvRubZJjNWl-01.jpg",
+                "assets/campaigns/bhp-ports/1554886063322140-01.jpg",
+                "assets/campaigns/bhp-ports/pfbid0jM5qnmyA2kHDM8aV4Pw3115jA1rRU3AafCzYSzz24GV28nUAu8T3UGgH8YrLuMqYl-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "wmwa:14",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1660851812713492",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1660851812713492&set=a.507507878047897",
+                  "displayed_date": "31 July at 13:59",
+                  "published_date": "2026-07-31",
+                  "published_at": "2026-07-31T05:59:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "Fed up and fighting back! \nBHP Port Ops members from WMWA partner Union the AWU, the  AMWU - Australian Manufacturing Workers' Union and the ETU - The Electrical Trades Union  have voted overwhelmingly to endorse protected industrial action across the 8th and 9th of August.\nThis action includes a 24-hour work ban on loading vessels, starting Saturday morning, and a 24-hour stoppage on Sunday.\nIt comes after 8 months of bargaining, with BHP refusing to offer a fair agreement that locks in decent base rate wage increases, classifications, career progression and fair conditions.\nWe're ready to go longer and fight harder. Port Ops members - check your inbox for a full update on PIA next week!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1660851812713492-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "amwu-wa:12",
+                  "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+                  "post_id": "pfbid028PNwncuVZRBgvSSHg4kLWzZBDDk1dDbY5KkEGD4bDKbCWhBJaXsaf2EvRubZJjNWl",
+                  "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid028PNwncuVZRBgvSSHg4kLWzZBDDk1dDbY5KkEGD4bDKbCWhBJaXsaf2EvRubZJjNWl",
+                  "displayed_date": "31 July at 14:00",
+                  "published_date": "2026-07-31",
+                  "published_at": "2026-07-31T06:00:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "Fed up and fighting back! \nBHP Port Ops members from Western Mine Workers Alliance partner Union the AWU, the AMWU and the ETU WA Branch have voted overwhelmingly to endorse protected industrial action across the 8th and 9th of August.\nThis action includes a 24-hour work ban on loading vessels, starting Saturday morning, and a 24-hour stoppage on Sunday.\nIt comes after 8 months of bargaining, with BHP refusing to offer a fair agreement that locks in decent base rate wage increases, classifications, career progression and fair conditions.\nWe're ready to go longer and fight harder. Port Ops members - check your inbox for a full update on PIA next week!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid028PNwncuVZRBgvSSHg4kLWzZBDDk1dDbY5KkEGD4bDKbCWhBJaXsaf2EvRubZJjNWl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "awu-wa:16",
+                  "source_page": "AWU Western Australia",
+                  "post_id": "1554886063322140",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1554886063322140&set=a.370151778462247",
+                  "displayed_date": "31 July at 14:19",
+                  "published_date": "2026-07-31",
+                  "published_at": "2026-07-31T06:19:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "Fed up and fighting back! \nBHP Port Ops members from Western Mine Workers Alliance - WMWA partner Union the AWU, the AMWU Australian Manufacturing Workers' Union WA and the ETU WA Branch have voted overwhelmingly to endorse protected industrial action across the 8th and 9th of August.\nThis action includes a 24-hour work ban on loading vessels, starting Saturday morning, and a 24-hour stoppage on Sunday.\nIt comes after 8 months of bargaining, with BHP refusing to offer a fair agreement that locks in decent base rate wage increases, classifications, career progression and fair conditions.\nWe're ready to go longer and fight harder. Port Ops members - check your inbox for a full update on PIA next week.",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1554886063322140-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "etu-wa:21",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "pfbid0jM5qnmyA2kHDM8aV4Pw3115jA1rRU3AafCzYSzz24GV28nUAu8T3UGgH8YrLuMqYl",
+                  "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0jM5qnmyA2kHDM8aV4Pw3115jA1rRU3AafCzYSzz24GV28nUAu8T3UGgH8YrLuMqYl",
+                  "displayed_date": "31 July at 18:44",
+                  "published_date": "2026-07-31",
+                  "published_at": "2026-07-31T10:44:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "Fed up and fighting back! \nBHP Port Ops members from the ETU WA, the Western Mine Workers Alliance and the AMWU Australian Manufacturing Workers' Union WA have voted overwhelmingly to endorse protected industrial action across the 8th and 9th of August.\nThis action includes a 24-hour work ban on loading vessels, starting Saturday morning, and a 24-hour stoppage on Sunday.\nIt comes after 8 months of bargaining, with BHP refusing to offer a fair agreement that locks in decent base rate wage increases, classifications, career progression and fair conditions.\nWe're ready to go longer and fight harder. Port Ops members - check your inbox for a full update on PIA next week!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid0jM5qnmyA2kHDM8aV4Pw3115jA1rRU3AafCzYSzz24GV28nUAu8T3UGgH8YrLuMqYl-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "milestone_id": "BHP-M05",
+          "title": "FWC-assisted bargaining and August action",
+          "start_date": "2026-08-04",
+          "end_date": "2026-08-11",
+          "summary": "Bargaining meeting 11, a further action program and unions' claimed post-action effects.",
+          "evidence_state": "Union accounts; claimed effect unverified",
+          "source_post_count": 10,
+          "source_pages": [
+            "Western Mine Workers Alliance",
+            "AWU Western Australia",
+            "ETU WA Branch",
+            "AMWU Australian Manufacturing Workers' Union WA"
+          ],
+          "events": [
+            {
+              "event_id": "BHP-017",
+              "event_date": "2026-08-04",
+              "event_end_date": null,
+              "event_type": "bargaining_update",
+              "summary": "WMWA and AWU said the eleventh bargaining meeting occurred with Fair Work Commission assistance.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/1664477375684269-01.jpg",
+                "assets/campaigns/bhp-ports/pfbid07Nqt5DGTPWHLad1sZSe6tZUHyDD4k6Hu9DL4HLN8K8a4AL1JYkVRp24yRenhHgAxl-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "wmwa:9",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1664477375684269",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1664477375684269&set=a.507507878047897",
+                  "displayed_date": "4 August at 07:00",
+                  "published_date": "2026-08-04",
+                  "published_at": "2026-08-03T23:00:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "WMWA partner Union the AWU, along with the ETU and AMWU, are back at the bargaining table today for the 11th BHP Ports Bargaining meeting. Today's meeting is being conducted with the assistance of the FWC.\nThis comes off the back of last week's meeting, where the lack of any substantive progress seen the combined ports unions (AWU, ETU and AMWU) notify BHP of their intention to take Protected Industrial Action this Saturday and Sunday.\nWorkers at Port Hedland are highly skilled, and engage in high risk/high volume work, 24 hours a day, every day of the year. These workers are simply asking for a fair deal.\nToday's Ports bargaining meeting is another chance for BHP to make a substantive offer to address important things like:\n A proposed REM models that is fair for all workers at Port Hedland\n Allowances to fairly compensate both FIFO and Reso workers\n A decent classification structure that promotes competency-based progression\nThe Ports Unions and our members want BHP to come to the table today with a substantive proposal that addresses our members concerns.\nWe will update members on the outcomes from today's meeting by email, and as always, our members will get to determine what deal is acceptable or what isn’t.\nYour organisers will be in Port Hedland and onsite this Thursday, and Friday to talk to members about this weekend's proposed actions and answer any questions. \nWMWA Fighting for Fair for in the Pilbara!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1664477375684269-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "awu-wa:15",
+                  "source_page": "AWU Western Australia",
+                  "post_id": "pfbid07Nqt5DGTPWHLad1sZSe6tZUHyDD4k6Hu9DL4HLN8K8a4AL1JYkVRp24yRenhHgAxl",
+                  "post_url": "https://www.facebook.com/awuwesternaustralia/posts/pfbid07Nqt5DGTPWHLad1sZSe6tZUHyDD4k6Hu9DL4HLN8K8a4AL1JYkVRp24yRenhHgAxl",
+                  "displayed_date": "4 August at 11:02",
+                  "published_date": "2026-08-04",
+                  "published_at": "2026-08-04T03:02:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "WMWA partner Union the AWU, along with the ETU and AMWU, are back at the bargaining table today for the 11th BHP Ports Bargaining meeting. Today's meeting is being conducted with the assistance of the FWC.\nThis comes off the back of last week's meeting, where the lack of any substantive progress seen the combined ports unions (AWU, ETU and AMWU) notify BHP of their intention to take Protected Industrial Action this Saturday and Sunday.\nWorkers at Port Hedland are highly skilled, and engage in high risk/high volume work, 24 hours a day, every day of the year. These workers are simply asking for a fair deal.\nToday's Ports bargaining meeting is another chance for BHP to make a substantive offer to address important things like:\n A proposed REM models that is fair for all workers at Port Hedland\n Allowances to fairly compensate both FIFO and Reso workers\n A decent classification structure that promotes competency-based progression.\nThe Ports Unions and our members want BHP to come to the table today with a substantive proposal that addresses our members concerns.\nWe will update members on the outcomes from today's meeting by email, and as always, our members will get to determine what deal is acceptable or what isn’t.\nYour organisers will be in Port Hedland and onsite this Thursday, and Friday to talk to members about this weekend's proposed actions and answer any questions. \nWMWA Fighting for Fair for in the Pilbara!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid07Nqt5DGTPWHLad1sZSe6tZUHyDD4k6Hu9DL4HLN8K8a4AL1JYkVRp24yRenhHgAxl-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-018",
+              "event_date": "2026-08-07",
+              "event_end_date": null,
+              "event_type": "protected_action_notice",
+              "summary": "Union pages announced ship-loader bans and combined protected action for 8 and 9 August.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/pfbid0ZWa423EWEGKgbfCd5tumVEUEzx4mQv5xyG4U4JVEutPWiEDoiVjwZEKCajH9RRMKl-01.jpg",
+                "assets/campaigns/bhp-ports/pfbid02fVK2xHcnNTbLEp7vd3ku3toydBYUYYPHeqiLLrS5j3WAJeE5r7WCmvSWig2dUfuzl-01.jpg",
+                "assets/campaigns/bhp-ports/1667801645351842-01.jpg",
+                "assets/campaigns/bhp-ports/1561518762658870-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "etu-wa:19",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "pfbid0ZWa423EWEGKgbfCd5tumVEUEzx4mQv5xyG4U4JVEutPWiEDoiVjwZEKCajH9RRMKl",
+                  "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0ZWa423EWEGKgbfCd5tumVEUEzx4mQv5xyG4U4JVEutPWiEDoiVjwZEKCajH9RRMKl",
+                  "displayed_date": "7 August at 05:00",
+                  "published_date": "2026-08-07",
+                  "published_at": "2026-08-06T21:00:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "From 0530 tomorrow, members from  Western Mine Workers Alliance - WMWA partner union the AWU will commence PIA with ship loader movement bans. WMIA members will be joined by members from the AMWU Australian Manufacturing Workers' Union WA and ETU WA from 0530 Sunday to combined all unions at BHP Port Operations taking 24 hours of PIA. \nOur members are fed up of BHP's months of delays and denial at the bargaining table. \nWe're stepping up the fight for a fair enterprise agreement that includes decent base rate wage increases, a fair classification structure with career progression and fair conditions to recognise the highly skilled, high volume, high risk work our members do, 24 hours a day 365 days a year.\nProtected action is never taken lightly, but it’s clear BHP aren’t taking us seriously. \nIf you don’t fight, you lose!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid0ZWa423EWEGKgbfCd5tumVEUEzx4mQv5xyG4U4JVEutPWiEDoiVjwZEKCajH9RRMKl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "amwu-wa:9",
+                  "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+                  "post_id": "pfbid02fVK2xHcnNTbLEp7vd3ku3toydBYUYYPHeqiLLrS5j3WAJeE5r7WCmvSWig2dUfuzl",
+                  "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid02fVK2xHcnNTbLEp7vd3ku3toydBYUYYPHeqiLLrS5j3WAJeE5r7WCmvSWig2dUfuzl",
+                  "displayed_date": "7 August at 10:11",
+                  "published_date": "2026-08-07",
+                  "published_at": "2026-08-07T02:11:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "From 0530 tomorrow, members from Western Mine Workers Alliance - WMWA partner union the AWU will commence PIA with ship loader movement bans. WMWA members will be joined by members from the AMWU and ETU WA Branch from 0530 Sunday to combined all unions at BHP Port Operations taking 24 hours of PIA. \nOur members are fed up of BHP's months of delays and denial at the bargaining table. \nWe're stepping up the fight for a fair enterprise agreement that includes decent base rate wage increases, a fair classification structure with career progression and fair conditions to recognise the highly skilled, high volume, high risk work our members do, 24 hours a day 365 days a year.\nProtected action is never taken lightly, but it’s clear BHP aren’t taking us seriously. \nIf you don’t fight, you lose!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid02fVK2xHcnNTbLEp7vd3ku3toydBYUYYPHeqiLLrS5j3WAJeE5r7WCmvSWig2dUfuzl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "wmwa:5",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1667801645351842",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1667801645351842&set=a.507507878047897",
+                  "displayed_date": "7 August at 11:15",
+                  "published_date": "2026-08-07",
+                  "published_at": "2026-08-07T03:15:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "From 0530 tomorrow, members from WMWA partner union the AWU will take a combined 48 hours of protected industrial Action at BHP Port Operations. They'll be joined by members from the AMWU - Australian Manufacturing Workers' Union and ETU - The Electrical Trades Union from 0530 Sunday!\nOur members are fed up of BHP's months of delays and denial at the bargaining table. We're stepping up the fight for a fair enterprise agreement that includes decent base rate wage increases, a fair classification structure with career progression and fair conditions to recognise the highly skilled, high volume, high risk work our members do, 24 hours a day 365 days a year.\nPort Ops members, check your inbox for more info about this weekend's protected action!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1667801645351842-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "awu-wa:13",
+                  "source_page": "AWU Western Australia",
+                  "post_id": "1561518762658870",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1561518762658870&set=a.370151778462247",
+                  "displayed_date": "7 August at 16:09",
+                  "published_date": "2026-08-07",
+                  "published_at": "2026-08-07T08:09:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "From 0530 tomorrow, members from Western Mine Workers Alliance - WMWA  partner union the AWU will take a combined 48 hours of protected industrial Action at BHP Port Operations. They'll be joined by members from the AMWU Australian Manufacturing Workers' Union WA  and ETU WA Branch  from 0530 Sunday!\nOur members are fed up of BHP's months of delays and denial at the bargaining table. We're stepping up the fight for a fair enterprise agreement that includes decent base rate wage increases, a fair classification structure with career progression and fair conditions to recognise the highly skilled, high volume, high risk work our members do, 24 hours a day 365 days a year.\nPort Ops members, check your inbox for more info about this weekend's protected action!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1561518762658870-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-019",
+              "event_date": "2026-08-10",
+              "event_end_date": "2026-08-11",
+              "event_type": "post_action_claims",
+              "summary": "Four union pages said the August action had concluded and claimed substantial operational and bargaining effects; those effects were not independently corroborated.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/1670598881738785-01.jpg",
+                "assets/campaigns/bhp-ports/pfbid0tMyvf9e54pBTY76dW8EF4Bobqe5s3Fs8xeQRPxXS6RVffhcLSDJpghsfrnLzH6q4l-01.jpg",
+                "assets/campaigns/bhp-ports/1519930930149638-01.jpg",
+                "assets/campaigns/bhp-ports/1565273455616734-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "wmwa:7",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1670598881738785",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1670598881738785&set=a.507507878047897",
+                  "displayed_date": "10 August at 11:00",
+                  "published_date": "2026-08-10",
+                  "published_at": "2026-08-10T03:00:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "Over the weekend, hundreds of members from the combined BHP Port Ops unions - WMWA partner union the AWU, The AMWU - Australian Manufacturing Workers' Union and the ETU - The Electrical Trades Union downed tools in our fight for a fair EA!\nOur members know that our action had a huge impact at Port Hedland - and so does BHP.\nWe hope this action does exactly what it's intended to do, and sharpen everyone’s mind on finding a solution that works for everyone, fast.\nThank you to every member who stood strong with us last weekend - your action made a big difference in our fight!\nWMWA BHP Ports members, keep an eye on your inbox for updates.",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1670598881738785-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "amwu-wa:7",
+                  "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+                  "post_id": "pfbid0tMyvf9e54pBTY76dW8EF4Bobqe5s3Fs8xeQRPxXS6RVffhcLSDJpghsfrnLzH6q4l",
+                  "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid0tMyvf9e54pBTY76dW8EF4Bobqe5s3Fs8xeQRPxXS6RVffhcLSDJpghsfrnLzH6q4l",
+                  "displayed_date": "10 August at 11:07",
+                  "published_date": "2026-08-10",
+                  "published_at": "2026-08-10T03:07:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "Over the weekend, hundreds of members from the combined BHP Port Ops unions - The AMWU, Western Mine Workers Alliance - WMWA partner union the AWU, and the ETU WA Branch downed tools in our fight for a fair EA!\nOur members know that our action had a huge impact at Port Hedland - and so does BHP.\nWe hope this action does exactly what it's intended to do, and sharpen everyone’s mind on finding a solution that works for everyone, fast.\nThank you to every member who stood strong with us last weekend - your action made a big difference in our fight!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid0tMyvf9e54pBTY76dW8EF4Bobqe5s3Fs8xeQRPxXS6RVffhcLSDJpghsfrnLzH6q4l-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "etu-wa:5",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "1519930930149638",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1519930930149638&set=a.166072128868865",
+                  "displayed_date": "10 August at 15:00",
+                  "published_date": "2026-08-10",
+                  "published_at": "2026-08-10T07:00:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "Over the weekend, hundreds of members from the combined BHP Port Ops unions - the ETU WA, Western Mine Workers Alliance - WMWA partner union the AWU and the AMWU Australian Manufacturing Workers' Union WA downed tools in our fight for a fair EA!\nOur members know that our action had a huge impact at Port Hedland - and so does BHP.\nWe hope this action does exactly what it's intended to do, and sharpen everyone’s mind on finding a solution that works for everyone, fast.\nThank you to every member who stood strong with us last weekend - your action made a big difference in our fight!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1519930930149638-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "awu-wa:8",
+                  "source_page": "AWU Western Australia",
+                  "post_id": "1565273455616734",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1565273455616734&set=a.370151755128916",
+                  "displayed_date": "11 August at 15:02",
+                  "published_date": "2026-08-11",
+                  "published_at": "2026-08-11T07:02:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "Over the weekend, hundreds of members from the combined BHP Port Ops unions - WMWA partner union the AWU, The AMWU Australian Manufacturing Workers' Union WA and the ETU WA Branch downed tools in our fight for a fair EA!\nOur members know that our action had a huge impact at Port Hedland - and so does BHP.\nWe hope this action does exactly what it's intended to do, and sharpen everyone’s mind on finding a solution that works for everyone, fast.\nThank you to every member who stood strong with us last weekend - your action made a big difference in our fight!\nWMWA BHP Ports members, keep an eye on your inbox for updates.",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1565273455616734-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "milestone_id": "BHP-M06",
+          "title": "Continuing FWC-assisted bargaining",
+          "start_date": "2026-08-19",
+          "end_date": "2026-08-20",
+          "summary": "Union accounts of another Commission-involved meeting and a subsequent member update.",
+          "evidence_state": "Union accounts; Commission record not connected",
+          "source_post_count": 4,
+          "source_pages": [
+            "Western Mine Workers Alliance",
+            "AMWU Australian Manufacturing Workers' Union WA",
+            "AWU Western Australia"
+          ],
+          "events": [
+            {
+              "event_id": "BHP-020",
+              "event_date": "2026-08-19",
+              "event_end_date": "2026-08-20",
+              "event_type": "fwc_assisted_bargaining_update",
+              "summary": "WMWA, AMWU and AWU said workers and union representatives met BHP with the Fair Work Commission and criticised BHP's offer.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/1678743207591019-01.jpg",
+                "assets/campaigns/bhp-ports/pfbid02rL9H9FP5vMaoK8pHdAswnkt9r8CfutGa8csnM24CxqwB1dcvWmE7fAPU7tSX1nitl-01.jpg",
+                "assets/campaigns/bhp-ports/1572662001544546-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "wmwa:12",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1678743207591019",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1678743207591019&set=a.507507878047897",
+                  "displayed_date": "2 days ago",
+                  "published_date": "2026-08-19",
+                  "published_at": null,
+                  "date_basis": "facebook_relative_label",
+                  "date_precision": "day",
+                  "full_text": "Today, workers, representatives from the combined Port Ops unions, and BHP met with the Fair Work Commission.\nThis was the same day that BHP announced a full-year profit of over $13 billion, up 9%. But their offer fails to address the basic concerns of our members - the very workers who helped deliver that massive profit.\nWe're meeting again next week with BHP, and in the meantime, we'll be consulting with members on our options - including counter-offers. It's time for a fair offer from BHP!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1678743207591019-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "amwu-wa:3",
+                  "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+                  "post_id": "pfbid02rL9H9FP5vMaoK8pHdAswnkt9r8CfutGa8csnM24CxqwB1dcvWmE7fAPU7tSX1nitl",
+                  "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid02rL9H9FP5vMaoK8pHdAswnkt9r8CfutGa8csnM24CxqwB1dcvWmE7fAPU7tSX1nitl",
+                  "displayed_date": "a day ago",
+                  "published_date": "2026-08-20",
+                  "published_at": null,
+                  "date_basis": "facebook_relative_label",
+                  "date_precision": "day",
+                  "full_text": "Yesterday, workers, representatives from the combined Port Ops unions, and BHP met with the Fair Work Commission.\nThis was the same day that BHP announced a full-year profit of over $13 billion, up 9%. But their offer fails to address the basic concerns of our members - the very workers who helped deliver that massive profit.\nWe're meeting again next week with BHP, and in the meantime, we'll be consulting with members on our options - including counter-offers. It's time for a fair offer from BHP!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/pfbid02rL9H9FP5vMaoK8pHdAswnkt9r8CfutGa8csnM24CxqwB1dcvWmE7fAPU7tSX1nitl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "awu-wa:2",
+                  "source_page": "AWU Western Australia",
+                  "post_id": "1572662001544546",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1572662001544546&set=a.370151778462247",
+                  "displayed_date": "a day ago",
+                  "published_date": "2026-08-20",
+                  "published_at": null,
+                  "date_basis": "facebook_relative_label",
+                  "date_precision": "day",
+                  "full_text": "Yesterday, workers, representatives from the combined Port Ops unions, and BHP met with the Fair Work Commission.\nThis was the same day that BHP announced a full-year profit of over $13 billion, up 9%. But their offer fails to address the basic concerns of our members – the very workers who helped deliver that massive profit.\nWe're meeting again next week with BHP, and in the meantime, we'll be consulting with members on our options – including counter-offers. It's time for a fair offer from BHP!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1572662001544546-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "BHP-021",
+              "event_date": "2026-08-20",
+              "event_end_date": null,
+              "event_type": "member_update_administration",
+              "summary": "WMWA directed BHP Ports members to a further bargaining update by email.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/bhp-ports/1679480647517275-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "wmwa:11",
+                  "source_page": "Western Mine Workers Alliance",
+                  "post_id": "1679480647517275",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1679480647517275&set=a.507507878047897",
+                  "displayed_date": "a day ago",
+                  "published_date": "2026-08-20",
+                  "published_at": null,
+                  "date_basis": "facebook_relative_label",
+                  "date_precision": "day",
+                  "full_text": "WMWA members at BHP Ports - you've got a mail from your union! \nPlease check your inbox for an update on the latest bargaining meeting with BHP.\nNothing in your inbox? Check your spam/junk folders, and if you still don't see anything, send us a DM!",
+                  "graphics": [
+                    "assets/campaigns/bhp-ports/1679480647517275-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "context_events": [
+        {
+          "event_id": "BHP-008",
+          "event_date": "2026-07-03",
+          "event_end_date": null,
+          "event_type": "adjacent_agreement_context",
+          "summary": "WMWA described the employee vote on BHP's separate Mining Area C and South Flank agreement; this is contextual rather than a Port Operations agreement event.",
+          "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+          "event_graphics": [
+            "assets/campaigns/bhp-ports/1633148088817198-01.jpg"
+          ],
+          "source_posts": [
+            {
+              "candidate_id": "wmwa:33",
+              "source_page": "Western Mine Workers Alliance",
+              "post_id": "1633148088817198",
+              "post_url": "https://www.facebook.com/photo/?fbid=1633148088817198&set=a.507507878047897",
+              "displayed_date": "3 July",
+              "published_date": "2026-07-03",
+              "published_at": null,
+              "date_basis": "facebook_absolute_label",
+              "date_precision": "day",
+              "full_text": "A narrow majority (58%) of BHP's 1800 workers at Mining Area C/South Flank have endorsed the company's latest EA offer. \nOnce the agreement is approved by the FWC, workers will have guaranteed 4% annual pay increases for 4 years, delayed flight compensation starting next year, 14% super contributions and other improved entitlements.\nBHP’s initial baseline agreement included none of these improvements. When the first offer came out, hundreds of WMWA members stood together and collectively voiced their concerns. This could not be ignored and has made a big difference. Thank you to every member who got involved throughout the bargaining process.\nWhile the new agreement fails to meet a number of WMWA's claims, today's result proves that if BHP wants to win over their workforce in other sites, particularly in Port Hedland, they're going to need to do much better.",
+              "graphics": [
+                "assets/campaigns/bhp-ports/1633148088817198-01.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "event_id": "BHP-014",
+          "event_date": "2026-07-17",
+          "event_end_date": null,
+          "event_type": "adjacent_fwc_context",
+          "summary": "WMWA reported that BHP's separate Mining Area C and South Flank agreement had been lodged for Commission approval.",
+          "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+          "event_graphics": [
+            "assets/campaigns/bhp-ports/1646940270771313-01.jpg"
+          ],
+          "source_posts": [
+            {
+              "candidate_id": "wmwa:24",
+              "source_page": "Western Mine Workers Alliance",
+              "post_id": "1646940270771313",
+              "post_url": "https://www.facebook.com/photo/?fbid=1646940270771313&set=a.507507878047897",
+              "displayed_date": "17 July",
+              "published_date": "2026-07-17",
+              "published_at": null,
+              "date_basis": "facebook_absolute_label",
+              "date_precision": "day",
+              "full_text": "Earlier this month BHP confirmed a majority of MAC and South Flank employees have voted in support of their new proposed enterprise bargaining agreement.\nThis week, BHP lodged the proposed agreement to the Fair Work Commission for approval. The approval process normally can take a couple of months and allows for bargaining representatives, including the WMWA partner Unions to raise concerns around things like mandatory content/model clauses and other technical legal issues.\nOnce approved, the agreement's terms and conditions will apply to the 1800 workers covered by the agreement. It will include:\n 4% guaranteed yearly pay increases for all workers.\n Increases to shift allowances for workers not on even time rosters like 8/6 and 8/6-7/7.\n 14% super contribution paid from July.\n A higher duties allowance for step up supervisors\n A clearer classification structure (albeit not as detailed or as fair as we wanted)\n An actual clear issue resolution process (albeit not as strong as we wanted)\n A commitment to introduce a delayed compensation flights policy.\nThe above benefits are the result of hundreds of WMWA members providing BHP with organised and professional feedback on their original baseline proposal, which included only one of the above benefits from the first offer.\nWMWA members at MAC and South Flank should be proud of the results they achieved against all the odds.\nMeanwhile, the Fight for Fair continues at Port Hedland, with members from WMWA Partner union AWU taking historic protected industrial action yesterday!",
+              "graphics": [
+                "assets/campaigns/bhp-ports/1646940270771313-01.jpg"
+              ]
+            }
+          ]
+        }
+      ],
+      "undated_exhibits": [],
+      "all_posts": [
+        {
+          "candidate_id": "wmwa:51",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": null,
+          "post_url": null,
+          "displayed_date": "29 May",
+          "published_date": "2026-05-29",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "From tomorrow, WMWA will be conducting site visits at BHP Port Operations during morning and lunch breaks. \nWe're looking forward to catching up with members about the bargaining process, and what the next steps in our campaign could look like. \nCome and say g'day at: \n30/05/26 - Nelson Point - Inflow and South Yard \n01/06/26 - Nelson Point - North Yard ,Locomotive Workshop and Rail Maintenance Workshop\n02/06/26 - Finucane Island - Operations \n02/06/26 - Nelson Point - Shutdown Yard and NPI \n03/06/26 - Nelson Point - Track machine Workshop and LV Workshop",
+          "graphics": []
+        },
+        {
+          "candidate_id": "amwu-wa:33",
+          "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+          "post_id": "pfbid022Yidi9UNgvNNK5ZysvEfAd9PXtEfS4adJEPYWq7DRB7qvEuEamKfptVZ2nHFNp3vl",
+          "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid022Yidi9UNgvNNK5ZysvEfAd9PXtEfS4adJEPYWq7DRB7qvEuEamKfptVZ2nHFNp3vl",
+          "displayed_date": "30 May",
+          "published_date": "2026-05-30",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "AMWU FILES FOR PROTECTED INDUSTRIAL ACTION AT BHP PORTS \nWhile others are telling Pilbara mine workers that BHP's proposed South Flank and Mining Area C Agreement is somehow a step forward, the AMWU is doing what it has always done — fighting hard for mechanical trades workers and organising to build real power.\nFor months, AMWU members at BHP port operations in Port Hedland have bargained in good faith. They have attended meetings, put forward claims, participated constructively and genuinely tried to reach an agreement that reflects the skills, experience and contribution of the mechanical maintenance workforce.\nOther unions in the Pilbara are busy selling workers minimum-rate agreements with no real career progression, weak protections and little certainty for the future. AMWU members at BHP ports are drawing a line in the sand.\nThe AMWU has now commenced proceedings in the Fair Work Commission seeking a Protected Action Ballot Order.\nThis is not a step workers take lightly.\nProtected industrial action is a lawful right. It exists for a reason. When workers have bargained honestly, reasonably and in good faith, they are entitled to have a meaningful mechanism available to apply pressure when negotiations stall.\nNow they are exercising their lawful rights.\nThe message from Port Hedland maintenance workers is loud and clear:\nEnough is enough.\nIf you're a mechanical tradesperson working for BHP in Port Hedland, South Flank, Mining Area C, Yandi, Jimblebar, Newman, Rail, Ports or anywhere across the Pilbara, now is the time to stand with the union that is actually fighting for mechanical maintenance workers.\nStand and deliver. Join the AMWU.\n United.\n Determined.\n Ready to fight for a fair deal.\n#AMWU #PortHedland #Pilbara #UnionStrong #MechanicalTrades #MaintenanceWorkers #ProtectedAction #FairAgreement #BHP",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid022Yidi9UNgvNNK5ZysvEfAd9PXtEfS4adJEPYWq7DRB7qvEuEamKfptVZ2nHFNp3vl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:50",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1602670478531626",
+          "post_url": "https://www.facebook.com/photo/?fbid=1602670478531626&set=a.507507878047897",
+          "displayed_date": "1 June",
+          "published_date": "2026-06-01",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "WMWA has been out on site across BHP Port Ops this weekend, and we're out again this week! You can catch us at:\n01/06/26 - Nelson Point - North Yard, Locomotive Workshop and Rail Maintenance Workshop\n02/06/26 - Finucane Island - Operations\n02/06/26 - Nelson Point - Production techs crib \n03/06/26 - Nelson Point - Track machine Workshop and LV Workshop\nWe want your views on BHP’s approach so far and options for next steps.\nAs AWU WA Secretary Brad Gandy says, \"Pilbara mineworkers deserve the same chance for a say as millions of other EA workers around the country and BHP must do better to listen to its Port Hedland workforce.\"\nWorkers deserve transparency, a clear classification structure, and a decent pay increase. If you see us onsite over the next few days, please say g'day and tell us what you think about BHP's approach to bargaining!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1602670478531626-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:71",
+          "source_page": "ETU WA Branch",
+          "post_id": "1469163505226381",
+          "post_url": "https://www.facebook.com/photo/?fbid=1469163505226381&set=a.166072115535533",
+          "displayed_date": "11 June",
+          "published_date": "2026-06-11",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "𝐏𝐢𝐥𝐛𝐚𝐫𝐚 𝐖𝐨𝐫𝐤𝐞𝐫𝐬 𝐑𝐞𝐟𝐮𝐬𝐞 𝐓𝐨 𝐁𝐞 𝐓𝐫𝐞𝐚𝐭𝐞𝐝 𝐀𝐬 𝐒𝐞𝐜𝐨𝐧𝐝-𝐂𝐥𝐚𝐬𝐬 𝐖𝐨𝐫𝐤𝐞𝐫𝐬\nETU members at BHP  Ports are now voting on whether to endorse protected industrial action in support of their Enterprise Agreement campaign.\nLet's be clear about what this vote is about.\nOur members are not voting because they want conflict. They are voting because they are determined to ensure that their labour is not valued any less than the labour of their comrades in the South West.\nBHP and the paid-for media can spin this however they like, but workers know the reality.\nWorking in the Pilbara is no longer what it used to be.\nThe days when employers could expect workers to accept being left behind while company profits soar are over. FIFO life comes with sacrifices. Time away from family comes with sacrifices. Living and working in one of the most remote industrial regions in the country comes with sacrifices.\nWorkers are simply demanding that those sacrifices are properly recognised and fairly rewarded.\nThis Protected Action Ballot gives ETU members the opportunity to send a strong message to BHP: enough is enough.\n Every vote matters.\nUnder Australia's industrial laws, not voting has the same effect as voting NO. If members want a stronger bargaining position and want BHP to understand the strength of feeling across the Ports workforce, they need to participate in the ballot.\nThe vote is about giving workers a voice and giving workers options. Any future action will be determined by the members themselves.\nThe message to BHP is simple:\nIf you want industrial peace, bring a fair offer to the table.\nIf you want to undervalue Pilbara workers, expect resistance.\nVote. Participate. Stand together.\nIn Unity,\nETU North West Crew",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1469163505226381-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:67",
+          "source_page": "ETU WA Branch",
+          "post_id": "pfbid02tB4SufGSoCTRQVLh2WrgtdifHk3t8W1H57jczdVn2h4NrZTD2du1MZ9g7zwhJKSfl",
+          "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid02tB4SufGSoCTRQVLh2WrgtdifHk3t8W1H57jczdVn2h4NrZTD2du1MZ9g7zwhJKSfl",
+          "displayed_date": "14 June",
+          "published_date": "2026-06-14",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "𝐁𝐇𝐏'𝐒 𝐍𝐔𝐌𝐁𝐄𝐑𝐒 𝐃𝐎𝐍'𝐓 𝐀𝐃𝐃 𝐔𝐏\nBHP  and their industry lobby group, the The Chamber of Minerals and Energy of Western Australia - CMEWA, an employer union, want workers to believe that asking for a fair Enterprise Agreement is somehow unreasonable.\nLet's do the maths.\nThe media is reporting that industrial action at Port Hedland could put around $𝟏𝟐𝟔 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐩𝐞𝐫 𝐝𝐚𝐲 in exports at risk.\nThere are approximately 𝟒𝟓𝟎 𝐰𝐨𝐫𝐤𝐞𝐫𝐬 covered by this agreement.\nBHP says workers are already on around $𝟐𝟎𝟎,𝟎𝟎𝟎 𝐩𝐞𝐫 𝐲𝐞𝐚𝐫 including allowances and bonuses.\n450 workers × $200,000 = $𝟗𝟎 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐩𝐞𝐫 𝐲𝐞𝐚𝐫\nLet's be generous and increase that figure.\n450 workers × $250,000 = $𝟏𝟏𝟐.𝟓 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐩𝐞𝐫 𝐲𝐞𝐚𝐫\nStill not there.\n450 workers × $280,000 = $𝟏𝟐𝟔 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐩𝐞𝐫 𝐲𝐞𝐚𝐫\nRead that again.\n𝐎𝐧𝐞 𝐞𝐧𝐭𝐢𝐫𝐞 𝐲𝐞𝐚𝐫'𝐬 𝐰𝐚𝐠𝐞𝐬 𝐢𝐧𝐜𝐫𝐞𝐚𝐬𝐞𝐝 𝐛𝐲 $𝟖𝟎𝐤 𝐟𝐨𝐫 𝐞𝐯𝐞𝐫𝐲 𝐰𝐨𝐫𝐤𝐞𝐫 𝐚𝐭 𝐭𝐡𝐞 𝐩𝐨𝐫𝐭 𝐰𝐨𝐮𝐥𝐝 𝐞𝐪𝐮𝐚𝐥 𝐣𝐮𝐬𝐭 𝐨𝐧𝐞 𝐝𝐚𝐲 𝐨𝐟 𝐞𝐱𝐩𝐨𝐫𝐭𝐬.\nYet BHP would rather threaten disruption, spend millions on lawyers, consultants and anti-union propaganda, and run to the media than sit down and negotiate an agreement that reflects the value workers create.\nAnd what about the outrageous claim being pushed that workers want salaries of $400,000 a year?\nLet's test that too.\n450 workers × $400,000 = $𝟏𝟖𝟎 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐩𝐞𝐫 𝐲𝐞𝐚𝐫.\nEven if that absurd claim were true, it would amount to about 𝟏.𝟒 𝐝𝐚𝐲𝐬 𝐨𝐟 𝐞𝐱𝐩𝐨𝐫𝐭𝐬.\nThat's it.\nThe remaining 𝟑𝟔𝟑.𝟔 𝐝𝐚𝐲𝐬 𝐨𝐟 𝐞𝐱𝐩𝐨𝐫𝐭𝐬 would still be flowing out of Port Hedland.\nSo let's stop pretending this dispute is about money.\nThis is about ideology.\nThis is about control.\nBHP wants workers to remain dependent on management deciding who gets rewarded and who doesn't. They want to continue offering wage outcomes that fail to keep pace with the cost of living while posting massive profits and shipping billions of dollars of Australian resources overseas.\nThe reality is that ETU members can earn the same money — and often more — in Perth and the South West while sleeping in their own bed every night, watching their kids grow up and being there for life's important moments.\nFIFO used to come with a genuine financial advantage.\nThat advantage has been eroded.\nWorkers know it.\nThat's why the Pilbara is unionising.\nWorkers are realising that the only way to stop falling behind is to stand together, join their union, organise collectively and, when necessary, exercise their lawful right to take protected industrial action.\nBHP didn't build the Pilbara.\nWorkers built the Pilbara.\nAnd workers deserve their fair share.\n𝐈𝐟 𝐁𝐇𝐏 𝐜𝐚𝐧 𝐚𝐟𝐟𝐨𝐫𝐝 𝐭𝐨 𝐥𝐨𝐬𝐞 $𝟏𝟐𝟔 𝐦𝐢𝐥𝐥𝐢𝐨𝐧 𝐚 𝐝𝐚𝐲 𝐟𝐢𝐠𝐡𝐭𝐢𝐧𝐠 𝐰𝐨𝐫𝐤𝐞𝐫𝐬, 𝐢𝐭 𝐜𝐚𝐧 𝐚𝐟𝐟𝐨𝐫𝐝 𝐭𝐨 𝐛𝐚𝐫𝐠𝐚𝐢𝐧 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞𝐦.\n ETU WA\n Organise. Unite. Win.",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid02tB4SufGSoCTRQVLh2WrgtdifHk3t8W1H57jczdVn2h4NrZTD2du1MZ9g7zwhJKSfl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:43",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1619054060226601",
+          "post_url": "https://www.facebook.com/photo/?fbid=1619054060226601&set=a.507507878047897",
+          "displayed_date": "19 June",
+          "published_date": "2026-06-19",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "WMWA has today applied to the Fair Work Commission for a Protected Action Ballot Order for members at BHP Port Operations. \nAfter months of negotiations, BHP refuse to come to the table with a decent or fair EA offer. Our organisers have spoken extensively to members on site, and they're ready to step up and take action!\nAWU WA Acting Secretary Craig Beveridge says that \"BHP have been dismissive and non-committal about the concerns and claims of the workforce that generate immense profits for them at Port Hedland.  \n“Workers want an Enterprise Agreement that provides transparency, fair treatment and guaranteed conditions – not having their livelihood at the whim of individual managers.”",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1619054060226601-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "amwu-wa:26",
+          "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+          "post_id": "pfbid0bexh2ssoeDia1zXtjVA6E3fK5HVxYt44e3xGnqMKmac9aDBrcvSC6EoXcimGPW1Gl",
+          "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid0bexh2ssoeDia1zXtjVA6E3fK5HVxYt44e3xGnqMKmac9aDBrcvSC6EoXcimGPW1Gl",
+          "displayed_date": "24 June",
+          "published_date": "2026-06-24",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Yesterday, the AMWU, Western Mine Workers Alliance - WMWA, and ETU WA Branch met with BHP to discuss a range of issues with our members' wages and working conditions at Port Hedland Port Operations.\nWhile we made some progress, there's still a way to go before we reach an agreement that addresses the core concerns of our members.\nAll three unions are standing together as the Combined BHP Port Unions to fight for a fair EA at BHP Port Operations.\nWe remain ready, willing and able to continue negotiating with BHP, and a further bargaining meeting is scheduled for 7 July. The AWU WA's PABO application is underway, and members should stay tuned on details for voting!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid0bexh2ssoeDia1zXtjVA6E3fK5HVxYt44e3xGnqMKmac9aDBrcvSC6EoXcimGPW1Gl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "awu-wa:36",
+          "source_page": "AWU Western Australia",
+          "post_id": "pfbid0Q2okyou2pDsq6pEHLJ2wtixyAQDbWpcCRZni8Qny2BahcjyTQvkY6gepje9Seqinl",
+          "post_url": "https://www.facebook.com/awuwesternaustralia/posts/pfbid0Q2okyou2pDsq6pEHLJ2wtixyAQDbWpcCRZni8Qny2BahcjyTQvkY6gepje9Seqinl",
+          "displayed_date": "24 June",
+          "published_date": "2026-06-24",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Yesterday, Western Mine Workers Alliance - WMWA, the AMWU Australian Manufacturing Workers' Union WA and the ETU WA Branch met with BHP to discuss a range of issues with our members' wages and working conditions at Port Hedland Port Operations.\nWhile we made some progress, there's still a way to go before we reach an agreement that addresses the core concerns of our members.\nAll three unions are standing together as the Combined BHP Port Unions to fight for a fair EA at BHP Port Operations.\nWe remain ready, willing and able to continue negotiating with BHP, and a further bargaining meeting is scheduled for 7 July.",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid0Q2okyou2pDsq6pEHLJ2wtixyAQDbWpcCRZni8Qny2BahcjyTQvkY6gepje9Seqinl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:55",
+          "source_page": "ETU WA Branch",
+          "post_id": "pfbid0TL2vGgSQPeYk5kcj3VEE5zL2Kegz8DRWwGAcUmgzrMD8b4mBS6jYYpyqhPZjacYRl",
+          "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0TL2vGgSQPeYk5kcj3VEE5zL2Kegz8DRWwGAcUmgzrMD8b4mBS6jYYpyqhPZjacYRl",
+          "displayed_date": "24 June",
+          "published_date": "2026-06-24",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Yesterday, Western Mine Workers Alliance - WMWA, the AMWU Australian Manufacturing Workers' Union WA and the ETU WA met with BHP to discuss a range of issues with our members' wages and working conditions at Port Hedland Port Operations.\nWhile we made some progress, there's still a way to go before we reach an agreement that addresses the core concerns of our members.\nAll three unions are standing together as the Combined BHP Port Unions to fight for a fair EA at BHP Port Operations.\nWe remain ready, willing and able to continue negotiating with BHP, and a further bargaining meeting is scheduled for 7 July. The AWU WA's PABO application is underway, and members should stay tuned on details for voting!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid0TL2vGgSQPeYk5kcj3VEE5zL2Kegz8DRWwGAcUmgzrMD8b4mBS6jYYpyqhPZjacYRl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:39",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1624554586343215",
+          "post_url": "https://www.facebook.com/photo/?fbid=1624554586343215&set=a.507507878047897",
+          "displayed_date": "24 June",
+          "published_date": "2026-06-24",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Yesterday, WMWA, the AMWU Australian Manufacturing Workers' Union WA and ETU WA Branch met with BHP to discuss a range of issues with our members' wages and working conditions at Port Hedland Port Operations.\nWhile we made some progress, there's still a way to go before we reach an agreement that addresses the core concerns of our members. \nAll three unions are standing together as the Combined BHP Port Unions to fight for a fair EA at BHP Port Operations.  \nWe remain ready, willing and able to continue negotiating with BHP, and a further bargaining meeting is scheduled for 7 July. The AWU WA's PABO application is underway, and members should stay tuned on details for voting!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1624554586343215-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:35",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1629294902535850",
+          "post_url": "https://www.facebook.com/photo/?fbid=1629294902535850&set=a.507507878047897",
+          "displayed_date": "29 June",
+          "published_date": "2026-06-29",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "BHP Port Ops members - you have mail about the PABO vote. \nNothing in your inbox? Check your spam/junk folders, and if you still don't see anything, send us a DM!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1629294902535850-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:33",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1633148088817198",
+          "post_url": "https://www.facebook.com/photo/?fbid=1633148088817198&set=a.507507878047897",
+          "displayed_date": "3 July",
+          "published_date": "2026-07-03",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "A narrow majority (58%) of BHP's 1800 workers at Mining Area C/South Flank have endorsed the company's latest EA offer. \nOnce the agreement is approved by the FWC, workers will have guaranteed 4% annual pay increases for 4 years, delayed flight compensation starting next year, 14% super contributions and other improved entitlements.\nBHP’s initial baseline agreement included none of these improvements. When the first offer came out, hundreds of WMWA members stood together and collectively voiced their concerns. This could not be ignored and has made a big difference. Thank you to every member who got involved throughout the bargaining process.\nWhile the new agreement fails to meet a number of WMWA's claims, today's result proves that if BHP wants to win over their workforce in other sites, particularly in Port Hedland, they're going to need to do much better.",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1633148088817198-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:32",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1636343941830946",
+          "post_url": "https://www.facebook.com/photo/?fbid=1636343941830946&set=a.507507878047897",
+          "displayed_date": "6 July",
+          "published_date": "2026-07-06",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Members at BHP Port Hedland have voted overwhelmingly (97%) to endorse protected industrial action. \nThe ballot results should send a clear message to BHP that they need to come to the eighth bargaining meeting tomorrow with actual proposals which address workers' concerns around conditions, classifications, career progression, pay and fairness.\nWMWA members want a deal that works for all parties, but we won't be walking away from the fight if BHP fails to deliver substantive and fair proposals.",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1636343941830946-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "amwu-wa:19",
+          "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+          "post_id": "pfbid02Rhg84MSxrEtKvgsMYt12k8qAjR6hGNFeqM8fCWFAo2pCmS7wiXsBuL7GGHZXYNxJl",
+          "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid02Rhg84MSxrEtKvgsMYt12k8qAjR6hGNFeqM8fCWFAo2pCmS7wiXsBuL7GGHZXYNxJl",
+          "displayed_date": "8 July",
+          "published_date": "2026-07-08",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "The AMWU WA, Western Mine Workers Alliance - WMWA Partner Union the AWU and ETU WA Branch have filed to take protected industrial action on the 16th of July at BHP Port Hedland.\nWorkers will down tools for eight hours, from 2pm to 10pm next Thursday as we step up our fight for a fair, safe and productive workplace in Port Hedland.\nWe're sending a message to BHP -- after over 6 months of negotiations, workers deserve a transparent, enforceable agreement that recognises their skills and commitment to keep the ports running!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid02Rhg84MSxrEtKvgsMYt12k8qAjR6hGNFeqM8fCWFAo2pCmS7wiXsBuL7GGHZXYNxJl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "awu-wa:32",
+          "source_page": "AWU Western Australia",
+          "post_id": "1534251555385591",
+          "post_url": "https://www.facebook.com/photo/?fbid=1534251555385591&set=a.370151778462247",
+          "displayed_date": "8 July",
+          "published_date": "2026-07-08",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Western Mine Workers Alliance - WMWA  Partner Union the AWU, the AMWU Australian Manufacturing Workers' Union WA and ETU WA Branch have filed to take protected industrial action on the 16th of July at BHP Port Hedland.\nWorkers will down tools for eight hours, from 2pm to 10pm next Thursday as we step up our fight for a fair, safe and productive workplace in Port Hedland.\nWe're sending a message to BHP -- after over 6 months of negotiations, workers deserve a transparent, enforceable agreement that recognises their skills and commitment to keep the ports running!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1534251555385591-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:40",
+          "source_page": "ETU WA Branch",
+          "post_id": "pfbid0RAzJPruZFMYXDvGTZkvGNsF2yNSn5zZ2ZFV4KghMkozv2ngPdcSzsjUANt9XuKdcl",
+          "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0RAzJPruZFMYXDvGTZkvGNsF2yNSn5zZ2ZFV4KghMkozv2ngPdcSzsjUANt9XuKdcl",
+          "displayed_date": "8 July",
+          "published_date": "2026-07-08",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Western Mine Workers Alliance - WMWA Partner Union the AWU, the AMWU Australian Manufacturing Workers' Union WA  and ETU WA Branch have filed to take protected industrial action on the 16th of July at BHP Port Hedland.\nWorkers will down tools for eight hours, from 2pm to 10pm next Thursday as we step up our fight for a fair, safe and productive workplace in Port Hedland.\nWe're sending a message to BHP - after over 6 months of negotiations, workers deserve a transparent, enforceable agreement that recognises their skills and commitment to keep the ports running!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid0RAzJPruZFMYXDvGTZkvGNsF2yNSn5zZ2ZFV4KghMkozv2ngPdcSzsjUANt9XuKdcl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:30",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1638204891644851",
+          "post_url": "https://www.facebook.com/photo/?fbid=1638204891644851&set=a.507507878047897",
+          "displayed_date": "8 July",
+          "published_date": "2026-07-08",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "WMWA Partner Union the AWU, the AMWU Australian Manufacturing Workers' Union WA and the ETU WA Branch have filed to take protected industrial action on the 16th of July at BHP Port Hedland. \nWorkers will down tools for eight hours, from 2pm to 10pm next Thursday as we step up our fight for a fair, safe and productive workplace in Port Hedland. \nWe're sending a message to BHP -- after over 6 months of negotiations, workers deserve a transparent, enforceable agreement that recognises their skills and commitment to keep the ports running!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1638204891644851-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "awu-wa:24",
+          "source_page": "AWU Western Australia",
+          "post_id": "pfbid026FRfjpvPhj1FCwuBcGpBc6oCLecRDEpJyT9VtttMcuxFMBmmcnWvrptCeHCx2fQGl",
+          "post_url": "https://www.facebook.com/awuwesternaustralia/posts/pfbid026FRfjpvPhj1FCwuBcGpBc6oCLecRDEpJyT9VtttMcuxFMBmmcnWvrptCeHCx2fQGl",
+          "displayed_date": "15 July",
+          "published_date": "2026-07-15",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Some people are calling for politicians to step in and stop tomorrow’s strike in Port Hedland. \n \nUnfortunately for them, our WA Branch Secretary has a message for the mining lobby: we only listen to our members!\nThe message from our members has been clear. BHP has behaved poorly and not listened to them during negotiations, leaving them with no choice but to take lawful industrial action sanctioned by the Fair Work Commission, the industrial umpire.\nOur members are only asking for their fair share. A fair agreement that respects and rewards their hard work and protects their pay and conditions in a safe workplace.\nBHP makes billions in profits off our members and they deserve their fair share of these mega profits.\nNo matter where you work in WA, we’ve got your back and will always support your collective bargaining efforts!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid026FRfjpvPhj1FCwuBcGpBc6oCLecRDEpJyT9VtttMcuxFMBmmcnWvrptCeHCx2fQGl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:25",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "pfbid0AZdKn8H8BwscauRN9ZMNyJgFrKyTjAX192omb7NcBm5nAvVcdKNGtWWM1424hWXtl",
+          "post_url": "https://www.facebook.com/WesternMineWorkersAlliance/posts/pfbid0AZdKn8H8BwscauRN9ZMNyJgFrKyTjAX192omb7NcBm5nAvVcdKNGtWWM1424hWXtl",
+          "displayed_date": "15 July",
+          "published_date": "2026-07-15",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "WMWA members at BHP Ports - you've got an email about tomorrow's protected industrial action!\nNothing in your inbox? Check your spam/junk folders, and if you still don't see anything, send us a DM!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid0AZdKn8H8BwscauRN9ZMNyJgFrKyTjAX192omb7NcBm5nAvVcdKNGtWWM1424hWXtl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "amwu-wa:17",
+          "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+          "post_id": "pfbid02mCmKCcssoxJTENpXcpX2zf7JrVJVasA4eTPGy2SYPZYkaaCLvmm21cKMLbvRzsBYl",
+          "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid02mCmKCcssoxJTENpXcpX2zf7JrVJVasA4eTPGy2SYPZYkaaCLvmm21cKMLbvRzsBYl",
+          "displayed_date": "16 July",
+          "published_date": "2026-07-16",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "This is what solidarity in action looks like.\nWhile AMWU members at BHP Ports took protected industrial action today, our fellow members from the AMWU Victorian Branch stood with us in support.\nThat’s the strength of our union. We back each other, no matter the distance, because every fight for fairness matters.\nTogether, we are stronger. Together, we win.\nIn unity. In solidarity. AMWU strong.",
+          "graphics": []
+        },
+        {
+          "candidate_id": "etu-wa:31",
+          "source_page": "ETU WA Branch",
+          "post_id": "pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl",
+          "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl",
+          "displayed_date": "16 July",
+          "published_date": "2026-07-16",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "This is what unionism looks like. One union. Many branches. One fight.\nOur brothers and sisters in ETU - Electrical Trades Union of Australia, Victorian Branch and ETU Queensland & NT have stepped out to support us today in our fight for fairness at BHP Ports.\nNo matter where we work, we will always stand for fairness, safety and respect at work.\nUNION POWER!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-01.jpg",
+            "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-02.jpg",
+            "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-03.jpg",
+            "assets/campaigns/bhp-ports/pfbid0HaDVxfA4WXC3JyQWjKEkDwNqyf9x15Bnqyg4UPqsXF1RCnuaPMi1pyenQiPYgjuVl-04.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:32",
+          "source_page": "ETU WA Branch",
+          "post_id": "1463356569155698",
+          "post_url": "https://www.facebook.com/photo/?fbid=1463356569155698&set=pcb.1463356609155694",
+          "displayed_date": "16 July",
+          "published_date": "2026-07-16",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "ETU QLD & NT members showed out to support AMWU and ETU WA Members in Port Hedland who are taking it to mining giant BHP, taking industrial action for the first time in decades. \nWe rallied out the front of BHP’s Brisbane Head office to show that this blue will be fought all across Australia.\nUnion members at BHP Port Hedland deserve fair wages & conditions and Queensland & Northern Territory stands with you all in solidarity.\nIf you don’t fight. You lose!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1463356569155698-01.jpg",
+            "assets/campaigns/bhp-ports/1463356569155698-02.jpg",
+            "assets/campaigns/bhp-ports/1463356569155698-03.jpg",
+            "assets/campaigns/bhp-ports/1463356569155698-04.jpg"
+          ]
+        },
+        {
+          "candidate_id": "rail-roundup:9",
+          "source_page": "Pilbara Rail Round Up",
+          "post_id": null,
+          "post_url": null,
+          "displayed_date": "16 July",
+          "published_date": "2026-07-16",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Today the BHP Port Operations workers have the opportunity to do a couple of very important things.\n1. Show BHP that you will not put up with an inferior agreement just because the company wants the same conditions implemented as Area C/ Southflank.\n2. To understand that withdrawing your labour and standing together is something that few people in our country are prepared to do. \nAs a collective, taking PIA provides the ability to influence the best outcome possible.\nIf you have the ability go down to the picket line and support your fellow workers, please make the effort.\nStand together, fight for what you deserve and be Proud to be Union.\nWarren Johncock",
+          "graphics": []
+        },
+        {
+          "candidate_id": "etu-wa:28",
+          "source_page": "ETU WA Branch",
+          "post_id": "pfbid02iUQihWsZqRjvkeswCaS546KdmUQRPyZBjT27SzaAFYN2EgrZZ7PzPAgmxat95t5Ll",
+          "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid02iUQihWsZqRjvkeswCaS546KdmUQRPyZBjT27SzaAFYN2EgrZZ7PzPAgmxat95t5Ll",
+          "displayed_date": "17 July",
+          "published_date": "2026-07-17",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "QLD ETU member stand in solidarity with the BHP Port Headland members.",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid02iUQihWsZqRjvkeswCaS546KdmUQRPyZBjT27SzaAFYN2EgrZZ7PzPAgmxat95t5Ll-01.webp"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:29",
+          "source_page": "ETU WA Branch",
+          "post_id": null,
+          "post_url": null,
+          "displayed_date": "17 July",
+          "published_date": "2026-07-17",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "𝐓𝐡𝐞 𝐌𝐨𝐬𝐭 𝐄𝐱𝐩𝐞𝐧𝐬𝐢𝐯𝐞 𝐅𝐚𝐦𝐢𝐥𝐲 𝐁𝐁𝐐 𝐓𝐨 𝐃𝐚𝐭𝐞\nWorkers walked off the job yesterday for the first time in decades at a BHP iron ore operation.\nSome sections of the media spent days claiming the sky would fall and that industrial action would cripple production. Then, when the stoppage happened, many of those same voices claimed it had \"no impact.\"\nSo which is it?\nEarlier that day, a car dumper and a ship loader both suffered breakdowns. Union members worked hard to get the equipment back into service until 2:00 pm. Then they downed tools and made history.\nThe result was simple: ore stayed on the trains, the rail network backed up, stockpiles grew, and ship departures were delayed. It was another reminder of a basic truth that BHP too often forgets:\n𝐖𝐢𝐭𝐡𝐨𝐮𝐭 𝐰𝐨𝐫𝐤𝐞𝐫𝐬, 𝐧𝐨𝐭𝐡𝐢𝐧𝐠 𝐦𝐨𝐯𝐞𝐬.\nThis first stoppage was just the entrée - a small taste of what is to come if BHP refuses to negotiate a fair Union EBA that protects wages, conditions and secure career progression.\nThe main course will be far harder for BHP to digest. BHP will need more than some digestives to cure the indigestion.\n𝐖𝐨𝐫𝐤𝐞𝐫𝐬 𝐜𝐫𝐞𝐚𝐭𝐞 𝐭𝐡𝐞 𝐰𝐞𝐚𝐥𝐭𝐡. 𝐖𝐨𝐫𝐤𝐞𝐫𝐬 𝐝𝐞𝐬𝐞𝐫𝐯𝐞 𝐭𝐡𝐞𝐢𝐫 𝐟𝐚𝐢𝐫 𝐬𝐡𝐚𝐫𝐞.",
+          "graphics": []
+        },
+        {
+          "candidate_id": "wmwa:23",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1647255684073105",
+          "post_url": "https://www.facebook.com/photo/?fbid=1647255684073105&set=a.507507878047897",
+          "displayed_date": "17 July",
+          "published_date": "2026-07-17",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Yesterday, over 100 Ports Unions members joined the community picket in Port Hedland as part of yesterday's protected industrial action (PIA) where members from WMWA Partner Union the AWU undertook 4 consecutive 1 hour stoppages at the end of day shift and start of night shift, along with members from the ETU and AMWU. \nBHP Ports union members want BHP to take the negotiations for the new Ports agreement seriously, and they don't want to wait 2 years like MAC/South Flank employees had to. \nTaking PIA is never the first option and it's never easy - a big thank you to the Ports Unions members for standing together and standing up yesterday, including all those members who wanted to partake but had to remain at work for safety reasons. \nIf you don't fight you lose - WMWA fighting for Fair across the Pilbara!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1647255684073105-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:24",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1646940270771313",
+          "post_url": "https://www.facebook.com/photo/?fbid=1646940270771313&set=a.507507878047897",
+          "displayed_date": "17 July",
+          "published_date": "2026-07-17",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Earlier this month BHP confirmed a majority of MAC and South Flank employees have voted in support of their new proposed enterprise bargaining agreement.\nThis week, BHP lodged the proposed agreement to the Fair Work Commission for approval. The approval process normally can take a couple of months and allows for bargaining representatives, including the WMWA partner Unions to raise concerns around things like mandatory content/model clauses and other technical legal issues.\nOnce approved, the agreement's terms and conditions will apply to the 1800 workers covered by the agreement. It will include:\n 4% guaranteed yearly pay increases for all workers.\n Increases to shift allowances for workers not on even time rosters like 8/6 and 8/6-7/7.\n 14% super contribution paid from July.\n A higher duties allowance for step up supervisors\n A clearer classification structure (albeit not as detailed or as fair as we wanted)\n An actual clear issue resolution process (albeit not as strong as we wanted)\n A commitment to introduce a delayed compensation flights policy.\nThe above benefits are the result of hundreds of WMWA members providing BHP with organised and professional feedback on their original baseline proposal, which included only one of the above benefits from the first offer.\nWMWA members at MAC and South Flank should be proud of the results they achieved against all the odds.\nMeanwhile, the Fight for Fair continues at Port Hedland, with members from WMWA Partner union AWU taking historic protected industrial action yesterday!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1646940270771313-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:16",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1658989719566368",
+          "post_url": "https://www.facebook.com/photo/?fbid=1658989719566368&set=a.507507878047897",
+          "displayed_date": "29 July at 19:45",
+          "published_date": "2026-07-29",
+          "published_at": "2026-07-29T11:45:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "WMWA members at BHP Ports - you've got an important email from your union! \nPlease check your inbox for an update about tomorrow's mass meeting.\nNothing in your inbox? Check your spam/junk folders, and if you still don't see anything, send us a DM!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1658989719566368-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "amwu-wa:12",
+          "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+          "post_id": "pfbid028PNwncuVZRBgvSSHg4kLWzZBDDk1dDbY5KkEGD4bDKbCWhBJaXsaf2EvRubZJjNWl",
+          "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid028PNwncuVZRBgvSSHg4kLWzZBDDk1dDbY5KkEGD4bDKbCWhBJaXsaf2EvRubZJjNWl",
+          "displayed_date": "31 July at 14:00",
+          "published_date": "2026-07-31",
+          "published_at": "2026-07-31T06:00:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "Fed up and fighting back! \nBHP Port Ops members from Western Mine Workers Alliance partner Union the AWU, the AMWU and the ETU WA Branch have voted overwhelmingly to endorse protected industrial action across the 8th and 9th of August.\nThis action includes a 24-hour work ban on loading vessels, starting Saturday morning, and a 24-hour stoppage on Sunday.\nIt comes after 8 months of bargaining, with BHP refusing to offer a fair agreement that locks in decent base rate wage increases, classifications, career progression and fair conditions.\nWe're ready to go longer and fight harder. Port Ops members - check your inbox for a full update on PIA next week!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid028PNwncuVZRBgvSSHg4kLWzZBDDk1dDbY5KkEGD4bDKbCWhBJaXsaf2EvRubZJjNWl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "awu-wa:16",
+          "source_page": "AWU Western Australia",
+          "post_id": "1554886063322140",
+          "post_url": "https://www.facebook.com/photo/?fbid=1554886063322140&set=a.370151778462247",
+          "displayed_date": "31 July at 14:19",
+          "published_date": "2026-07-31",
+          "published_at": "2026-07-31T06:19:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "Fed up and fighting back! \nBHP Port Ops members from Western Mine Workers Alliance - WMWA partner Union the AWU, the AMWU Australian Manufacturing Workers' Union WA and the ETU WA Branch have voted overwhelmingly to endorse protected industrial action across the 8th and 9th of August.\nThis action includes a 24-hour work ban on loading vessels, starting Saturday morning, and a 24-hour stoppage on Sunday.\nIt comes after 8 months of bargaining, with BHP refusing to offer a fair agreement that locks in decent base rate wage increases, classifications, career progression and fair conditions.\nWe're ready to go longer and fight harder. Port Ops members - check your inbox for a full update on PIA next week.",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1554886063322140-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:21",
+          "source_page": "ETU WA Branch",
+          "post_id": "pfbid0jM5qnmyA2kHDM8aV4Pw3115jA1rRU3AafCzYSzz24GV28nUAu8T3UGgH8YrLuMqYl",
+          "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0jM5qnmyA2kHDM8aV4Pw3115jA1rRU3AafCzYSzz24GV28nUAu8T3UGgH8YrLuMqYl",
+          "displayed_date": "31 July at 18:44",
+          "published_date": "2026-07-31",
+          "published_at": "2026-07-31T10:44:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "Fed up and fighting back! \nBHP Port Ops members from the ETU WA, the Western Mine Workers Alliance and the AMWU Australian Manufacturing Workers' Union WA have voted overwhelmingly to endorse protected industrial action across the 8th and 9th of August.\nThis action includes a 24-hour work ban on loading vessels, starting Saturday morning, and a 24-hour stoppage on Sunday.\nIt comes after 8 months of bargaining, with BHP refusing to offer a fair agreement that locks in decent base rate wage increases, classifications, career progression and fair conditions.\nWe're ready to go longer and fight harder. Port Ops members - check your inbox for a full update on PIA next week!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid0jM5qnmyA2kHDM8aV4Pw3115jA1rRU3AafCzYSzz24GV28nUAu8T3UGgH8YrLuMqYl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:14",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1660851812713492",
+          "post_url": "https://www.facebook.com/photo/?fbid=1660851812713492&set=a.507507878047897",
+          "displayed_date": "31 July at 13:59",
+          "published_date": "2026-07-31",
+          "published_at": "2026-07-31T05:59:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "Fed up and fighting back! \nBHP Port Ops members from WMWA partner Union the AWU, the  AMWU - Australian Manufacturing Workers' Union and the ETU - The Electrical Trades Union  have voted overwhelmingly to endorse protected industrial action across the 8th and 9th of August.\nThis action includes a 24-hour work ban on loading vessels, starting Saturday morning, and a 24-hour stoppage on Sunday.\nIt comes after 8 months of bargaining, with BHP refusing to offer a fair agreement that locks in decent base rate wage increases, classifications, career progression and fair conditions.\nWe're ready to go longer and fight harder. Port Ops members - check your inbox for a full update on PIA next week!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1660851812713492-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "awu-wa:15",
+          "source_page": "AWU Western Australia",
+          "post_id": "pfbid07Nqt5DGTPWHLad1sZSe6tZUHyDD4k6Hu9DL4HLN8K8a4AL1JYkVRp24yRenhHgAxl",
+          "post_url": "https://www.facebook.com/awuwesternaustralia/posts/pfbid07Nqt5DGTPWHLad1sZSe6tZUHyDD4k6Hu9DL4HLN8K8a4AL1JYkVRp24yRenhHgAxl",
+          "displayed_date": "4 August at 11:02",
+          "published_date": "2026-08-04",
+          "published_at": "2026-08-04T03:02:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "WMWA partner Union the AWU, along with the ETU and AMWU, are back at the bargaining table today for the 11th BHP Ports Bargaining meeting. Today's meeting is being conducted with the assistance of the FWC.\nThis comes off the back of last week's meeting, where the lack of any substantive progress seen the combined ports unions (AWU, ETU and AMWU) notify BHP of their intention to take Protected Industrial Action this Saturday and Sunday.\nWorkers at Port Hedland are highly skilled, and engage in high risk/high volume work, 24 hours a day, every day of the year. These workers are simply asking for a fair deal.\nToday's Ports bargaining meeting is another chance for BHP to make a substantive offer to address important things like:\n A proposed REM models that is fair for all workers at Port Hedland\n Allowances to fairly compensate both FIFO and Reso workers\n A decent classification structure that promotes competency-based progression.\nThe Ports Unions and our members want BHP to come to the table today with a substantive proposal that addresses our members concerns.\nWe will update members on the outcomes from today's meeting by email, and as always, our members will get to determine what deal is acceptable or what isn’t.\nYour organisers will be in Port Hedland and onsite this Thursday, and Friday to talk to members about this weekend's proposed actions and answer any questions. \nWMWA Fighting for Fair for in the Pilbara!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid07Nqt5DGTPWHLad1sZSe6tZUHyDD4k6Hu9DL4HLN8K8a4AL1JYkVRp24yRenhHgAxl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:9",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1664477375684269",
+          "post_url": "https://www.facebook.com/photo/?fbid=1664477375684269&set=a.507507878047897",
+          "displayed_date": "4 August at 07:00",
+          "published_date": "2026-08-04",
+          "published_at": "2026-08-03T23:00:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "WMWA partner Union the AWU, along with the ETU and AMWU, are back at the bargaining table today for the 11th BHP Ports Bargaining meeting. Today's meeting is being conducted with the assistance of the FWC.\nThis comes off the back of last week's meeting, where the lack of any substantive progress seen the combined ports unions (AWU, ETU and AMWU) notify BHP of their intention to take Protected Industrial Action this Saturday and Sunday.\nWorkers at Port Hedland are highly skilled, and engage in high risk/high volume work, 24 hours a day, every day of the year. These workers are simply asking for a fair deal.\nToday's Ports bargaining meeting is another chance for BHP to make a substantive offer to address important things like:\n A proposed REM models that is fair for all workers at Port Hedland\n Allowances to fairly compensate both FIFO and Reso workers\n A decent classification structure that promotes competency-based progression\nThe Ports Unions and our members want BHP to come to the table today with a substantive proposal that addresses our members concerns.\nWe will update members on the outcomes from today's meeting by email, and as always, our members will get to determine what deal is acceptable or what isn’t.\nYour organisers will be in Port Hedland and onsite this Thursday, and Friday to talk to members about this weekend's proposed actions and answer any questions. \nWMWA Fighting for Fair for in the Pilbara!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1664477375684269-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "amwu-wa:9",
+          "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+          "post_id": "pfbid02fVK2xHcnNTbLEp7vd3ku3toydBYUYYPHeqiLLrS5j3WAJeE5r7WCmvSWig2dUfuzl",
+          "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid02fVK2xHcnNTbLEp7vd3ku3toydBYUYYPHeqiLLrS5j3WAJeE5r7WCmvSWig2dUfuzl",
+          "displayed_date": "7 August at 10:11",
+          "published_date": "2026-08-07",
+          "published_at": "2026-08-07T02:11:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "From 0530 tomorrow, members from Western Mine Workers Alliance - WMWA partner union the AWU will commence PIA with ship loader movement bans. WMWA members will be joined by members from the AMWU and ETU WA Branch from 0530 Sunday to combined all unions at BHP Port Operations taking 24 hours of PIA. \nOur members are fed up of BHP's months of delays and denial at the bargaining table. \nWe're stepping up the fight for a fair enterprise agreement that includes decent base rate wage increases, a fair classification structure with career progression and fair conditions to recognise the highly skilled, high volume, high risk work our members do, 24 hours a day 365 days a year.\nProtected action is never taken lightly, but it’s clear BHP aren’t taking us seriously. \nIf you don’t fight, you lose!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid02fVK2xHcnNTbLEp7vd3ku3toydBYUYYPHeqiLLrS5j3WAJeE5r7WCmvSWig2dUfuzl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "awu-wa:13",
+          "source_page": "AWU Western Australia",
+          "post_id": "1561518762658870",
+          "post_url": "https://www.facebook.com/photo/?fbid=1561518762658870&set=a.370151778462247",
+          "displayed_date": "7 August at 16:09",
+          "published_date": "2026-08-07",
+          "published_at": "2026-08-07T08:09:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "From 0530 tomorrow, members from Western Mine Workers Alliance - WMWA  partner union the AWU will take a combined 48 hours of protected industrial Action at BHP Port Operations. They'll be joined by members from the AMWU Australian Manufacturing Workers' Union WA  and ETU WA Branch  from 0530 Sunday!\nOur members are fed up of BHP's months of delays and denial at the bargaining table. We're stepping up the fight for a fair enterprise agreement that includes decent base rate wage increases, a fair classification structure with career progression and fair conditions to recognise the highly skilled, high volume, high risk work our members do, 24 hours a day 365 days a year.\nPort Ops members, check your inbox for more info about this weekend's protected action!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1561518762658870-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:19",
+          "source_page": "ETU WA Branch",
+          "post_id": "pfbid0ZWa423EWEGKgbfCd5tumVEUEzx4mQv5xyG4U4JVEutPWiEDoiVjwZEKCajH9RRMKl",
+          "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0ZWa423EWEGKgbfCd5tumVEUEzx4mQv5xyG4U4JVEutPWiEDoiVjwZEKCajH9RRMKl",
+          "displayed_date": "7 August at 05:00",
+          "published_date": "2026-08-07",
+          "published_at": "2026-08-06T21:00:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "From 0530 tomorrow, members from  Western Mine Workers Alliance - WMWA partner union the AWU will commence PIA with ship loader movement bans. WMIA members will be joined by members from the AMWU Australian Manufacturing Workers' Union WA and ETU WA from 0530 Sunday to combined all unions at BHP Port Operations taking 24 hours of PIA. \nOur members are fed up of BHP's months of delays and denial at the bargaining table. \nWe're stepping up the fight for a fair enterprise agreement that includes decent base rate wage increases, a fair classification structure with career progression and fair conditions to recognise the highly skilled, high volume, high risk work our members do, 24 hours a day 365 days a year.\nProtected action is never taken lightly, but it’s clear BHP aren’t taking us seriously. \nIf you don’t fight, you lose!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid0ZWa423EWEGKgbfCd5tumVEUEzx4mQv5xyG4U4JVEutPWiEDoiVjwZEKCajH9RRMKl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:5",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1667801645351842",
+          "post_url": "https://www.facebook.com/photo/?fbid=1667801645351842&set=a.507507878047897",
+          "displayed_date": "7 August at 11:15",
+          "published_date": "2026-08-07",
+          "published_at": "2026-08-07T03:15:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "From 0530 tomorrow, members from WMWA partner union the AWU will take a combined 48 hours of protected industrial Action at BHP Port Operations. They'll be joined by members from the AMWU - Australian Manufacturing Workers' Union and ETU - The Electrical Trades Union from 0530 Sunday!\nOur members are fed up of BHP's months of delays and denial at the bargaining table. We're stepping up the fight for a fair enterprise agreement that includes decent base rate wage increases, a fair classification structure with career progression and fair conditions to recognise the highly skilled, high volume, high risk work our members do, 24 hours a day 365 days a year.\nPort Ops members, check your inbox for more info about this weekend's protected action!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1667801645351842-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "amwu-wa:7",
+          "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+          "post_id": "pfbid0tMyvf9e54pBTY76dW8EF4Bobqe5s3Fs8xeQRPxXS6RVffhcLSDJpghsfrnLzH6q4l",
+          "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid0tMyvf9e54pBTY76dW8EF4Bobqe5s3Fs8xeQRPxXS6RVffhcLSDJpghsfrnLzH6q4l",
+          "displayed_date": "10 August at 11:07",
+          "published_date": "2026-08-10",
+          "published_at": "2026-08-10T03:07:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "Over the weekend, hundreds of members from the combined BHP Port Ops unions - The AMWU, Western Mine Workers Alliance - WMWA partner union the AWU, and the ETU WA Branch downed tools in our fight for a fair EA!\nOur members know that our action had a huge impact at Port Hedland - and so does BHP.\nWe hope this action does exactly what it's intended to do, and sharpen everyone’s mind on finding a solution that works for everyone, fast.\nThank you to every member who stood strong with us last weekend - your action made a big difference in our fight!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid0tMyvf9e54pBTY76dW8EF4Bobqe5s3Fs8xeQRPxXS6RVffhcLSDJpghsfrnLzH6q4l-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:5",
+          "source_page": "ETU WA Branch",
+          "post_id": "1519930930149638",
+          "post_url": "https://www.facebook.com/photo/?fbid=1519930930149638&set=a.166072128868865",
+          "displayed_date": "10 August at 15:00",
+          "published_date": "2026-08-10",
+          "published_at": "2026-08-10T07:00:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "Over the weekend, hundreds of members from the combined BHP Port Ops unions - the ETU WA, Western Mine Workers Alliance - WMWA partner union the AWU and the AMWU Australian Manufacturing Workers' Union WA downed tools in our fight for a fair EA!\nOur members know that our action had a huge impact at Port Hedland - and so does BHP.\nWe hope this action does exactly what it's intended to do, and sharpen everyone’s mind on finding a solution that works for everyone, fast.\nThank you to every member who stood strong with us last weekend - your action made a big difference in our fight!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1519930930149638-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:7",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1670598881738785",
+          "post_url": "https://www.facebook.com/photo/?fbid=1670598881738785&set=a.507507878047897",
+          "displayed_date": "10 August at 11:00",
+          "published_date": "2026-08-10",
+          "published_at": "2026-08-10T03:00:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "Over the weekend, hundreds of members from the combined BHP Port Ops unions - WMWA partner union the AWU, The AMWU - Australian Manufacturing Workers' Union and the ETU - The Electrical Trades Union downed tools in our fight for a fair EA!\nOur members know that our action had a huge impact at Port Hedland - and so does BHP.\nWe hope this action does exactly what it's intended to do, and sharpen everyone’s mind on finding a solution that works for everyone, fast.\nThank you to every member who stood strong with us last weekend - your action made a big difference in our fight!\nWMWA BHP Ports members, keep an eye on your inbox for updates.",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1670598881738785-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "awu-wa:8",
+          "source_page": "AWU Western Australia",
+          "post_id": "1565273455616734",
+          "post_url": "https://www.facebook.com/photo/?fbid=1565273455616734&set=a.370151755128916",
+          "displayed_date": "11 August at 15:02",
+          "published_date": "2026-08-11",
+          "published_at": "2026-08-11T07:02:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "Over the weekend, hundreds of members from the combined BHP Port Ops unions - WMWA partner union the AWU, The AMWU Australian Manufacturing Workers' Union WA and the ETU WA Branch downed tools in our fight for a fair EA!\nOur members know that our action had a huge impact at Port Hedland - and so does BHP.\nWe hope this action does exactly what it's intended to do, and sharpen everyone’s mind on finding a solution that works for everyone, fast.\nThank you to every member who stood strong with us last weekend - your action made a big difference in our fight!\nWMWA BHP Ports members, keep an eye on your inbox for updates.",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1565273455616734-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:12",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1678743207591019",
+          "post_url": "https://www.facebook.com/photo/?fbid=1678743207591019&set=a.507507878047897",
+          "displayed_date": "2 days ago",
+          "published_date": "2026-08-19",
+          "published_at": null,
+          "date_basis": "facebook_relative_label",
+          "date_precision": "day",
+          "full_text": "Today, workers, representatives from the combined Port Ops unions, and BHP met with the Fair Work Commission.\nThis was the same day that BHP announced a full-year profit of over $13 billion, up 9%. But their offer fails to address the basic concerns of our members - the very workers who helped deliver that massive profit.\nWe're meeting again next week with BHP, and in the meantime, we'll be consulting with members on our options - including counter-offers. It's time for a fair offer from BHP!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1678743207591019-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "amwu-wa:3",
+          "source_page": "AMWU Australian Manufacturing Workers' Union WA",
+          "post_id": "pfbid02rL9H9FP5vMaoK8pHdAswnkt9r8CfutGa8csnM24CxqwB1dcvWmE7fAPU7tSX1nitl",
+          "post_url": "https://www.facebook.com/amwuwabranch/posts/pfbid02rL9H9FP5vMaoK8pHdAswnkt9r8CfutGa8csnM24CxqwB1dcvWmE7fAPU7tSX1nitl",
+          "displayed_date": "a day ago",
+          "published_date": "2026-08-20",
+          "published_at": null,
+          "date_basis": "facebook_relative_label",
+          "date_precision": "day",
+          "full_text": "Yesterday, workers, representatives from the combined Port Ops unions, and BHP met with the Fair Work Commission.\nThis was the same day that BHP announced a full-year profit of over $13 billion, up 9%. But their offer fails to address the basic concerns of our members - the very workers who helped deliver that massive profit.\nWe're meeting again next week with BHP, and in the meantime, we'll be consulting with members on our options - including counter-offers. It's time for a fair offer from BHP!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/pfbid02rL9H9FP5vMaoK8pHdAswnkt9r8CfutGa8csnM24CxqwB1dcvWmE7fAPU7tSX1nitl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "awu-wa:2",
+          "source_page": "AWU Western Australia",
+          "post_id": "1572662001544546",
+          "post_url": "https://www.facebook.com/photo/?fbid=1572662001544546&set=a.370151778462247",
+          "displayed_date": "a day ago",
+          "published_date": "2026-08-20",
+          "published_at": null,
+          "date_basis": "facebook_relative_label",
+          "date_precision": "day",
+          "full_text": "Yesterday, workers, representatives from the combined Port Ops unions, and BHP met with the Fair Work Commission.\nThis was the same day that BHP announced a full-year profit of over $13 billion, up 9%. But their offer fails to address the basic concerns of our members – the very workers who helped deliver that massive profit.\nWe're meeting again next week with BHP, and in the meantime, we'll be consulting with members on our options – including counter-offers. It's time for a fair offer from BHP!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1572662001544546-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "wmwa:11",
+          "source_page": "Western Mine Workers Alliance",
+          "post_id": "1679480647517275",
+          "post_url": "https://www.facebook.com/photo/?fbid=1679480647517275&set=a.507507878047897",
+          "displayed_date": "a day ago",
+          "published_date": "2026-08-20",
+          "published_at": null,
+          "date_basis": "facebook_relative_label",
+          "date_precision": "day",
+          "full_text": "WMWA members at BHP Ports - you've got a mail from your union! \nPlease check your inbox for an update on the latest bargaining meeting with BHP.\nNothing in your inbox? Check your spam/junk folders, and if you still don't see anything, send us a DM!",
+          "graphics": [
+            "assets/campaigns/bhp-ports/1679480647517275-01.jpg"
+          ]
+        }
+      ],
+      "source_boundary": "Union-authored public material is campaign evidence, not independent corroboration of impact, leverage, support or employer conduct."
+    },
+    {
+      "campaign_id": "south32-worsley-alumina-bargaining-2026",
+      "slug": "worsley",
+      "title": "South32 Worsley Alumina bargaining campaign",
+      "current_stage": {
+        "label": "Protected-action ballot order reported",
+        "basis": "ETU account only"
+      },
+      "latest_change": "ETU said on 12 August that the Fair Work Commission had made a protected-action ballot order. The order, ballot timetable and South32 position are not connected.",
+      "principal_claims": [
+        "wage comparison with Alcoa",
+        "South32's response to the union log of claims",
+        "agreement vote and bargaining process"
+      ],
+      "open_verification": [
+        "the Commission order and ballot timetable",
+        "South32's bargaining position",
+        "the outcome of the proposed agreement vote"
+      ],
+      "milestones": [
+        {
+          "milestone_id": "WOR-M01",
+          "title": "PABO application reported",
+          "start_date": "2026-08-10",
+          "end_date": "2026-08-10",
+          "summary": "ETU said members had filed for a protected-action ballot order and advanced an Alcoa wage comparator.",
+          "evidence_state": "ETU account only",
+          "source_post_count": 1,
+          "source_pages": [
+            "ETU WA Branch"
+          ],
+          "events": [
+            {
+              "event_id": "WOR-002",
+              "event_date": "2026-08-10",
+              "event_end_date": null,
+              "event_type": "pabo_application_claim",
+              "summary": "ETU said Worsley members had filed for a protected action ballot order, criticised South32's bargaining position and advanced an Alcoa wage comparator.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/worsley/pfbid02aVuSXDa2ByAogFyp9WpjLQKmBX8eRvh8FJE36PA8qaLbwaP7XXqaLv9DuqG2wvwpl-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "etu-wa:15",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "pfbid02aVuSXDa2ByAogFyp9WpjLQKmBX8eRvh8FJE36PA8qaLbwaP7XXqaLv9DuqG2wvwpl",
+                  "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid02aVuSXDa2ByAogFyp9WpjLQKmBX8eRvh8FJE36PA8qaLbwaP7XXqaLv9DuqG2wvwpl",
+                  "displayed_date": "10 August at 10:00",
+                  "published_date": "2026-08-10",
+                  "published_at": "2026-08-10T02:00:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "𝐒𝐎𝐔𝐓𝐇𝟑𝟐 𝐖𝐎𝐑𝐒𝐋𝐄𝐘 𝐀𝐋𝐔𝐌𝐈𝐍𝐀 𝐌𝐄𝐌𝐁𝐄𝐑𝐒 𝐅𝐈𝐋𝐄 𝐅𝐎𝐑 𝐏𝐀𝐁𝐎 — 𝐓𝐇𝐄 𝐅𝐈𝐆𝐇𝐓 𝐈𝐒 𝐎𝐍!\n@South32  Worsley Alumina members have filed for PABO — the first step towards securing the right to take Protected Industrial Action.\nSouth32 has not been bargaining in good faith. The Company has not responded to our Log of Claims and is instead chucking an Agreement out to vote that does not address our key claims or any of our cost items.\nA Worsley Alumina day sparky is 19% behind an Alcoa day sparky.\nA Worsley Alumina shift sparky is a staggering 25% behind an Alcoa shift sparky.\nBoth companies mine the same dirt, run the same process and produce the same final product — so why the difference?\nSouth32's argument was that they are different companies. That was true but irrelevant.\nSince Alcoa announced that it was acquiring all of South32's Alumina/Aluminium business, that irrelevant argument has evaporated.\nOur members won't tolerate being treated as the poor cousins. The time to fix this injustice is now — not in two years' time.\nWith Alcoa now required to approve everything, maybe it is time for Alcoa to join the bargaining table.\nIf you don’t fight, you lose!\nBrezo - Kwinana & South West Organiser",
+                  "graphics": [
+                    "assets/campaigns/worsley/pfbid02aVuSXDa2ByAogFyp9WpjLQKmBX8eRvh8FJE36PA8qaLbwaP7XXqaLv9DuqG2wvwpl-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "milestone_id": "WOR-M02",
+          "title": "PABO order reported",
+          "start_date": "2026-08-12",
+          "end_date": "2026-08-12",
+          "summary": "ETU said the Commission had made the ballot order and continued its criticism of South32's bargaining position.",
+          "evidence_state": "ETU account; order not connected",
+          "source_post_count": 1,
+          "source_pages": [
+            "ETU WA Branch"
+          ],
+          "events": [
+            {
+              "event_id": "WOR-003",
+              "event_date": "2026-08-12",
+              "event_end_date": null,
+              "event_type": "pabo_order_claim",
+              "summary": "ETU said the Fair Work Commission had made a protected action ballot order and continued its criticism of South32's bargaining position.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/worsley/1521453453330719-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "etu-wa:3",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "1521453453330719",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1521453453330719&set=a.166072115535533",
+                  "displayed_date": "12 August at 06:00",
+                  "published_date": "2026-08-12",
+                  "published_at": "2026-08-11T22:00:00.000Z",
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "minute",
+                  "full_text": "𝐒𝐎𝐔𝐓𝐇𝟑𝟐 𝐖𝐎𝐑𝐒𝐋𝐄𝐘 𝐀𝐋𝐔𝐌𝐈𝐍𝐀 𝐏𝐀𝐁𝐎 𝐎𝐑𝐃𝐄𝐑𝐄𝐃 — 𝐓𝐇𝐄 𝐅𝐈𝐆𝐇𝐓 𝐈𝐒 𝐎𝐍!\nSouth32 Worsley Alumina members have filed for PABO, and the Fair Work Commission has made orders to conduct a ballot of members — the second step towards securing the right to take protected industrial action.\nAt the last meeting, South32 rolled out a document that rejected almost all of our claims. There wasn’t even an opportunity to properly review the agreement and negotiate its terms further. The Company decided to roll the dice and put it to a vote.\nWe expect South32 to bargain in good faith and stop looking for the exit ramp now that Alcoa has acquired Worsley Alumina.\nMembers are ready to get in the trenches. Has South32 learned anything from the previous agreement? Time will tell, with the current agreement set to expire on 1 September 2026.\n𝐓𝐢𝐜𝐤 𝐭𝐨𝐜𝐤. 𝐓𝐢𝐜𝐤 𝐭𝐨𝐜𝐤. 𝐓𝐡𝐞 𝐜𝐥𝐨𝐜𝐤 𝐢𝐬 𝐫𝐮𝐧𝐧𝐢𝐧𝐠.\n𝐓𝐡𝐞 𝐝𝐞𝐚𝐝𝐥𝐢𝐧𝐞 𝐢𝐬 𝐜𝐨𝐦𝐢𝐧𝐠. 𝐓𝐡𝐞 𝐩𝐫𝐞𝐬𝐬𝐮𝐫𝐞 𝐢𝐬 𝐛𝐮𝐢𝐥𝐝𝐢𝐧𝐠.\n𝐈𝐟 𝐲𝐨𝐮 𝐝𝐨𝐧’𝐭 𝐟𝐢𝐠𝐡𝐭, 𝐲𝐨𝐮 𝐥𝐨𝐬𝐞!\nBrezo - Organiser Kwinana & South West",
+                  "graphics": [
+                    "assets/campaigns/worsley/1521453453330719-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "context_events": [],
+      "undated_exhibits": [
+        {
+          "candidate_id": "etu-wa:69",
+          "source_page": "ETU WA Branch",
+          "post_id": "pfbid02KB3XJwRS2kXsxy4BoXiGKeWfPbUjDSi2as6JxMrvScmKSMSHgHPG9cYxE3rgbo41l",
+          "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid02KB3XJwRS2kXsxy4BoXiGKeWfPbUjDSi2as6JxMrvScmKSMSHgHPG9cYxE3rgbo41l",
+          "full_text": "BHP  vs little brother South32",
+          "reason": "Substantively relevant BHP/Worsley wage-comparator graphic, but the retained post shell exposes no usable publication date; excluded from the dated event timeline and retained as an undated source exhibit.",
+          "graphics": [
+            "assets/campaigns/worsley/pfbid02KB3XJwRS2kXsxy4BoXiGKeWfPbUjDSi2as6JxMrvScmKSMSHgHPG9cYxE3rgbo41l-01.jpg"
+          ]
+        }
+      ],
+      "all_posts": [
+        {
+          "candidate_id": "etu-wa:15",
+          "source_page": "ETU WA Branch",
+          "post_id": "pfbid02aVuSXDa2ByAogFyp9WpjLQKmBX8eRvh8FJE36PA8qaLbwaP7XXqaLv9DuqG2wvwpl",
+          "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid02aVuSXDa2ByAogFyp9WpjLQKmBX8eRvh8FJE36PA8qaLbwaP7XXqaLv9DuqG2wvwpl",
+          "displayed_date": "10 August at 10:00",
+          "published_date": "2026-08-10",
+          "published_at": "2026-08-10T02:00:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "𝐒𝐎𝐔𝐓𝐇𝟑𝟐 𝐖𝐎𝐑𝐒𝐋𝐄𝐘 𝐀𝐋𝐔𝐌𝐈𝐍𝐀 𝐌𝐄𝐌𝐁𝐄𝐑𝐒 𝐅𝐈𝐋𝐄 𝐅𝐎𝐑 𝐏𝐀𝐁𝐎 — 𝐓𝐇𝐄 𝐅𝐈𝐆𝐇𝐓 𝐈𝐒 𝐎𝐍!\n@South32  Worsley Alumina members have filed for PABO — the first step towards securing the right to take Protected Industrial Action.\nSouth32 has not been bargaining in good faith. The Company has not responded to our Log of Claims and is instead chucking an Agreement out to vote that does not address our key claims or any of our cost items.\nA Worsley Alumina day sparky is 19% behind an Alcoa day sparky.\nA Worsley Alumina shift sparky is a staggering 25% behind an Alcoa shift sparky.\nBoth companies mine the same dirt, run the same process and produce the same final product — so why the difference?\nSouth32's argument was that they are different companies. That was true but irrelevant.\nSince Alcoa announced that it was acquiring all of South32's Alumina/Aluminium business, that irrelevant argument has evaporated.\nOur members won't tolerate being treated as the poor cousins. The time to fix this injustice is now — not in two years' time.\nWith Alcoa now required to approve everything, maybe it is time for Alcoa to join the bargaining table.\nIf you don’t fight, you lose!\nBrezo - Kwinana & South West Organiser",
+          "graphics": [
+            "assets/campaigns/worsley/pfbid02aVuSXDa2ByAogFyp9WpjLQKmBX8eRvh8FJE36PA8qaLbwaP7XXqaLv9DuqG2wvwpl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:3",
+          "source_page": "ETU WA Branch",
+          "post_id": "1521453453330719",
+          "post_url": "https://www.facebook.com/photo/?fbid=1521453453330719&set=a.166072115535533",
+          "displayed_date": "12 August at 06:00",
+          "published_date": "2026-08-12",
+          "published_at": "2026-08-11T22:00:00.000Z",
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "minute",
+          "full_text": "𝐒𝐎𝐔𝐓𝐇𝟑𝟐 𝐖𝐎𝐑𝐒𝐋𝐄𝐘 𝐀𝐋𝐔𝐌𝐈𝐍𝐀 𝐏𝐀𝐁𝐎 𝐎𝐑𝐃𝐄𝐑𝐄𝐃 — 𝐓𝐇𝐄 𝐅𝐈𝐆𝐇𝐓 𝐈𝐒 𝐎𝐍!\nSouth32 Worsley Alumina members have filed for PABO, and the Fair Work Commission has made orders to conduct a ballot of members — the second step towards securing the right to take protected industrial action.\nAt the last meeting, South32 rolled out a document that rejected almost all of our claims. There wasn’t even an opportunity to properly review the agreement and negotiate its terms further. The Company decided to roll the dice and put it to a vote.\nWe expect South32 to bargain in good faith and stop looking for the exit ramp now that Alcoa has acquired Worsley Alumina.\nMembers are ready to get in the trenches. Has South32 learned anything from the previous agreement? Time will tell, with the current agreement set to expire on 1 September 2026.\n𝐓𝐢𝐜𝐤 𝐭𝐨𝐜𝐤. 𝐓𝐢𝐜𝐤 𝐭𝐨𝐜𝐤. 𝐓𝐡𝐞 𝐜𝐥𝐨𝐜𝐤 𝐢𝐬 𝐫𝐮𝐧𝐧𝐢𝐧𝐠.\n𝐓𝐡𝐞 𝐝𝐞𝐚𝐝𝐥𝐢𝐧𝐞 𝐢𝐬 𝐜𝐨𝐦𝐢𝐧𝐠. 𝐓𝐡𝐞 𝐩𝐫𝐞𝐬𝐬𝐮𝐫𝐞 𝐢𝐬 𝐛𝐮𝐢𝐥𝐝𝐢𝐧𝐠.\n𝐈𝐟 𝐲𝐨𝐮 𝐝𝐨𝐧’𝐭 𝐟𝐢𝐠𝐡𝐭, 𝐲𝐨𝐮 𝐥𝐨𝐬𝐞!\nBrezo - Organiser Kwinana & South West",
+          "graphics": [
+            "assets/campaigns/worsley/1521453453330719-01.jpg"
+          ]
+        }
+      ],
+      "source_boundary": "Union-authored public material is campaign evidence, not independent corroboration of impact, leverage, support or employer conduct."
+    }
+  ]
+}
