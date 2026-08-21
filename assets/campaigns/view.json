@@ -567,7 +567,6 @@
               "summary": "ETU and WMWA described the 16 July action and promoted its participation and campaign significance; operational effect was not independently verified.",
               "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining strength, workforce support or employer conduct. Aligned union posts are not independent corroboration.",
               "event_graphics": [
-                "assets/campaigns/bhp-ports/pfbid02iUQihWsZqRjvkeswCaS546KdmUQRPyZBjT27SzaAFYN2EgrZZ7PzPAgmxat95t5Ll-01.webp",
                 "assets/campaigns/bhp-ports/1647255684073105-01.jpg"
               ],
               "source_posts": [
@@ -582,9 +581,7 @@
                   "date_basis": "facebook_absolute_label",
                   "date_precision": "day",
                   "full_text": "QLD ETU member stand in solidarity with the BHP Port Headland members.",
-                  "graphics": [
-                    "assets/campaigns/bhp-ports/pfbid02iUQihWsZqRjvkeswCaS546KdmUQRPyZBjT27SzaAFYN2EgrZZ7PzPAgmxat95t5Ll-01.webp"
-                  ]
+                  "graphics": []
                 },
                 {
                   "candidate_id": "etu-wa:29",
@@ -1473,9 +1470,7 @@
           "date_basis": "facebook_absolute_label",
           "date_precision": "day",
           "full_text": "QLD ETU member stand in solidarity with the BHP Port Headland members.",
-          "graphics": [
-            "assets/campaigns/bhp-ports/pfbid02iUQihWsZqRjvkeswCaS546KdmUQRPyZBjT27SzaAFYN2EgrZZ7PzPAgmxat95t5Ll-01.webp"
-          ]
+          "graphics": []
         },
         {
           "candidate_id": "etu-wa:29",
