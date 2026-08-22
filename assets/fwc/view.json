@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "observed_at": "2026-08-21T06:58:06.408Z",
+  "observed_at": "2026-08-22T02:10:13.725Z",
   "source": {
     "label": "Fair Work Commission · Agreements in Progress",
     "url": "https://www.fwc.gov.au/work-conditions/enterprise-agreements/find-enterprise-agreement/agreements-progress",
-    "snapshot_id": "2026-08-21T06-58-06.408Z",
-    "unique_matter_count": 332
+    "snapshot_id": "2026-08-22T02-10-13.725Z",
+    "unique_matter_count": 322
   },
   "baseline_change": {
     "kind": "fwc_evidence_baseline",
@@ -439,7 +439,7 @@
     }
   ],
   "agreements": {
-    "direct_count": 10,
+    "direct_count": 9,
     "secondary_count": 4,
     "clusters": [
       {
@@ -464,16 +464,6 @@
         "title": "Port and stevedoring",
         "description": "Pending agreements with express Dampier, Port Hedland or North West waterside coverage.",
         "matters": [
-          {
-            "matter_no": "AG2026/2171",
-            "title": "LINX Dampier/Port Hedland Enterprise Agreement 2026",
-            "applicant": "Linx Cargo Care Pty Ltd Trading AS Linx Cargo Care",
-            "status": "Member consideration",
-            "lodged_at": "2026-08-10T15:17:00",
-            "source_url": "https://www.fwc.gov.au/documents/agreement-applications/ag2026_2171.pdf",
-            "relevance": "Agreement expressly covers LINX stevedoring operations at Dampier and Port Hedland.",
-            "quality_flags": []
-          },
           {
             "matter_no": "AG2026/2173",
             "title": "Toll & MUA WA Stevedoring Agreement 2026",
@@ -623,6 +613,9 @@
         "relevance": "Agreement covers Sandvik Rock Processing employees throughout Western Australia; materially adjacent to iron-ore operations but no Pilbara asset or location is specified.",
         "quality_flags": []
       }
+    ],
+    "omitted_historical_matter_nos": [
+      "AG2026/2171"
     ],
     "boundary": "Pending applications are procedural observations. They do not establish approval, operational effect or an industrial causal relationship."
   }
