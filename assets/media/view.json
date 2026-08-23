@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-23T08:45:00+08:00",
+  "item_count": 7,
+  "open_count": 5,
+  "paywalled_count": 2,
+  "boundary": "Summaries state only information available on the public page or in a public search index. Paywalled articles are labelled and are not bypassed.",
+  "items": [
+    {
+      "item_id": "abc-pilbara-briefing-2026-08-20",
+      "published_date": "2026-08-20",
+      "source": "ABC Pilbara",
+      "title": "Kimberley and Pilbara local news briefing, 20 August 2026",
+      "url": "https://www.abc.net.au/news/2026-08-20/kimberley-and-pilbara-local-news-briefing/107056932",
+      "access": "open",
+      "public_basis": "Full article publicly readable",
+      "topic": "operations",
+      "summary": "ABC reports first production at Fortescue's Christmas Creek green-iron pilot, construction of a new Onslow Iron accommodation camp, and a Federal Court challenge concerning Chevron's Gorgon environment plan.",
+      "relevance": "Three direct Pilbara operating, workforce-accommodation and legal-context developments in one regional bulletin."
+    },
+    {
+      "item_id": "afr-bhp-right-of-entry-2026-08-20",
+      "published_date": "2026-08-20",
+      "source": "Australian Financial Review",
+      "title": "Union officials blocked in BHP Pilbara port right-of-entry row",
+      "url": "https://www.afr.com/work-and-careers/workplace/police-called-in-bizarre-escalation-of-bhp-pilbara-union-dispute-20260820-p60q61",
+      "access": "paywalled",
+      "public_basis": "Headline and public search-index synopsis only",
+      "topic": "industrial-relations",
+      "summary": "The publicly indexed synopsis reports a right-of-entry dispute at BHP's Port Hedland operations, including union allegations that officials were barred and police were called.",
+      "relevance": "A reported escalation in the active BHP Port Operations matter. The underlying allegations require court, police or other public records before being treated as established."
+    },
+    {
+      "item_id": "the-west-bhp-right-of-entry-2026-08-20",
+      "published_date": "2026-08-20",
+      "source": "The West Australian",
+      "title": "Stoush between BHP and unions at Port Hedland escalates with WA Police called",
+      "url": "https://thewest.com.au/business/mining/stoush-between-bhp-and-unions-at-port-hedland-escalates-with-wa-police-called-over-aggressive-behaviour-c-22753561",
+      "access": "paywalled",
+      "public_basis": "Headline, byline and publication date publicly readable",
+      "topic": "industrial-relations",
+      "summary": "The public page identifies a further report about the BHP–union dispute at Port Hedland and police attendance; substantive article text remains subscriber-only.",
+      "relevance": "Independent media coverage of the same reported right-of-entry escalation, but not independent proof of the contested conduct."
+    },
+    {
+      "item_id": "abc-mardie-potash-2026-08-19",
+      "published_date": "2026-08-19",
+      "source": "ABC Pilbara",
+      "title": "Mardie Salt to test potash by-product",
+      "url": "https://www.abc.net.au/news/2026-08-19/kimberley-and-pilbara-local-news-briefing/107053322",
+      "access": "open",
+      "public_basis": "Public regional-news briefing",
+      "topic": "operations",
+      "summary": "BCI Minerals awarded a contract for a sulphate-of-potash pilot plant at Mardie Salt to test whether a salt-production by-product can be used as fertiliser.",
+      "relevance": "A diversification and project-execution development at a current Pilbara operation."
+    },
+    {
+      "item_id": "reneweconomy-fortescue-hot-metal-2026-08-19",
+      "published_date": "2026-08-19",
+      "source": "RenewEconomy",
+      "title": "Fortescue achieves first hot metal using electric smelting",
+      "url": "https://reneweconomy.com.au/fortescue-achieves-first-hot-metal-using-electric-smelting-as-it-seeks-to-solve-pilbara-green-iron-puzzle/",
+      "access": "open",
+      "public_basis": "Full article publicly readable",
+      "topic": "decarbonisation",
+      "summary": "Fortescue's Christmas Creek project produced molten metal from blended ore in its electric smelting furnace; commissioning is to continue in stages and commercial-scale production remains an unresolved challenge.",
+      "relevance": "A concrete operating milestone, with the article preserving the distinction between a pilot result and commercial-scale green-iron production."
+    },
+    {
+      "item_id": "international-mining-jimblebar-charging-2026-08-18",
+      "published_date": "2026-08-18",
+      "source": "International Mining",
+      "title": "BHP to test static and dynamic charging at Jimblebar",
+      "url": "https://im-mining.com/2026/08/18/bhp-to-test-static-and-dynamic-charging-at-jimblebar-as-part-of-battery-electric-truck-fleet-viability-assessments/",
+      "access": "open",
+      "public_basis": "Full article publicly readable",
+      "topic": "technology",
+      "summary": "BHP plans FY2027 trials of high-power static charging and Caterpillar dynamic energy transfer at Jimblebar as part of assessing battery-electric haul-truck fleet viability.",
+      "relevance": "A direct Pilbara technology and future-workforce capability trial; the equipment remains under development and is not yet commercially available."
+    },
+    {
+      "item_id": "australian-mining-pilbara-ports-july-2026",
+      "published_date": "2026-08-17",
+      "source": "Australian Mining",
+      "title": "Pilbara Ports sees 63 million tonnes handled in July",
+      "url": "https://www.australianmining.com.au/pilbara-ports-sees-63-million-tonnes-handled-in-july",
+      "access": "open",
+      "public_basis": "Full article publicly readable",
+      "topic": "operations",
+      "summary": "Pilbara Ports recorded 63.8 million tonnes of throughput in July 2026. Port Hedland handled 45 million tonnes, including 44.2 million tonnes of iron ore exports.",
+      "relevance": "Source-linked operating context for the region's export system, including the BHP Port Operations matter."
+    }
+  ]
+}

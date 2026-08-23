@@ -332,6 +332,23 @@
   .reg-source { display: inline-block; margin-top: 11px; color: var(--faint); font: 400 10px var(--mono); text-decoration: none; }
   .reg-source:hover { color: var(--soft); }
 
+  .media-feed { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .media-item { min-width: 0; padding: 17px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .media-item:nth-child(2n) { border-right: 0; }
+  .media-item:nth-last-child(-n+2) { border-bottom: 0; }
+  .media-item:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
+  .media-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; color: var(--faint); font: 500 10px var(--mono); }
+  .media-access { padding: 3px 6px; border-radius: 4px; color: var(--green); background: var(--green-soft); text-transform: uppercase; letter-spacing: .04em; }
+  .media-access.paywalled { color: #efaa77; background: var(--amber-soft); }
+  .media-topic { text-transform: uppercase; letter-spacing: .04em; }
+  .media-item h3 { margin: 9px 0 7px; font-size: 15px; font-weight: 550; line-height: 1.35; }
+  .media-item h3 a { text-decoration: none; }
+  .media-item h3 a:hover { color: var(--soft); }
+  .media-item p { margin: 0; color: var(--muted); font-size: 13px; }
+  .media-relevance { margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--line); color: var(--soft); font-size: 12px; }
+  .media-basis { margin-top: 9px; color: var(--faint); font: 400 10px var(--mono); }
+  .media-boundary { padding: 11px 17px; border-top: 1px solid var(--line); color: var(--faint); font-size: 11px; }
+
   .coverage-grid { display: grid; grid-template-columns: repeat(3,1fr); }
   .coverage-item { padding: 13px 16px; border-right: 1px solid var(--line); border-top: 1px solid var(--line); }
   .coverage-item:nth-child(3n) { border-right: 0; }
@@ -368,8 +385,10 @@
     .metric { border-top: 1px solid var(--line); }
     .metric:nth-child(odd) { border-left: 0; }
     .aside { grid-template-columns: 1fr; }
-    .signal-grid, .coverage-grid, .regulatory-grid { grid-template-columns: 1fr; }
+    .signal-grid, .coverage-grid, .regulatory-grid, .media-feed { grid-template-columns: 1fr; }
     .issue, .coverage-item, .reg-item { border-right: 0; border-bottom: 1px solid var(--line); }
+    .media-item, .media-item:nth-child(2n), .media-item:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--line); }
+    .media-item:last-child { border-bottom: 0; }
     #active-matters .panel-head { align-items: flex-start; flex-direction: column; }
     .active-matter > summary { grid-template-columns: 1fr; }
     .matter-state { justify-content: space-between; }
@@ -643,6 +662,12 @@
     <div data-fwc-agreements><div class="agreements-loading">Loading reviewed pending-agreement register…</div></div>
   </section>
 
+  <section class="panel" id="media-newsfeed" style="margin-top:18px;">
+    <div class="panel-head"><div><h2 class="panel-title">Media newsfeed</h2><span class="panel-kicker">public information · direct Pilbara relevance</span></div><span class="panel-kicker" data-media-summary>Loading…</span></div>
+    <div data-media-feed><div class="agreements-loading" style="margin:16px">Loading public media reports…</div></div>
+    <div class="media-boundary">Publicly readable and paywalled reporting are labelled separately. Pilbara Watch states only information visible on the public article page or in a public search index; it does not bypass subscriptions.</div>
+  </section>
+
   <section class="panel" id="regulatory-watch" style="margin-top:18px;">
     <div class="panel-head"><h2 class="panel-title">Regulatory and workplace developments</h2><span class="panel-kicker">official sources · relevance signalled, not overstated</span></div>
     <div class="regulatory-grid">
@@ -682,13 +707,13 @@
         <div class="coverage-item"><div class="coverage-source">FWC legal records</div><div class="coverage-status" data-fwc-coverage><span class="status-dot ok"></span>15 official campaign documents · 322 pending matters</div></div>
         <div class="coverage-item"><div class="coverage-source">Market snapshot</div><div class="coverage-status"><span class="status-dot ok"></span>Manual · source-linked baseline</div></div>
         <div class="coverage-item"><div class="coverage-source">Production and operating data</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
-        <div class="coverage-item"><div class="coverage-source">News and specialist media</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
+        <div class="coverage-item"><div class="coverage-source">News and specialist media</div><div class="coverage-status" data-media-coverage><span class="status-dot ok"></span>7 reviewed reports · 5 publicly readable · 2 paywalled</div></div>
       </div>
       <div class="method-note" data-facebook-method>Current six-page corpus: 3794 canonical posts; 2576 dated from Facebook labels; 1218 explicit date gaps; coverage 2022-08-16 to 2026-08-22. Reviewed campaign graphics and complete source text are published through a sanitized account-free layer. Raw HTML, full-page screenshots, comments, authentication state and private evidence paths remain on MS64.</div>
     </div>
   </details>
 
-  <footer><span>Pilbara Watch · by Briefer · refinement 7</span><span>Campaign histories · official evidence · pending agreements</span></footer>
+  <footer><span>Pilbara Watch · by Briefer · refinement 8</span><span>Campaign histories · official evidence · public media · pending agreements</span></footer>
 </main>
 <script>
   const buttons = [...document.querySelectorAll('.filter')];
@@ -703,6 +728,7 @@
   const dateRange = (start, end) => end && end !== start ? `${start}–${end}` : start;
   const safeFacebookUrl = value => /^https:\/\/www\.facebook\.com\//.test(value || '') ? value : null;
   const safeFwcUrl = value => /^https:\/\/www\.fwc\.gov\.au\//.test(value || '') ? value : null;
+  const safeMediaUrl = value => /^https:\/\/[A-Za-z0-9.-]+(?:\/|$)/.test(value || '') ? value : null;
 
   function postCard(post) {
     const graphic = post.graphics?.[0];
@@ -774,6 +800,14 @@
     target.innerHTML = `<div class="agreement-clusters">${data.clusters.map(cluster => `<article class="agreement-cluster" data-cluster-id="${escapeHtml(cluster.cluster_id)}"><div class="agreement-cluster-head"><h3>${escapeHtml(cluster.title)}</h3><span class="agreement-count">${cluster.matters.length} matter${cluster.matters.length === 1 ? '' : 's'}</span></div><div class="agreement-cluster-copy">${escapeHtml(cluster.description)}</div><div class="agreement-list">${cluster.matters.map(agreementMatter).join('')}</div></article>`).join('')}</div><details class="agreements-secondary"><summary>Broader WA and sector watch · ${data.secondary.length}</summary><div class="agreements-secondary-body">${data.secondary.map(agreementMatter).join('')}</div></details><div class="agreements-boundary"><span>${escapeHtml(data.boundary)}</span><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener">${escapeHtml(source.label)} · observed ${escapeHtml((source.observed_at || '').slice(0, 10))} ↗</a></div>`;
   }
 
+  function renderMedia(target, data) {
+    target.innerHTML = `<div class="media-feed">${data.items.map(item => {
+      const link = safeMediaUrl(item.url);
+      const accessLabel = item.access === 'open' ? 'Open article' : 'Paywalled';
+      return `<article class="media-item" data-media-id="${escapeHtml(item.item_id)}"><div class="media-meta"><span>${escapeHtml(item.published_date)}</span><span>·</span><span>${escapeHtml(item.source)}</span><span class="media-access ${escapeHtml(item.access)}">${accessLabel}</span><span class="media-topic">${escapeHtml(item.topic.replaceAll('-', ' '))}</span></div><h3>${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(item.title)} ↗</a>` : escapeHtml(item.title)}</h3><p>${escapeHtml(item.summary)}</p><div class="media-relevance"><strong>Pilbara Watch:</strong> ${escapeHtml(item.relevance)}</div><div class="media-basis">Public basis · ${escapeHtml(item.public_basis)}</div></article>`;
+    }).join('')}</div>`;
+  }
+
   async function initialiseCampaigns() {
     const panels = [...document.querySelectorAll('.campaign-panel[data-campaign-id]')];
     const watchlistTargets = [...document.querySelectorAll('[data-watchlist-id]')];
@@ -810,11 +844,29 @@
       if (agreementsTarget) agreementsTarget.innerHTML = `<div class="campaign-error" style="margin:16px">Agreement register unavailable: ${escapeHtml(error.message)}</div>`;
     }
   }
+
+  async function initialiseMedia() {
+    const mediaTarget = document.querySelector('[data-media-feed]');
+    if (!mediaTarget) return;
+    try {
+      const response = await fetch('assets/media/view.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error(`Media view HTTP ${response.status}`);
+      const data = await response.json();
+      renderMedia(mediaTarget, data);
+      document.querySelector('[data-media-summary]').textContent = `${data.item_count} reports · ${data.open_count} open · ${data.paywalled_count} paywalled`;
+      document.querySelector('[data-media-coverage]').innerHTML = `<span class="status-dot ok"></span>${data.item_count} reviewed reports · ${data.open_count} publicly readable · ${data.paywalled_count} paywalled`;
+    } catch (error) {
+      mediaTarget.innerHTML = `<div class="campaign-error" style="margin:16px">Media feed unavailable: ${escapeHtml(error.message)}</div>`;
+      document.querySelector('[data-media-summary]').textContent = 'Feed unavailable';
+      document.querySelector('[data-media-coverage]').innerHTML = '<span class="status-dot partial"></span>Collection unavailable · existing dashboard sections unaffected';
+    }
+  }
   initialiseCampaigns();
+  initialiseMedia();
 </script>
 
 <div id="automation-publication-status" style="margin:24px auto;max-width:1100px;padding:12px 16px;border:1px solid rgba(255,255,255,.15);border-radius:8px;text-align:center;font:12px/1.4 system-ui;color:#aab4c3;background:#101722">
-  Automated publication verified · 2026-08-23T00:08:55.791Z
+  Automated publication verified · 2026-08-23T01:10:42.378Z
 </div>
 </body>
 </html>
