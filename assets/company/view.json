@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-23T09:45:00+08:00",
+  "item_count": 7,
+  "company_count": 5,
+  "price_sensitive_count": 7,
+  "watchlist": [
+    {
+      "asx_code": "BHP",
+      "company": "BHP Group"
+    },
+    {
+      "asx_code": "FMG",
+      "company": "Fortescue"
+    },
+    {
+      "asx_code": "RIO",
+      "company": "Rio Tinto"
+    },
+    {
+      "asx_code": "MIN",
+      "company": "Mineral Resources"
+    },
+    {
+      "asx_code": "S32",
+      "company": "South32"
+    }
+  ],
+  "boundary": "Official issuer disclosures are direct evidence of what the company reported to the market. Forward-looking statements, estimates and company characterisations are not independent verification.",
+  "items": [
+    {
+      "announcement_id": "fmg-blacksmith-resource-03127355",
+      "released_at": "2026-08-20T08:36:00+10:00",
+      "released_label": "20 Aug · 8:36 am AEST",
+      "company": "Fortescue",
+      "asx_code": "FMG",
+      "headline": "Blacksmith Project Mineral Resource and Ore Reserve Update",
+      "asx_url": "https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03127355",
+      "company_url": "https://investors.fortescue.com/en/announcements-and-reports",
+      "price_sensitive": true,
+      "category": "resources-and-reserves",
+      "summary": "Fortescue lodged an updated resource and reserve statement for Blacksmith, a proposed Pilbara project that the company says could support more than 20 years of operation and around 5Mtpa of direct-shipping ore.",
+      "relevance": "A potential new Pilbara production source and future workforce footprint; project timing and execution remain subject to company decisions and approvals."
+    },
+    {
+      "announcement_id": "fmg-fy26-results-03127352",
+      "released_at": "2026-08-20T08:36:00+10:00",
+      "released_label": "20 Aug · 8:36 am AEST",
+      "company": "Fortescue",
+      "asx_code": "FMG",
+      "headline": "FY26 Full Year Results",
+      "asx_url": "https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03127352",
+      "company_url": "https://investors.fortescue.com/en/results-and-operational-performance",
+      "price_sensitive": true,
+      "category": "results",
+      "summary": "Fortescue reported record FY26 iron ore shipments of 201.3Mt, underlying net profit after tax of about US$3.5 billion and a total FY26 dividend of A$1.08 per share.",
+      "relevance": "The results frame operating scale, cost capacity and capital available for Pilbara operations, Iron Bridge and decarbonisation investment."
+    },
+    {
+      "announcement_id": "bhp-fy26-results-03126197",
+      "released_at": "2026-08-18T08:33:00+10:00",
+      "released_label": "18 Aug · 8:33 am AEST",
+      "company": "BHP Group",
+      "asx_code": "BHP",
+      "headline": "BHP FY2026 Results Announcement",
+      "asx_url": "https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03126197",
+      "company_url": "https://www.bhp.com/news/media-centre/releases/2026/08/bhp-results-for-the-full-year-ended-30-june-2026",
+      "price_sensitive": true,
+      "category": "results",
+      "summary": "BHP reported record WAIO production and shipments and announced Ministers North, a proposed Pilbara mine intended to help sustain WAIO production above 305Mtpa.",
+      "relevance": "Direct evidence of BHP's Pilbara production and replacement-mine strategy, separate from the active Port Operations bargaining matter."
+    },
+    {
+      "announcement_id": "s32-june-quarterly-03116159",
+      "released_at": "2026-08-07T08:35:00+10:00",
+      "released_label": "7 Aug · 8:35 am AEST",
+      "company": "South32",
+      "asx_code": "S32",
+      "headline": "June 2026 Quarterly Report",
+      "asx_url": "https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03116159",
+      "company_url": "https://www.south32.net/docs/default-source/all-financial-results/quarterly-report---june-2026.pdf?sfvrsn=af822f49_3",
+      "price_sensitive": true,
+      "category": "quarterly-production",
+      "summary": "South32 reported Worsley Alumina FY26 saleable production of 3.722Mt, broadly unchanged year on year, with FY27 guidance maintained at 3.9Mt.",
+      "relevance": "Official operating context for the Worsley bargaining campaign. The disclosure does not establish the status or effect of bargaining."
+    },
+    {
+      "announcement_id": "rio-hy26-results-03119116",
+      "released_at": "2026-07-29T08:26:00+10:00",
+      "released_label": "29 Jul · 8:26 am AEST",
+      "company": "Rio Tinto",
+      "asx_code": "RIO",
+      "headline": "Rio Tinto 2026 Half Year Results",
+      "asx_url": "https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03119116",
+      "company_url": "https://www.riotinto.com/en/invest/financial-news-performance/results",
+      "price_sensitive": true,
+      "category": "results",
+      "summary": "Rio Tinto reported a 28% increase in underlying EBITDA and a 75% increase in free cash flow, alongside continued productivity improvement across the portfolio.",
+      "relevance": "Financial and capital-allocation context for Rio's Pilbara replacement mines, Rhodes Ridge studies and workforce investment."
+    },
+    {
+      "announcement_id": "min-q4-fy26-03119091",
+      "released_at": "2026-07-29T08:21:00+10:00",
+      "released_label": "29 Jul · 8:21 am AEST",
+      "company": "Mineral Resources",
+      "asx_code": "MIN",
+      "headline": "Quarterly Activity Report — Q4 FY26",
+      "asx_url": "https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03119091",
+      "company_url": "https://www.mineralresources.com.au/news/company-updates/q4-fy26-quarterly-activity-report/",
+      "price_sensitive": true,
+      "category": "quarterly-production",
+      "summary": "MinRes reported FY26 Onslow Iron attributable shipments of 19.7Mt above upgraded guidance, Pilbara Hub shipments of 9.9Mt, and stronger liquidity with net debt reduced to about A$4.3 billion.",
+      "relevance": "Direct operating and balance-sheet context for Onslow Iron, the Pilbara Hub and the Port of Ashburton supply chain."
+    },
+    {
+      "announcement_id": "rio-q2-production-03114999",
+      "released_at": "2026-07-15T08:18:00+10:00",
+      "released_label": "15 Jul · 8:18 am AEST",
+      "company": "Rio Tinto",
+      "asx_code": "RIO",
+      "headline": "Second Quarter 2026 Production Results",
+      "asx_url": "https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03114999",
+      "company_url": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+      "price_sensitive": true,
+      "category": "quarterly-production",
+      "summary": "Rio Tinto reported Q2 Pilbara production of 83.5Mt and sales of 85.3Mt on a 100% basis, with first-half Pilbara production up 6% year on year.",
+      "relevance": "Source-linked operating context for Rio's Pilbara system and a baseline against which later workforce or disruption claims can be tested."
+    }
+  ]
+}

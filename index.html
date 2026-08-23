@@ -349,6 +349,23 @@
   .media-basis { margin-top: 9px; color: var(--faint); font: 400 10px var(--mono); }
   .media-boundary { padding: 11px 17px; border-top: 1px solid var(--line); color: var(--faint); font-size: 11px; }
 
+  .company-feed { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .company-announcement { min-width: 0; padding: 17px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .company-announcement:nth-child(2n) { border-right: 0; }
+  .company-announcement:nth-last-child(-n+2) { border-bottom: 0; }
+  .company-announcement:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
+  .company-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; color: var(--faint); font: 500 10px var(--mono); }
+  .asx-code { padding: 3px 6px; border-radius: 4px; color: #9db8e1; background: var(--blue-soft); letter-spacing: .04em; }
+  .price-sensitive { padding: 3px 6px; border-radius: 4px; color: #efaa77; background: var(--amber-soft); text-transform: uppercase; letter-spacing: .04em; }
+  .company-category { text-transform: uppercase; letter-spacing: .04em; }
+  .company-announcement h3 { margin: 9px 0 7px; font-size: 15px; font-weight: 550; line-height: 1.35; }
+  .company-announcement p { margin: 0; color: var(--muted); font-size: 13px; }
+  .company-relevance { margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--line); color: var(--soft); font-size: 12px; }
+  .company-links { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .company-link { color: var(--faint); font: 400 10px var(--mono); text-decoration: none; }
+  .company-link:hover { color: var(--soft); }
+  .company-boundary { padding: 11px 17px; border-top: 1px solid var(--line); color: var(--faint); font-size: 11px; }
+
   .coverage-grid { display: grid; grid-template-columns: repeat(3,1fr); }
   .coverage-item { padding: 13px 16px; border-right: 1px solid var(--line); border-top: 1px solid var(--line); }
   .coverage-item:nth-child(3n) { border-right: 0; }
@@ -385,10 +402,12 @@
     .metric { border-top: 1px solid var(--line); }
     .metric:nth-child(odd) { border-left: 0; }
     .aside { grid-template-columns: 1fr; }
-    .signal-grid, .coverage-grid, .regulatory-grid, .media-feed { grid-template-columns: 1fr; }
+    .signal-grid, .coverage-grid, .regulatory-grid, .media-feed, .company-feed { grid-template-columns: 1fr; }
     .issue, .coverage-item, .reg-item { border-right: 0; border-bottom: 1px solid var(--line); }
     .media-item, .media-item:nth-child(2n), .media-item:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--line); }
     .media-item:last-child { border-bottom: 0; }
+    .company-announcement, .company-announcement:nth-child(2n), .company-announcement:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--line); }
+    .company-announcement:last-child { border-bottom: 0; }
     #active-matters .panel-head { align-items: flex-start; flex-direction: column; }
     .active-matter > summary { grid-template-columns: 1fr; }
     .matter-state { justify-content: space-between; }
@@ -662,6 +681,12 @@
     <div data-fwc-agreements><div class="agreements-loading">Loading reviewed pending-agreement register…</div></div>
   </section>
 
+  <section class="panel" id="company-announcements" style="margin-top:18px;">
+    <div class="panel-head"><div><h2 class="panel-title">Company and ASX announcements</h2><span class="panel-kicker">official disclosures · Pilbara relevance selected</span></div><span class="panel-kicker" data-company-summary>Loading…</span></div>
+    <div data-company-feed><div class="agreements-loading" style="margin:16px">Loading official company disclosures…</div></div>
+    <div class="company-boundary">Official company disclosures and ASX lodgements are direct evidence of what an issuer reported to the market. Forward-looking statements, estimates and company characterisations remain issuer claims unless independently verified.</div>
+  </section>
+
   <section class="panel" id="media-newsfeed" style="margin-top:18px;">
     <div class="panel-head"><div><h2 class="panel-title">Media newsfeed</h2><span class="panel-kicker">public information · direct Pilbara relevance</span></div><span class="panel-kicker" data-media-summary>Loading…</span></div>
     <div data-media-feed><div class="agreements-loading" style="margin:16px">Loading public media reports…</div></div>
@@ -703,7 +728,7 @@
         <div class="coverage-item"><div class="coverage-source">Union Facebook</div><div class="coverage-status" data-facebook-coverage><span class="status-dot ok"></span>6 declared public pages · 3794 posts</div></div>
         <div class="coverage-item"><div class="coverage-source">Evidence persistence</div><div class="coverage-status"><span class="status-dot ok"></span>Healthy · duplicate-free rerun</div></div>
         <div class="coverage-item"><div class="coverage-source">Regulatory sources</div><div class="coverage-status"><span class="status-dot ok"></span>Manual official-source baseline</div></div>
-        <div class="coverage-item"><div class="coverage-source">Company announcements — not connected</div><div class="coverage-status"><span class="status-dot"></span>No inference drawn</div></div>
+        <div class="coverage-item"><div class="coverage-source">Company and ASX announcements</div><div class="coverage-status" data-company-coverage><span class="status-dot ok"></span>7 reviewed disclosures · 5 watched issuers</div></div>
         <div class="coverage-item"><div class="coverage-source">FWC legal records</div><div class="coverage-status" data-fwc-coverage><span class="status-dot ok"></span>15 official campaign documents · 322 pending matters</div></div>
         <div class="coverage-item"><div class="coverage-source">Market snapshot</div><div class="coverage-status"><span class="status-dot ok"></span>Manual · source-linked baseline</div></div>
         <div class="coverage-item"><div class="coverage-source">Production and operating data</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
@@ -713,7 +738,7 @@
     </div>
   </details>
 
-  <footer><span>Pilbara Watch · by Briefer · refinement 8</span><span>Campaign histories · official evidence · public media · pending agreements</span></footer>
+  <footer><span>Pilbara Watch · by Briefer · refinement 9</span><span>Campaign histories · official evidence · company disclosures · public media</span></footer>
 </main>
 <script>
   const buttons = [...document.querySelectorAll('.filter')];
@@ -725,10 +750,34 @@
   }));
 
   const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' })[character]);
+  function setCoverageStatus(selector, text, state = 'ok') {
+    const target = document.querySelector(selector);
+    if (!target) return;
+    const dot = document.createElement('span');
+    dot.className = `status-dot ${state}`;
+    target.replaceChildren(dot, document.createTextNode(text));
+  }
   const dateRange = (start, end) => end && end !== start ? `${start}–${end}` : start;
   const safeFacebookUrl = value => /^https:\/\/www\.facebook\.com\//.test(value || '') ? value : null;
   const safeFwcUrl = value => /^https:\/\/www\.fwc\.gov\.au\//.test(value || '') ? value : null;
   const safeMediaUrl = value => /^https:\/\/[A-Za-z0-9.-]+(?:\/|$)/.test(value || '') ? value : null;
+  const companySourceHosts = {
+    BHP: ['www.bhp.com'], FMG: ['investors.fortescue.com'], RIO: ['www.riotinto.com'],
+    MIN: ['www.mineralresources.com.au'], S32: ['www.south32.net']
+  };
+  function safeAsxUrl(value) {
+    try {
+      const url = new URL(value);
+      const keys = [...url.searchParams.keys()].sort();
+      return url.protocol === 'https:' && url.hostname === 'www.asx.com.au' && !url.port && !url.username && !url.password && !url.hash && url.pathname === '/asx/v2/statistics/displayAnnouncement.do' && keys.join(',') === 'display,idsId' && url.searchParams.get('display') === 'pdf' && /^\d+$/.test(url.searchParams.get('idsId') || '') ? value : null;
+    } catch { return null; }
+  }
+  function safeCompanyUrl(value, asxCode) {
+    try {
+      const url = new URL(value);
+      return url.protocol === 'https:' && !url.port && !url.username && !url.password && (companySourceHosts[asxCode] || []).includes(url.hostname) ? value : null;
+    } catch { return null; }
+  }
 
   function postCard(post) {
     const graphic = post.graphics?.[0];
@@ -808,6 +857,14 @@
     }).join('')}</div>`;
   }
 
+  function renderCompanyFeed(target, data) {
+    target.innerHTML = `<div class="company-feed">${data.items.map(item => {
+      const asxLink = safeAsxUrl(item.asx_url);
+      const companyLink = safeCompanyUrl(item.company_url, item.asx_code);
+      return `<article class="company-announcement" data-announcement-id="${escapeHtml(item.announcement_id)}"><div class="company-meta"><span class="asx-code">ASX:${escapeHtml(item.asx_code)}</span><span>${escapeHtml(item.company)}</span><span>·</span><span>${escapeHtml(item.released_label)}</span>${item.price_sensitive ? '<span class="price-sensitive">Price sensitive</span>' : ''}<span class="company-category">${escapeHtml(item.category.replaceAll('-', ' '))}</span></div><h3>${escapeHtml(item.headline)}</h3><p>${escapeHtml(item.summary)}</p><div class="company-relevance"><strong>Pilbara Watch:</strong> ${escapeHtml(item.relevance)}</div><div class="company-links">${asxLink ? `<a class="company-link" href="${escapeHtml(asxLink)}" target="_blank" rel="noopener">ASX lodgement ↗</a>` : ''}${companyLink ? `<a class="company-link" href="${escapeHtml(companyLink)}" target="_blank" rel="noopener">Company source ↗</a>` : ''}</div></article>`;
+    }).join('')}</div>`;
+  }
+
   async function initialiseCampaigns() {
     const panels = [...document.querySelectorAll('.campaign-panel[data-campaign-id]')];
     const watchlistTargets = [...document.querySelectorAll('[data-watchlist-id]')];
@@ -852,21 +909,41 @@
       const response = await fetch('assets/media/view.json', { cache: 'no-store' });
       if (!response.ok) throw new Error(`Media view HTTP ${response.status}`);
       const data = await response.json();
+      if (!Array.isArray(data.items) || data.item_count !== data.items.length || data.open_count !== data.items.filter(item => item.access === 'open').length || data.paywalled_count !== data.items.filter(item => item.access === 'paywalled').length) throw new Error('Invalid media view');
       renderMedia(mediaTarget, data);
       document.querySelector('[data-media-summary]').textContent = `${data.item_count} reports · ${data.open_count} open · ${data.paywalled_count} paywalled`;
-      document.querySelector('[data-media-coverage]').innerHTML = `<span class="status-dot ok"></span>${data.item_count} reviewed reports · ${data.open_count} publicly readable · ${data.paywalled_count} paywalled`;
+      setCoverageStatus('[data-media-coverage]', `${data.item_count} reviewed reports · ${data.open_count} publicly readable · ${data.paywalled_count} paywalled`);
     } catch (error) {
       mediaTarget.innerHTML = `<div class="campaign-error" style="margin:16px">Media feed unavailable: ${escapeHtml(error.message)}</div>`;
       document.querySelector('[data-media-summary]').textContent = 'Feed unavailable';
-      document.querySelector('[data-media-coverage]').innerHTML = '<span class="status-dot partial"></span>Collection unavailable · existing dashboard sections unaffected';
+      setCoverageStatus('[data-media-coverage]', 'Collection unavailable · existing dashboard sections unaffected', 'partial');
+    }
+  }
+
+  async function initialiseCompanyFeed() {
+    const companyTarget = document.querySelector('[data-company-feed]');
+    if (!companyTarget) return;
+    try {
+      const response = await fetch('assets/company/view.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error(`Company view HTTP ${response.status}`);
+      const data = await response.json();
+      if (!Array.isArray(data.items) || data.item_count !== data.items.length || data.company_count !== new Set(data.items.map(item => item.asx_code)).size || data.price_sensitive_count !== data.items.filter(item => item.price_sensitive === true).length) throw new Error('Invalid company view');
+      renderCompanyFeed(companyTarget, data);
+      document.querySelector('[data-company-summary]').textContent = `${data.item_count} disclosures · ${data.company_count} issuers`;
+      setCoverageStatus('[data-company-coverage]', `${data.item_count} reviewed disclosures · ${data.company_count} watched issuers`);
+    } catch (error) {
+      companyTarget.innerHTML = `<div class="campaign-error" style="margin:16px">Company feed unavailable: ${escapeHtml(error.message)}</div>`;
+      document.querySelector('[data-company-summary]').textContent = 'Feed unavailable';
+      setCoverageStatus('[data-company-coverage]', 'Collection unavailable · existing dashboard sections unaffected', 'partial');
     }
   }
   initialiseCampaigns();
   initialiseMedia();
+  initialiseCompanyFeed();
 </script>
 
 <div id="automation-publication-status" style="margin:24px auto;max-width:1100px;padding:12px 16px;border:1px solid rgba(255,255,255,.15);border-radius:8px;text-align:center;font:12px/1.4 system-ui;color:#aab4c3;background:#101722">
-  Automated publication verified · 2026-08-23T01:10:42.378Z
+  Automated publication verified · 2026-08-23T02:08:11.049Z
 </div>
 </body>
 </html>
