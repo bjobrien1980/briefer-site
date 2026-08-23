@@ -1955,6 +1955,730 @@
         }
       ],
       "source_boundary": "Union-authored public material is campaign evidence, not independent corroboration of impact, leverage, support or employer conduct."
+    },
+    {
+      "campaign_id": "inpex-ichthys-operations-bargaining-2026",
+      "slug": "inpex-ichthys",
+      "title": "INPEX Ichthys Operations agreement campaign",
+      "current_stage": {
+        "label": "Agreement approved; operative 21 August 2026",
+        "basis": "Fair Work Commission · AG2026/2006 · [2026] FWCA 2203"
+      },
+      "latest_change": "The Commission approved the INPEX-Ichthys Operations Enterprise Agreement 2026-2030. It operates from 21 August 2026 and has a corrected nominal expiry date of 14 August 2030.",
+      "principal_claims": [
+        "job security and limits on outsourcing",
+        "industry-leading remuneration and allowances",
+        "competency-based career progression",
+        "minimum staffing and representation rights",
+        "offshore working and overcycle arrangements"
+      ],
+      "open_verification": [
+        "term-by-term comparison with Shell, Chevron and other tier-one operator agreements",
+        "the extent to which the outcome becomes a bargaining comparator rather than a union characterisation",
+        "implementation of the progression, staffing and job-security provisions"
+      ],
+      "milestones": [
+        {
+          "milestone_id": "INP-M01",
+          "title": "Replacement bargaining begins",
+          "start_date": "2025-11-29",
+          "end_date": "2025-11-29",
+          "summary": "Offshore Alliance described the campaign launch and a member-generated log of claims.",
+          "evidence_state": "Union account",
+          "source_post_count": 1,
+          "source_pages": [
+            "Offshore Alliance"
+          ],
+          "events": [
+            {
+              "event_id": "INP-001",
+              "event_date": "2025-11-29",
+              "event_end_date": null,
+              "event_type": "campaign_launch",
+              "summary": "Offshore Alliance said bargaining for a replacement INPEX facilities agreement had begun and described its log of claims.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining leverage, workforce support or employer conduct. Aligned union posts are dissemination, not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/inpex-ichthys/pfbid02KUC1qzZ9d2wUYYaEz6xhryubK5n6hcQsmYi8NAtkpC6aK3c6Nd46WpbHzbziJtkPl-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "union-profile-100063786371409:342",
+                  "source_page": "Offshore Alliance",
+                  "post_id": "pfbid02KUC1qzZ9d2wUYYaEz6xhryubK5n6hcQsmYi8NAtkpC6aK3c6Nd46WpbHzbziJtkPl",
+                  "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02KUC1qzZ9d2wUYYaEz6xhryubK5n6hcQsmYi8NAtkpC6aK3c6Nd46WpbHzbziJtkPl&id=100063786371409",
+                  "displayed_date": "29 November 2025",
+                  "published_date": "2025-11-29",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Our bargaining campaign to renegotiate the 2022 INPEX Facilities EBA kicked into gear earlier this year when Offshore Alliance, AWU (ILNG) and ETU members across INPEX’s offshore and onshore facilities put together a comprehensive log of claims in the form of a draft EBA.\nOur first bargaining meeting took place over a month ago, but negotiations have progressed with the speed of a snail overdosed on Valium.\nNo actual ‘bargaining’ has occurred in 10 hours of negotiation as INPEX say that they are still trying to “understand our claims”.\nINPEX’s have sent OA members correspondence advising that “some of the (union) claims generated more discussion than others…”.\nNo shit. Who would have thought?\nINPEX went onto explain that we are just 36% of the way through our draft Agreement after 10 hours of meetings – and that’s just INPEX seeking clarification of our claims for improved pay and conditions.\nIf matters progress at this pace, we will be into mid-February before we start actual negotiations.\nWith the nominal expiry date of the current INPEX EBA being 02 May 2025, stalling negotiations probably isn’t in INPEX’s best interests.\nWe wish INPEX the best of luck if they don’t put their skates on.",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/pfbid02KUC1qzZ9d2wUYYaEz6xhryubK5n6hcQsmYi8NAtkpC6aK3c6Nd46WpbHzbziJtkPl-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "milestone_id": "INP-M02",
+          "title": "Competing agreement and action ballots",
+          "start_date": "2026-04-09",
+          "end_date": "2026-04-26",
+          "summary": "Unions opposed INPEX's proposal, pursued PABOs and reported strong authorisation for action.",
+          "evidence_state": "Union accounts; ballot result not independently connected",
+          "source_post_count": 4,
+          "source_pages": [
+            "ETU WA Branch",
+            "Offshore Alliance"
+          ],
+          "events": [
+            {
+              "event_id": "INP-002",
+              "event_date": "2026-04-09",
+              "event_end_date": null,
+              "event_type": "pabo_application",
+              "summary": "ETU said it had applied for a protected action ballot order after negotiations and opposed INPEX’s proposed agreement.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining leverage, workforce support or employer conduct. Aligned union posts are dissemination, not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/inpex-ichthys/1405695411573191-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "etu-wa:203",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "1405695411573191",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1405695411573191&set=a.166072115535533",
+                  "displayed_date": "9 April",
+                  "published_date": "2026-04-09",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "The ETU WA and NT branches have filed a PABO application seeking to take PIA from early May. \nNegotiations have been shambolic, and despite Inpex seeking to push through their idea of a decent EA, our members are solid and locked in to backing in their full Draft EA claims tabled back in late October 2025 at the first scheduled EA meeting. \nA huge effort has gone into this draft EA document and all Inpex crew on all facilities are ready to vote NO to Inpex’s draft EA version, and to vote YES to all PIA questions in the ballot once the PABO gets the greenlight from the FWC. \nIf you don’t fight, you lose!\nIan Gill\nETU WA Lead Organiser - Hydrocarbons",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/1405695411573191-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "INP-003",
+              "event_date": "2026-04-10",
+              "event_end_date": null,
+              "event_type": "pabo_order_claim",
+              "summary": "Offshore Alliance said the Commission had approved separate protected-action ballots for Offshore Alliance/AWU and ETU members.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining leverage, workforce support or employer conduct. Aligned union posts are dissemination, not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/inpex-ichthys/1586365496832981-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "union-profile-100063786371409:210",
+                  "source_page": "Offshore Alliance",
+                  "post_id": "1586365496832981",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1586365496832981&set=a.498676838935191",
+                  "displayed_date": "10 April",
+                  "published_date": "2026-04-10",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "In a great first up win in our INPEX EBA Campaign 2026, the Fair Work Commission have approved the Offshore Alliance’s (OA/AWU) Ballot of Members to determine majority support for Protected Industrial Action.\nThe ETU were similarly successful in their PABO Application.\nBut prior to our PIA Ballot, our INPEX members are lining up to smash up INPEX’s dodgy EBA proposal in the INPEX EA Ballot commencing Wednesday 15th April.\nThe INPEX EA is seeking to remove job security provisions, implement a Career Stagnation Framework, reduce the Real Value of key remuneration terms and provide employment standards which fall well short of industry standards.\nThere is plenty happening right now across the INPEX offshore and onshore facilities, but the unity of the INPEX operations workforce will defeat the industrial bastardry of an outfit which suffers from insatiable greed.\nOffshore Alliance",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/1586365496832981-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "INP-004",
+              "event_date": "2026-04-20",
+              "event_end_date": null,
+              "event_type": "employer_proposal_vote_claim",
+              "summary": "Offshore Alliance reported that eight of approximately 430 employees voted yes to an INPEX-proposed agreement; the denominator and result are not independently connected here.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining leverage, workforce support or employer conduct. Aligned union posts are dissemination, not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/inpex-ichthys/pfbid0vCF8zpGz3oZcwqPpRHZotAxRzABtZWZ3dPntB8khU9XnJUXDpWq56KwZ9Dbuvzpal-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "union-profile-100063786371409:201",
+                  "source_page": "Offshore Alliance",
+                  "post_id": "pfbid0vCF8zpGz3oZcwqPpRHZotAxRzABtZWZ3dPntB8khU9XnJUXDpWq56KwZ9Dbuvzpal",
+                  "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0vCF8zpGz3oZcwqPpRHZotAxRzABtZWZ3dPntB8khU9XnJUXDpWq56KwZ9Dbuvzpal&id=100063786371409",
+                  "displayed_date": "20 April",
+                  "published_date": "2026-04-20",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "The INPEX HR Bosses have corrected the Ballot results for their dodgy EA proposal. They didn’t get zero votes. They got 8 ‘YES’ votes out of 430 in support of the garbage dished up by INPEX HR in their EA Ballot.\nThe EA Ballot INPEX cancelled prior to its scheduled close.\n98% of the INPEX FPSO, CPF & ILNG workforce rejected INPEX HR’s substandard deal.\nAt 09:00 AM today 430 Offshore Alliance/AWU & ETU members will be able to vote in support of Protected Industrial Action in a Ballot which closes at 14:00 on Friday 24th April.\nWhen Shell tested our resolve 4 years ago to take Protected Industrial Action, they lost $1.5 Billion in lost production on the Prelude FLNG in a dispute which lasted for 75 days of PIA.\nThe resolve of our INPEX members to fight for a union-negotiated EBA is no different to that of our Shell Prelude members in 2022.\nBlinky Bill’s mates from oil & gas employer group AREEA group couldn’t help themselves by buying into a bargaining dispute which they knew SFA about.\nThe form guide says that ARREA will almost inevitably go MIA when INPEX start racking up lost production.\nTher’s zero chance the AREEA bosses will jump on a plane and  head off to Tokyo to explain how they helped f*** up INPEX’s EA Ballot & left INPEX facing Protected Industrial Action.\nThe AREEA bosses have zero skin in the game.\nJust plenty of yap, yap, yap and SFA real-life experience in negotiating a West Coast oil & gas EBA.\nBecause they don’t teach EBA negotiations in HR Woke school.\nThe INPEX HR bosses and Blinky Bill can either double down on their 6 months of dysfunction in the renegotiation of a new EBA or they can start bargaining – something they should have done 6 months ago.\nOur members are up for the fight, and the Offshore Alliance is encouraging members to vote ‘YES’ to all 26 PIA Ballot questions.\nIt’s Game On, INPEX!",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/pfbid0vCF8zpGz3oZcwqPpRHZotAxRzABtZWZ3dPntB8khU9XnJUXDpWq56KwZ9Dbuvzpal-01.jpg"
+                  ]
+                }
+              ]
+            },
+            {
+              "event_id": "INP-005",
+              "event_date": "2026-04-26",
+              "event_end_date": null,
+              "event_type": "protected_action_ballot_result_claim",
+              "summary": "Offshore Alliance said 426 members across the CPF, FPSO and ILNG facilities had authorised protected industrial action.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining leverage, workforce support or employer conduct. Aligned union posts are dissemination, not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/inpex-ichthys/pfbid0nwnXCYYfphwrpvj5RHBtXkqkYeH4pMLqNfNR49qTmpbBaK5hXkmAYPZY3hkuek3Fl-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "union-profile-100063786371409:192",
+                  "source_page": "Offshore Alliance",
+                  "post_id": "pfbid0nwnXCYYfphwrpvj5RHBtXkqkYeH4pMLqNfNR49qTmpbBaK5hXkmAYPZY3hkuek3Fl",
+                  "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0nwnXCYYfphwrpvj5RHBtXkqkYeH4pMLqNfNR49qTmpbBaK5hXkmAYPZY3hkuek3Fl&id=100063786371409",
+                  "displayed_date": "26 April",
+                  "published_date": "2026-04-26",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "The combined 426 Offshore Alliance/AWU/ETU INPEX members on the INPEX CPF, FPSO and ILNG facilities have put their shoulder to the wheel in voting ‘YES’ to Protected Industrial Action.\nEvery one of our members can be commended on their unity in backing in our campaign for a benchmark industry standard EBA.\nEvery PIA Ballot submitted by each union member was a secret ballot.\nThe ballot agency running the ballot was a company independent of both INPEX and the Union.\nThe 100% vote in support of PIA followed a 98% INPEX workforce rejection of their dodgy EA proposal.\nOur members have made their intentions clear.\nThe so-called oil and gas employer group AREEA and Blinky Bill can bullshit all they like to their mates in the media about the state of our EBA negotiations with INPEX, but the INPEX workforce have made clear the next steps in our EBA campaign if INPEX don’t make fundamental changes to their bargaining position and their approach to EBA negotiations.\nOn the back of a 98% rejection of INPEX’s sub-standard EA proposal, we made more progress in the FWC Compulsory Conference last week than we did in 6 months of dysfunctional EBA negotiations with INPEX.\nWe will continue with FWC facilitated negotiations until the 15th of May with a clear understanding of INPEX getting Notice of Protected Industrial Action at this point if we haven’t reached full agreement on ALL bargaining claims.\nLet’s hope INPEX have the smarts to keep AREEA as far away as possible from our EBA negotiations as any involvement by the AREEA peanut gallery in the INPEX EA bargaining or in the public commentary on our negotiations, is an almost lay down miserere guarantee of PIA.\nGreat work by our INPEX members – united, principled and ready to fight for a Union-negotiated EBA.\nOffshore Alliance",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/pfbid0nwnXCYYfphwrpvj5RHBtXkqkYeH4pMLqNfNR49qTmpbBaK5hXkmAYPZY3hkuek3Fl-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "milestone_id": "INP-M03",
+          "title": "Protected action commences",
+          "start_date": "2026-06-02",
+          "end_date": "2026-06-02",
+          "summary": "Aligned union pages said action began across the CPF, FPSO and ILNG facilities.",
+          "evidence_state": "Aligned union accounts",
+          "source_post_count": 3,
+          "source_pages": [
+            "AWU Western Australia",
+            "ETU WA Branch",
+            "Offshore Alliance"
+          ],
+          "events": [
+            {
+              "event_id": "INP-006",
+              "event_date": "2026-06-02",
+              "event_end_date": null,
+              "event_type": "protected_industrial_action",
+              "summary": "AWU, ETU and Offshore Alliance said protected action commenced across all three INPEX facilities after bargaining remained unresolved.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining leverage, workforce support or employer conduct. Aligned union posts are dissemination, not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/inpex-ichthys/1501175068693240-01.jpg",
+                "assets/campaigns/inpex-ichthys/1455219456620786-01.jpg",
+                "assets/campaigns/inpex-ichthys/1634918935310970-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "awu-wa:47",
+                  "source_page": "AWU Western Australia",
+                  "post_id": "1501175068693240",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1501175068693240&set=a.370151755128916",
+                  "displayed_date": "2 June",
+                  "published_date": "2026-06-02",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Offshore Alliance members across all INPEX facilities are commencing protected industrial action today! \nUntil further notice, union members are downing tools between 6am-8am and 6pm-8pm every day, and will be undertaking a number of work bans, after INPEX failed to take EA negotiations seriously. If INPEX hasn't committed to genuine bargaining by the end of next week, industrial action will ramp up on 11 June. \nOur members are sick of the lack of progress and will continue to engage in industrial action until progress in brgaining is made. \nOur members generate billions in profit for INPEX - it's time they received their fair share!",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/1501175068693240-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "etu-wa:77",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "1455219456620786",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1455219456620786&set=a.166072115535533",
+                  "displayed_date": "2 June",
+                  "published_date": "2026-06-02",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "𝐈𝐍𝐏𝐄𝐗 𝐏𝐈𝐀 𝐜𝐨𝐦𝐦𝐞𝐧𝐜𝐞𝐝\nAfter months of bargaining with INPEX, including a good strong dose of FWC actioned IBB, INPEX have proved, yet again, that they simply can’t meet a deadline. Vacillating is a word that comes to mind. They are definitely good at that!\nPIA has commenced on the ILNG plant in Darwin and the CPF and FPSO offshore, after the Unions and members gave INPEX ample time to get busy over the long weekend to get some work done on outstanding claims, most of which are costed claims of course.  We will give the IBB another shot, but PIA is probably all that INPEX will understand, because they love making tons of money more than anything else, and lately, they’ve been making shitloads of it, so PIA is a thorn in their fat wallet. You wouldn’t know how well they are doing, going by the small pot of budgeted funds apparently allocated to their workers in this EA negotiation. It seems incredible that INPEX simply cannot come to the realisation that their highly skilled workforce on these assets, are the very reason they make so much money, but appear so frugal when it comes to bargaining! INPEX are dizzy, out of touch and out of step and are in for a world of pain if they don’t do the right thing!\nIan Gill - Lead Organiser",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/1455219456620786-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "union-profile-100063786371409:83",
+                  "source_page": "Offshore Alliance",
+                  "post_id": "1634918935310970",
+                  "post_url": "https://www.facebook.com/photo/?fbid=1634918935310970&set=a.498676838935191",
+                  "displayed_date": "2 June",
+                  "published_date": "2026-06-02",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Whilst significant progress was made last week in FWC facilitated bargaining with INPEX, they have fallen short on a number of fundamental claims. \nA long way short, and our INPEX members have had enough.\nProtected Industrial Action ramps up today on all 3 INPEX facilities with stoppages of work and work bans.\nINPEX are making $Billions off the blood, sweat and tears of their Australian operations workforce and we will keep escalating PIA until INPEX agree to fair industrial outcomes.\nGreat work by the OA, AWU and ETU INPEX members in standing tall in our fight for a benchmark industry standard EBA.\nIF YOU DON'T FGHT, YOU LOSE!",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/1634918935310970-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "milestone_id": "INP-M04",
+          "title": "INPEX s.424 application dismissed",
+          "start_date": "2026-06-14",
+          "end_date": "2026-06-15",
+          "summary": "The Commission dismissed INPEX's application to terminate the protected action.",
+          "evidence_state": "Commission decision connected",
+          "source_post_count": 3,
+          "source_pages": [
+            "ETU WA Branch",
+            "Offshore Alliance",
+            "AWU Western Australia"
+          ],
+          "events": [
+            {
+              "event_id": "INP-007",
+              "event_date": "2026-06-14",
+              "event_end_date": "2026-06-15",
+              "event_type": "section_424_decision",
+              "summary": "ETU, Offshore Alliance and AWU reported that the Commission rejected INPEX’s s.424 application to stop the protected action.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining leverage, workforce support or employer conduct. Aligned union posts are dissemination, not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/inpex-ichthys/pfbid0kvvwbgypUFJH3s2Eu4cqXCXTm4hBCn6k7PrMXXMEaagM2Mat2zyDcBipkEF8BR9Bl-01.jpg",
+                "assets/campaigns/inpex-ichthys/pfbid015kkEAU5XQJLBBWHcrG8dMaeAXpjcRHGwQtbNL7yKJrTu9aRRgLUvKKUNY9b1bJ2l-01.jpg",
+                "assets/campaigns/inpex-ichthys/pfbid02CrKKrP2EZp1LhRNsTNk5uy1A2dFbKXtSUEmoWL8WmnTcDDWh6tkcR7geUs5vB1cDl-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "etu-wa:161",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "pfbid0kvvwbgypUFJH3s2Eu4cqXCXTm4hBCn6k7PrMXXMEaagM2Mat2zyDcBipkEF8BR9Bl",
+                  "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0kvvwbgypUFJH3s2Eu4cqXCXTm4hBCn6k7PrMXXMEaagM2Mat2zyDcBipkEF8BR9Bl",
+                  "displayed_date": "14 June",
+                  "published_date": "2026-06-14",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "The joint unions’ legal team has successfully smashed INPEX’s S424 application seeking to halt protected industrial action across its facilities. This is a clear win for workers and a clear rejection of yet another attempt to undermine lawful bargaining rights.\nProtected industrial action has already placed significant pressure on INPEX, with millions reportedly lost through ongoing delays and disruption, in addition to the costs of their unsuccessful legal manoeuvre. Despite this, management has continued to choose litigation over genuine engagement at the bargaining table.\nFull credit must go to every member and bargaining representative who has stood firm, held the line, and refused to be intimidated. And credit where it’s due to our legal team for dismantling INPEX’s attempt to stymie lawfully protected industrial action.\nThe message is simple: respect the workforce that keeps your onshore and offshore operations running, or expect workers to continue exercising their legal rights. If you don’t fight, you don’t win—and workers have shown exactly what standing together achieves.",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/pfbid0kvvwbgypUFJH3s2Eu4cqXCXTm4hBCn6k7PrMXXMEaagM2Mat2zyDcBipkEF8BR9Bl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "union-profile-100063786371409:157",
+                  "source_page": "Offshore Alliance",
+                  "post_id": "pfbid015kkEAU5XQJLBBWHcrG8dMaeAXpjcRHGwQtbNL7yKJrTu9aRRgLUvKKUNY9b1bJ2l",
+                  "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid015kkEAU5XQJLBBWHcrG8dMaeAXpjcRHGwQtbNL7yKJrTu9aRRgLUvKKUNY9b1bJ2l&id=100063786371409",
+                  "displayed_date": "14 June",
+                  "published_date": "2026-06-14",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "The unity of workers will never, ever be defeated by the bastardry of the bosses. \nThe Offshore Alliance, AWU and ETU INPEX workforce and our lawyers have secured a massive legal win in the Fair Work Commission today, by smashing \nINPEX’s S.424 application to stop our members taking Protected Industrial Action.\nToday’s legal victory cannot be overstated.\nYou're a F***en legend Oshie! (Barrister representing the combined unions).\nThe work of our Barrister was nothing short of outstanding.\nThe INPEX application to stop members exercising their legal rights to take PIA was never about the broader Australian economy or power supply to Darwin.\nIt was all about protecting the corporate interests of INPEX and their bloated profits.\nThe same way that INPEX treat their tax obligations.\nInstead of bargaining to reach agreement with the Unions on a new EBA, INPEX made the decision to be led by the nose by their industrial zealots and hard-liners.\nINPEX management wanted to stop PIA and then renege on every agreed term secured in the FWC facilitated bargaining.\nThey have zero credibility with the INPEX operations workforce.\nOur members will never forgive or forget INPEX’s industrial bastardry. Never.\nProtected Industrial Action is continuing on all 3 INPEX facilities until a benchmark industry standard EBA is agreed.\nThe INPEX bosses responsible for destroying their standing with the INPEX workforce need to be cleaned out.\nThe INPEX bosses led by the nose by AREEA should be sacked.\nThe $100 million + dollars INPEX have lost so far is money INPEX should have put into sorting out our EBA.\nInstead, their senior management and HR/IR bosses have pissed the $100 million against the wall.\nWe cannot speak highly enough of the 426 INPEX CPF, FPSO and ILNG members who are standing strong, united and prepared to go one day longer and one day stronger than the goons hiding in the shadows in INPEX Elizabeth HQ.\nOffshore Alliance – If You Don’t Fight, You Lose!",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/pfbid015kkEAU5XQJLBBWHcrG8dMaeAXpjcRHGwQtbNL7yKJrTu9aRRgLUvKKUNY9b1bJ2l-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "awu-wa:122",
+                  "source_page": "AWU Western Australia",
+                  "post_id": "pfbid02CrKKrP2EZp1LhRNsTNk5uy1A2dFbKXtSUEmoWL8WmnTcDDWh6tkcR7geUs5vB1cDl",
+                  "post_url": "https://www.facebook.com/awuwesternaustralia/posts/pfbid02CrKKrP2EZp1LhRNsTNk5uy1A2dFbKXtSUEmoWL8WmnTcDDWh6tkcR7geUs5vB1cDl",
+                  "displayed_date": "15 June",
+                  "published_date": "2026-06-15",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "The Fair Work Commission has rejected Inpex's application to stop our strike action!\nInpex tried - and failed - to argue that industrial action taken by Offshore Alliance members will have a significant impact on the Australian economy.\nAs our WA Branch Secretary, Brad Gandy, says, \"Our members pay more in income tax than INPEX does.\"\n\"In eight years of operating and tens of millions of tonnes of hydrocarbons exported to provide other countries with energy, INPEX has never paid a cent to Australia in resources tax.\"\n\"Suddenly, when our members are engaging in legal strike action to improve their terms and conditions of employment the Australian economy is important to INPEX. Nobody is buying it.\"\n\"Our members at INPEX are some of the best operators in the industry, worldwide. Anyone who scoffs at their claims for improved conditions and yet doesn't bat an eye at a CEO pocketing millions has, to put it mildly, an interesting world view.\"\nOffshore Alliance Members will keep up the fight!",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/pfbid02CrKKrP2EZp1LhRNsTNk5uy1A2dFbKXtSUEmoWL8WmnTcDDWh6tkcR7geUs5vB1cDl-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "milestone_id": "INP-M05",
+          "title": "Settlement endorsed",
+          "start_date": "2026-06-17",
+          "end_date": "2026-06-17",
+          "summary": "Three union sources reported member endorsement of settlement terms and cessation of action.",
+          "evidence_state": "Aligned union accounts; ABC reported the in-principle deal",
+          "source_post_count": 3,
+          "source_pages": [
+            "AWU Western Australia",
+            "ETU WA Branch",
+            "Offshore Alliance"
+          ],
+          "events": [
+            {
+              "event_id": "INP-008",
+              "event_date": "2026-06-17",
+              "event_end_date": null,
+              "event_type": "settlement_endorsed",
+              "summary": "AWU, ETU and Offshore Alliance said more than 400 members endorsed settlement terms covering job security, remuneration, progression, representation and working arrangements.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining leverage, workforce support or employer conduct. Aligned union posts are dissemination, not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/inpex-ichthys/pfbid02wrtrkBxU4eNHbef51fJBbGMTPaWRzaTK2xSXkot6EC8pjSZMEdXP2PPAVF8DroGjl-01.jpg",
+                "assets/campaigns/inpex-ichthys/pfbid0inYFiP4KNqW7SeM3EfYkDvgn212vu31uGfsmHYcVfd4HJee7AqnB1kwKs4Mo6Fk8l-01.jpg",
+                "assets/campaigns/inpex-ichthys/pfbid02U5PaePSyCXR21e1zisJB3KNR16S9yq3NhpyeAZqasH8paoxP2n3TkYjk3gM3hh2Kl-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "awu-wa:120",
+                  "source_page": "AWU Western Australia",
+                  "post_id": "pfbid02wrtrkBxU4eNHbef51fJBbGMTPaWRzaTK2xSXkot6EC8pjSZMEdXP2PPAVF8DroGjl",
+                  "post_url": "https://www.facebook.com/awuwesternaustralia/posts/pfbid02wrtrkBxU4eNHbef51fJBbGMTPaWRzaTK2xSXkot6EC8pjSZMEdXP2PPAVF8DroGjl",
+                  "displayed_date": "17 June",
+                  "published_date": "2026-06-17",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "Over 400 Offshore Alliance and AWU members have endorsed the proposed Inpex EA, which sets a new industry standard for wages, conditions and job security across offshore oil and gas!\nThis new agreement locks in:\n• Job Security – Permanent jobs are protected and cannot be outsourced to low-wage labour hire contractors.\n• Remuneration – Industry benchmark rates of pay and allowances have been secured.\n• Career Progression Framework – A new competency-based progression system will provide clear career pathways and recognition of skills and experience.\n• Improved Employee Representation Rights – Enhanced delegates' rights, improved right of entry provisions to offshore facilities, and stronger representation rights for members in disciplinary matters.\n• Improved Overcycle Arrangements – Better roster flexibility and overcycle provisions for offshore workers.\nThank you to our members who have stood firm in the face of media scrutiny, mudslinging from industry lobby groups, and a legal challenge against their lawful industrial action. Today is a major win - not just for Inpex employees, but for workers across the offshore oil and gas sector!",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/pfbid02wrtrkBxU4eNHbef51fJBbGMTPaWRzaTK2xSXkot6EC8pjSZMEdXP2PPAVF8DroGjl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "etu-wa:110",
+                  "source_page": "ETU WA Branch",
+                  "post_id": "pfbid0inYFiP4KNqW7SeM3EfYkDvgn212vu31uGfsmHYcVfd4HJee7AqnB1kwKs4Mo6Fk8l",
+                  "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0inYFiP4KNqW7SeM3EfYkDvgn212vu31uGfsmHYcVfd4HJee7AqnB1kwKs4Mo6Fk8l",
+                  "displayed_date": "17 June",
+                  "published_date": "2026-06-17",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "INPEX have finally woken up and agreed to members claims and agreement in principle has been reached.\nMuch better rates/salaries that lead the pack, proper level progression, vital job security and minimum manning provisions by classification and facility and more!\nGreat credit must go to all the rank and file members of all Unions, and in particular to all the bargaining reps that made this all possible with their unwavering commitment. A decent dose of PIA with stoppages and targeted bans that cost INPEX tens of millions of dollars and a failed legal attempt to stop PIA via a s424 application, and where credit also goes to a top legal team effort in this space. They crushed them.\nINPEX employees can hold their heads high and will forever hold the moral high ground from this dispute, while the raggedy INPEX management seek to regain the trust of their most valuable asset – their highly skilled workforce! This campaign and dispute are a textbook example of how to win against the big end of town. High Union density, organised, capable and unwilling to bend under any circumstance. Congratulations to every INPEX worker involved. You are worth every cent you have secured – and more! Champions! INPEX IR and those in Tokyo – give yourself a whopping uppercut!\nIan Gill",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/pfbid0inYFiP4KNqW7SeM3EfYkDvgn212vu31uGfsmHYcVfd4HJee7AqnB1kwKs4Mo6Fk8l-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "union-profile-100063786371409:153",
+                  "source_page": "Offshore Alliance",
+                  "post_id": "pfbid02U5PaePSyCXR21e1zisJB3KNR16S9yq3NhpyeAZqasH8paoxP2n3TkYjk3gM3hh2Kl",
+                  "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02U5PaePSyCXR21e1zisJB3KNR16S9yq3NhpyeAZqasH8paoxP2n3TkYjk3gM3hh2Kl&id=100063786371409",
+                  "displayed_date": "17 June",
+                  "published_date": "2026-06-17",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "At 06:00 this morning, over 400 Offshore Alliance, AWU and ETU members endorsed the settlement of our INPEX bargaining campaign. \nThrough the unbending collective struggle of our 430+ INPEX members, we have now secured the best EBA in the oil and gas industry.\nOur INPEX EBA campaign was tough going, but our members never flinched. \nNot once.\nThis dispute cost INPEX 1 train (which was shut down at ILNG yesterday), 2 Conde tankers and an LNG carrier.\nAnd about $200 million in lost production.\nIt is a dispute which should have been settled months earlier, had there been a different approach to negotiations.\nBut the final bargaining outcome is a credit to all parties who have settled their differences and negotiated agreed industrial outcomes.\nThere will be more said about the new INPEX EBA after the Ballot of members, which will be delayed to ensure classifications not previously covered by the EBA are added to the new EBA.\nA massive thanks to Deputy President Binet from the FWC, who oversaw facilitated bargaining at a time when production was likely to have been shut down for weeks, or possibly months.\nHad it not been for DP Binet’s efforts in threading the needle through the competing industrial interests, this dispute was headed for a more costly industrial dispute than the 2022 Shell Prelude dispute.\nOur Offshore and Onshore INPEX Reps have done a massive job in representing the interests of their workmates and their contribution to bargaining was nothing short of outstanding.\nWe also want to again thank the efforts of Barrister Oshie Fagir in knocking off the S.424 INPEX application to terminate Protected Industrial Action.\nOur INPEX members have now formally named him “King Oshie”\nGreat work by Offshore Alliance and AWU National Organiser Zach Duncalfe and ETU National Legal Officer Kevin Sneddon who had our members back, every step through the process.\nAnd a big shout out to the efforts of Organizer’s Strawbs, Caleb and Gilly. Great work. And keep those bananas and coke’s going Strawbs! \nAs for AREEA and the NT News? They can both go and fXXX themselves.\nOffshore Alliance\nIF YOU DON’T FIGHT, YOU LOSE!\nhttps://offshorealliance.org.au/members/join",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/pfbid02U5PaePSyCXR21e1zisJB3KNR16S9yq3NhpyeAZqasH8paoxP2n3TkYjk3gM3hh2Kl-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "milestone_id": "INP-M06",
+          "title": "Employee vote and FWC approval",
+          "start_date": "2026-07-14",
+          "end_date": "2026-07-16",
+          "summary": "Offshore Alliance reported the employee ballot result; the Commission subsequently approved the agreement.",
+          "evidence_state": "Agreement approval connected; ballot percentages remain union-reported",
+          "source_post_count": 2,
+          "source_pages": [
+            "Offshore Alliance"
+          ],
+          "events": [
+            {
+              "event_id": "INP-009",
+              "event_date": "2026-07-14",
+              "event_end_date": "2026-07-16",
+              "event_type": "agreement_ballot",
+              "summary": "Offshore Alliance reported the employee ballot opening and later reported 97.3% participation and 97.5% yes among a 471-person workforce. The Commission subsequently approved the agreement on 19 August 2026.",
+              "source_boundary": "Union-authored public material. It directly evidences what the source published, but does not independently establish operational effect, bargaining leverage, workforce support or employer conduct. Aligned union posts are dissemination, not independent corroboration.",
+              "event_graphics": [
+                "assets/campaigns/inpex-ichthys/pfbid027ardakfhkkas7m417JFpReabhbLmHc5EqZt25zpACDMgqW1UuPPMQYW3XSXUjV8gl-01.jpg",
+                "assets/campaigns/inpex-ichthys/pfbid02nk6hmdtd4FhWFNNrR6Wvb8N5HhnTQJWdVSpJNvFsVCz2i5ZZErPTJCkqm6o89vxfl-01.jpg"
+              ],
+              "source_posts": [
+                {
+                  "candidate_id": "union-profile-100063786371409:134",
+                  "source_page": "Offshore Alliance",
+                  "post_id": "pfbid027ardakfhkkas7m417JFpReabhbLmHc5EqZt25zpACDMgqW1UuPPMQYW3XSXUjV8gl",
+                  "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid027ardakfhkkas7m417JFpReabhbLmHc5EqZt25zpACDMgqW1UuPPMQYW3XSXUjV8gl&id=100063786371409",
+                  "displayed_date": "14 July",
+                  "published_date": "2026-07-14",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "When the Offshore Alliance, AWU (NT) & ETU commenced bargaining with INPEX in October last year for a new EBA, our members had some pretty clear industrial objectives.\nMembers wanted their jobs locked in and to secure benchmark rates and employment conditions.\nOur INPEX members Dared to Struggle and Dared to Win.\nThe INPEX EBA Ballot opened at 06:00 today and closes at 16:00 tomorrow.",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/pfbid027ardakfhkkas7m417JFpReabhbLmHc5EqZt25zpACDMgqW1UuPPMQYW3XSXUjV8gl-01.jpg"
+                  ]
+                },
+                {
+                  "candidate_id": "union-profile-100063786371409:132",
+                  "source_page": "Offshore Alliance",
+                  "post_id": "pfbid02nk6hmdtd4FhWFNNrR6Wvb8N5HhnTQJWdVSpJNvFsVCz2i5ZZErPTJCkqm6o89vxfl",
+                  "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02nk6hmdtd4FhWFNNrR6Wvb8N5HhnTQJWdVSpJNvFsVCz2i5ZZErPTJCkqm6o89vxfl&id=100063786371409",
+                  "displayed_date": "16 July",
+                  "published_date": "2026-07-16",
+                  "published_at": null,
+                  "date_basis": "facebook_absolute_label",
+                  "date_precision": "day",
+                  "full_text": "INPEX union members across the INPEX CPF, FPSO and ILNG facilities have once again delivered.\n97.3% of the INPEX offshore and onshore operations workforce participated in the EA Ballot, with 97.5% of the 471 strong workforce voting ‘YES’ to an EBA which sets new industry standards for our members working direct for the Tier 1 oil & gas operators..\nThe INPEX EBA campaign had plenty going on. \nThe non-union EA INPEX tried getting voted up in April this year got smashed up by 98% of the INPEX workforce.\nINPEX’s S.424 application to the FWC to prevent members from exercising their legal rights to take Protected Industrial Action got smashed up the Union lawyers.\nAnd INPEX’s decision to follow AREEA’s idiotic hard line IR agenda and push back against our members’ bargaining claims resulted in Extensive PIA across each of the INPEX facilities including:\n• A tripped flashgas compressor on the FPSO with $600K per day going up in smoke;\n• 2 Conde tankers and 1 LNG tanker not being loaded;\n• 1 ILNG train being shutdown and\n• $200 million of lost production.\nThe INPEX EBA campaign was a campaign where members stood shoulder to shoulder across each of the 3 INPEX facilities in fighting for & securing the following EBA outcomes:\n1. Highest REM standards (salaries & allowances) amongst the 4 Tier-1 oil & gas Operators, with bonuses locked in & paid on a collective and not individual basis.\n2. Maintenance contractor & labour hire minimum rates & conditions locked in;\n3. Job security locked in for all INPEX facility and facility support members;\n4. A new Career Progression Framework with level progression determined by agreed competencies and objective criteria;\n5. Flights provided to all interstate members from Capital Cities and agreed regional airports;\n6. 20 job share positions available to members on each of the 3 INPEX facilities;\n7. Improved representational rights including union representation in meetings and investigations, Right of Entry provisions for OA Organisers on the offshore facilities, delegates rights, Consultative Committees & improved DSP provisions;\n8. Overcycle for travel delays plus travel during mid-swing O/C with O/C being increased to X1.5 plus superannuation (equivalent of X 1.7);\n9. Additional 14 paid days Supplementary Leave, improved Personal Leave, option to take double LSL on half pay and improved Parental Leave;\n10. Improved redundancy provisions plus agreed redundancy criteria (voluntary first then last-on first-off next);\n11. Agreed processes for changes in panels, shifts & facilities & hours of work provisions tightened up;\n12. Income Protection exclusions removed with job security for employees in receipt of income protection;\n13. Facility standards locked in including catering, recreational areas and unlimited unmetered Wi-Fi capable of supporting un-interrupted video conferencing;\n14. Improved fatigue management including minimum rest periods (and unoccupied cabins) for Night Shift employees mobilising to the facilities, minimum breaks between shifts and call-outs;\nGreat work by our Workplace Reps who put in a massive effort during bargaining, and our broader offshore West Coast membership (together with the AWU & ETU members at ILNG) who backed in their mates and the Union and never took a backward step at any stage throughout our bargaining campaign.\nThe AREEA peanut gallery stands condemned for their public attack and campaign against one of the world’s highest skilled and competent oil and gas workforces. \nThe irony isn’t lost on us that AREEA’s attack on INPEX workers came from an outfit full of HR bosses and wannabe’s who would be lucky to know how to change a light bulb, let alone work on a LNG facility.\nAREEA should not under-estimate the role their public condemnation of our INPEX members had in stiffening the resolve of our INPEX members to go One Day Longer & One Day Stronger in their Fight for a Union Standard EBA.\nIF YOU DON’T FIGHT, YOU LOSE!\nhttps://offshorealliance.org.au/members/join",
+                  "graphics": [
+                    "assets/campaigns/inpex-ichthys/pfbid02nk6hmdtd4FhWFNNrR6Wvb8N5HhnTQJWdVSpJNvFsVCz2i5ZZErPTJCkqm6o89vxfl-01.jpg"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "context_events": [],
+      "undated_exhibits": [],
+      "all_posts": [
+        {
+          "candidate_id": "union-profile-100063786371409:342",
+          "source_page": "Offshore Alliance",
+          "post_id": "pfbid02KUC1qzZ9d2wUYYaEz6xhryubK5n6hcQsmYi8NAtkpC6aK3c6Nd46WpbHzbziJtkPl",
+          "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02KUC1qzZ9d2wUYYaEz6xhryubK5n6hcQsmYi8NAtkpC6aK3c6Nd46WpbHzbziJtkPl&id=100063786371409",
+          "displayed_date": "29 November 2025",
+          "published_date": "2025-11-29",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Our bargaining campaign to renegotiate the 2022 INPEX Facilities EBA kicked into gear earlier this year when Offshore Alliance, AWU (ILNG) and ETU members across INPEX’s offshore and onshore facilities put together a comprehensive log of claims in the form of a draft EBA.\nOur first bargaining meeting took place over a month ago, but negotiations have progressed with the speed of a snail overdosed on Valium.\nNo actual ‘bargaining’ has occurred in 10 hours of negotiation as INPEX say that they are still trying to “understand our claims”.\nINPEX’s have sent OA members correspondence advising that “some of the (union) claims generated more discussion than others…”.\nNo shit. Who would have thought?\nINPEX went onto explain that we are just 36% of the way through our draft Agreement after 10 hours of meetings – and that’s just INPEX seeking clarification of our claims for improved pay and conditions.\nIf matters progress at this pace, we will be into mid-February before we start actual negotiations.\nWith the nominal expiry date of the current INPEX EBA being 02 May 2025, stalling negotiations probably isn’t in INPEX’s best interests.\nWe wish INPEX the best of luck if they don’t put their skates on.",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/pfbid02KUC1qzZ9d2wUYYaEz6xhryubK5n6hcQsmYi8NAtkpC6aK3c6Nd46WpbHzbziJtkPl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:203",
+          "source_page": "ETU WA Branch",
+          "post_id": "1405695411573191",
+          "post_url": "https://www.facebook.com/photo/?fbid=1405695411573191&set=a.166072115535533",
+          "displayed_date": "9 April",
+          "published_date": "2026-04-09",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "The ETU WA and NT branches have filed a PABO application seeking to take PIA from early May. \nNegotiations have been shambolic, and despite Inpex seeking to push through their idea of a decent EA, our members are solid and locked in to backing in their full Draft EA claims tabled back in late October 2025 at the first scheduled EA meeting. \nA huge effort has gone into this draft EA document and all Inpex crew on all facilities are ready to vote NO to Inpex’s draft EA version, and to vote YES to all PIA questions in the ballot once the PABO gets the greenlight from the FWC. \nIf you don’t fight, you lose!\nIan Gill\nETU WA Lead Organiser - Hydrocarbons",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/1405695411573191-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "union-profile-100063786371409:210",
+          "source_page": "Offshore Alliance",
+          "post_id": "1586365496832981",
+          "post_url": "https://www.facebook.com/photo/?fbid=1586365496832981&set=a.498676838935191",
+          "displayed_date": "10 April",
+          "published_date": "2026-04-10",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "In a great first up win in our INPEX EBA Campaign 2026, the Fair Work Commission have approved the Offshore Alliance’s (OA/AWU) Ballot of Members to determine majority support for Protected Industrial Action.\nThe ETU were similarly successful in their PABO Application.\nBut prior to our PIA Ballot, our INPEX members are lining up to smash up INPEX’s dodgy EBA proposal in the INPEX EA Ballot commencing Wednesday 15th April.\nThe INPEX EA is seeking to remove job security provisions, implement a Career Stagnation Framework, reduce the Real Value of key remuneration terms and provide employment standards which fall well short of industry standards.\nThere is plenty happening right now across the INPEX offshore and onshore facilities, but the unity of the INPEX operations workforce will defeat the industrial bastardry of an outfit which suffers from insatiable greed.\nOffshore Alliance",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/1586365496832981-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "union-profile-100063786371409:201",
+          "source_page": "Offshore Alliance",
+          "post_id": "pfbid0vCF8zpGz3oZcwqPpRHZotAxRzABtZWZ3dPntB8khU9XnJUXDpWq56KwZ9Dbuvzpal",
+          "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0vCF8zpGz3oZcwqPpRHZotAxRzABtZWZ3dPntB8khU9XnJUXDpWq56KwZ9Dbuvzpal&id=100063786371409",
+          "displayed_date": "20 April",
+          "published_date": "2026-04-20",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "The INPEX HR Bosses have corrected the Ballot results for their dodgy EA proposal. They didn’t get zero votes. They got 8 ‘YES’ votes out of 430 in support of the garbage dished up by INPEX HR in their EA Ballot.\nThe EA Ballot INPEX cancelled prior to its scheduled close.\n98% of the INPEX FPSO, CPF & ILNG workforce rejected INPEX HR’s substandard deal.\nAt 09:00 AM today 430 Offshore Alliance/AWU & ETU members will be able to vote in support of Protected Industrial Action in a Ballot which closes at 14:00 on Friday 24th April.\nWhen Shell tested our resolve 4 years ago to take Protected Industrial Action, they lost $1.5 Billion in lost production on the Prelude FLNG in a dispute which lasted for 75 days of PIA.\nThe resolve of our INPEX members to fight for a union-negotiated EBA is no different to that of our Shell Prelude members in 2022.\nBlinky Bill’s mates from oil & gas employer group AREEA group couldn’t help themselves by buying into a bargaining dispute which they knew SFA about.\nThe form guide says that ARREA will almost inevitably go MIA when INPEX start racking up lost production.\nTher’s zero chance the AREEA bosses will jump on a plane and  head off to Tokyo to explain how they helped f*** up INPEX’s EA Ballot & left INPEX facing Protected Industrial Action.\nThe AREEA bosses have zero skin in the game.\nJust plenty of yap, yap, yap and SFA real-life experience in negotiating a West Coast oil & gas EBA.\nBecause they don’t teach EBA negotiations in HR Woke school.\nThe INPEX HR bosses and Blinky Bill can either double down on their 6 months of dysfunction in the renegotiation of a new EBA or they can start bargaining – something they should have done 6 months ago.\nOur members are up for the fight, and the Offshore Alliance is encouraging members to vote ‘YES’ to all 26 PIA Ballot questions.\nIt’s Game On, INPEX!",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/pfbid0vCF8zpGz3oZcwqPpRHZotAxRzABtZWZ3dPntB8khU9XnJUXDpWq56KwZ9Dbuvzpal-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "union-profile-100063786371409:192",
+          "source_page": "Offshore Alliance",
+          "post_id": "pfbid0nwnXCYYfphwrpvj5RHBtXkqkYeH4pMLqNfNR49qTmpbBaK5hXkmAYPZY3hkuek3Fl",
+          "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0nwnXCYYfphwrpvj5RHBtXkqkYeH4pMLqNfNR49qTmpbBaK5hXkmAYPZY3hkuek3Fl&id=100063786371409",
+          "displayed_date": "26 April",
+          "published_date": "2026-04-26",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "The combined 426 Offshore Alliance/AWU/ETU INPEX members on the INPEX CPF, FPSO and ILNG facilities have put their shoulder to the wheel in voting ‘YES’ to Protected Industrial Action.\nEvery one of our members can be commended on their unity in backing in our campaign for a benchmark industry standard EBA.\nEvery PIA Ballot submitted by each union member was a secret ballot.\nThe ballot agency running the ballot was a company independent of both INPEX and the Union.\nThe 100% vote in support of PIA followed a 98% INPEX workforce rejection of their dodgy EA proposal.\nOur members have made their intentions clear.\nThe so-called oil and gas employer group AREEA and Blinky Bill can bullshit all they like to their mates in the media about the state of our EBA negotiations with INPEX, but the INPEX workforce have made clear the next steps in our EBA campaign if INPEX don’t make fundamental changes to their bargaining position and their approach to EBA negotiations.\nOn the back of a 98% rejection of INPEX’s sub-standard EA proposal, we made more progress in the FWC Compulsory Conference last week than we did in 6 months of dysfunctional EBA negotiations with INPEX.\nWe will continue with FWC facilitated negotiations until the 15th of May with a clear understanding of INPEX getting Notice of Protected Industrial Action at this point if we haven’t reached full agreement on ALL bargaining claims.\nLet’s hope INPEX have the smarts to keep AREEA as far away as possible from our EBA negotiations as any involvement by the AREEA peanut gallery in the INPEX EA bargaining or in the public commentary on our negotiations, is an almost lay down miserere guarantee of PIA.\nGreat work by our INPEX members – united, principled and ready to fight for a Union-negotiated EBA.\nOffshore Alliance",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/pfbid0nwnXCYYfphwrpvj5RHBtXkqkYeH4pMLqNfNR49qTmpbBaK5hXkmAYPZY3hkuek3Fl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "awu-wa:47",
+          "source_page": "AWU Western Australia",
+          "post_id": "1501175068693240",
+          "post_url": "https://www.facebook.com/photo/?fbid=1501175068693240&set=a.370151755128916",
+          "displayed_date": "2 June",
+          "published_date": "2026-06-02",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Offshore Alliance members across all INPEX facilities are commencing protected industrial action today! \nUntil further notice, union members are downing tools between 6am-8am and 6pm-8pm every day, and will be undertaking a number of work bans, after INPEX failed to take EA negotiations seriously. If INPEX hasn't committed to genuine bargaining by the end of next week, industrial action will ramp up on 11 June. \nOur members are sick of the lack of progress and will continue to engage in industrial action until progress in brgaining is made. \nOur members generate billions in profit for INPEX - it's time they received their fair share!",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/1501175068693240-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:77",
+          "source_page": "ETU WA Branch",
+          "post_id": "1455219456620786",
+          "post_url": "https://www.facebook.com/photo/?fbid=1455219456620786&set=a.166072115535533",
+          "displayed_date": "2 June",
+          "published_date": "2026-06-02",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "𝐈𝐍𝐏𝐄𝐗 𝐏𝐈𝐀 𝐜𝐨𝐦𝐦𝐞𝐧𝐜𝐞𝐝\nAfter months of bargaining with INPEX, including a good strong dose of FWC actioned IBB, INPEX have proved, yet again, that they simply can’t meet a deadline. Vacillating is a word that comes to mind. They are definitely good at that!\nPIA has commenced on the ILNG plant in Darwin and the CPF and FPSO offshore, after the Unions and members gave INPEX ample time to get busy over the long weekend to get some work done on outstanding claims, most of which are costed claims of course.  We will give the IBB another shot, but PIA is probably all that INPEX will understand, because they love making tons of money more than anything else, and lately, they’ve been making shitloads of it, so PIA is a thorn in their fat wallet. You wouldn’t know how well they are doing, going by the small pot of budgeted funds apparently allocated to their workers in this EA negotiation. It seems incredible that INPEX simply cannot come to the realisation that their highly skilled workforce on these assets, are the very reason they make so much money, but appear so frugal when it comes to bargaining! INPEX are dizzy, out of touch and out of step and are in for a world of pain if they don’t do the right thing!\nIan Gill - Lead Organiser",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/1455219456620786-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "union-profile-100063786371409:83",
+          "source_page": "Offshore Alliance",
+          "post_id": "1634918935310970",
+          "post_url": "https://www.facebook.com/photo/?fbid=1634918935310970&set=a.498676838935191",
+          "displayed_date": "2 June",
+          "published_date": "2026-06-02",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Whilst significant progress was made last week in FWC facilitated bargaining with INPEX, they have fallen short on a number of fundamental claims. \nA long way short, and our INPEX members have had enough.\nProtected Industrial Action ramps up today on all 3 INPEX facilities with stoppages of work and work bans.\nINPEX are making $Billions off the blood, sweat and tears of their Australian operations workforce and we will keep escalating PIA until INPEX agree to fair industrial outcomes.\nGreat work by the OA, AWU and ETU INPEX members in standing tall in our fight for a benchmark industry standard EBA.\nIF YOU DON'T FGHT, YOU LOSE!",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/1634918935310970-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:161",
+          "source_page": "ETU WA Branch",
+          "post_id": "pfbid0kvvwbgypUFJH3s2Eu4cqXCXTm4hBCn6k7PrMXXMEaagM2Mat2zyDcBipkEF8BR9Bl",
+          "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0kvvwbgypUFJH3s2Eu4cqXCXTm4hBCn6k7PrMXXMEaagM2Mat2zyDcBipkEF8BR9Bl",
+          "displayed_date": "14 June",
+          "published_date": "2026-06-14",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "The joint unions’ legal team has successfully smashed INPEX’s S424 application seeking to halt protected industrial action across its facilities. This is a clear win for workers and a clear rejection of yet another attempt to undermine lawful bargaining rights.\nProtected industrial action has already placed significant pressure on INPEX, with millions reportedly lost through ongoing delays and disruption, in addition to the costs of their unsuccessful legal manoeuvre. Despite this, management has continued to choose litigation over genuine engagement at the bargaining table.\nFull credit must go to every member and bargaining representative who has stood firm, held the line, and refused to be intimidated. And credit where it’s due to our legal team for dismantling INPEX’s attempt to stymie lawfully protected industrial action.\nThe message is simple: respect the workforce that keeps your onshore and offshore operations running, or expect workers to continue exercising their legal rights. If you don’t fight, you don’t win—and workers have shown exactly what standing together achieves.",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/pfbid0kvvwbgypUFJH3s2Eu4cqXCXTm4hBCn6k7PrMXXMEaagM2Mat2zyDcBipkEF8BR9Bl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "union-profile-100063786371409:157",
+          "source_page": "Offshore Alliance",
+          "post_id": "pfbid015kkEAU5XQJLBBWHcrG8dMaeAXpjcRHGwQtbNL7yKJrTu9aRRgLUvKKUNY9b1bJ2l",
+          "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid015kkEAU5XQJLBBWHcrG8dMaeAXpjcRHGwQtbNL7yKJrTu9aRRgLUvKKUNY9b1bJ2l&id=100063786371409",
+          "displayed_date": "14 June",
+          "published_date": "2026-06-14",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "The unity of workers will never, ever be defeated by the bastardry of the bosses. \nThe Offshore Alliance, AWU and ETU INPEX workforce and our lawyers have secured a massive legal win in the Fair Work Commission today, by smashing \nINPEX’s S.424 application to stop our members taking Protected Industrial Action.\nToday’s legal victory cannot be overstated.\nYou're a F***en legend Oshie! (Barrister representing the combined unions).\nThe work of our Barrister was nothing short of outstanding.\nThe INPEX application to stop members exercising their legal rights to take PIA was never about the broader Australian economy or power supply to Darwin.\nIt was all about protecting the corporate interests of INPEX and their bloated profits.\nThe same way that INPEX treat their tax obligations.\nInstead of bargaining to reach agreement with the Unions on a new EBA, INPEX made the decision to be led by the nose by their industrial zealots and hard-liners.\nINPEX management wanted to stop PIA and then renege on every agreed term secured in the FWC facilitated bargaining.\nThey have zero credibility with the INPEX operations workforce.\nOur members will never forgive or forget INPEX’s industrial bastardry. Never.\nProtected Industrial Action is continuing on all 3 INPEX facilities until a benchmark industry standard EBA is agreed.\nThe INPEX bosses responsible for destroying their standing with the INPEX workforce need to be cleaned out.\nThe INPEX bosses led by the nose by AREEA should be sacked.\nThe $100 million + dollars INPEX have lost so far is money INPEX should have put into sorting out our EBA.\nInstead, their senior management and HR/IR bosses have pissed the $100 million against the wall.\nWe cannot speak highly enough of the 426 INPEX CPF, FPSO and ILNG members who are standing strong, united and prepared to go one day longer and one day stronger than the goons hiding in the shadows in INPEX Elizabeth HQ.\nOffshore Alliance – If You Don’t Fight, You Lose!",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/pfbid015kkEAU5XQJLBBWHcrG8dMaeAXpjcRHGwQtbNL7yKJrTu9aRRgLUvKKUNY9b1bJ2l-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "awu-wa:122",
+          "source_page": "AWU Western Australia",
+          "post_id": "pfbid02CrKKrP2EZp1LhRNsTNk5uy1A2dFbKXtSUEmoWL8WmnTcDDWh6tkcR7geUs5vB1cDl",
+          "post_url": "https://www.facebook.com/awuwesternaustralia/posts/pfbid02CrKKrP2EZp1LhRNsTNk5uy1A2dFbKXtSUEmoWL8WmnTcDDWh6tkcR7geUs5vB1cDl",
+          "displayed_date": "15 June",
+          "published_date": "2026-06-15",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "The Fair Work Commission has rejected Inpex's application to stop our strike action!\nInpex tried - and failed - to argue that industrial action taken by Offshore Alliance members will have a significant impact on the Australian economy.\nAs our WA Branch Secretary, Brad Gandy, says, \"Our members pay more in income tax than INPEX does.\"\n\"In eight years of operating and tens of millions of tonnes of hydrocarbons exported to provide other countries with energy, INPEX has never paid a cent to Australia in resources tax.\"\n\"Suddenly, when our members are engaging in legal strike action to improve their terms and conditions of employment the Australian economy is important to INPEX. Nobody is buying it.\"\n\"Our members at INPEX are some of the best operators in the industry, worldwide. Anyone who scoffs at their claims for improved conditions and yet doesn't bat an eye at a CEO pocketing millions has, to put it mildly, an interesting world view.\"\nOffshore Alliance Members will keep up the fight!",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/pfbid02CrKKrP2EZp1LhRNsTNk5uy1A2dFbKXtSUEmoWL8WmnTcDDWh6tkcR7geUs5vB1cDl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "awu-wa:120",
+          "source_page": "AWU Western Australia",
+          "post_id": "pfbid02wrtrkBxU4eNHbef51fJBbGMTPaWRzaTK2xSXkot6EC8pjSZMEdXP2PPAVF8DroGjl",
+          "post_url": "https://www.facebook.com/awuwesternaustralia/posts/pfbid02wrtrkBxU4eNHbef51fJBbGMTPaWRzaTK2xSXkot6EC8pjSZMEdXP2PPAVF8DroGjl",
+          "displayed_date": "17 June",
+          "published_date": "2026-06-17",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "Over 400 Offshore Alliance and AWU members have endorsed the proposed Inpex EA, which sets a new industry standard for wages, conditions and job security across offshore oil and gas!\nThis new agreement locks in:\n• Job Security – Permanent jobs are protected and cannot be outsourced to low-wage labour hire contractors.\n• Remuneration – Industry benchmark rates of pay and allowances have been secured.\n• Career Progression Framework – A new competency-based progression system will provide clear career pathways and recognition of skills and experience.\n• Improved Employee Representation Rights – Enhanced delegates' rights, improved right of entry provisions to offshore facilities, and stronger representation rights for members in disciplinary matters.\n• Improved Overcycle Arrangements – Better roster flexibility and overcycle provisions for offshore workers.\nThank you to our members who have stood firm in the face of media scrutiny, mudslinging from industry lobby groups, and a legal challenge against their lawful industrial action. Today is a major win - not just for Inpex employees, but for workers across the offshore oil and gas sector!",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/pfbid02wrtrkBxU4eNHbef51fJBbGMTPaWRzaTK2xSXkot6EC8pjSZMEdXP2PPAVF8DroGjl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "etu-wa:110",
+          "source_page": "ETU WA Branch",
+          "post_id": "pfbid0inYFiP4KNqW7SeM3EfYkDvgn212vu31uGfsmHYcVfd4HJee7AqnB1kwKs4Mo6Fk8l",
+          "post_url": "https://www.facebook.com/ETUWABranch/posts/pfbid0inYFiP4KNqW7SeM3EfYkDvgn212vu31uGfsmHYcVfd4HJee7AqnB1kwKs4Mo6Fk8l",
+          "displayed_date": "17 June",
+          "published_date": "2026-06-17",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "INPEX have finally woken up and agreed to members claims and agreement in principle has been reached.\nMuch better rates/salaries that lead the pack, proper level progression, vital job security and minimum manning provisions by classification and facility and more!\nGreat credit must go to all the rank and file members of all Unions, and in particular to all the bargaining reps that made this all possible with their unwavering commitment. A decent dose of PIA with stoppages and targeted bans that cost INPEX tens of millions of dollars and a failed legal attempt to stop PIA via a s424 application, and where credit also goes to a top legal team effort in this space. They crushed them.\nINPEX employees can hold their heads high and will forever hold the moral high ground from this dispute, while the raggedy INPEX management seek to regain the trust of their most valuable asset – their highly skilled workforce! This campaign and dispute are a textbook example of how to win against the big end of town. High Union density, organised, capable and unwilling to bend under any circumstance. Congratulations to every INPEX worker involved. You are worth every cent you have secured – and more! Champions! INPEX IR and those in Tokyo – give yourself a whopping uppercut!\nIan Gill",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/pfbid0inYFiP4KNqW7SeM3EfYkDvgn212vu31uGfsmHYcVfd4HJee7AqnB1kwKs4Mo6Fk8l-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "union-profile-100063786371409:153",
+          "source_page": "Offshore Alliance",
+          "post_id": "pfbid02U5PaePSyCXR21e1zisJB3KNR16S9yq3NhpyeAZqasH8paoxP2n3TkYjk3gM3hh2Kl",
+          "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02U5PaePSyCXR21e1zisJB3KNR16S9yq3NhpyeAZqasH8paoxP2n3TkYjk3gM3hh2Kl&id=100063786371409",
+          "displayed_date": "17 June",
+          "published_date": "2026-06-17",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "At 06:00 this morning, over 400 Offshore Alliance, AWU and ETU members endorsed the settlement of our INPEX bargaining campaign. \nThrough the unbending collective struggle of our 430+ INPEX members, we have now secured the best EBA in the oil and gas industry.\nOur INPEX EBA campaign was tough going, but our members never flinched. \nNot once.\nThis dispute cost INPEX 1 train (which was shut down at ILNG yesterday), 2 Conde tankers and an LNG carrier.\nAnd about $200 million in lost production.\nIt is a dispute which should have been settled months earlier, had there been a different approach to negotiations.\nBut the final bargaining outcome is a credit to all parties who have settled their differences and negotiated agreed industrial outcomes.\nThere will be more said about the new INPEX EBA after the Ballot of members, which will be delayed to ensure classifications not previously covered by the EBA are added to the new EBA.\nA massive thanks to Deputy President Binet from the FWC, who oversaw facilitated bargaining at a time when production was likely to have been shut down for weeks, or possibly months.\nHad it not been for DP Binet’s efforts in threading the needle through the competing industrial interests, this dispute was headed for a more costly industrial dispute than the 2022 Shell Prelude dispute.\nOur Offshore and Onshore INPEX Reps have done a massive job in representing the interests of their workmates and their contribution to bargaining was nothing short of outstanding.\nWe also want to again thank the efforts of Barrister Oshie Fagir in knocking off the S.424 INPEX application to terminate Protected Industrial Action.\nOur INPEX members have now formally named him “King Oshie”\nGreat work by Offshore Alliance and AWU National Organiser Zach Duncalfe and ETU National Legal Officer Kevin Sneddon who had our members back, every step through the process.\nAnd a big shout out to the efforts of Organizer’s Strawbs, Caleb and Gilly. Great work. And keep those bananas and coke’s going Strawbs! \nAs for AREEA and the NT News? They can both go and fXXX themselves.\nOffshore Alliance\nIF YOU DON’T FIGHT, YOU LOSE!\nhttps://offshorealliance.org.au/members/join",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/pfbid02U5PaePSyCXR21e1zisJB3KNR16S9yq3NhpyeAZqasH8paoxP2n3TkYjk3gM3hh2Kl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "union-profile-100063786371409:134",
+          "source_page": "Offshore Alliance",
+          "post_id": "pfbid027ardakfhkkas7m417JFpReabhbLmHc5EqZt25zpACDMgqW1UuPPMQYW3XSXUjV8gl",
+          "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid027ardakfhkkas7m417JFpReabhbLmHc5EqZt25zpACDMgqW1UuPPMQYW3XSXUjV8gl&id=100063786371409",
+          "displayed_date": "14 July",
+          "published_date": "2026-07-14",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "When the Offshore Alliance, AWU (NT) & ETU commenced bargaining with INPEX in October last year for a new EBA, our members had some pretty clear industrial objectives.\nMembers wanted their jobs locked in and to secure benchmark rates and employment conditions.\nOur INPEX members Dared to Struggle and Dared to Win.\nThe INPEX EBA Ballot opened at 06:00 today and closes at 16:00 tomorrow.",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/pfbid027ardakfhkkas7m417JFpReabhbLmHc5EqZt25zpACDMgqW1UuPPMQYW3XSXUjV8gl-01.jpg"
+          ]
+        },
+        {
+          "candidate_id": "union-profile-100063786371409:132",
+          "source_page": "Offshore Alliance",
+          "post_id": "pfbid02nk6hmdtd4FhWFNNrR6Wvb8N5HhnTQJWdVSpJNvFsVCz2i5ZZErPTJCkqm6o89vxfl",
+          "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02nk6hmdtd4FhWFNNrR6Wvb8N5HhnTQJWdVSpJNvFsVCz2i5ZZErPTJCkqm6o89vxfl&id=100063786371409",
+          "displayed_date": "16 July",
+          "published_date": "2026-07-16",
+          "published_at": null,
+          "date_basis": "facebook_absolute_label",
+          "date_precision": "day",
+          "full_text": "INPEX union members across the INPEX CPF, FPSO and ILNG facilities have once again delivered.\n97.3% of the INPEX offshore and onshore operations workforce participated in the EA Ballot, with 97.5% of the 471 strong workforce voting ‘YES’ to an EBA which sets new industry standards for our members working direct for the Tier 1 oil & gas operators..\nThe INPEX EBA campaign had plenty going on. \nThe non-union EA INPEX tried getting voted up in April this year got smashed up by 98% of the INPEX workforce.\nINPEX’s S.424 application to the FWC to prevent members from exercising their legal rights to take Protected Industrial Action got smashed up the Union lawyers.\nAnd INPEX’s decision to follow AREEA’s idiotic hard line IR agenda and push back against our members’ bargaining claims resulted in Extensive PIA across each of the INPEX facilities including:\n• A tripped flashgas compressor on the FPSO with $600K per day going up in smoke;\n• 2 Conde tankers and 1 LNG tanker not being loaded;\n• 1 ILNG train being shutdown and\n• $200 million of lost production.\nThe INPEX EBA campaign was a campaign where members stood shoulder to shoulder across each of the 3 INPEX facilities in fighting for & securing the following EBA outcomes:\n1. Highest REM standards (salaries & allowances) amongst the 4 Tier-1 oil & gas Operators, with bonuses locked in & paid on a collective and not individual basis.\n2. Maintenance contractor & labour hire minimum rates & conditions locked in;\n3. Job security locked in for all INPEX facility and facility support members;\n4. A new Career Progression Framework with level progression determined by agreed competencies and objective criteria;\n5. Flights provided to all interstate members from Capital Cities and agreed regional airports;\n6. 20 job share positions available to members on each of the 3 INPEX facilities;\n7. Improved representational rights including union representation in meetings and investigations, Right of Entry provisions for OA Organisers on the offshore facilities, delegates rights, Consultative Committees & improved DSP provisions;\n8. Overcycle for travel delays plus travel during mid-swing O/C with O/C being increased to X1.5 plus superannuation (equivalent of X 1.7);\n9. Additional 14 paid days Supplementary Leave, improved Personal Leave, option to take double LSL on half pay and improved Parental Leave;\n10. Improved redundancy provisions plus agreed redundancy criteria (voluntary first then last-on first-off next);\n11. Agreed processes for changes in panels, shifts & facilities & hours of work provisions tightened up;\n12. Income Protection exclusions removed with job security for employees in receipt of income protection;\n13. Facility standards locked in including catering, recreational areas and unlimited unmetered Wi-Fi capable of supporting un-interrupted video conferencing;\n14. Improved fatigue management including minimum rest periods (and unoccupied cabins) for Night Shift employees mobilising to the facilities, minimum breaks between shifts and call-outs;\nGreat work by our Workplace Reps who put in a massive effort during bargaining, and our broader offshore West Coast membership (together with the AWU & ETU members at ILNG) who backed in their mates and the Union and never took a backward step at any stage throughout our bargaining campaign.\nThe AREEA peanut gallery stands condemned for their public attack and campaign against one of the world’s highest skilled and competent oil and gas workforces. \nThe irony isn’t lost on us that AREEA’s attack on INPEX workers came from an outfit full of HR bosses and wannabe’s who would be lucky to know how to change a light bulb, let alone work on a LNG facility.\nAREEA should not under-estimate the role their public condemnation of our INPEX members had in stiffening the resolve of our INPEX members to go One Day Longer & One Day Stronger in their Fight for a Union Standard EBA.\nIF YOU DON’T FIGHT, YOU LOSE!\nhttps://offshorealliance.org.au/members/join",
+          "graphics": [
+            "assets/campaigns/inpex-ichthys/pfbid02nk6hmdtd4FhWFNNrR6Wvb8N5HhnTQJWdVSpJNvFsVCz2i5ZZErPTJCkqm6o89vxfl-01.jpg"
+          ]
+        }
+      ],
+      "source_boundary": "Union-authored public material is campaign evidence, not independent corroboration of impact, leverage, support or employer conduct."
     }
   ]
 }

@@ -10,7 +10,7 @@
   "baseline_change": {
     "kind": "fwc_evidence_baseline",
     "title": "FWC evidence baseline connected",
-    "summary": "Three BHP ballot streams and the separate Mining Area C and South Flank agreement application are connected to official records. Worsley’s reported order remains unresolved."
+    "summary": "INPEX’s s.424 decision and approved 2026–2030 agreement are connected alongside three BHP ballot streams and the Mining Area C/South Flank application. Worsley’s reported order remains unresolved."
   },
   "campaigns": [
     {
@@ -432,6 +432,77 @@
               "The negative search result does not disprove the union report."
             ],
             "official_records": []
+          }
+        ]
+      },
+      "campaign_context": []
+    },
+    {
+      "campaign_id": "inpex-ichthys-operations-bargaining-2026",
+      "evidence_summary": {
+        "connected": 2,
+        "partially_connected": 0,
+        "unresolved": 0
+      },
+      "events": {
+        "INP-007": [
+          {
+            "link_id": "INP-LEGAL-001",
+            "record_type": "section_424_decision",
+            "status": "connected",
+            "status_label": "Commission decision connected",
+            "summary": "The union reports about INPEX's s.424 application are connected to the Commission's published decision dismissing the application.",
+            "matter_numbers": [
+              "B2026/623"
+            ],
+            "facts_established": [
+              "INPEX applied on 10 June 2026 to terminate protected industrial action under s.424 in B2026/623.",
+              "The Commission found the action threatened a full production stoppage but was not satisfied it threatened relevant danger to the population or significant damage to the Australian economy.",
+              "Deputy President Easton dismissed INPEX's application on 14 June 2026."
+            ],
+            "not_established": [
+              "The decision does not establish the unions' claimed dollar value of production loss or broader bargaining leverage.",
+              "The decision does not establish that every form or duration of action described in union posts occurred."
+            ],
+            "official_records": [
+              {
+                "record_type": "section_424_decision",
+                "matter_no": "B2026/623",
+                "citation": "[2026] FWC 2200",
+                "date": "2026-06-14",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/855198"
+              }
+            ]
+          }
+        ],
+        "INP-009": [
+          {
+            "link_id": "INP-LEGAL-002",
+            "record_type": "agreement_approval",
+            "status": "connected",
+            "status_label": "Agreement approved",
+            "summary": "The employee ballot outcome is followed by an official Commission approval of the INPEX-Ichthys Operations Enterprise Agreement 2026-2030.",
+            "matter_numbers": [
+              "AG2026/2006"
+            ],
+            "facts_established": [
+              "The Commission approved the INPEX-Ichthys Operations Enterprise Agreement 2026-2030 in AG2026/2006.",
+              "The agreement operates from 21 August 2026 and the corrected nominal expiry date is 14 August 2030.",
+              "The approval decision notes coverage of the AWU and CEPU as bargaining representatives."
+            ],
+            "not_established": [
+              "The approval decision does not independently establish the union-reported ballot percentages or operational impact of the preceding action.",
+              "Descriptions of the agreement as an industry benchmark are union characterisations and comparative analysis remains separate."
+            ],
+            "official_records": [
+              {
+                "record_type": "approved_agreement",
+                "matter_no": "AG2026/2006",
+                "citation": "AE533760",
+                "date": "2026-08-19",
+                "source_url": "https://www.fwc.gov.au/document-view/media/download/878502"
+              }
+            ]
           }
         ]
       },
