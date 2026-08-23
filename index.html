@@ -2,948 +2,259 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>Pilbara Watch · Briefer</title>
+<title>Pilbara Watch · Focused Command Register v4</title>
 <style>
-  :root {
-    --bg: #080a0d;
-    --panel: #0e1116;
-    --panel-2: #12161c;
-    --panel-3: #171c23;
-    --line: rgba(255,255,255,.075);
-    --line-strong: rgba(255,255,255,.13);
-    --ink: #f1f3f5;
-    --soft: #c8cdd4;
-    --muted: #89919d;
-    --faint: #5e6672;
-    --red: #e64d62;
-    --red-soft: rgba(230,77,98,.12);
-    --amber: #d98a52;
-    --amber-soft: rgba(217,138,82,.12);
-    --green: #52a879;
-    --green-soft: rgba(82,168,121,.12);
-    --blue: #6d8fc7;
-    --blue-soft: rgba(109,143,199,.12);
-    --radius: 10px;
-    --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
-    --sans: "IBM Plex Sans", "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-feature-settings: "ss02" 1;
-    font-size: 15px;
-    line-height: 1.55;
-  }
-  a { color: inherit; }
-  button { font: inherit; }
-  .shell { max-width: 1460px; margin: 0 auto; padding: 0 28px 56px; }
-  .wordmark { font-family: var(--sans); font-size: 17px; font-weight: 650; letter-spacing: -.45px; text-transform: none; }
-  .wordmark i { color: var(--red); font-style: normal; }
-  .edition { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 12px; white-space: nowrap; }
-  .edition strong { color: var(--soft); font-weight: 500; }
-  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px var(--green-soft); }
-
-  .masthead { padding: 27px 0 21px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
-  h1 { margin: 0; font-size: clamp(32px, 4vw, 46px); line-height: 1.02; font-weight: 550; letter-spacing: -1.55px; }
-  .masthead-byline { margin-top: 7px; display: flex; align-items: baseline; gap: 8px; color: var(--faint); font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
-  .masthead-tools { display: grid; justify-items: end; }
-
-  .market-snapshot { margin-bottom: 18px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--panel); overflow: hidden; }
-  .market-head { padding: 10px 14px; display: flex; justify-content: space-between; gap: 14px; border-bottom: 1px solid var(--line); color: var(--faint); font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
-  .market-grid { display: grid; grid-template-columns: repeat(6, minmax(145px,1fr)); }
-  .market-item { padding: 13px 14px 12px; border-right: 1px solid var(--line); text-decoration: none; min-width: 0; }
-  .market-item:last-child { border-right: 0; }
-  .market-item:hover { background: rgba(255,255,255,.02); }
-  .market-label { color: var(--muted); font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .04em; }
-  .market-line { margin-top: 5px; display: flex; align-items: baseline; gap: 8px; }
-  .market-value { color: var(--ink); font: 500 20px var(--mono); letter-spacing: -.55px; }
-  .market-change { font: 500 11px var(--mono); }
-  .market-change.up { color: var(--green); }
-  .market-change.down { color: #ef7182; }
-  .market-asof { margin-top: 5px; color: var(--faint); font: 400 10px var(--mono); }
-  .market-note { padding: 9px 14px; border-top: 1px solid var(--line); color: var(--faint); font: 400 10px var(--mono); }
-
-  .posture-band {
-    display: grid; grid-template-columns: repeat(4, minmax(130px,1fr));
-    border: 1px solid var(--line-strong); border-radius: var(--radius); overflow: hidden; background: var(--panel);
-  }
-  .posture-main { padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start; }
-  .posture-mark { width: 9px; height: 9px; flex: 0 0 9px; margin-top: 4px; background: var(--red); border-radius: 50%; box-shadow: 0 0 0 5px var(--red-soft); }
-  .posture-label { color: var(--muted); font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
-  .posture-value { margin-top: 3px; color: #ff7184; font-size: 23px; font-weight: 600; letter-spacing: -.6px; }
-  .posture-reason { margin-top: 4px; color: var(--soft); font-size: 13px; }
-  .metric { padding: 19px 20px; border-left: 1px solid var(--line); }
-  .metric:first-child { border-left: 0; }
-  .metric-number { font: 500 25px/1 var(--mono); letter-spacing: -1px; }
-  .metric-label { margin-top: 8px; color: var(--muted); font-size: 11px; }
-  .metric-note { margin-top: 3px; color: var(--faint); font-size: 10px; }
-
-  .layout { margin-top: 18px; display: grid; grid-template-columns: minmax(0, 1fr) 350px; gap: 18px; align-items: start; }
-  .stack { display: grid; gap: 18px; }
-  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-  .panel-head { min-height: 49px; padding: 13px 17px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); }
-  .panel-title { margin: 0; font: 600 13px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
-  .panel-kicker { color: var(--faint); font: 400 11px var(--mono); }
-  .panel-body { padding: 16px 17px; }
-
-  .top-three { display: grid; }
-  .signal { display: grid; grid-template-columns: 31px 1fr auto; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: start; }
-  .signal:first-child { padding-top: 0; }
-  .signal:last-child { padding-bottom: 0; border-bottom: 0; }
-  .signal-index { color: var(--faint); font: 500 11px var(--mono); padding-top: 2px; }
-  .signal h3 { margin: 0; font-size: 14px; font-weight: 550; letter-spacing: -.15px; }
-  .signal p { margin: 5px 0 0; color: var(--muted); font-size: 12.5px; }
-  .signal-tag { white-space: nowrap; font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .05em; padding: 4px 7px; border-radius: 99px; }
-  .tag-red { color: #ff8696; background: var(--red-soft); }
-  .tag-amber { color: #efaa77; background: var(--amber-soft); }
-  .tag-blue { color: #9db8e1; background: var(--blue-soft); }
-
-  .baseline { display: flex; gap: 13px; align-items: flex-start; }
-  .baseline-glyph { flex: 0 0 23px; height: 23px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: 50%; color: var(--amber); font: 500 11px var(--mono); }
-  .baseline strong { display: block; font-size: 14px; font-weight: 550; }
-  .baseline p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
-  .delta-panel { margin-bottom: 18px; }
-
-  .active-register { padding: 10px; }
-  .active-matter summary { padding: 16px 17px; }
-  .matter-overview { min-width: 0; }
-  .matter-brief { margin-top: 8px; max-width: 960px; color: var(--muted); font-size: 13px; }
-  .matter-flags { margin-top: 9px; display: flex; gap: 7px; flex-wrap: wrap; }
-  .matter-flag { padding: 4px 7px; border-radius: 4px; background: var(--panel-3); color: var(--soft); font: 500 10px var(--mono); text-transform: uppercase; }
-  .matter-flag.caution { color: #efaa77; background: var(--amber-soft); }
-  .matter-flag.unverified { color: #ff8696; background: var(--red-soft); }
-
-  .filters { display: flex; gap: 5px; flex-wrap: wrap; }
-  .filter { border: 1px solid transparent; background: none; color: var(--faint); padding: 7px 9px; border-radius: 5px; cursor: pointer; font: 500 11px var(--mono); }
-  .filter:hover, .filter:focus-visible { color: var(--soft); outline: none; border-color: var(--line-strong); }
-  .filter.active { color: var(--ink); background: var(--panel-3); border-color: var(--line); }
-  .table-wrap { overflow-x: auto; }
-  table { width: 100%; border-collapse: collapse; min-width: 830px; }
-  th { padding: 10px 13px; color: var(--faint); font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .06em; text-align: left; background: rgba(255,255,255,.012); }
-  td { padding: 13px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11.5px; vertical-align: top; }
-  td:first-child { color: var(--ink); font-weight: 550; min-width: 190px; }
-  .stage { display: inline-flex; align-items: center; padding: 3px 6px; border-radius: 4px; background: var(--panel-3); color: var(--soft); font: 500 9px var(--mono); white-space: nowrap; }
-  .direction { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; color: var(--soft); }
-  .direction::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); }
-  .direction.escalating::before { background: var(--red); }
-  .direction.active::before { background: var(--blue); }
-
-  .matter-grid { display: grid; gap: 10px; }
-  details.matter { min-width: 0; background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; }
-  details.matter[open] { border-color: var(--line-strong); }
-  details.matter.hidden { display: none; }
-  summary { list-style: none; cursor: pointer; padding: 15px 16px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; }
-  summary::-webkit-details-marker { display: none; }
-  .matter-name { font-size: 16px; font-weight: 550; }
-  .matter-meta { margin-top: 5px; color: var(--faint); font: 400 11px var(--mono); }
-  .matter-state { display: flex; align-items: center; gap: 8px; color: var(--muted); font: 500 10px var(--mono); text-transform: uppercase; }
-  .matter-state::after { content: "+"; display: grid; place-items: center; width: 22px; height: 22px; border: 1px solid var(--line); border-radius: 5px; color: var(--soft); font-size: 14px; }
-  details[open] .matter-state::after { content: "−"; }
-  .matter-content { border-top: 1px solid var(--line); padding: 0 16px 16px; }
-  .source-caveat { margin: 14px 0 3px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--amber-soft); color: #d8b89e; font-size: 11px; }
-  .chronology { position: relative; padding: 4px 0 2px; }
-  .chronology::before { content: ""; position: absolute; left: 8px; top: 18px; bottom: 17px; width: 1px; background: var(--line-strong); }
-  .chronology-row { position: relative; display: grid; grid-template-columns: 91px 1fr; gap: 16px; padding: 11px 0 11px 28px; border-bottom: 1px solid var(--line); }
-  .chronology-row:last-child { border-bottom: 0; }
-  .chronology-row::before { content: ""; position: absolute; left: 4px; top: 16px; width: 7px; height: 7px; border: 1px solid var(--amber); background: var(--panel-2); border-radius: 50%; }
-  .chronology-step { color: var(--faint); font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
-  .chronology-text { color: var(--soft); font-size: 13px; }
-  .chronology-text small { display: block; margin-top: 5px; color: var(--faint); font: 400 10.5px var(--mono); }
-  .evidence-line { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  .evidence-line > span { color: var(--faint); font: 500 10px var(--mono); text-transform: uppercase; }
-  .source-link { color: #aeb8c7; text-decoration: none; border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; font: 400 10px var(--mono); }
-  .source-link:hover { border-color: var(--line-strong); color: var(--ink); }
-  .confidence { margin-left: auto; color: var(--muted); font: 400 10px var(--mono); }
-
-  .union-post-evidence { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
-  .union-post-section-head { margin-bottom: 10px; display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
-  .union-post-section-head h3 { margin: 0; font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
-  .union-post-section-head span { color: var(--faint); font: 400 10px var(--mono); }
-  .union-post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 10px; }
-  details.union-post-exhibit { min-width: 0; border: 1px solid var(--line); border-radius: 7px; background: #0c0f13; overflow: hidden; }
-  details.union-post-exhibit[open] { border-color: var(--line-strong); }
-  .union-post-exhibit > summary { padding: 0; display: grid; grid-template-columns: 148px minmax(0,1fr); gap: 0; align-items: stretch; }
-  .union-post-exhibit > summary::after { content: "+"; position: absolute; right: 12px; bottom: 11px; color: var(--muted); font: 500 14px var(--mono); }
-  .union-post-exhibit[open] > summary::after { content: "−"; }
-  .union-post-exhibit > summary { position: relative; }
-  .union-post-graphic { width: 148px; height: 148px; object-fit: cover; display: block; border-right: 1px solid var(--line); }
-  .union-post-header { min-width: 0; padding: 13px 32px 13px 13px; }
-  .union-post-label { color: var(--amber); font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
-  .union-post-title { margin-top: 7px; color: var(--ink); font-size: 14px; font-weight: 550; line-height: 1.35; }
-  .union-post-meta { margin-top: 7px; color: var(--faint); font: 400 10px/1.5 var(--mono); }
-  .union-post-access { margin-top: 10px; color: var(--soft); font: 500 10px var(--mono); }
-  .union-post-full { padding: 15px; border-top: 1px solid var(--line); }
-  .union-post-full-label { margin-bottom: 10px; color: var(--amber); font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
-  .union-post-text { color: var(--soft); font-size: 13px; line-height: 1.65; }
-  .union-post-text p { margin: 0 0 10px; }
-  .union-post-text p:last-child { margin-bottom: 0; }
-  .union-post-foot { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 12px; color: var(--faint); font: 400 10px var(--mono); }
-  .union-post-foot a { color: var(--soft); text-decoration: none; }
-  .union-post-foot a:hover { color: var(--ink); }
-
-  .campaign-panel { min-width: 0; padding: 16px; }
-  .campaign-loading { color: var(--faint); font: 400 11px var(--mono); }
-  .campaign-state-grid { display: grid; grid-template-columns: 1.15fr 1.35fr 1fr; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-  .campaign-state-block { padding: 15px; border-right: 1px solid var(--line); background: #0c0f13; }
-  .campaign-state-block:last-child { border-right: 0; }
-  .campaign-eyebrow { color: var(--faint); font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
-  .campaign-stage { margin-top: 8px; color: var(--ink); font-size: 17px; font-weight: 550; line-height: 1.35; }
-  .campaign-basis { margin-top: 7px; color: var(--amber); font: 500 10.5px var(--mono); }
-  .campaign-state-copy { margin-top: 8px; color: var(--muted); font-size: 13px; }
-  .campaign-list { margin: 9px 0 0; padding-left: 18px; color: var(--muted); font-size: 12.5px; }
-  .campaign-list li + li { margin-top: 4px; }
-  .campaign-tabs { margin-top: 14px; display: flex; gap: 5px; }
-  .campaign-tab { border: 1px solid var(--line); border-radius: 5px; padding: 9px 12px; background: transparent; color: var(--faint); cursor: pointer; font: 500 10.5px var(--mono); }
-  .campaign-tab.active { background: var(--panel-3); color: var(--ink); border-color: var(--line-strong); }
-  .campaign-view { min-width: 0; margin-top: 12px; }
-  .campaign-view[hidden] { display: none; }
-  .campaign-spine { position: relative; width: 100%; min-width: 0; max-width: 100%; display: grid; grid-template-columns: repeat(var(--milestone-count), minmax(120px,1fr)); gap: 0; overflow-x: auto; padding: 4px 0 14px; }
-  .campaign-spine::before { content: ""; position: absolute; left: 7%; right: 7%; top: 17px; height: 1px; background: var(--line-strong); }
-  .milestone-marker { position: relative; min-width: 120px; padding: 30px 10px 8px; border: 0; background: transparent; color: var(--muted); text-align: left; cursor: pointer; }
-  .milestone-marker::before { content: ""; position: absolute; top: 10px; left: 12px; width: 11px; height: 11px; border-radius: 50%; background: var(--panel-2); border: 2px solid var(--faint); z-index: 1; }
-  .milestone-marker.active::before { border-color: var(--amber); background: var(--amber); box-shadow: 0 0 0 4px var(--amber-soft); }
-  .milestone-date { color: var(--faint); font: 500 9.5px var(--mono); }
-  .milestone-title { margin-top: 5px; color: var(--soft); font-size: 12.5px; line-height: 1.35; }
-  .milestone-marker.active .milestone-title { color: var(--ink); }
-  .milestone-detail { display: none; border: 1px solid var(--line); border-radius: 8px; background: #0c0f13; }
-  .milestone-detail.active { display: block; }
-  .milestone-detail-head { padding: 14px 15px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 18px; }
-  .milestone-detail h4 { margin: 0; font-size: 16px; font-weight: 550; }
-  .milestone-summary { margin-top: 6px; color: var(--muted); font-size: 13px; }
-  .milestone-evidence { flex: 0 0 auto; color: var(--amber); font: 500 10px var(--mono); text-align: right; }
-  .campaign-events { padding: 0 14px 14px; }
-  details.campaign-event { margin-top: 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel-2); }
-  .campaign-event > summary { padding: 11px 12px; grid-template-columns: 92px minmax(0,1fr) auto; }
-  .event-date { color: var(--amber); font: 500 10px var(--mono); }
-  .event-summary { color: var(--soft); font-size: 13px; }
-  .event-type { color: var(--faint); font: 500 9.5px var(--mono); text-transform: uppercase; }
-  .campaign-event-body { padding: 12px; border-top: 1px solid var(--line); }
-  .campaign-boundary { margin-bottom: 11px; color: var(--faint); font-size: 11.5px; }
-  .campaign-post-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 10px; }
-  .campaign-post { min-width: 0; border: 1px solid var(--line); border-radius: 6px; background: #090c10; overflow: hidden; }
-  .campaign-post-top { display: grid; grid-template-columns: 112px minmax(0,1fr); min-height: 112px; }
-  .campaign-post-image { width: 112px; height: 112px; object-fit: cover; border-right: 1px solid var(--line); }
-  .campaign-post-no-image { width: 112px; min-height: 112px; display: grid; place-items: center; border-right: 1px solid var(--line); color: var(--faint); font: 500 8px var(--mono); text-align: center; padding: 8px; }
-  .campaign-post-meta { padding: 11px; }
-  .campaign-post-source { color: var(--soft); font-size: 12.5px; font-weight: 550; }
-  .campaign-post-date { margin-top: 6px; color: var(--amber); font: 500 10px var(--mono); }
-  .campaign-post-precision { margin-top: 5px; color: var(--faint); font: 400 9.5px var(--mono); }
-  .campaign-post-link { display: inline-block; margin-top: 9px; color: var(--muted); font: 400 10px var(--mono); text-decoration: none; }
-  details.campaign-post-text { border-top: 1px solid var(--line); }
-  .campaign-post-text > summary { padding: 10px 12px; display: flex; color: var(--soft); font: 500 10.5px var(--mono); }
-  .campaign-post-full { padding: 14px; border-top: 1px solid var(--line); color: var(--soft); font-size: 13px; line-height: 1.65; white-space: pre-wrap; }
-  .context-lane, .undated-exhibits { margin-top: 12px; border: 1px solid var(--line); border-radius: 7px; padding: 12px; background: var(--blue-soft); }
-  .context-lane h4, .undated-exhibits h4 { margin: 0 0 9px; font: 600 10.5px var(--mono); text-transform: uppercase; color: #9db8e1; }
-  .context-item { padding: 8px 0; border-top: 1px solid var(--line); }
-  .context-item:first-of-type { border-top: 0; }
-  .context-title { color: var(--soft); font-size: 13px; }
-  .context-copy { margin-top: 5px; color: var(--muted); font-size: 12px; }
-  .all-posts-head { margin-bottom: 11px; display: flex; justify-content: space-between; gap: 12px; color: var(--faint); font: 400 10.5px var(--mono); }
-  .campaign-error { padding: 12px; border: 1px solid var(--red); border-radius: 6px; color: #ff8696; font-size: 13px; }
-
-  .campaign-official-summary { margin-top: 12px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--green-soft); }
-  .campaign-official-summary strong { color: var(--soft); font: 600 10.5px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
-  .campaign-official-summary span { color: var(--muted); font: 400 10.5px var(--mono); }
-  details.official-evidence { margin-top: 11px; border: 1px solid var(--line); border-radius: 6px; background: #0a0d11; }
-  .official-evidence > summary { padding: 10px 11px; grid-template-columns: auto minmax(0,1fr) auto; gap: 10px; }
-  .evidence-status { padding: 4px 7px; border-radius: 99px; font: 600 9.5px var(--mono); white-space: nowrap; }
-  .evidence-status.connected { color: #86d2a6; background: var(--green-soft); }
-  .evidence-status.partially_connected { color: #efaa77; background: var(--amber-soft); }
-  .evidence-status.unresolved { color: #ff8696; background: var(--red-soft); }
-  .official-evidence-summary { color: var(--soft); font-size: 12.5px; }
-  .official-evidence-matter { color: var(--faint); font: 500 9.5px var(--mono); white-space: nowrap; }
-  .official-evidence-body { padding: 12px; border-top: 1px solid var(--line); }
-  .official-evidence-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .official-evidence-grid h5 { margin: 0 0 7px; color: var(--faint); font: 600 9.5px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
-  .official-evidence-grid ul { margin: 0; padding-left: 17px; color: var(--muted); font-size: 12px; }
-  .official-evidence-grid li + li { margin-top: 5px; }
-  .official-record-links { margin-top: 11px; padding-top: 10px; border-top: 1px solid var(--line); display: flex; gap: 7px; flex-wrap: wrap; }
-  .official-record-link { padding: 5px 7px; border: 1px solid var(--line); border-radius: 4px; color: var(--soft); font: 500 9.5px var(--mono); text-decoration: none; }
-  .official-record-link:hover { border-color: var(--line-strong); color: var(--ink); }
-  details.campaign-legal-context { margin-top: 12px; border: 1px solid var(--line); border-radius: 7px; background: var(--green-soft); }
-  .campaign-legal-context > summary { padding: 11px 12px; color: var(--soft); font: 600 10.5px var(--mono); text-transform: uppercase; }
-  .campaign-legal-context-body { padding: 0 12px 12px; }
-
-  #agreements-progress { margin-top: 18px; }
-  .agreements-loading { padding: 16px 17px; color: var(--faint); font: 400 11px var(--mono); }
-  .agreement-clusters { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .agreement-cluster { min-width: 0; padding: 17px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .agreement-cluster:nth-child(2n) { border-right: 0; }
-  .agreement-cluster:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
-  .agreement-cluster-head { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; }
-  .agreement-cluster h3 { margin: 0; font-size: 15px; font-weight: 550; }
-  .agreement-count { color: var(--amber); font: 500 10px var(--mono); white-space: nowrap; }
-  .agreement-cluster-copy { margin-top: 6px; color: var(--muted); font-size: 12.5px; }
-  .agreement-list { margin-top: 12px; display: grid; gap: 7px; }
-  .agreement-matter { min-width: 0; padding: 10px 11px; border: 1px solid var(--line); border-radius: 6px; background: #0b0e12; }
-  .agreement-matter-top { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 10px; align-items: baseline; }
-  .agreement-number { color: var(--amber); font: 500 10px var(--mono); }
-  .agreement-title { min-width: 0; color: var(--soft); font-size: 12.5px; font-weight: 550; text-align: left; text-decoration: none; }
-  .agreement-title:hover { color: var(--ink); }
-  .agreement-status { color: var(--green); font: 500 9.5px var(--mono); white-space: nowrap; }
-  .agreement-meta { margin-top: 6px; color: var(--faint); font: 400 9.5px var(--mono); }
-  .agreement-relevance { margin-top: 7px; color: var(--muted); font-size: 11.5px; }
-  details.agreement-quality { margin-top: 7px; border-top: 1px solid var(--line); }
-  .agreement-quality > summary { padding: 7px 0 0; color: var(--amber); font: 500 9.5px var(--mono); display: flex; }
-  .agreement-quality-note { padding-top: 7px; color: var(--muted); font-size: 11px; }
-  .agreements-secondary { border-top: 1px solid var(--line); }
-  .agreements-secondary > summary { padding: 13px 17px; color: var(--soft); font: 600 10.5px var(--mono); text-transform: uppercase; }
-  .agreements-secondary-body { padding: 0 17px 15px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; }
-  .agreements-boundary { padding: 11px 17px; border-top: 1px solid var(--line); color: var(--faint); font-size: 11.5px; display: flex; justify-content: space-between; gap: 18px; }
-  .agreements-boundary a { color: var(--soft); text-decoration: none; white-space: nowrap; }
-
-  .horizon { display: grid; }
-  .horizon-item { position: relative; padding: 0 0 17px 21px; }
-  .horizon-item:last-child { padding-bottom: 0; }
-  .horizon-item::before { content: ""; position: absolute; left: 4px; top: 6px; bottom: -5px; width: 1px; background: var(--line-strong); }
-  .horizon-item:last-child::before { display: none; }
-  .horizon-item::after { content: ""; position: absolute; left: 1px; top: 5px; width: 7px; height: 7px; border-radius: 50%; background: var(--panel); border: 1px solid var(--amber); }
-  .horizon-date { color: var(--amber); font: 500 9px var(--mono); text-transform: uppercase; }
-  .horizon-title { margin-top: 3px; font-size: 12.5px; font-weight: 550; }
-  .horizon-copy { margin-top: 3px; color: var(--muted); font-size: 11px; }
-
-  .company-list { display: grid; }
-  .company { padding: 11px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 78px 1fr auto; gap: 10px; align-items: start; }
-  .company:first-child { padding-top: 0; }
-  .company:last-child { border-bottom: 0; padding-bottom: 0; }
-  .company-name { color: var(--soft); font: 500 10px var(--mono); }
-  .company-copy { color: var(--muted); font-size: 11px; }
-  .company-count { color: var(--faint); font: 500 9px var(--mono); }
-
-  .signal-grid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); }
-  .issue { padding: 16px; border-right: 1px solid var(--line); }
-  .issue:last-child { border-right: 0; }
-  .issue-label { color: var(--faint); font: 500 9px var(--mono); text-transform: uppercase; }
-  .issue h3 { margin: 7px 0 5px; font-size: 13px; font-weight: 550; }
-  .issue p { margin: 0; color: var(--muted); font-size: 11.5px; }
-  .regulatory-grid { display: grid; grid-template-columns: repeat(3,1fr); }
-  .reg-item { padding: 17px; border-right: 1px solid var(--line); }
-  .reg-item:last-child { border-right: 0; }
-  .reg-status { color: var(--green); font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
-  .reg-item h3 { margin: 9px 0 7px; font-size: 15px; font-weight: 550; }
-  .reg-item p { margin: 0 0 11px; color: var(--muted); font-size: 13px; }
-  .reg-relevance { padding-top: 10px; border-top: 1px solid var(--line); color: var(--soft); font-size: 12px; }
-  .reg-source { display: inline-block; margin-top: 11px; color: var(--faint); font: 400 10px var(--mono); text-decoration: none; }
-  .reg-source:hover { color: var(--soft); }
-
-  .media-feed { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .media-item { min-width: 0; padding: 17px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .media-item:nth-child(2n) { border-right: 0; }
-  .media-item:nth-last-child(-n+2) { border-bottom: 0; }
-  .media-item:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
-  .media-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; color: var(--faint); font: 500 10px var(--mono); }
-  .media-access { padding: 3px 6px; border-radius: 4px; color: var(--green); background: var(--green-soft); text-transform: uppercase; letter-spacing: .04em; }
-  .media-access.paywalled { color: #efaa77; background: var(--amber-soft); }
-  .media-topic { text-transform: uppercase; letter-spacing: .04em; }
-  .media-item h3 { margin: 9px 0 7px; font-size: 15px; font-weight: 550; line-height: 1.35; }
-  .media-item h3 a { text-decoration: none; }
-  .media-item h3 a:hover { color: var(--soft); }
-  .media-item p { margin: 0; color: var(--muted); font-size: 13px; }
-  .media-relevance { margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--line); color: var(--soft); font-size: 12px; }
-  .media-basis { margin-top: 9px; color: var(--faint); font: 400 10px var(--mono); }
-  .media-boundary { padding: 11px 17px; border-top: 1px solid var(--line); color: var(--faint); font-size: 11px; }
-
-  .company-feed { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .company-announcement { min-width: 0; padding: 17px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .company-announcement:nth-child(2n) { border-right: 0; }
-  .company-announcement:nth-last-child(-n+2) { border-bottom: 0; }
-  .company-announcement:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
-  .company-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; color: var(--faint); font: 500 10px var(--mono); }
-  .asx-code { padding: 3px 6px; border-radius: 4px; color: #9db8e1; background: var(--blue-soft); letter-spacing: .04em; }
-  .price-sensitive { padding: 3px 6px; border-radius: 4px; color: #efaa77; background: var(--amber-soft); text-transform: uppercase; letter-spacing: .04em; }
-  .company-category { text-transform: uppercase; letter-spacing: .04em; }
-  .company-announcement h3 { margin: 9px 0 7px; font-size: 15px; font-weight: 550; line-height: 1.35; }
-  .company-announcement p { margin: 0; color: var(--muted); font-size: 13px; }
-  .company-relevance { margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--line); color: var(--soft); font-size: 12px; }
-  .company-links { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
-  .company-link { color: var(--faint); font: 400 10px var(--mono); text-decoration: none; }
-  .company-link:hover { color: var(--soft); }
-  .company-boundary { padding: 11px 17px; border-top: 1px solid var(--line); color: var(--faint); font-size: 11px; }
-
-  .coverage-grid { display: grid; grid-template-columns: repeat(3,1fr); }
-  .coverage-item { padding: 13px 16px; border-right: 1px solid var(--line); border-top: 1px solid var(--line); }
-  .coverage-item:nth-child(3n) { border-right: 0; }
-  .coverage-source { color: var(--soft); font-size: 12.5px; }
-  .coverage-status { margin-top: 6px; display: flex; align-items: center; gap: 6px; color: var(--muted); font: 400 10px var(--mono); }
-  .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--faint); }
-  .status-dot.partial { background: var(--amber); }
-  .status-dot.ok { background: var(--green); }
-
-  .method-note { padding: 14px 16px; border-top: 1px solid var(--line); color: var(--faint); font-size: 12px; }
-  .assurance { margin-top: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); overflow: hidden; }
-  .assurance > summary { min-height: 49px; padding: 13px 17px; display: flex; justify-content: space-between; gap: 20px; color: var(--soft); }
-  .assurance > summary strong { font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: .055em; }
-  .assurance-summary { color: var(--faint); font: 400 9px var(--mono); text-align: right; }
-  .assurance > summary::after { content: "+"; color: var(--muted); font: 500 15px var(--mono); }
-  .assurance[open] > summary::after { content: "−"; }
-  .assurance-body { border-top: 1px solid var(--line); }
-  .source-boundary { padding: 13px 16px; color: var(--muted); font-size: 11px; border-bottom: 1px solid var(--line); }
-  footer { margin-top: 18px; display: flex; justify-content: space-between; gap: 20px; color: var(--faint); font: 400 10px var(--mono); }
-
-  @media (max-width: 1080px) {
-    .layout { grid-template-columns: 1fr; }
-    .aside { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
-    .posture-band { grid-template-columns: repeat(4,1fr); }
-    .market-grid { overflow-x: auto; grid-template-columns: repeat(6, minmax(155px,1fr)); }
-  }
-  @media (max-width: 760px) {
-    .shell { padding-inline: 14px; }
-    .masthead { align-items: start; flex-direction: column; padding-top: 24px; }
-    .masthead-tools { justify-items: start; }
-    .market-head { align-items: flex-start; flex-direction: column; gap: 3px; }
-    .market-grid { margin-bottom: -1px; }
-    .posture-band { grid-template-columns: 1fr 1fr; }
-    .metric { border-top: 1px solid var(--line); }
-    .metric:nth-child(odd) { border-left: 0; }
-    .aside { grid-template-columns: 1fr; }
-    .signal-grid, .coverage-grid, .regulatory-grid, .media-feed, .company-feed { grid-template-columns: 1fr; }
-    .issue, .coverage-item, .reg-item { border-right: 0; border-bottom: 1px solid var(--line); }
-    .media-item, .media-item:nth-child(2n), .media-item:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--line); }
-    .media-item:last-child { border-bottom: 0; }
-    .company-announcement, .company-announcement:nth-child(2n), .company-announcement:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--line); }
-    .company-announcement:last-child { border-bottom: 0; }
-    #active-matters .panel-head { align-items: flex-start; flex-direction: column; }
-    .active-matter > summary { grid-template-columns: 1fr; }
-    .matter-state { justify-content: space-between; }
-    .union-post-section-head { align-items: flex-start; flex-direction: column; }
-    .union-post-grid { grid-template-columns: 1fr; }
-    .union-post-exhibit > summary { grid-template-columns: 112px minmax(0,1fr); }
-    .union-post-graphic { width: 112px; height: 112px; }
-    .union-post-foot { flex-direction: column; }
-    .campaign-state-grid { grid-template-columns: 1fr; }
-    .campaign-state-block { border-right: 0; border-bottom: 1px solid var(--line); }
-    .campaign-state-block:last-child { border-bottom: 0; }
-    .milestone-detail-head { flex-direction: column; }
-    .milestone-evidence { text-align: left; }
-    .campaign-event > summary { grid-template-columns: 1fr; }
-    .campaign-post-grid { grid-template-columns: 1fr; }
-    .campaign-post-top { grid-template-columns: 96px minmax(0,1fr); }
-    .campaign-post-image, .campaign-post-no-image { width: 96px; height: 96px; min-height: 96px; }
-    .official-evidence > summary { grid-template-columns: 1fr; }
-    .official-evidence-grid { grid-template-columns: 1fr; }
-    .campaign-official-summary { align-items: flex-start; flex-direction: column; }
-    .agreement-clusters, .agreements-secondary-body { grid-template-columns: 1fr; }
-    .agreement-cluster { border-right: 0; }
-    .agreement-cluster:last-child:nth-child(odd) { grid-column: auto; }
-    .agreement-matter-top { grid-template-columns: 1fr; gap: 4px; }
-    .agreements-boundary { align-items: flex-start; flex-direction: column; }
-    .chronology-row { grid-template-columns: 1fr; gap: 4px; }
-    .confidence { width: 100%; margin-left: 0; }
-    .assurance > summary { align-items: flex-start; }
-    .assurance-summary { display: none; }
-    footer { flex-direction: column; }
-  }
+:root{--bg:#090b0e;--surface:#0e1115;--surface2:#14181d;--line:#293039;--line2:#1c2229;--ink:#f0f2f3;--soft:#c6ccd1;--muted:#929aa4;--faint:#6e7782;--accent:#c68b5c;--good:#78aa8c;--bad:#d77a82;--focus:#edb984;--sans:"Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif;--mono:"SFMono-Regular",Menlo,Monaco,Consolas,monospace}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.46 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}button,select{font:inherit}button,a,select,summary{outline:none}button:focus-visible,a:focus-visible,select:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:2px}a{color:inherit;text-underline-offset:3px}.shell{width:min(1400px,calc(100% - 44px));margin:auto;padding:18px 0 42px}.masthead{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:0 0 15px;border-bottom:1px solid var(--line)}h1{margin:0;font-size:30px;line-height:1;font-weight:570;letter-spacing:-1px}.identity{display:block}.byline{display:block;margin-top:5px;color:var(--faint);font-size:10px}.wordmark{color:var(--soft);font-weight:650}.wordmark i{color:var(--bad);font-style:normal}.edition{text-align:right;color:var(--muted);font-size:11px}.edition strong{color:var(--soft);font-weight:600}
+.market-wrap{border-bottom:1px solid var(--line)}.market{display:grid;grid-template-columns:repeat(6,minmax(145px,1fr));overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}.market a{scroll-snap-align:start;min-width:145px;min-height:82px;padding:12px 14px;text-decoration:none;border-right:1px solid var(--line2)}.market a:hover{background:var(--surface)}.market-label,.meta,.field-label,.table-head,.source-state{font:600 9px/1.35 var(--mono);letter-spacing:.055em;text-transform:uppercase}.market-label{color:var(--faint)}.market-line{display:flex;align-items:baseline;gap:7px;margin-top:6px}.market-value{font:500 17px/1 var(--mono);letter-spacing:-.4px}.market-change{font:500 10px var(--mono)}.up{color:var(--good)}.down{color:var(--bad)}.market-asof{margin-top:5px;color:var(--faint);font:9px var(--mono)}.swipe-cue{display:none}.data-notes,.methodology{border-bottom:1px solid var(--line2)}summary{cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}.data-notes summary,.methodology summary,.collapse summary{display:flex;align-items:center;min-height:44px;color:var(--soft);font-size:11px}.data-notes summary:after,.methodology summary:after,.collapse summary:after,.cluster summary:after{content:'+';margin-left:auto;color:var(--faint);font-family:var(--mono)}details[open]>summary:after{content:'−'}.disclosure-copy,.market-note{margin:0;padding:0 0 12px;color:var(--muted);font-size:11px}.source-record{padding:12px 0;border-top:1px solid var(--line2)}.source-record-head{display:flex;gap:10px;justify-content:space-between}.source-record-title{color:var(--soft);font-weight:600}.source-record-meta,.source-record-boundary{margin-top:5px;color:var(--faint);font-size:10px}.source-record-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.source-record-links a{display:inline-flex;align-items:center;min-height:44px}.source-record-graphic{display:block;width:112px;height:112px;margin-top:8px;object-fit:cover}.source-record-text{margin-top:8px;color:var(--muted);font-size:12px;white-space:pre-wrap}.feed-note{color:var(--faint);font-size:10px}
+.brief{padding:20px 0 17px;border-bottom:1px solid var(--line)}.section-label{color:var(--muted);font-size:11px;font-weight:650}.brief h2,.section-head h2{margin:2px 0 0;font-size:19px;line-height:1.2;font-weight:580;letter-spacing:-.35px}.brief-list{display:grid;grid-template-columns:repeat(3,1fr);margin-top:12px;border-top:1px solid var(--line2)}.brief-row{display:grid;grid-template-columns:22px minmax(0,1fr);gap:9px;min-height:66px;padding:11px 14px 8px 0;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer}.brief-row+.brief-row{padding-left:14px;border-left:1px solid var(--line2)}.brief-no{color:var(--faint);font:10px var(--mono)}.brief-title{font-size:13px;font-weight:600;line-height:1.35}.source-state{display:block;margin-top:5px;color:var(--muted);text-transform:none}.source-state strong{color:var(--soft);font-weight:600}.source-state.unresolved strong{color:var(--bad)}
+.mobile-nav{display:none}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:28px;align-items:start}.main-column,.agreement-view{min-width:0}.register,.agreement-view,.context-view{padding-top:27px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:12px}.section-meta{color:var(--faint);font-size:10px}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:48px;padding:5px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.filter-disclosure>summary{display:none}.filters{display:flex;gap:8px}.filter-label{display:flex;align-items:center;gap:7px;color:var(--faint);font-size:10px}.filter-label select{height:44px;padding:0 28px 0 9px;border:1px solid var(--line);border-radius:3px;background:var(--surface);color:var(--soft)}.result-count{color:var(--faint);font:10px var(--mono);white-space:nowrap}
+.table-head,.matter-row{display:grid;grid-template-columns:1.12fr .82fr 1.25fr 1fr}.table-head{color:var(--faint);border-bottom:1px solid var(--line)}.table-head>div{padding:10px}.matter-row{width:100%;min-height:92px;padding:0;border:0;border-bottom:1px solid var(--line2);background:transparent;color:var(--muted);text-align:left;cursor:pointer}.matter-row:hover{background:var(--surface)}.matter-cell{padding:12px 10px;font-size:11.5px;line-height:1.42}.matter-name{display:block;color:var(--ink);font-size:13px;font-weight:610}.footprint{display:block;margin-top:4px;color:var(--faint);font-size:10px}.stage{display:block;color:var(--soft);font-weight:570}.evidence-text{display:block;margin-top:5px;color:var(--muted);font-size:10px}.line-clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.empty{display:none;padding:20px 10px;color:var(--muted)}
+.detail[hidden],.register-list[hidden]{display:none}.detail{padding-top:27px}.back-button{display:inline-flex;align-items:center;min-height:44px;padding:0 8px 0 0;border:0;background:transparent;color:var(--soft);cursor:pointer}.detail-head{padding:12px 0 18px;border-bottom:1px solid var(--line)}.detail-head h2{margin:3px 0 0;font-size:24px;font-weight:580;letter-spacing:-.5px}.detail-sub{margin-top:5px;color:var(--faint);font-size:10px}.detail-fields{max-width:850px}.detail-field{padding:16px 0;border-bottom:1px solid var(--line2)}.field-label{color:var(--faint)}.field-value{margin-top:6px;color:var(--soft);font-size:14px;font-weight:590}.field-copy{margin:5px 0 0;color:var(--muted);font-size:12px}.verify-list{margin:7px 0 0;padding-left:18px;color:var(--muted);font-size:12px}.verify-list li+li{margin-top:4px}.boundary{color:var(--muted)}.collapse{border-bottom:1px solid var(--line)}.collapse summary{font-weight:580}.count{margin-left:7px;color:var(--faint);font:10px var(--mono)}.collapse-body{padding:0 0 15px}.event{display:grid;grid-template-columns:100px minmax(0,1fr);gap:14px;padding:9px 0;border-top:1px solid var(--line2)}.event-date,.context-meta{color:var(--faint);font:10px var(--mono)}.event-title{color:var(--soft);font-size:12px}.event-evidence{margin-top:3px;color:var(--faint);font-size:10px}.linked-item{padding:9px 0;border-top:1px solid var(--line2)}.linked-item a{display:inline-flex;align-items:center;min-height:44px;color:var(--soft)}.source-basis{color:var(--muted);font-size:12px}
+.agreement-view{border-top:1px solid var(--line)}.agreement-section{padding-bottom:18px;border-bottom:1px solid var(--line)}.agreement-section+.agreement-section{padding-top:18px}.rail-heading{display:flex;justify-content:space-between;gap:12px;margin:3px 0 0;font-size:16px;font-weight:580}.approved-title{margin-top:12px;color:var(--soft);font-size:13px;font-weight:600}.agreement-meta{display:flex;flex-wrap:wrap;gap:4px 9px;margin-top:5px;color:var(--faint);font:10px var(--mono)}.agreement-meta strong{color:var(--soft)}.rail-actions{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:6px}.rail-link,.rail-button{display:inline-flex;align-items:center;min-height:44px;padding:0;border:0;background:none;color:var(--soft);font-size:11px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}.cluster{border-bottom:1px solid var(--line2)}.cluster summary{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px;min-height:62px;padding:9px 0;align-content:center}.cluster-title{color:var(--soft);font-size:12px;font-weight:590}.cluster-summary{grid-column:1/-1;color:var(--faint);font-size:10px}.cluster summary:after{grid-column:2;grid-row:1/3;align-self:center}.agreement-item{padding:11px 0 11px 10px;border-top:1px solid var(--line2)}.agreement-title{color:var(--soft);font-size:11.5px}.rail-boundary{margin:12px 0 0;color:var(--faint);font-size:10px}.broader{border-bottom:1px solid var(--line)}.broader>summary{display:flex;align-items:center;min-height:44px;color:var(--soft);font-size:12px}.broader>summary:after{content:'+';margin-left:auto}.broader[open]>summary:after{content:'−'}
+.context-view,.auxiliary{grid-column:1/-1}.context-list{border-top:1px solid var(--line)}.context-row{display:grid;grid-template-columns:95px 160px minmax(0,1fr) 190px 170px;gap:12px;padding:13px 8px;border-bottom:1px solid var(--line2);color:var(--muted);font-size:11.5px}.context-date,.context-company{color:var(--soft);font-weight:590}.context-headline{display:inline-flex;align-items:center;min-height:44px;color:var(--soft);font-size:13px;font-weight:600}.context-development,.context-relevance{margin-top:4px}.context-relevance{color:var(--faint);font-size:10.5px}.context-source{font-size:10px}.context-source a{display:inline-flex;align-items:center;min-height:44px}.matter-link{display:inline-flex;align-items:center;min-height:44px;padding:0;border:0;background:none;color:var(--soft);text-align:left;text-decoration:underline;cursor:pointer}.expanded-only{display:none}.context-row.full .expanded-only{display:block;margin-top:7px;color:var(--muted)}.view-all{display:flex;align-items:center;justify-content:center;width:100%;min-height:44px;margin-top:8px;border:1px solid var(--line);background:var(--surface);color:var(--soft);cursor:pointer}.regulatory{margin-top:28px}.reg-list{border-top:1px solid var(--line)}.reg-row{display:grid;grid-template-columns:140px minmax(180px,.8fr) 1.5fr 150px;gap:14px;padding:12px 8px;border-bottom:1px solid var(--line2);color:var(--muted);font-size:11px}.reg-date{color:var(--soft);font-size:10px}.reg-title{color:var(--soft);font-weight:600}.reg-row a{display:inline-flex;align-items:center;min-height:44px}.methodology{margin-top:14px}.footer{display:flex;justify-content:space-between;gap:20px;padding-top:20px;color:var(--faint);font-size:10px}
+@media(max-width:1080px){.workspace{grid-template-columns:minmax(0,1fr) 300px;gap:20px}.context-row{grid-template-columns:85px 130px minmax(0,1fr) 160px}.context-row>.context-linked{grid-column:4}.table-head,.matter-row{grid-template-columns:1fr .8fr 1fr .9fr}}
+@media(max-width:700px){.shell{width:calc(100% - 28px);padding-top:14px}.masthead{align-items:flex-start}.identity{display:block}h1{font-size:25px}.byline{margin-top:5px}.edition{font-size:10px}.market-wrap{margin-inline:-14px}.market{display:flex;padding-inline:14px}.market a{flex:0 0 174px;min-height:88px}.swipe-cue{display:block;padding:6px 14px 8px;color:var(--faint);font:10px var(--mono)}.data-notes{margin-inline:14px}.brief{padding:14px 0}.brief h2{font-size:16px}.brief-list{display:block}.brief-row,.brief-row+.brief-row{width:100%;min-height:58px;padding:10px 0;border-left:0;border-bottom:1px solid var(--line2)}.mobile-nav{display:grid;grid-template-columns:repeat(3,1fr);position:sticky;top:0;z-index:10;margin-inline:-14px;padding:6px 14px;background:rgba(9,11,14,.96);border-bottom:1px solid var(--line)}.mobile-nav button{min-height:44px;padding:5px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);font-size:11px}.mobile-nav button[aria-selected=true]{border-color:var(--soft);color:var(--ink)}.workspace{display:block}.workspace>[data-view]{display:none}.workspace[data-active-view=matters]>[data-view=matters],.workspace[data-active-view=agreements]>[data-view=agreements],.workspace[data-active-view=context]>[data-view=context]{display:block}.register,.agreement-view,.context-view{padding-top:18px}.agreement-view{border-top:0}.section-head{align-items:flex-start;margin-bottom:10px}.section-meta{display:none}.filter-disclosure{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.filter-disclosure>summary{display:flex;align-items:center;min-height:44px;color:var(--soft);font-size:12px}.filter-disclosure>summary:after{content:'+';margin-left:auto}.filter-disclosure[open]>summary:after{content:'−'}.toolbar{display:block;min-height:0;padding:0;border:0}.filters{display:grid;grid-template-columns:1fr 1fr;padding:7px 0 10px}.filter-label{display:block}.filter-label select{width:100%;height:44px;margin-top:4px}.result-count{padding:8px 0;text-align:right}.table-head{display:none}.matter-row{display:block;min-height:0;padding:13px 4px}.matter-cell{padding:0}.matter-cell+.matter-cell{margin-top:9px}.matter-name{font-size:14px}.line-clamp{-webkit-line-clamp:1}.stage{display:inline}.evidence-text{display:inline;margin:0 0 0 6px}.evidence-text:before{content:'· '}.detail{padding-top:0;margin-inline:-14px}.back-button{position:sticky;top:56px;z-index:9;width:100%;height:44px;padding:0 14px;background:rgba(9,11,14,.97);border-bottom:1px solid var(--line);text-align:left}.detail-head,.detail-fields{padding-inline:14px}.collapse{margin-inline:14px}.context-row{display:block;padding:15px 4px}.context-row>div+div{margin-top:6px}.context-row .context-source,.context-row .context-linked{margin-top:9px}.context-list .context-row:nth-child(n+4){display:none}.context-list.show-all .context-row{display:block}.context-row.full .expanded-only{display:block}.regulatory,.methodology{margin-top:18px}.regulatory>details>summary{display:flex;align-items:center;min-height:44px;color:var(--soft);font-weight:600}.regulatory>details>summary:after{content:'+';margin-left:auto}.regulatory>details[open]>summary:after{content:'−'}.reg-list{border-top:1px solid var(--line2)}.reg-row{display:block;padding:12px 4px}.reg-row>div+div{margin-top:5px}.footer{display:none}}
+@media(min-width:701px){.regulatory>details>summary{display:none}.regulatory>details>.reg-content{display:block!important}.context-list .context-row:nth-child(n+4){display:none}.context-list.show-all .context-row{display:grid}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <main class="shell">
-  <section class="masthead">
-    <div>
-      <h1>Pilbara Watch</h1>
-      <div class="masthead-byline">by <span class="wordmark">brief<i>er</i></span></div>
-    </div>
-    <div class="masthead-tools">
-      <div class="edition"><span class="live-dot"></span><span><strong>3 PM edition</strong> · Friday, 21 August 2026 · AWST</span></div>
-    </div>
-  </section>
-
-  <section class="market-snapshot" id="market-snapshot" aria-label="Market snapshot">
-    <div class="market-head"><span>Market snapshot</span><span>Latest available · source-linked · delayed quotes</span></div>
-    <div class="market-grid">
-      <a class="market-item" href="https://finance.yahoo.com/quote/TIO=F/" target="_blank" rel="noopener" data-market-symbol="TIO=F" data-value="95.20999908447266" data-asof="2026-08-21">
+<header class="masthead"><div class="identity"><h1>Pilbara Watch</h1><div class="byline">by <span class="wordmark">brief<i>er</i></span></div></div><div class="edition"><div><strong>3 PM edition</strong></div><div>Friday, 21 August 2026 · AWST</div></div></header>
+<section class="market-wrap" id="market-snapshot" aria-label="Market snapshot"><div class="market">
+<a class="market-item" href="https://finance.yahoo.com/quote/TIO=F/" target="_blank" rel="noopener" data-market-symbol="TIO=F" data-value="95.20999908447266" data-asof="2026-08-21">
         <div class="market-label">Iron ore 62% Fe</div>
         <div class="market-line"><data class="market-value" value="95.20999908447266">US$95.21/t</data><span class="market-change up">+0.05%</span></div>
         <div class="market-asof">21 Aug CME 62% Fe futures · delayed quote ↗</div>
       </a>
-      <a class="market-item" href="https://finance.yahoo.com/quote/BHP.AX/" target="_blank" rel="noopener" data-market-symbol="BHP.AX" data-value="65.16000366210938" data-asof="2026-08-21">
+<a class="market-item" href="https://finance.yahoo.com/quote/BHP.AX/" target="_blank" rel="noopener" data-market-symbol="BHP.AX" data-value="65.16000366210938" data-asof="2026-08-21">
         <div class="market-label">BHP · ASX</div>
         <div class="market-line"><data class="market-value" value="65.16000366210938">A$65.16</data><span class="market-change down">−0.90%</span></div>
         <div class="market-asof">21 Aug ASX close ↗</div>
       </a>
-      <a class="market-item" href="https://finance.yahoo.com/quote/RIO.AX/" target="_blank" rel="noopener" data-market-symbol="RIO.AX" data-value="175.3800048828125" data-asof="2026-08-21">
+<a class="market-item" href="https://finance.yahoo.com/quote/RIO.AX/" target="_blank" rel="noopener" data-market-symbol="RIO.AX" data-value="175.3800048828125" data-asof="2026-08-21">
         <div class="market-label">Rio Tinto · ASX</div>
         <div class="market-line"><data class="market-value" value="175.3800048828125">A$175.38</data><span class="market-change up">+1.35%</span></div>
         <div class="market-asof">21 Aug ASX close ↗</div>
       </a>
-      <a class="market-item" href="https://finance.yahoo.com/quote/FMG.AX/" target="_blank" rel="noopener" data-market-symbol="FMG.AX" data-value="17.75" data-asof="2026-08-21">
+<a class="market-item" href="https://finance.yahoo.com/quote/FMG.AX/" target="_blank" rel="noopener" data-market-symbol="FMG.AX" data-value="17.75" data-asof="2026-08-21">
         <div class="market-label">Fortescue · ASX</div>
         <div class="market-line"><data class="market-value" value="17.75">A$17.75</data><span class="market-change down">−1.11%</span></div>
         <div class="market-asof">21 Aug ASX close ↗</div>
       </a>
-      <a class="market-item" href="https://finance.yahoo.com/quote/AUDUSD=X/" target="_blank" rel="noopener" data-market-symbol="AUDUSD=X" data-value="0.7174630165100098" data-asof="2026-08-22">
+<a class="market-item" href="https://finance.yahoo.com/quote/AUDUSD=X/" target="_blank" rel="noopener" data-market-symbol="AUDUSD=X" data-value="0.7174630165100098" data-asof="2026-08-22">
         <div class="market-label">AUD/USD</div>
         <div class="market-line"><data class="market-value" value="0.7174630165100098">0.7175</data><span class="market-change up">+0.78%</span></div>
         <div class="market-asof">22 Aug FX delayed quote ↗</div>
       </a>
-      <a class="market-item" href="https://finance.yahoo.com/quote/%5EAORD/" target="_blank" rel="noopener" data-market-symbol="^AORD" data-value="9269.7001953125" data-asof="2026-08-21">
+<a class="market-item" href="https://finance.yahoo.com/quote/%5EAORD/" target="_blank" rel="noopener" data-market-symbol="^AORD" data-value="9269.7001953125" data-asof="2026-08-21">
         <div class="market-label">All Ordinaries</div>
         <div class="market-line"><data class="market-value" value="9269.7001953125">9,269.70</data><span class="market-change down">−0.31%</span></div>
         <div class="market-asof">21 Aug ASX close ↗</div>
-      </a>
-    </div>
-    <div class="market-note" data-market-note>Shares and index in AUD; iron ore is USD/t. Changes compare the latest two available daily closes. Yahoo Finance delayed data · latest market date 22 Aug.</div>
-  </section>
-
-  <section class="panel delta-panel" id="edition-delta">
-    <div class="panel-head"><h2 class="panel-title">What changed since the previous edition</h2><span class="panel-kicker">3 PM · evidence baseline</span></div>
-    <div class="panel-body baseline">
-      <div class="baseline-glyph">F</div>
-      <div><strong>INPEX benchmark agreement approved</strong><p>The Commission approved the INPEX-Ichthys Operations Enterprise Agreement 2026–2030 after a campaign involving protected action and a dismissed s.424 application. The agreement operates from 21 August 2026. BHP official links remain connected; Worsley’s reported protected-action ballot order remains unresolved.</p></div>
-    </div>
-  </section>
-
-  <section class="panel" id="active-matters">
-    <div class="panel-head">
-      <div><h2 class="panel-title">Active matters</h2><span class="panel-kicker">seven matters · expand for source-labelled chronology</span></div>
-      <div class="filters" aria-label="Matter filters">
-        <button class="filter active" data-filter="all">All</button>
-        <button class="filter" data-filter="bhp">BHP</button>
-        <button class="filter" data-filter="fortescue">Fortescue</button>
-        <button class="filter" data-filter="rio">Rio</button>
-        <button class="filter" data-filter="oil-gas">Oil &amp; gas</button>
-        <button class="filter" data-filter="south32">South32</button>
-        <button class="filter" data-filter="cross">Cross-industry</button>
-      </div>
-    </div>
-    <div class="matter-grid active-register">
-      <details class="matter active-matter" data-company="bhp" open>
-        <summary>
-          <div class="matter-overview">
-            <div class="matter-name">BHP Port Operations bargaining</div>
-            <div class="matter-meta">BHP · AWU / ETU / AMWU · Port Hedland</div>
-            <div class="matter-brief">Union pages report a further FWC-involved meeting on 19–20 August after two protected-action programs. The Commission record does not establish the meeting substance.</div>
-            <div class="matter-flags"><span class="matter-flag">Campaign history</span><span class="matter-flag unverified">Union accounts</span></div>
-          </div>
-          <div class="matter-state">21 events</div>
-        </summary>
-        <div class="matter-content campaign-content">
-          <div class="campaign-panel" data-campaign-id="bhp-port-operations-bargaining-2026"><div class="campaign-loading">Loading reviewed campaign record…</div></div>
-        </div>
-      </details>
-
-      <details class="matter active-matter" data-company="south32">
-        <summary>
-          <div class="matter-overview">
-            <div class="matter-name">South32 Worsley Alumina bargaining</div>
-            <div class="matter-meta">South32 · ETU · Worsley Alumina</div>
-            <div class="matter-brief">ETU reports a protected-action ballot order. The order, ballot timetable and South32 position are not connected.</div>
-            <div class="matter-flags"><span class="matter-flag">2-event sequence</span><span class="matter-flag unverified">Verification required</span></div>
-          </div>
-          <div class="matter-state">PABO reported</div>
-        </summary>
-        <div class="matter-content campaign-content">
-          <div class="campaign-panel" data-campaign-id="south32-worsley-alumina-bargaining-2026"><div class="campaign-loading">Loading reviewed campaign record…</div></div>
-        </div>
-      </details>
-
-      <details class="matter active-matter" data-company="oil-gas">
-        <summary>
-          <div class="matter-overview">
-            <div class="matter-name">INPEX Ichthys benchmark agreement campaign</div>
-            <div class="matter-meta">INPEX · Offshore Alliance / AWU / ETU · CPF / FPSO / ILNG</div>
-            <div class="matter-brief">Protected action, a dismissed s.424 application and settlement were followed by an employee vote and Commission approval. The new agreement operates from 21 August 2026.</div>
-            <div class="matter-flags"><span class="matter-flag">Reviewed campaign</span><span class="matter-flag">Official approval connected</span></div>
-          </div>
-          <div class="matter-state">9 events</div>
-        </summary>
-        <div class="matter-content campaign-content">
-          <div class="campaign-panel" data-campaign-id="inpex-ichthys-operations-bargaining-2026"><div class="campaign-loading">Loading reviewed campaign record…</div></div>
-        </div>
-      </details>
-
-      <details class="matter active-matter" data-company="fortescue">
-        <summary>
-          <div class="matter-overview">
-            <div class="matter-name">Fortescue collective bargaining watch</div>
-            <div class="matter-meta">Fortescue · WMWA / AWU / ETU · Pilbara operations</div>
-            <div class="matter-brief">Union posts describe requests to bargain, worker-priority surveys and asserted Federal Court resistance. The filing and Fortescue's legal position are not connected.</div>
-            <div class="matter-flags"><span class="matter-flag">Watchlist</span><span class="matter-flag unverified">Official connection required</span></div>
-          </div>
-          <div class="matter-state">Early campaign</div>
-        </summary>
-        <div class="matter-content">
-          <div class="chronology">
-            <div class="chronology-row"><div class="chronology-step">15 May 2026</div><div class="chronology-text">WMWA said unions had requested collective bargaining and that Fortescue had filed Federal Court proceedings in response.<small>Union account · filing not connected</small></div></div>
-            <div class="chronology-row"><div class="chronology-step">20–27 May</div><div class="chronology-text">WMWA and AWU promoted worker-priority surveying and a collective-agreement campaign.<small>Campaign activity only · no majority-support outcome inferred</small></div></div>
-            <div class="chronology-row"><div class="chronology-step">7 July</div><div class="chronology-text">WMWA reported a 4.5% salary review and a $2,500 site/shift allowance increase while characterising the terms as discretionary policy.<small>Union report of company communication · scope not independently connected</small></div></div>
-          </div>
-          <section class="union-post-evidence" aria-label="Fortescue union source posts"><div class="union-post-section-head"><h3>Union Facebook source posts</h3><span>Graphics and full post text · no Facebook account required</span></div><div class="union-post-grid" data-watchlist-id="fortescue"><div class="campaign-loading">Loading source exhibits…</div></div></section>
-        </div>
-      </details>
-
-      <details class="matter active-matter" data-company="rio">
-        <summary>
-          <div class="matter-overview">
-            <div class="matter-name">Rio Pilbara bargaining and workforce watch</div>
-            <div class="matter-meta">Rio Tinto · WMWA / AWU / AMWU · Pilbara</div>
-            <div class="matter-brief">The historical corpus identifies separate Paraburdoo conditions, Dampier Salt bargaining and redundancy-consultation strands. They are tracked separately and not presented as one agreement campaign.</div>
-            <div class="matter-flags"><span class="matter-flag">Multi-strand watch</span><span class="matter-flag unverified">Official connection required</span></div>
-          </div>
-          <div class="matter-state">Three strands</div>
-        </summary>
-        <div class="matter-content">
-          <div class="chronology">
-            <div class="chronology-row"><div class="chronology-step">Aug–Oct 2025</div><div class="chronology-text">AWU and WMWA opposed changes to extended sick leave and promoted Paraburdoo bargaining through a majority-support campaign.<small>Union accounts · official petition outcome not connected</small></div></div>
-            <div class="chronology-row"><div class="chronology-step">Dec 2025</div><div class="chronology-text">AMWU said bargaining had commenced at Dampier Salt with the existing agreement preserved during negotiations.<small>Union account · current FWC/agreement status to be connected</small></div></div>
-            <div class="chronology-row"><div class="chronology-step">May 2026</div><div class="chronology-text">WMWA published job-cut and redeployment claims and separately stated an intention to pursue broader Rio Pilbara mines bargaining.<small>Employer scope and undated bargaining-plan post require verification</small></div></div>
-          </div>
-          <div class="evidence-line"><span>Evidence state</span><span class="confidence">Union campaign accounts · no single Rio-wide agreement inferred</span></div>
-          <section class="union-post-evidence" aria-label="Rio union Facebook source posts">
-            <div class="union-post-section-head"><h3>Union Facebook source posts</h3><span>Graphics and full post text · no Facebook account required</span></div>
-            <div class="union-post-grid" data-watchlist-id="rio">
-            <details class="union-post-exhibit" data-post-id="1671717254960281">
-              <summary>
-                <img class="union-post-graphic" src="assets/union-posts/1671717254960281.jpg" alt="WMWA graphic contrasting a reported Rio warning about unions with Pilbara investment.">
-                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">Rio unionisation and investment claim</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
-              </summary>
-              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>RIO warns about unionisation in the Pilbara - but backs in Iron Ore futures all in the same week.</p><p>Rio Iron Ore chief Matthew Holcz was reported last week as saying that the re-unionisation of the Pilbara may have an impact on future investment.</p><p>But last week at the Melbourne Mining Club in Melbourne Town Hall, he also said despite ongoing demand about China’s maturing steel industry and rising scrap steel usage, the demise of iron ore is “very much being exaggerated”.</p><p>While China is approaching peak steelmaking capacity, Holcz said Rio Tinto expects Chinese iron ore consumption to remain relatively stable through to 2030, with some decline after that.</p><p>Meanwhile, the firm is betting that growth in emerging markets is expected to offset some of that pressure.</p><p>Whilst the contradiction can be hard to understand for outsiders, workers know that actions always speak louder than words.</p><p>Rio workers are watching the comapny spend billions in the Pilbara  on their New Hope Downs and Greater Brockman sites, as well as the expansion of the West Ang mine sites.</p><p>You can read up more here: https://www.investordaily.com.au/rio-tinto-bets-on-india.../</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1671717254960281&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
-            </details>
-            </div>
-          </section>
-        </div>
-      </details>
-
-      <details class="matter active-matter" data-company="oil-gas">
-        <summary>
-          <div class="matter-overview">
-            <div class="matter-name">Chevron EBA-enforcement legal watch</div>
-            <div class="matter-meta">Chevron · Offshore Alliance · Industrial Magistrates Court claims</div>
-            <div class="matter-brief">Offshore Alliance reports a meal-allowance prosecution and a document-production order in alleged EBA outsourcing litigation. No court file or order is yet connected.</div>
-            <div class="matter-flags"><span class="matter-flag">Legal watch</span><span class="matter-flag unverified">Court record required</span></div>
-          </div>
-          <div class="matter-state">Two claims</div>
-        </summary>
-        <div class="matter-content">
-          <div class="chronology">
-            <div class="chronology-row"><div class="chronology-step">2 Aug 2026</div><div class="chronology-text">Offshore Alliance said it was prosecuting Chevron over an alleged unpaid meal allowance and seeking a penalty.<small>Union account · proceeding not connected</small></div></div>
-            <div class="chronology-row"><div class="chronology-step">10 Aug 2026</div><div class="chronology-text">Offshore Alliance said the Industrial Magistrates Court ordered production of documents concerning alleged outsourcing of permanent E&amp;I roles.<small>Union account · order and alleged breach not connected</small></div></div>
-          </div>
-          <section class="union-post-evidence" aria-label="Chevron union source posts"><div class="union-post-section-head"><h3>Union Facebook source posts</h3><span>Graphics and full post text · no Facebook account required</span></div><div class="union-post-grid" data-watchlist-id="chevron"><div class="campaign-loading">Loading source exhibits…</div></div></section>
-        </div>
-      </details>
-
-      <details class="matter active-matter" data-company="cross">
-        <summary>
-          <div class="matter-overview">
-            <div class="matter-name">Pilbara safety and workforce campaigns</div>
-            <div class="matter-meta">WMWA · multi-employer · mining/FIFO</div>
-            <div class="matter-brief">WMWA is promoting silica, chemical-exposure and FIFO mental-health issues. Regulator, employer and workplace adoption have not been established.</div>
-            <div class="matter-flags"><span class="matter-flag">Issue promotion</span><span class="matter-flag caution">Advocacy</span></div>
-          </div>
-          <div class="matter-state">Campaign signal</div>
-        </summary>
-        <div class="matter-content">
-          <div class="chronology">
-            <div class="chronology-row"><div class="chronology-step">Captured item 01</div><div class="chronology-text">WMWA promoted a proposition concerning silica exposure and testing.<small>Displayed date unavailable · underlying exposure data not acquired</small></div></div>
-            <div class="chronology-row"><div class="chronology-step">Captured item 02</div><div class="chronology-text">WMWA published related claims concerning toxic chemical exposure.<small>Displayed date unavailable · no regulator or employer response acquired</small></div></div>
-            <div class="chronology-row"><div class="chronology-step">Captured item 03</div><div class="chronology-text">WMWA promoted suicide-prevention and mental-health concerns for resources and FIFO workers.<small>Displayed date unavailable · workforce traction not established</small></div></div>
-          </div>
-          <div class="evidence-line"><span>Evidence</span><a class="source-link" href="https://www.facebook.com/photo/?fbid=1673583661440307&set=a.507507878047897" target="_blank" rel="noopener">Silica post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1671463784985628&set=a.507507878047897" target="_blank" rel="noopener">Chemical exposure post</a><a class="source-link" href="https://www.facebook.com/photo/?fbid=1675523597912980&set=a.507507878047897" target="_blank" rel="noopener">FIFO mental-health post</a><span class="confidence">Source weight: issue promotion only</span></div>
-          <section class="union-post-evidence" aria-label="Union Facebook source posts">
-            <div class="union-post-section-head"><h3>Union Facebook source posts</h3><span>Graphics and full post text · no Facebook account required</span></div>
-            <div class="union-post-grid">
-            <details class="union-post-exhibit" data-post-id="1673583661440307">
-              <summary>
-                <img class="union-post-graphic" src="assets/union-posts/1673583661440307.jpg" alt="WMWA graphic reading ‘It’s not just a bit of dust. Silica dust kills’.">
-                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">Silica testing campaign</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
-              </summary>
-              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>It might seem like just a bit of dust - but exposure to respirable crystalline silica can be deadly.</p><p>WMWA is currently working with HSRs and Safety in the fight for mandatory testing in WA mining. It&#x27;s time our sector caught up with the rest of Australia.</p><p>If you think you are being exposed to asbestos or silica, don&#x27;t just let it slide. Speak up, record it and contact your organiser. DM us if you need more info!</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1673583661440307&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
-            </details>
-            <details class="union-post-exhibit" data-post-id="1671463784985628">
-              <summary>
-                <img class="union-post-graphic" src="assets/union-posts/1671463784985628.jpg" alt="WMWA graphic reading ‘Danger: toxic chemicals — is your workplace safe?’.">
-                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">Toxic-chemical exposure campaign</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
-              </summary>
-              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>Are you exposed to toxic chemicals at work?</p><p>WHS Ministers have rejected or delayed safer exposure limits for 9 chemicals, some of which are onsite across Pilbara mines:</p><p>Benzene</p><p>Chlorine</p><p>Copper</p><p>Formaldehyde</p><p>Hydrogen cyanide</p><p>Hydrogen sulphide</p><p>Nitrogen dioxide</p><p>Silica dust (RCS)</p><p>Titanium dioxide</p><p>We’re fighting for safer limits — but that won’t change unless we can show how these chemicals are actually being managed on Australian worksites.</p><p>Please take a few minutes to complete our survey and tell us what’s really going on at work. The more examples we have, the stronger our case. Every response is confidential, and we won’t share your details with anybody.</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1671463784985628&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
-            </details>
-            <details class="union-post-exhibit" data-post-id="1675523597912980">
-              <summary>
-                <img class="union-post-graphic" src="assets/union-posts/1675523597912980.jpg" alt="WMWA graphic reading ‘Suicide prevention is everyone’s business’.">
-                <div class="union-post-header"><div class="union-post-label">Union Facebook post</div><div class="union-post-title">FIFO suicide-prevention campaign</div><div class="union-post-meta">Western Mine Workers Alliance · collected 16 August 2026<br>Displayed publication date unavailable</div><div class="union-post-access">Graphic + full post text</div></div>
-              </summary>
-              <div class="union-post-full"><div class="union-post-full-label">Full text of union post</div><div class="union-post-text"><p>Suicide Prevention is about people and in Australia, we lose about nine people to suicide every day - that&#x27;s nine people too many. Unfortunately, the resource sector and FIFO workers are disproportionally represented in these numbers.</p><p>Suicide prevention is everyone’s business, and your union takes it seriously.</p><p>Our members work long hours in gruelling conditions, away from family and friends, and often face a workplace culture that tells many to simply “harden up” or “push through”. That culture is costing lives.</p><p>WMWA partner unions the AWU and MEU play an important role. We are a trusted resource for workers, we are on the ground and we hear the quiet conversations.</p><p>Unions are not a replacement for clinical or crisis services, but we are often the first conversation, and we know the resource sector has a problem.</p><p>This isn’t about making tough industries soft. It’s about making them strong as a mentally healthy workforce is a safer workforce.</p><p>Suicide prevention must be built into the safety system - because every worker deserves to come home in one piece, body and mind.</p><p>If somethings not right, or you just need someone to talk to, your GP is always a good place to start. Otherwise there are plenty of good confidential services, like Lifeline  131114 or Yarn on 139276.</p></div><div class="union-post-foot"><span>Union-authored material · advocacy evidence</span><a href="https://www.facebook.com/photo/?fbid=1675523597912980&amp;set=a.507507878047897" target="_blank" rel="noopener">Original Facebook URL ↗</a></div></div>
-            </details>
-            </div>
-          </section>
-        </div>
-      </details>
-    </div>
-  </section>
-
-  <section class="panel" id="agreements-progress">
-    <div class="panel-head"><div><h2 class="panel-title">Agreements in progress</h2><span class="panel-kicker" data-fwc-register-summary>9 direct Pilbara matters · grouped by operational context</span></div><span class="panel-kicker" data-fwc-snapshot-date>FWC snapshot · 22 Aug</span></div>
-    <div data-fwc-agreements><div class="agreements-loading">Loading reviewed pending-agreement register…</div></div>
-  </section>
-
-  <section class="panel" id="company-announcements" style="margin-top:18px;">
-    <div class="panel-head"><div><h2 class="panel-title">Company and ASX announcements</h2><span class="panel-kicker">official disclosures · Pilbara relevance selected</span></div><span class="panel-kicker" data-company-summary>Loading…</span></div>
-    <div data-company-feed><div class="agreements-loading" style="margin:16px">Loading official company disclosures…</div></div>
-    <div class="company-boundary">Official company disclosures and ASX lodgements are direct evidence of what an issuer reported to the market. Forward-looking statements, estimates and company characterisations remain issuer claims unless independently verified.</div>
-  </section>
-
-  <section class="panel" id="media-newsfeed" style="margin-top:18px;">
-    <div class="panel-head"><div><h2 class="panel-title">Media newsfeed</h2><span class="panel-kicker">public information · direct Pilbara relevance</span></div><span class="panel-kicker" data-media-summary>Loading…</span></div>
-    <div data-media-feed><div class="agreements-loading" style="margin:16px">Loading public media reports…</div></div>
-    <div class="media-boundary">Publicly readable and paywalled reporting are labelled separately. Pilbara Watch states only information visible on the public article page or in a public search index; it does not bypass subscriptions.</div>
-  </section>
-
-  <section class="panel" id="regulatory-watch" style="margin-top:18px;">
-    <div class="panel-head"><h2 class="panel-title">Regulatory and workplace developments</h2><span class="panel-kicker">official sources · relevance signalled, not overstated</span></div>
-    <div class="regulatory-grid">
-      <article class="reg-item">
-        <div class="reg-status">In force · 7 July 2026</div>
-        <h3>Building Cooperative Workplaces reforms</h3>
-        <p>The No. 1 Act changes Fair Work Commission processes, supported bargaining, intractable bargaining determinations and Commonwealth procurement preferencing.</p>
-        <div class="reg-relevance"><strong>Pilbara relevance:</strong> the intractable-bargaining changes and Commission process reforms may affect bargaining strategy and dispute pathways. No direct application to a current Pilbara matter is asserted.</div>
-        <a class="reg-source" href="https://www.fairwork.gov.au/about-us/workplace-laws/legislation-changes/building-cooperative-workplaces-reforms" target="_blank" rel="noopener">Fair Work Ombudsman · official summary ↗</a>
-      </article>
-      <article class="reg-item">
-        <div class="reg-status">In force · 1 July 2026</div>
-        <h3>Payday Super</h3>
-        <p>Employers must pay superannuation contributions with salary or wages so they generally reach the nominated account within seven business days.</p>
-        <div class="reg-relevance"><strong>Pilbara relevance:</strong> payroll, enterprise-agreement and contractor compliance. The change is operational rather than evidence of an industrial issue at any named employer.</div>
-        <a class="reg-source" href="https://www.fairwork.gov.au/newsroom/news/payday-super-new-rules-starting-1-july-2026" target="_blank" rel="noopener">Fair Work Ombudsman · official summary ↗</a>
-      </article>
-      <article class="reg-item">
-        <div class="reg-status">Decision · 2 June 2026</div>
-        <h3>Annual Wage Review 2026</h3>
-        <p>The Fair Work Commission has published its 2026 decision and associated determinations for national and award minimum wages.</p>
-        <div class="reg-relevance"><strong>Pilbara relevance:</strong> generally indirect for highly paid agreement-covered workforces, but relevant to award floors, contractors, labour hire and bargaining comparators.</div>
-        <a class="reg-source" href="https://www.fwc.gov.au/hearings-decisions/major-cases/annual-wage-reviews/annual-wage-review-2026" target="_blank" rel="noopener">Fair Work Commission · case page ↗</a>
-      </article>
-    </div>
-  </section>
-
-  <details class="assurance" id="assurance-footer">
-    <summary><strong>Method, coverage and collection health</strong><span class="assurance-summary" data-facebook-corpus-summary>6-page union corpus · 3794 posts · reviewed FWC baseline connected</span></summary>
-    <div class="assurance-body">
-      <div class="source-boundary"><strong>Source boundary:</strong> Union-authored posts are advocacy material and direct evidence only of what a union is asserting or promoting. Union-authored material does not establish operational impact, bargaining strength or influence without independent corroboration. Pilbara Watch reproduces the captured union graphic and full visible post text for account-free access; Facebook interface labels are removed while the source wording is retained.</div>
-      <div class="coverage-grid">
-        <div class="coverage-item"><div class="coverage-source">Union Facebook</div><div class="coverage-status" data-facebook-coverage><span class="status-dot ok"></span>6 declared public pages · 3794 posts</div></div>
-        <div class="coverage-item"><div class="coverage-source">Evidence persistence</div><div class="coverage-status"><span class="status-dot ok"></span>Healthy · duplicate-free rerun</div></div>
-        <div class="coverage-item"><div class="coverage-source">Regulatory sources</div><div class="coverage-status"><span class="status-dot ok"></span>Manual official-source baseline</div></div>
-        <div class="coverage-item"><div class="coverage-source">Company and ASX announcements</div><div class="coverage-status" data-company-coverage><span class="status-dot ok"></span>7 reviewed disclosures · 5 watched issuers</div></div>
-        <div class="coverage-item"><div class="coverage-source">FWC legal records</div><div class="coverage-status" data-fwc-coverage><span class="status-dot ok"></span>15 official campaign documents · 322 pending matters</div></div>
-        <div class="coverage-item"><div class="coverage-source">Market snapshot</div><div class="coverage-status"><span class="status-dot ok"></span>Manual · source-linked baseline</div></div>
-        <div class="coverage-item"><div class="coverage-source">Production and operating data</div><div class="coverage-status"><span class="status-dot"></span>Not connected</div></div>
-        <div class="coverage-item"><div class="coverage-source">News and specialist media</div><div class="coverage-status" data-media-coverage><span class="status-dot ok"></span>7 reviewed reports · 5 publicly readable · 2 paywalled</div></div>
-      </div>
-      <div class="method-note" data-facebook-method>Current six-page corpus: 3794 canonical posts; 2576 dated from Facebook labels; 1218 explicit date gaps; coverage 2022-08-16 to 2026-08-22. Reviewed campaign graphics and complete source text are published through a sanitized account-free layer. Raw HTML, full-page screenshots, comments, authentication state and private evidence paths remain on MS64.</div>
-    </div>
-  </details>
-
-  <footer><span>Pilbara Watch · by Briefer · refinement 9</span><span>Campaign histories · official evidence · company disclosures · public media</span></footer>
-</main>
+      </a></div><div class="swipe-cue">6 markets · swipe →</div><details class="data-notes"><summary>Data notes</summary><div class="market-note" data-market-note>Shares and index in AUD; iron ore is USD/t. Changes compare the latest two available daily closes. Yahoo Finance delayed data · latest market date 22 Aug.</div></details></section>
+<section class="brief" id="edition-delta"><div class="section-label">Daily Brief</div><h2>Since the previous edition</h2><div class="brief-list">
+<button class="brief-row" data-matter-id="inpex"><span class="brief-no">01</span><span><span class="brief-title">INPEX agreement approved and now operative</span><span class="source-state"><strong>FWC official</strong> · connected</span></span></button>
+<button class="brief-row" data-matter-id="bhp"><span class="brief-no">02</span><span><span class="brief-title">BHP bargaining active; meeting substance unverified</span><span class="source-state"><strong>Official + union</strong> · bounded</span></span></button>
+<button class="brief-row" data-matter-id="worsley"><span class="brief-no">03</span><span><span class="brief-title">Worsley ballot order still needs a public record</span><span class="source-state unresolved"><strong>Unresolved</strong> · union account only</span></span></button></div></section>
+<nav class="mobile-nav" aria-label="Register views"><button data-view-target="matters" aria-selected="true">Matters 7</button><button data-view-target="agreements" aria-selected="false">Agreements<br>1 new · 9</button><button data-view-target="context" aria-selected="false">Context 14</button></nav>
+<div class="workspace" data-active-view="matters">
+<div class="main-column" data-view="matters"><section class="register-list" id="registerList"><div class="register"><div class="section-head"><div><div class="section-label">Matter Register</div><h2>Current named matters</h2></div><div class="section-meta">7 matters · explicit evidence state</div></div><details class="filter-disclosure"><summary>Filter</summary><div class="toolbar"><div class="filters"><label class="filter-label">Company<select id="companyFilter"><option value="all">All companies</option><option value="BHP">BHP</option><option value="South32">South32</option><option value="INPEX">INPEX</option><option value="Fortescue">Fortescue</option><option value="Rio Tinto">Rio Tinto</option><option value="Chevron">Chevron</option><option value="Cross-industry">Cross-industry</option></select></label><label class="filter-label">State<select id="statusFilter"><option value="all">All states</option><option value="active">Active bargaining</option><option value="approved">Approved</option><option value="watch">Watch</option><option value="unresolved">Verification gap</option><option value="advocacy">Advocacy signal</option></select></label></div><div class="result-count" id="resultCount" aria-live="polite">7 matters shown</div></div></details><div class="table-head"><div>Matter + footprint</div><div>Stage + evidence</div><div>Latest material change</div><div>Next verification</div></div><div id="matterRows"></div><div class="empty" id="emptyState">No matters match both filters.</div></div></section>
+<section class="detail" id="detail" hidden tabindex="-1" aria-labelledby="detailTitle"><button class="back-button" id="backToMatters" type="button">← Back to matters</button><div class="detail-head"><div class="section-label">Focused matter</div><h2 id="detailTitle"></h2><div class="detail-sub" id="detailSub"></div></div><div class="detail-fields"><section class="detail-field"><div class="field-label">Current position</div><div class="field-value" id="currentPosition"></div><p class="field-copy" id="positionBasis"></p></section><section class="detail-field"><div class="field-label">Latest change</div><p class="field-copy" id="latestChange"></p></section><section class="detail-field"><div class="field-label">Evidence state / boundary</div><div class="field-value" id="evidenceState"></div><p class="field-copy boundary" id="boundaryText"></p></section><section class="detail-field"><div class="field-label">Next verification</div><ul class="verify-list" id="verificationList"></ul></section></div><details class="collapse"><summary>Chronology <span class="count" id="chronologyCount"></span></summary><div class="collapse-body" id="timeline"></div></details><details class="collapse"><summary>Linked company / media context <span class="count" id="matterContextCount"></span></summary><div class="collapse-body" id="matterContextList"></div></details><details class="collapse source-records"><summary>Campaign source records <span class="count" id="sourceRecordCount"></span></summary><div class="collapse-body" id="sourceRecordList"></div></details><details class="collapse"><summary>Source basis</summary><div class="collapse-body source-basis" id="sourceLine"></div></details></section></div>
+<aside class="agreement-view" data-view="agreements" aria-label="Agreement Watch"><section class="agreement-section"><div class="section-label">Agreement Watch</div><h2 class="rail-heading">Newly approved <span class="result-count" id="approvedCount"></span></h2><div id="approvedAgreement"></div></section><section class="agreement-section"><h2 class="rail-heading">Direct applications <span class="result-count" id="progressCount"></span></h2><div id="agreementClusters"></div><p class="rail-boundary">Pending applications are procedural observations. They do not establish approval, operational effect or an industrial causal relationship.</p></section><details class="broader"><summary id="watchSummary"></summary><div id="broaderWatch"></div></details></aside>
+<section class="context-view" data-view="context"><div class="section-head"><div><div class="section-label">Company and Operating Context</div><h2>Latest substantive records</h2></div><div class="section-meta">Newest 3 of 14 by default</div></div><div class="context-list" id="contextRows"></div><button class="view-all" id="contextToggle" type="button">View all 14</button></section><div class="auxiliary"><section class="regulatory"><details><summary>Regulatory developments · 3</summary><div class="reg-content"><div class="section-head"><div><div class="section-label">Regulatory developments</div><h2>Official-source changes</h2></div></div><div class="reg-list"><article class="reg-row"><div class="reg-date">In force · 7 Jul 2026</div><div class="reg-title">Building Cooperative Workplaces reforms</div><div>May affect bargaining strategy and dispute pathways; no direct application to a named matter is asserted.</div><div><a href="https://www.fairwork.gov.au/about-us/workplace-laws/legislation-changes/building-cooperative-workplaces-reforms" target="_blank" rel="noopener">Official source · Building Cooperative Workplaces reforms</a></div></article><article class="reg-row"><div class="reg-date">In force · 1 Jul 2026</div><div class="reg-title">Payday Super</div><div>Relevant to payroll and agreement compliance; not evidence of an issue at a named employer.</div><div><a href="https://www.fairwork.gov.au/newsroom/news/payday-super-new-rules-starting-1-july-2026" target="_blank" rel="noopener">Official source · Payday Super</a></div></article><article class="reg-row"><div class="reg-date">Decision · 2 Jun 2026</div><div class="reg-title">Annual Wage Review 2026</div><div>Relevant to award floors, contractors, labour hire and bargaining comparators.</div><div><a href="https://www.fwc.gov.au/hearings-decisions/major-cases/annual-wage-reviews/annual-wage-review-2026" target="_blank" rel="noopener">Official source · Annual Wage Review 2026</a></div></article></div></div></details></section><details class="methodology"><summary>Methodology and source boundaries</summary><p class="disclosure-copy"><strong>Settled evidence boundary:</strong> Union-authored posts are messaging evidence of what is asserted, not proof of operational impact or workforce support. Company and ASX disclosures establish what an issuer reported, not independent truth. Media remains labelled as open, paywalled public synopsis, or public page only. Pending agreement applications are procedural observations, not proof of approval or effect. <a href="https://www.fwc.gov.au/" target="_blank" rel="noopener">Fair Work Commission</a> and <a href="https://www.fairwork.gov.au/" target="_blank" rel="noopener">Fair Work Ombudsman</a> records are linked externally.</p></details></div>
+</div><footer class="footer"><span>Pilbara Watch · by Briefer · focused command register v4</span><span>Monitor first · inspect one matter at a time</span></footer></main>
 <script>
-  const buttons = [...document.querySelectorAll('.filter')];
-  const matters = [...document.querySelectorAll('details.matter')];
-  buttons.forEach(button => button.addEventListener('click', () => {
-    buttons.forEach(item => item.classList.toggle('active', item === button));
-    const filter = button.dataset.filter;
-    matters.forEach(matter => matter.classList.toggle('hidden', filter !== 'all' && !matter.dataset.company.split(' ').includes(filter)));
-  }));
-
-  const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' })[character]);
-  function setCoverageStatus(selector, text, state = 'ok') {
-    const target = document.querySelector(selector);
-    if (!target) return;
-    const dot = document.createElement('span');
-    dot.className = `status-dot ${state}`;
-    target.replaceChildren(dot, document.createTextNode(text));
-  }
-  const dateRange = (start, end) => end && end !== start ? `${start}–${end}` : start;
-  const safeFacebookUrl = value => /^https:\/\/www\.facebook\.com\//.test(value || '') ? value : null;
-  const safeFwcUrl = value => /^https:\/\/www\.fwc\.gov\.au\//.test(value || '') ? value : null;
-  const safeMediaUrl = value => /^https:\/\/[A-Za-z0-9.-]+(?:\/|$)/.test(value || '') ? value : null;
-  const companySourceHosts = {
-    BHP: ['www.bhp.com'], FMG: ['investors.fortescue.com'], RIO: ['www.riotinto.com'],
-    MIN: ['www.mineralresources.com.au'], S32: ['www.south32.net']
-  };
-  function safeAsxUrl(value) {
-    try {
-      const url = new URL(value);
-      const keys = [...url.searchParams.keys()].sort();
-      return url.protocol === 'https:' && url.hostname === 'www.asx.com.au' && !url.port && !url.username && !url.password && !url.hash && url.pathname === '/asx/v2/statistics/displayAnnouncement.do' && keys.join(',') === 'display,idsId' && url.searchParams.get('display') === 'pdf' && /^\d+$/.test(url.searchParams.get('idsId') || '') ? value : null;
-    } catch { return null; }
-  }
-  function safeCompanyUrl(value, asxCode) {
-    try {
-      const url = new URL(value);
-      return url.protocol === 'https:' && !url.port && !url.username && !url.password && (companySourceHosts[asxCode] || []).includes(url.hostname) ? value : null;
-    } catch { return null; }
-  }
-
-  function postCard(post) {
-    const graphic = post.graphics?.[0];
-    const link = safeFacebookUrl(post.post_url);
-    const date = post.published_date || 'Undated';
-    const precision = post.date_precision ? `${post.date_precision} precision · ${post.displayed_date || 'label unavailable'}` : 'publication date unavailable';
-    return `<article class="campaign-post" data-post-id="${escapeHtml(post.post_id || post.candidate_id || '')}">
-      <div class="campaign-post-top">
-        ${graphic ? `<img class="campaign-post-image" src="${escapeHtml(graphic)}" alt="Union source graphic">` : '<div class="campaign-post-no-image">No source graphic captured</div>'}
-        <div class="campaign-post-meta"><div class="campaign-post-source">${escapeHtml(post.source_page)}</div><div class="campaign-post-date">${escapeHtml(date)}</div><div class="campaign-post-precision">${escapeHtml(precision)}</div>${link ? `<a class="campaign-post-link" href="${escapeHtml(link)}" target="_blank" rel="noopener">Original Facebook URL ↗</a>` : ''}</div>
-      </div>
-      <details class="campaign-post-text"><summary>Full text of union post</summary><div class="campaign-post-full">${escapeHtml(post.full_text)}</div></details>
-    </article>`;
-  }
-
-  function officialEvidence(link) {
-    const records = (link.official_records || []).filter(record => safeFwcUrl(record.source_url));
-    const recordLinks = records.map(record => `<a class="official-record-link" href="${escapeHtml(record.source_url)}" target="_blank" rel="noopener">${escapeHtml(record.citation || record.matter_no || 'FWC record')} · ${escapeHtml((record.record_type || 'record').replaceAll('_', ' '))} ↗</a>`).join('');
-    const established = (link.facts_established || []).map(item => `<li>${escapeHtml(item)}</li>`).join('') || '<li>No additional official fact connected.</li>';
-    const boundary = (link.not_established || []).map(item => `<li>${escapeHtml(item)}</li>`).join('') || '<li>No additional boundary recorded.</li>';
-    return `<details class="official-evidence" data-evidence-status="${escapeHtml(link.status)}"><summary><span class="evidence-status ${escapeHtml(link.status)}">${escapeHtml(link.status_label)}</span><span class="official-evidence-summary">${escapeHtml(link.summary)}</span><span class="official-evidence-matter">${escapeHtml((link.matter_numbers || []).join(' · '))}</span></summary><div class="official-evidence-body"><div class="official-evidence-grid"><section><h5>Established by official record</h5><ul>${established}</ul></section><section><h5>Evidence boundary</h5><ul>${boundary}</ul></section></div>${recordLinks ? `<div class="official-record-links">${recordLinks}</div>` : ''}</div></details>`;
-  }
-
-  function eventCard(event, legalEvents = {}) {
-    const sourceLabel = `${event.source_posts.length} source post${event.source_posts.length === 1 ? '' : 's'}`;
-    const official = (legalEvents[event.event_id] || []).map(officialEvidence).join('');
-    return `<details class="campaign-event" data-event-id="${escapeHtml(event.event_id)}"><summary><span class="event-date">${escapeHtml(dateRange(event.event_date, event.event_end_date))}</span><span class="event-summary">${escapeHtml(event.summary)}</span><span class="event-type">${escapeHtml(event.event_type.replaceAll('_', ' '))}</span></summary><div class="campaign-event-body"><div class="campaign-boundary">${escapeHtml(event.source_boundary)} · ${sourceLabel}${event.source_posts.length > 1 ? ' · aligned posts are not independent corroboration' : ''}</div>${official}<div class="campaign-post-grid">${event.source_posts.map(postCard).join('')}</div></div></details>`;
-  }
-
-  function renderCampaign(panel, campaign, legalCampaign) {
-    const latestIndex = Math.max(0, campaign.milestones.length - 1);
-    const legalEvents = legalCampaign?.events || {};
-    const summary = legalCampaign?.evidence_summary || { connected: 0, partially_connected: 0, unresolved: 0 };
-    const contextLinks = legalCampaign?.campaign_context || [];
-    panel.innerHTML = `<div class="campaign-state-grid">
-      <section class="campaign-state-block"><div class="campaign-eyebrow">Current position</div><div class="campaign-stage">${escapeHtml(campaign.current_stage.label)}</div><div class="campaign-basis">${escapeHtml(campaign.current_stage.basis)}</div></section>
-      <section class="campaign-state-block"><div class="campaign-eyebrow">Latest material change</div><div class="campaign-state-copy">${escapeHtml(campaign.latest_change)}</div><div class="campaign-eyebrow" style="margin-top:12px">Principal union claims</div><ul class="campaign-list">${campaign.principal_claims.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>
-      <section class="campaign-state-block"><div class="campaign-eyebrow">Open verification</div><ul class="campaign-list">${campaign.open_verification.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>
-    </div>
-    <div class="campaign-official-summary"><strong>Official evidence</strong><span>${summary.connected} connected · ${summary.partially_connected} partially connected · ${summary.unresolved} unresolved</span></div>
-    <div class="campaign-tabs" role="tablist"><button class="campaign-tab active" data-campaign-view="milestones">Milestones</button><button class="campaign-tab" data-campaign-view="posts">All campaign posts</button></div>
-    <section class="campaign-view" data-view-panel="milestones">
-      <div class="campaign-spine" style="--milestone-count:${campaign.milestones.length}">${campaign.milestones.map((milestone, index) => `<button class="milestone-marker ${index === latestIndex ? 'active' : ''}" data-milestone-index="${index}"><span class="milestone-date">${escapeHtml(dateRange(milestone.start_date, milestone.end_date))}</span><span class="milestone-title">${escapeHtml(milestone.title)}</span></button>`).join('')}</div>
-      <div class="milestone-details">${campaign.milestones.map((milestone, index) => `<article class="milestone-detail ${index === latestIndex ? 'active' : ''}" data-milestone-detail="${index}"><div class="milestone-detail-head"><div><h4>${escapeHtml(milestone.title)}</h4><div class="milestone-summary">${escapeHtml(milestone.summary)}</div></div><div class="milestone-evidence">${milestone.source_post_count} source posts<br>${escapeHtml(milestone.evidence_state)}</div></div><div class="campaign-events">${milestone.events.map(event => eventCard(event, legalEvents)).join('')}</div></article>`).join('')}</div>
-      ${campaign.context_events.length ? `<aside class="context-lane"><h4>Adjacent agreement context</h4>${campaign.context_events.map(event => eventCard(event, legalEvents)).join('')}</aside>` : ''}
-      ${campaign.undated_exhibits.length ? `<aside class="undated-exhibits"><h4>Relevant undated campaign exhibit</h4><div class="campaign-post-grid">${campaign.undated_exhibits.map(item => postCard({ ...item, published_date: null, date_precision: null })).join('')}</div></aside>` : ''}
-      ${contextLinks.length ? `<details class="campaign-legal-context"><summary>Additional official campaign records · ${contextLinks.length}</summary><div class="campaign-legal-context-body">${contextLinks.map(officialEvidence).join('')}</div></details>` : ''}
-    </section>
-    <section class="campaign-view" data-view-panel="posts" hidden><div class="all-posts-head"><span>${campaign.all_posts.length} accepted source posts</span><span>Graphics and complete text · no Facebook account required</span></div><div class="campaign-post-grid">${campaign.all_posts.map(postCard).join('')}</div></section>`;
-
-    const tabs = [...panel.querySelectorAll('.campaign-tab')];
-    tabs.forEach(tab => tab.addEventListener('click', () => {
-      tabs.forEach(item => item.classList.toggle('active', item === tab));
-      panel.querySelectorAll('[data-view-panel]').forEach(view => { view.hidden = view.dataset.viewPanel !== tab.dataset.campaignView; });
-    }));
-    panel.querySelectorAll('.milestone-marker').forEach(marker => marker.addEventListener('click', () => {
-      panel.querySelectorAll('.milestone-marker').forEach(item => item.classList.toggle('active', item === marker));
-      panel.querySelectorAll('[data-milestone-detail]').forEach(detail => detail.classList.toggle('active', detail.dataset.milestoneDetail === marker.dataset.milestoneIndex));
-    }));
-  }
-
-  function agreementMatter(item) {
-    const link = safeFwcUrl(item.source_url);
-    const quality = (item.quality_flags || []).length ? `<details class="agreement-quality"><summary>Document quality note</summary>${item.quality_flags.map(flag => `<div class="agreement-quality-note">${escapeHtml(flag)}</div>`).join('')}</details>` : '';
-    return `<article class="agreement-matter" data-matter-no="${escapeHtml(item.matter_no)}"><div class="agreement-matter-top"><span class="agreement-number">${escapeHtml(item.matter_no)}</span>${link ? `<a class="agreement-title" href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(item.title)} ↗</a>` : `<span class="agreement-title">${escapeHtml(item.title)}</span>`}<span class="agreement-status">${escapeHtml(item.status || 'Status unavailable')}</span></div><div class="agreement-meta">${escapeHtml(item.applicant || 'Applicant unavailable')} · lodged ${escapeHtml((item.lodged_at || '').slice(0, 10) || 'date unavailable')}</div><div class="agreement-relevance">${escapeHtml(item.relevance)}</div>${quality}</article>`;
-  }
-
-  function renderAgreements(target, data, source) {
-    target.innerHTML = `<div class="agreement-clusters">${data.clusters.map(cluster => `<article class="agreement-cluster" data-cluster-id="${escapeHtml(cluster.cluster_id)}"><div class="agreement-cluster-head"><h3>${escapeHtml(cluster.title)}</h3><span class="agreement-count">${cluster.matters.length} matter${cluster.matters.length === 1 ? '' : 's'}</span></div><div class="agreement-cluster-copy">${escapeHtml(cluster.description)}</div><div class="agreement-list">${cluster.matters.map(agreementMatter).join('')}</div></article>`).join('')}</div><details class="agreements-secondary"><summary>Broader WA and sector watch · ${data.secondary.length}</summary><div class="agreements-secondary-body">${data.secondary.map(agreementMatter).join('')}</div></details><div class="agreements-boundary"><span>${escapeHtml(data.boundary)}</span><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener">${escapeHtml(source.label)} · observed ${escapeHtml((source.observed_at || '').slice(0, 10))} ↗</a></div>`;
-  }
-
-  function renderMedia(target, data) {
-    target.innerHTML = `<div class="media-feed">${data.items.map(item => {
-      const link = safeMediaUrl(item.url);
-      const accessLabel = item.access === 'open' ? 'Open article' : 'Paywalled';
-      return `<article class="media-item" data-media-id="${escapeHtml(item.item_id)}"><div class="media-meta"><span>${escapeHtml(item.published_date)}</span><span>·</span><span>${escapeHtml(item.source)}</span><span class="media-access ${escapeHtml(item.access)}">${accessLabel}</span><span class="media-topic">${escapeHtml(item.topic.replaceAll('-', ' '))}</span></div><h3>${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(item.title)} ↗</a>` : escapeHtml(item.title)}</h3><p>${escapeHtml(item.summary)}</p><div class="media-relevance"><strong>Pilbara Watch:</strong> ${escapeHtml(item.relevance)}</div><div class="media-basis">Public basis · ${escapeHtml(item.public_basis)}</div></article>`;
-    }).join('')}</div>`;
-  }
-
-  function renderCompanyFeed(target, data) {
-    target.innerHTML = `<div class="company-feed">${data.items.map(item => {
-      const asxLink = safeAsxUrl(item.asx_url);
-      const companyLink = safeCompanyUrl(item.company_url, item.asx_code);
-      return `<article class="company-announcement" data-announcement-id="${escapeHtml(item.announcement_id)}"><div class="company-meta"><span class="asx-code">ASX:${escapeHtml(item.asx_code)}</span><span>${escapeHtml(item.company)}</span><span>·</span><span>${escapeHtml(item.released_label)}</span>${item.price_sensitive ? '<span class="price-sensitive">Price sensitive</span>' : ''}<span class="company-category">${escapeHtml(item.category.replaceAll('-', ' '))}</span></div><h3>${escapeHtml(item.headline)}</h3><p>${escapeHtml(item.summary)}</p><div class="company-relevance"><strong>Pilbara Watch:</strong> ${escapeHtml(item.relevance)}</div><div class="company-links">${asxLink ? `<a class="company-link" href="${escapeHtml(asxLink)}" target="_blank" rel="noopener">ASX lodgement ↗</a>` : ''}${companyLink ? `<a class="company-link" href="${escapeHtml(companyLink)}" target="_blank" rel="noopener">Company source ↗</a>` : ''}</div></article>`;
-    }).join('')}</div>`;
-  }
+const matters=[
+{id:'bhp',name:'BHP Port Operations bargaining',company:'BHP',meta:'AWU / ETU / AMWU · Port Hedland',status:'active',statusLabel:'Active bargaining',stage:'FWC-assisted bargaining',latest:"Union pages report a further FWC-involved meeting on 19–20 August; BHP's offer and meeting substance are not connected.",evidence:'Official records + union accounts',evidenceTone:'connected',next:'Commission record and BHP response',position:'FWC-assisted bargaining following August protected action',basis:'Union accounts for the latest meeting; official FWC records connect three ballot streams and extension decisions.',verify:["BHP's current offer and response",'Commission record and next procedural step','Operational impact claimed by unions','Bargaining movement after August action'],boundary:'Official records establish PABO orders, ballot results and authorisation extensions. They do not establish the 19–20 August meeting substance, BHP’s offer, bargaining movement or claimed operational effects. Aligned union posts are not independent corroboration.',source:'FWC: B2026/581 · B2026/585 · B2026/702 · union public posts',events:[['30 May–22 Jun','Three protected-action ballot streams proceed','FWC orders connected; union campaign framing separate'],['6 Jul','AWU ballot declaration records 67 yes votes from 69 participants','Official ballot result · 87 eligible voters'],['16 Jul','First protected action reported at Port Operations','Aligned union accounts · operational effect unverified'],['4–20 Aug','FWC-assisted meetings and further action reported','Meeting dates/substance from union accounts only']]},
+{id:'worsley',name:'South32 Worsley Alumina bargaining',company:'South32',meta:'ETU · Worsley Alumina',status:'unresolved',statusLabel:'Verification gap',stage:'PABO order reported',latest:'ETU said on 12 August that the Commission made a protected-action ballot order.',evidence:'Union account · unresolved',evidenceTone:'unresolved',next:'Order, matter number and ballot timetable',position:'Protected-action ballot order reported',basis:'ETU account only. Public Commission searches did not locate a matching record under the tested identities.',verify:['Commission order and matter number','Ballot agent, questions and voting deadline',"South32's bargaining position",'Outcome of the proposed agreement vote'],boundary:'No official order date, matter number, employee coverage, ballot agent, questions or deadline was located. A negative search does not disprove the union report; a recent or differently indexed record may not yet be discoverable.',source:'ETU public posts · FWC search result negative at capture time',events:[['Early Aug','ETU reports members filed for a PABO','ETU account only'],['12 Aug','ETU reports the Commission made the order','Order not connected'],['Next','Locate order and published ballot timetable','Open verification']]},
+{id:'inpex',name:'INPEX Ichthys benchmark agreement campaign',company:'INPEX',meta:'Offshore Alliance / AWU / ETU · CPF / FPSO / ILNG',status:'approved',statusLabel:'Approved',stage:'Agreement operative',latest:'FWC approved the 2026–2030 agreement; it operates from 21 August 2026 with corrected nominal expiry 14 August 2030.',evidence:'FWC approval connected',evidenceTone:'connected',next:'Implementation and comparator analysis',position:'Agreement approved; operative 21 August 2026',basis:'Fair Work Commission · AG2026/2006 · [2026] FWCA 2203.',verify:['Term-by-term comparison with Shell and Chevron agreements','Whether benchmark status extends beyond union characterisation','Implementation of progression, staffing and job-security provisions'],boundary:'The approval establishes the agreement and operative dates. It does not independently establish union-reported ballot percentages, operational impact of preceding action, or “industry benchmark” status.',source:'FWC B2026/623 · AG2026/2006 · [2026] FWC 2200 · [2026] FWCA 2203',events:[['May–Jun','Replacement bargaining, PABOs and action ballots','Union accounts; ballot percentages not independently connected'],['Jun','Protected action commences across CPF, FPSO and ILNG','Aligned union accounts'],['14 Jun','INPEX s.424 application dismissed','FWC decision [2026] FWC 2200 connected'],['Jul','Settlement endorsed and employee vote reported','Union accounts; ABC reported in-principle deal'],['21 Aug','Approved agreement becomes operative','FWC approval connected']]},
+{id:'fortescue',name:'Fortescue collective bargaining watch',company:'Fortescue',meta:'WMWA / AWU / ETU · Pilbara operations',status:'watch',statusLabel:'Watch',stage:'Early campaign',latest:'Union posts describe requests to bargain, worker-priority surveys and asserted Federal Court resistance.',evidence:'Union accounts only',evidenceTone:'advocacy',next:'Court filing and Fortescue position',position:'Early collective-bargaining campaign',basis:'Union-authored public posts. No official filing or employer account is connected.',verify:['Federal Court filing and relief sought',"Fortescue's legal position",'Any majority-support process or outcome','Scope of reported pay and allowance changes'],boundary:'The posts evidence campaign activity and union assertions only. They do not establish a majority-support outcome, the contents of any court filing, Fortescue’s position or workforce-wide support.',source:'WMWA / AWU public posts',events:[['15 May','Unions say they requested bargaining and Fortescue filed proceedings','Union account · filing not connected'],['20–27 May','Worker-priority surveys promoted','Campaign activity only'],['7 Jul','Pay review and allowance change reported','Union report of company communication · scope unverified']]},
+{id:'rio',name:'Rio Pilbara bargaining and workforce watch',company:'Rio Tinto',meta:'WMWA / AWU / AMWU · Pilbara',status:'watch',statusLabel:'Watch',stage:'Three separate strands',latest:'Paraburdoo conditions, Dampier Salt bargaining and redundancy consultation remain separate tracked strands.',evidence:'Union accounts · multi-strand',evidenceTone:'advocacy',next:'Official status for each strand',position:'Multi-strand workforce and bargaining watch',basis:'Historical union corpus; no Rio-wide agreement campaign is inferred.',verify:['Paraburdoo majority-support outcome','Current Dampier Salt FWC/agreement status','Employer scope of redundancy claims','Any distinct broader Pilbara bargaining step'],boundary:'Separate Paraburdoo, Dampier Salt and redundancy-consultation strands are not combined into one campaign. Union advocacy about investment and organising is not evidence of organising strength or operational impact.',source:'WMWA / AWU / AMWU public posts',events:[['Aug–Oct 2025','Paraburdoo conditions and majority-support campaigning','Union accounts · petition outcome not connected'],['Dec 2025','Dampier Salt bargaining said to commence','Union account · current official status needed'],['May 2026','Job-cut, redeployment and broader bargaining claims','Employer scope and next step unverified']]},
+{id:'chevron',name:'Chevron EBA-enforcement legal watch',company:'Chevron',meta:'Offshore Alliance · Industrial Magistrates Court claims',status:'watch',statusLabel:'Legal watch',stage:'Two claims reported',latest:'Offshore Alliance reports a meal-allowance prosecution and document-production order in alleged outsourcing litigation.',evidence:'Union account · court record required',evidenceTone:'unresolved',next:'Court file, order and Chevron response',position:'EBA-enforcement legal watch',basis:'Offshore Alliance public posts; no court file or order is connected.',verify:['Industrial Magistrates Court file numbers','Meal-allowance claim and relief sought','Document-production order','Chevron response and alleged outsourcing scope'],boundary:'Union posts establish only that the Offshore Alliance made the claims. They do not establish the proceeding, an order, any breach, the scope of alleged outsourcing or Chevron’s position.',source:'Offshore Alliance public posts',events:[['2 Aug','Meal-allowance prosecution and penalty claim reported','Union account · proceeding not connected'],['10 Aug','Document-production order in outsourcing claim reported','Union account · order not connected'],['Next','Acquire court records and employer response','Open verification']]},
+{id:'safety',name:'Pilbara safety and workforce campaigns',company:'Cross-industry',meta:'WMWA · multi-employer · mining / FIFO',status:'advocacy',statusLabel:'Advocacy signal',stage:'Issue promotion',latest:'WMWA promotes silica, chemical-exposure and FIFO mental-health propositions.',evidence:'Advocacy evidence only',evidenceTone:'advocacy',next:'Regulator, employer and workplace adoption',position:'Cross-industry issue promotion',basis:'Union-authored public posts with displayed publication dates unavailable.',verify:['Underlying exposure and testing data','Regulator responses','Employer responses or policy adoption','Evidence of workplace traction'],boundary:'These posts evidence issue promotion only. They do not establish exposure levels, regulatory adoption, employer conduct, workforce traction or operational impact.',source:'WMWA public posts · collected 16 August 2026',events:[['Captured item 01','Silica exposure and testing proposition promoted','Displayed date unavailable · underlying data not acquired'],['Captured item 02','Toxic-chemical exposure claims published','No regulator or employer response acquired'],['Captured item 03','FIFO suicide-prevention concerns promoted','Workforce traction not established']]}
+];
+let approvedAgreements=[
+{matterNo:'AG2026/2006',approvalRecord:'AE533760',title:'INPEX-Ichthys Operations Enterprise Agreement 2026-2030',approvalDate:'2026-08-19',sourceUrl:'https://www.fwc.gov.au/document-view/media/download/878502',matterId:'inpex'}
+];
+let agreementClusters=[
+{id:'bhp-adjacent',title:'BHP adjacent agreement',matters:[
+{matterNo:'AG2026/1877',title:'BHP Mining Area C and South Flank Operations Agreement 2026',status:'Member consideration',lodgedAt:'2026-07-15T15:51:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_1877.pdf'}
+]},
+{id:'port-stevedoring',title:'Port and stevedoring',matters:[
+{matterNo:'AG2026/2173',title:'Toll & MUA WA Stevedoring Agreement 2026',status:'Member consideration',lodgedAt:'2026-08-10T15:50:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_2173.pdf'}
+]},
+{id:'karratha-burrup-operations',title:'Karratha and Burrup operations',matters:[
+{matterNo:'AG2026/2077',title:'UGL Resources (Contracting) Pty Ltd Karratha Enterprise Agreement 2026',status:'Member consideration',lodgedAt:'2026-08-04T07:11:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_2077.pdf'}
+]},
+{id:'project-ceres',title:'Perdaman Project Ceres',matters:[
+{matterNo:'AG2026/1306',title:'Boyle Civil Contracting Pty Ltd Perdaman Ceres Project Greenfields Agreement 2024',status:'Member consideration',lodgedAt:'2026-06-01T10:16:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_1306.pdf'},
+{matterNo:'AG2026/2213',title:'NEPEAN Power Pty Ltd Perdaman Ceres Project Greenfields Agreement 2024',status:'Member consideration',lodgedAt:'2026-08-13T09:25:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_2213.pdf'},
+{matterNo:'AG2026/2214',title:'Six Star Projects Perdaman Ceres Project Greenfields Agreement 2024',status:'Member consideration',lodgedAt:'2026-08-13T10:32:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_2214.pdf'},
+{matterNo:'AG2026/2225',title:'AULDEC Solutions Pty Ltd Perdaman \r\nCeres Project Greenfields Agreement 2024',status:'Initial assessment',lodgedAt:'2026-08-14T10:02:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_2225.pdf'},
+{matterNo:'AG2026/2252',title:'Link Civilcon Holdings Pty Ltd Perdaman Ceres Project Greenfields Agreement 2024',status:'Initial assessment',lodgedAt:'2026-08-18T14:07:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_2252.pdf'}
+]},
+{id:'north-west-construction',title:'North West construction',matters:[
+{matterNo:'AG2026/2254',title:'Future Power WA Pty Ltd Enterprise Agreement 2026',status:'Initial assessment',lodgedAt:'2026-08-18T16:19:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_2254.pdf'}
+]}
+];
+let broaderWatchAgreements=[
+{matterNo:'AG2026/1085',title:'Axess Offshore Australia Enterprise Agreement 2026',status:'Member consideration',lodgedAt:'2026-05-12T10:47:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_1085.pdf'},
+{matterNo:'AG2026/2161',title:'John Holland Pty Ltd WA Rail Agreement 2025',status:'Member consideration',lodgedAt:'2026-08-10T14:03:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_2161.pdf'},
+{matterNo:'AG2026/2196',title:'Oil and Gas Agreement 2026',status:'Member consideration',lodgedAt:'2026-08-12T09:44:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_2196.pdf'},
+{matterNo:'AG2026/2232',title:'Sandvik Rock Processing Australia & Union Enterprise Agreement West Coast 2026',status:'Initial assessment',lodgedAt:'2026-08-17T09:38:00',sourceUrl:'https://www.fwc.gov.au/documents/agreement-applications/ag2026_2232.pdf'}
+];
+let contextItems=[
+{id:'fmg-blacksmith-resource-03127355',date:'2026-08-20',dateLabel:'20 Aug 2026',company:'Fortescue',headline:'Blacksmith Project Mineral Resource and Ore Reserve Update',development:'Fortescue lodged an updated resource and reserve statement for Blacksmith, a proposed Pilbara project that the company says could support more than 20 years of operation and around 5Mtpa of direct-shipping ore.',relevance:'A potential new Pilbara production source and future workforce footprint; project timing and execution remain subject to company decisions and approvals.',sourceName:'Fortescue / ASX',sourceClass:'company',sourceLabel:'Company / ASX',access:'Official disclosure',url:'https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03127355',alternateUrl:'https://investors.fortescue.com/en/announcements-and-reports',alternateLabel:'Issuer page',matterIds:['fortescue'],treatment:'contextual'},
+{id:'fmg-fy26-results-03127352',date:'2026-08-20',dateLabel:'20 Aug 2026',company:'Fortescue',headline:'FY26 Full Year Results',development:'Fortescue reported record FY26 iron ore shipments of 201.3Mt, underlying net profit after tax of about US$3.5 billion and a total FY26 dividend of A$1.08 per share.',relevance:'The results frame operating scale, cost capacity and capital available for Pilbara operations, Iron Bridge and decarbonisation investment.',sourceName:'Fortescue / ASX',sourceClass:'company',sourceLabel:'Company / ASX',access:'Official disclosure',url:'https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03127352',alternateUrl:'https://investors.fortescue.com/en/results-and-operational-performance',alternateLabel:'Issuer page',matterIds:['fortescue'],treatment:'contextual'},
+{id:'bhp-fy26-results-03126197',date:'2026-08-18',dateLabel:'18 Aug 2026',company:'BHP Group',headline:'BHP FY2026 Results Announcement',development:'BHP reported record WAIO production and shipments and announced Ministers North, a proposed Pilbara mine intended to help sustain WAIO production above 305Mtpa.',relevance:"Direct evidence of BHP's Pilbara production and replacement-mine strategy, separate from the active Port Operations bargaining matter.",sourceName:'BHP / ASX',sourceClass:'company',sourceLabel:'Company / ASX',access:'Official disclosure',url:'https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03126197',alternateUrl:'https://www.bhp.com/news/media-centre/releases/2026/08/bhp-results-for-the-full-year-ended-30-june-2026',alternateLabel:'Issuer release',matterIds:['bhp'],treatment:'contextual'},
+{id:'s32-june-quarterly-03116159',date:'2026-08-07',dateLabel:'7 Aug 2026',company:'South32',headline:'June 2026 Quarterly Report',development:'South32 reported Worsley Alumina FY26 saleable production of 3.722Mt, broadly unchanged year on year, with FY27 guidance maintained at 3.9Mt.',relevance:'Official operating context for the Worsley bargaining campaign. The disclosure does not establish the status or effect of bargaining.',sourceName:'South32 / ASX',sourceClass:'company',sourceLabel:'Company / ASX',access:'Official disclosure',url:'https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03116159',alternateUrl:'https://www.south32.net/docs/default-source/all-financial-results/quarterly-report---june-2026.pdf?sfvrsn=af822f49_3',alternateLabel:'Issuer PDF',matterIds:['worsley'],treatment:'contextual'},
+{id:'rio-hy26-results-03119116',date:'2026-07-29',dateLabel:'29 Jul 2026',company:'Rio Tinto',headline:'Rio Tinto 2026 Half Year Results',development:'Rio Tinto reported a 28% increase in underlying EBITDA and a 75% increase in free cash flow, alongside continued productivity improvement across the portfolio.',relevance:"Financial and capital-allocation context for Rio's Pilbara replacement mines, Rhodes Ridge studies and workforce investment.",sourceName:'Rio Tinto / ASX',sourceClass:'company',sourceLabel:'Company / ASX',access:'Official disclosure',url:'https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03119116',alternateUrl:'https://www.riotinto.com/en/invest/financial-news-performance/results',alternateLabel:'Issuer page',matterIds:['rio'],treatment:'contextual'},
+{id:'min-q4-fy26-03119091',date:'2026-07-29',dateLabel:'29 Jul 2026',company:'Mineral Resources',headline:'Quarterly Activity Report — Q4 FY26',development:'MinRes reported FY26 Onslow Iron attributable shipments of 19.7Mt above upgraded guidance, Pilbara Hub shipments of 9.9Mt, and stronger liquidity with net debt reduced to about A$4.3 billion.',relevance:'Direct operating and balance-sheet context for Onslow Iron, the Pilbara Hub and the Port of Ashburton supply chain.',sourceName:'Mineral Resources / ASX',sourceClass:'company',sourceLabel:'Company / ASX',access:'Official disclosure',url:'https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03119091',alternateUrl:'https://www.mineralresources.com.au/news/company-updates/q4-fy26-quarterly-activity-report/',alternateLabel:'Issuer page',matterIds:[],treatment:'contextual'},
+{id:'rio-q2-production-03114999',date:'2026-07-15',dateLabel:'15 Jul 2026',company:'Rio Tinto',headline:'Second Quarter 2026 Production Results',development:'Rio Tinto reported Q2 Pilbara production of 83.5Mt and sales of 85.3Mt on a 100% basis, with first-half Pilbara production up 6% year on year.',relevance:"Source-linked operating context for Rio's Pilbara system and a baseline against which later workforce or disruption claims can be tested.",sourceName:'Rio Tinto / ASX',sourceClass:'company',sourceLabel:'Company / ASX',access:'Official disclosure',url:'https://www.asx.com.au/asx/v2/statistics/displayAnnouncement.do?display=pdf&idsId=03114999',alternateUrl:'https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results',alternateLabel:'Issuer release',matterIds:['rio'],treatment:'contextual'},
+{id:'abc-pilbara-briefing-2026-08-20',date:'2026-08-20',dateLabel:'20 Aug 2026',company:'Fortescue / MinRes / Chevron',headline:'Kimberley and Pilbara local news briefing, 20 August 2026',development:"ABC reports first production at Fortescue's Christmas Creek green-iron pilot, construction of a new Onslow Iron accommodation camp, and a Federal Court challenge concerning Chevron's Gorgon environment plan.",relevance:'Three direct Pilbara operating, workforce-accommodation and legal-context developments in one regional bulletin.',sourceName:'ABC Pilbara',sourceClass:'media-open',sourceLabel:'Media',access:'Open · full article',url:'https://www.abc.net.au/news/2026-08-20/kimberley-and-pilbara-local-news-briefing/107056932',matterIds:['fortescue'],treatment:'contextual'},
+{id:'afr-bhp-right-of-entry-2026-08-20',date:'2026-08-20',dateLabel:'20 Aug 2026',company:'BHP Group',headline:'Union officials blocked in BHP Pilbara port right-of-entry row',development:'The publicly indexed synopsis reports a right-of-entry dispute at BHP\'s Port Hedland operations, including union allegations that officials were barred and police were called.',relevance:'A reported escalation in the active BHP Port Operations matter. The underlying allegations require court, police or other public records before being treated as established.',sourceName:'Australian Financial Review',sourceClass:'media-paywalled',sourceLabel:'Media',access:'Paywalled · public synopsis',url:'https://www.afr.com/work-and-careers/workplace/police-called-in-bizarre-escalation-of-bhp-pilbara-union-dispute-20260820-p60q61',matterIds:['bhp'],treatment:'chronology-worthy'},
+{id:'the-west-bhp-right-of-entry-2026-08-20',date:'2026-08-20',dateLabel:'20 Aug 2026',company:'BHP Group',headline:'Stoush between BHP and unions at Port Hedland escalates with WA Police called',development:'The public page identifies a further report about the BHP–union dispute at Port Hedland and police attendance; substantive article text remains subscriber-only.',relevance:'Independent media coverage of the same reported right-of-entry escalation, but not independent proof of the contested conduct.',sourceName:'The West Australian',sourceClass:'media-paywalled',sourceLabel:'Media',access:'Paywalled · public page only',url:'https://thewest.com.au/business/mining/stoush-between-bhp-and-unions-at-port-hedland-escalates-with-wa-police-called-over-aggressive-behaviour-c-22753561',matterIds:['bhp'],treatment:'contextual'},
+{id:'abc-mardie-potash-2026-08-19',date:'2026-08-19',dateLabel:'19 Aug 2026',company:'BCI Minerals',headline:'Mardie Salt to test potash by-product',development:'BCI Minerals awarded a contract for a sulphate-of-potash pilot plant at Mardie Salt to test whether a salt-production by-product can be used as fertiliser.',relevance:'A diversification and project-execution development at a current Pilbara operation.',sourceName:'ABC Pilbara',sourceClass:'media-open',sourceLabel:'Media',access:'Open · regional briefing',url:'https://www.abc.net.au/news/2026-08-19/kimberley-and-pilbara-local-news-briefing/107053322',matterIds:[],treatment:'contextual'},
+{id:'reneweconomy-fortescue-hot-metal-2026-08-19',date:'2026-08-19',dateLabel:'19 Aug 2026',company:'Fortescue',headline:'Fortescue achieves first hot metal using electric smelting',development:"Fortescue's Christmas Creek project produced molten metal from blended ore in its electric smelting furnace; commissioning is to continue in stages and commercial-scale production remains an unresolved challenge.",relevance:'A concrete operating milestone, with the article preserving the distinction between a pilot result and commercial-scale green-iron production.',sourceName:'RenewEconomy',sourceClass:'media-open',sourceLabel:'Media',access:'Open · full article',url:'https://reneweconomy.com.au/fortescue-achieves-first-hot-metal-using-electric-smelting-as-it-seeks-to-solve-pilbara-green-iron-puzzle/',matterIds:['fortescue'],treatment:'contextual'},
+{id:'international-mining-jimblebar-charging-2026-08-18',date:'2026-08-18',dateLabel:'18 Aug 2026',company:'BHP Group',headline:'BHP to test static and dynamic charging at Jimblebar',development:'BHP plans FY2027 trials of high-power static charging and Caterpillar dynamic energy transfer at Jimblebar as part of assessing battery-electric haul-truck fleet viability.',relevance:'A direct Pilbara technology and future-workforce capability trial; the equipment remains under development and is not yet commercially available.',sourceName:'International Mining',sourceClass:'media-open',sourceLabel:'Media',access:'Open · full article',url:'https://im-mining.com/2026/08/18/bhp-to-test-static-and-dynamic-charging-at-jimblebar-as-part-of-battery-electric-truck-fleet-viability-assessments/',matterIds:['bhp'],treatment:'contextual'},
+{id:'australian-mining-pilbara-ports-july-2026',date:'2026-08-17',dateLabel:'17 Aug 2026',company:'Pilbara Ports',headline:'Pilbara Ports sees 63 million tonnes handled in July',development:'Pilbara Ports recorded 63.8 million tonnes of throughput in July 2026. Port Hedland handled 45 million tonnes, including 44.2 million tonnes of iron ore exports.',relevance:"Source-linked operating context for the region's export system, including the BHP Port Operations matter.",sourceName:'Australian Mining',sourceClass:'media-open',sourceLabel:'Media',access:'Open · full article',url:'https://www.australianmining.com.au/pilbara-ports-sees-63-million-tonnes-handled-in-july',matterIds:['bhp'],treatment:'contextual'}
+];
+const rows=document.getElementById('matterRows'),companyFilter=document.getElementById('companyFilter'),statusFilter=document.getElementById('statusFilter'),resultCount=document.getElementById('resultCount'),emptyState=document.getElementById('emptyState');
+const registerList=document.getElementById('registerList'),detail=document.getElementById('detail'),workspace=document.querySelector('.workspace');let selectedId=null,lastMatterTrigger=null,lastListScrollY=0,contextExpanded=false;
+const staticContextItems=contextItems.slice();const staticContextById=new Map(staticContextItems.map(item=>[item.id,item]));const staticApprovedAgreements=approvedAgreements.slice();let companyContext=null,mediaContext=null;
+const campaignMatterIds={'bhp-port-operations-bargaining-2026':'bhp','south32-worsley-alumina-bargaining-2026':'worsley','inpex-ichthys-operations-bargaining-2026':'inpex'};
+const campaignSources=new Map(),fwcSources=new Map(),watchlistSources=new Map();
+const staticSourceRecords=new Map([['safety',[
+{post_id:'1673583661440307',source_page:'Western Mine Workers Alliance',post_url:'https://www.facebook.com/photo/?fbid=1673583661440307&set=a.507507878047897',displayed_date:'Displayed publication date unavailable',full_text:"It might seem like just a bit of dust - but exposure to respirable crystalline silica can be deadly.\n\nWMWA is currently working with HSRs and Safety in the fight for mandatory testing in WA mining. It's time our sector caught up with the rest of Australia.\n\nIf you think you are being exposed to asbestos or silica, don't just let it slide. Speak up, record it and contact your organiser. DM us if you need more info!",graphics:['assets/union-posts/1673583661440307.jpg']},
+{post_id:'1671463784985628',source_page:'Western Mine Workers Alliance',post_url:'https://www.facebook.com/photo/?fbid=1671463784985628&set=a.507507878047897',displayed_date:'Displayed publication date unavailable',full_text:'Are you exposed to toxic chemicals at work?\n\nWHS Ministers have rejected or delayed safer exposure limits for 9 chemicals, some of which are onsite across Pilbara mines:\n\nBenzene\n\nChlorine\n\nCopper\n\nFormaldehyde\n\nHydrogen cyanide\n\nHydrogen sulphide\n\nNitrogen dioxide\n\nSilica dust (RCS)\n\nTitanium dioxide\n\nWe’re fighting for safer limits — but that won’t change unless we can show how these chemicals are actually being managed on Australian worksites.\n\nPlease take a few minutes to complete our survey and tell us what’s really going on at work. The more examples we have, the stronger our case. Every response is confidential, and we won’t share your details with anybody.',graphics:['assets/union-posts/1671463784985628.jpg']},
+{post_id:'1675523597912980',source_page:'Western Mine Workers Alliance',post_url:'https://www.facebook.com/photo/?fbid=1675523597912980&set=a.507507878047897',displayed_date:'Displayed publication date unavailable',full_text:"Suicide Prevention is about people and in Australia, we lose about nine people to suicide every day - that's nine people too many. Unfortunately, the resource sector and FIFO workers are disproportionally represented in these numbers.\n\nSuicide prevention is everyone’s business, and your union takes it seriously.\n\nOur members work long hours in gruelling conditions, away from family and friends, and often face a workplace culture that tells many to simply “harden up” or “push through”. That culture is costing lives.\n\nWMWA partner unions the AWU and MEU play an important role. We are a trusted resource for workers, we are on the ground and we hear the quiet conversations.\n\nUnions are not a replacement for clinical or crisis services, but we are often the first conversation, and we know the resource sector has a problem.\n\nThis isn’t about making tough industries soft. It’s about making them strong as a mentally healthy workforce is a safer workforce.\n\nSuicide prevention must be built into the safety system - because every worker deserves to come home in one piece, body and mind.\n\nIf somethings not right, or you just need someone to talk to, your GP is always a good place to start. Otherwise there are plenty of good confidential services, like Lifeline 131114 or Yarn on 139276.",graphics:['assets/union-posts/1675523597912980.jpg']}
+]]]);
+const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' })[character]);
+const safeFacebookUrl = value => /^https:\/\/www\.facebook\.com\//.test(value || '') ? value : null;
+const safeFwcUrl = value => /^https:\/\/www\.fwc\.gov\.au\//.test(value || '') ? value : null;
+const safeMediaUrl = value => /^https:\/\/[A-Za-z0-9.-]+(?:\/|$)/.test(value || '') ? value : null;
+const safeGraphicPath = value => /^assets\/(?:campaigns|union-posts)\/[A-Za-z0-9._\/-]+\.(?:jpg|jpeg|png|webp)$/i.test(value || '') && !value.includes('..') ? value : null;
+const companySourceHosts={BHP:['www.bhp.com'],FMG:['investors.fortescue.com'],RIO:['www.riotinto.com'],MIN:['www.mineralresources.com.au'],S32:['www.south32.net']};
+function safeAsxUrl(value){try{const url=new URL(value),keys=[...url.searchParams.keys()].sort();return url.protocol==='https:'&&url.hostname === 'www.asx.com.au'&&!url.port&&!url.username&&!url.password&&!url.hash&&url.pathname==='/asx/v2/statistics/displayAnnouncement.do'&&keys.join(',')==='display,idsId'&&url.searchParams.get('display')==='pdf'&&/^\d+$/.test(url.searchParams.get('idsId')||'')?value:null}catch{return null}}
+function safeCompanyUrl(value,asxCode){try{const url=new URL(value);return url.protocol==='https:'&&!url.port&&!url.username&&!url.password&&(companySourceHosts[asxCode] || []).includes(url.hostname)?value:null}catch{return null}}
+function formatOfficialDate(value){return new Intl.DateTimeFormat('en-AU',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(`${value.slice(0,10)}T00:00:00Z`))}
+function formatOfficialDateTime(value){return `${formatOfficialDate(value)} · ${value.slice(11,16)}`}
+function stageComposition(items){const counts={};items.forEach(i=>counts[i.status]=(counts[i.status]||0)+1);return Object.entries(counts).map(([k,v])=>`${v} ${k}`).join(' · ')}
+function agreementItemMarkup(item,index){const link=safeFwcUrl(item.sourceUrl);return `<article class="agreement-item" data-index="${index+1}"><div class="agreement-title">${escapeHtml(item.title)}</div><div class="agreement-meta"><strong>${escapeHtml(item.matterNo)}</strong><span>${escapeHtml(item.status)}</span><span>Lodged ${escapeHtml(formatOfficialDateTime(item.lodgedAt))}</span></div><div class="rail-actions">${link?`<a class="rail-link" href="${escapeHtml(link)}" target="_blank" rel="noopener">Official FWC application</a>`:''}</div></article>`}
+function renderAgreementRail(){const direct=agreementClusters.flatMap(c=>c.matters);document.getElementById('approvedCount').textContent=`${approvedAgreements.length} record`;document.getElementById('approvedAgreement').innerHTML=approvedAgreements.map((i,index)=>{const link=safeFwcUrl(i.sourceUrl);return `<article data-index="${index+1}"><div class="approved-title">${escapeHtml(i.title)}</div><div class="agreement-meta"><strong>${escapeHtml(i.matterNo)}</strong><span>Approved ${escapeHtml(formatOfficialDate(i.approvalDate))}</span></div><div class="rail-actions">${link?`<a class="rail-link" href="${escapeHtml(link)}" target="_blank" rel="noopener">Official approval · ${escapeHtml(i.approvalRecord)}</a>`:''}<button class="rail-button" data-matter-id="${escapeHtml(i.matterId)}">Open linked matter</button></div></article>`}).join('');document.getElementById('progressCount').textContent=`${direct.length} applications · ${agreementClusters.length} clusters`;let index=0;document.getElementById('agreementClusters').innerHTML=agreementClusters.map(c=>{const latest=[...c.matters].sort((a,b)=>b.lodgedAt.localeCompare(a.lodgedAt))[0];return `<details class="cluster"><summary><span class="cluster-title">${escapeHtml(c.title)} · ${c.matters.length}</span><span class="cluster-summary">${escapeHtml(stageComposition(c.matters))} · latest ${escapeHtml(formatOfficialDateTime(latest.lodgedAt))}</span></summary>${c.matters.map(item=>agreementItemMarkup(item,index++)).join('')}</details>`}).join('');document.getElementById('watchSummary').textContent=`Broader WA and sector watch · ${broaderWatchAgreements.length}`;document.getElementById('broaderWatch').innerHTML=broaderWatchAgreements.map((item,i)=>agreementItemMarkup(item,i)).join('')}
+function linkedMatterMarkup(item){if(!item.matterIds.length)return '<span class="context-meta">Operating context only</span>';return item.matterIds.map(id=>{const m=matters.find(x=>x.id===id);return m?`<button class="matter-link" data-matter-id="${escapeHtml(id)}">${escapeHtml(m.name)}</button>`:''}).join('')}
+function contextUrl(item){if(item.sourceClass==='company')return safeAsxUrl(item.url)||safeCompanyUrl(item.alternateUrl,item.asxCode);return safeMediaUrl(item.url)}
+function renderContext(){const list=document.getElementById('contextRows');list.classList.toggle('show-all',contextExpanded);list.innerHTML=contextItems.map(item=>{const link=contextUrl(item);return `<article class="context-row ${contextExpanded?'full':''}"><div><span class="context-date">${escapeHtml(item.dateLabel)}</span><div class="context-company">${escapeHtml(item.company)}</div></div><div>${link?`<a class="context-headline" href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(item.headline)}</a>`:`<span class="context-headline">${escapeHtml(item.headline)}</span>`}</div><div><div class="context-development">${escapeHtml(item.development)}</div><div class="context-relevance"><strong>Pilbara relevance:</strong> ${escapeHtml(item.relevance)}</div></div><div class="context-source">${link?`<a href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(item.sourceName)}</a>`:escapeHtml(item.sourceName)}<div class="context-meta">${escapeHtml(item.sourceLabel)} · ${escapeHtml(item.access)}</div></div><div class="context-linked">${linkedMatterMarkup(item)}</div></article>`}).join('');document.getElementById('contextToggle').textContent=contextExpanded?'Show newest 3':'View all 14'}
+function renderRows(){const visible=matters.filter(m=>(companyFilter.value==='all'||m.company===companyFilter.value)&&(statusFilter.value==='all'||m.status===statusFilter.value));rows.innerHTML=visible.map(m=>`<button class="matter-row" data-id="${escapeHtml(m.id)}" aria-label="Open ${escapeHtml(m.name)}"><span class="matter-cell"><span class="matter-name">${escapeHtml(m.name)}</span><span class="footprint">${escapeHtml(m.company)} · ${escapeHtml(m.meta)}</span></span><span class="matter-cell"><span class="stage">${escapeHtml(m.stage)}</span><span class="evidence-text">${escapeHtml(m.evidence)}</span></span><span class="matter-cell line-clamp">${escapeHtml(m.latest)}</span><span class="matter-cell line-clamp">${escapeHtml(m.next)}</span></button>`).join('');resultCount.textContent=`${visible.length} matter${visible.length===1?'':'s'} shown`;emptyState.style.display=visible.length?'none':'block'}
+function renderMatterContext(id){const linked=contextItems.filter(i=>i.matterIds.includes(id));document.getElementById('matterContextCount').textContent=`${linked.length}`;document.getElementById('matterContextList').innerHTML=linked.length?linked.map(i=>{const link=contextUrl(i);return `<article class="linked-item">${link?`<a href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(i.headline)}</a>`:escapeHtml(i.headline)}<div class="context-meta">${escapeHtml(i.treatment)} · ${escapeHtml(i.dateLabel)} · ${escapeHtml(i.sourceName)} · ${escapeHtml(i.sourceLabel)} · ${escapeHtml(i.access)}</div></article>`}).join(''):'<p class="context-meta">No canonical company or media record is directly linked.</p>'}
+function postSourceMarkup(post,sourceClass){const link=safeFacebookUrl(post.post_url),graphic=safeGraphicPath(post.graphics?.[0]);return `<article class="source-record"><div class="source-record-head"><div><div class="source-record-title">${escapeHtml(post.source_page||'Union source record')}</div><div class="source-record-meta">${escapeHtml(post.published_date||post.displayed_date||'Publication date unavailable')} · ${escapeHtml(sourceClass)}</div></div></div><div class="source-record-boundary">Union-authored material · advocacy evidence. Graphics and complete text · no Facebook account required.</div>${graphic?`<img class="source-record-graphic" src="${escapeHtml(graphic)}" alt="Union source graphic">`:''}<div class="source-record-text">${escapeHtml(post.full_text||'')}</div>${link?`<div class="source-record-links"><a href="${escapeHtml(link)}" target="_blank" rel="noopener">Original Facebook record</a></div>`:''}</article>`}
+function officialSourceMarkup(link){const records=(link.official_records||[]).filter(record=>safeFwcUrl(record.source_url));return records.map(record=>`<article class="source-record"><div class="source-record-title">Official FWC · ${escapeHtml(record.citation||record.matter_no||'record')}</div><div class="source-record-meta">Official regulatory record · public access</div><div class="source-record-boundary">${escapeHtml((link.facts_established||[]).join(' '))}${link.not_established?.length?` Boundary: ${escapeHtml(link.not_established.join(' '))}`:''}</div><div class="source-record-links"><a href="${escapeHtml(record.source_url)}" target="_blank" rel="noopener">Open official FWC record</a></div></article>`).join('')}
+function sourceRecordsFor(id){const posts=(staticSourceRecords.get(id)||[]).map(post=>postSourceMarkup(post,'Static reviewed fallback · union messaging'));const campaign=campaignSources.get(id);if(campaign)posts.push(...campaign.all_posts.map(post=>postSourceMarkup(post,'Campaign source · union messaging')));const watch=watchlistSources.get(id);if(watch)posts.push(...watch.posts.map(post=>postSourceMarkup(post,'Watchlist source · union messaging')));const legal=fwcSources.get(id);if(legal){for(const links of Object.values(legal.events||{}))for(const link of links)posts.push(officialSourceMarkup(link));for(const link of legal.campaign_context||[])posts.push(officialSourceMarkup(link))}return posts.filter(Boolean)}
+function renderSourceRecords(id){const records=sourceRecordsFor(id);document.getElementById('sourceRecordCount').textContent=`${records.length}`;document.getElementById('sourceRecordList').innerHTML=records.length?records.join(''):'<p class="feed-note">No dynamic campaign or official source records are available. The static evidence boundary above remains in effect.</p>'}
+function setView(view){workspace.dataset.activeView=view;document.querySelectorAll('[data-view-target]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.viewTarget===view)));if(view!=='matters'&&selectedId)closeMatter(false,false)}
+function openMatter(id,push=true,trigger=null){const m=matters.find(x=>x.id===id);if(!m)return;if(!selectedId)lastListScrollY=window.scrollY;selectedId=id;lastMatterTrigger=trigger||document.activeElement;setView('matters');registerList.hidden=true;detail.hidden=false;document.getElementById('detailTitle').textContent=m.name;document.getElementById('detailSub').textContent=`${m.company} · ${m.meta} · ${m.statusLabel}`;document.getElementById('currentPosition').textContent=m.position;document.getElementById('positionBasis').textContent=m.basis;document.getElementById('latestChange').textContent=m.latest;document.getElementById('evidenceState').textContent=m.evidence;document.getElementById('boundaryText').textContent=m.boundary;document.getElementById('verificationList').innerHTML=m.verify.map(v=>`<li>${escapeHtml(v)}</li>`).join('');document.getElementById('chronologyCount').textContent=`${m.events.length}`;document.getElementById('timeline').innerHTML=m.events.map(e=>`<article class="event"><div class="event-date">${escapeHtml(e[0])}</div><div><div class="event-title">${escapeHtml(e[1])}</div><div class="event-evidence">${escapeHtml(e[2])}</div></div></article>`).join('');renderMatterContext(id);renderSourceRecords(id);document.getElementById('sourceLine').textContent=m.source;if(push&&location.hash!==`#matter-${id}`)history.pushState({matter:id},'',`#matter-${id}`);detail.focus({preventScroll:true});window.scrollTo({top:document.querySelector('.mobile-nav').offsetTop,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})}
+function closeMatter(updateHistory=true,focus=true){const old=selectedId;selectedId=null;detail.hidden=true;registerList.hidden=false;if(updateHistory&&location.hash.startsWith('#matter-'))history.replaceState({},'',location.pathname+location.search);requestAnimationFrame(()=>window.scrollTo({top:lastListScrollY,behavior:'auto'}));if(focus){const target=rows.querySelector(`[data-id="${old}"]`)||lastMatterTrigger;target?.focus()}}
+function syncResponsiveDisclosures(){const desktop=matchMedia('(min-width:701px)').matches;document.querySelector('.regulatory details').open=desktop;document.querySelector('.filter-disclosure').open=desktop}
+function reviewedContextLinkage(id){const reviewed=staticContextById.get(id);return{matterIds:reviewed?.matterIds||[],treatment:reviewed?.treatment||'contextual',company:reviewed?.company||null}}
+function rebuildContext(){const fallbackCompany=staticContextItems.filter(item=>item.sourceClass==='company'),fallbackMedia=staticContextItems.filter(item=>item.sourceClass!=='company');contextItems=[...(companyContext||fallbackCompany),...(mediaContext||fallbackMedia)].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,14);renderContext();if(selectedId)renderMatterContext(selectedId)}
+function companyContextItem(item){const linkage=reviewedContextLinkage(item.announcement_id);return{id:item.announcement_id,date:item.released_at.slice(0,10),dateLabel:item.released_label,company:item.company,headline:item.headline,development:item.summary,relevance:item.relevance,sourceName:`${item.company} / ASX`,sourceClass:'company',sourceLabel:'Company / ASX',access:'Official disclosure',url:item.asx_url,alternateUrl:item.company_url,asxCode:item.asx_code,matterIds:linkage.matterIds,treatment:linkage.treatment}}
+function mediaContextItem(item){const linkage=reviewedContextLinkage(item.item_id);return{id:item.item_id,date:item.published_date,dateLabel:formatOfficialDate(item.published_date),company:linkage.company||'Pilbara',headline:item.title,development:item.summary,relevance:item.relevance,sourceName:item.source,sourceClass:`media-${item.access}`,sourceLabel:'Media',access:item.access==='open'?'Open · public article':'Paywalled · public synopsis only',url:item.url,matterIds:linkage.matterIds,treatment:linkage.treatment}}
 
   async function initialiseCampaigns() {
-    const panels = [...document.querySelectorAll('.campaign-panel[data-campaign-id]')];
-    const watchlistTargets = [...document.querySelectorAll('[data-watchlist-id]')];
-    const agreementsTarget = document.querySelector('[data-fwc-agreements]');
-    if (!panels.length && !watchlistTargets.length && !agreementsTarget) return;
     try {
-      const [campaignResponse, fwcResponse, watchlistResponse] = await Promise.all([
-        fetch('assets/campaigns/view.json', { cache: 'no-store' }),
-        fetch('assets/fwc/view.json', { cache: 'no-store' }),
-        fetch('assets/watchlist/view.json', { cache: 'no-store' })
-      ]);
-      if (!campaignResponse.ok) throw new Error(`Campaign view HTTP ${campaignResponse.status}`);
-      if (!fwcResponse.ok) throw new Error(`FWC view HTTP ${fwcResponse.status}`);
-      if (!watchlistResponse.ok) throw new Error(`Watchlist view HTTP ${watchlistResponse.status}`);
-      const [data, fwcData, watchlistData] = await Promise.all([campaignResponse.json(), fwcResponse.json(), watchlistResponse.json()]);
-      const byId = new Map(data.campaigns.map(campaign => [campaign.campaign_id, campaign]));
-      const legalById = new Map(fwcData.campaigns.map(campaign => [campaign.campaign_id, campaign]));
-      const watchlistById = new Map(watchlistData.matters.map(matter => [matter.watchlist_id, matter]));
-      for (const panel of panels) {
-        const campaign = byId.get(panel.dataset.campaignId);
-        const legalCampaign = legalById.get(panel.dataset.campaignId);
-        if (!campaign || !legalCampaign) throw new Error(`Missing ${panel.dataset.campaignId}`);
-        renderCampaign(panel, campaign, legalCampaign);
-      }
-      for (const target of watchlistTargets) {
-        const matter = watchlistById.get(target.dataset.watchlistId);
-        if (!matter) throw new Error(`Missing watchlist ${target.dataset.watchlistId}`);
-        target.innerHTML = matter.posts.map(postCard).join('');
-      }
-      if (agreementsTarget) renderAgreements(agreementsTarget, fwcData.agreements, { ...fwcData.source, observed_at: fwcData.observed_at });
-    } catch (error) {
-      panels.forEach(panel => { panel.innerHTML = `<div class="campaign-error">Campaign record unavailable: ${escapeHtml(error.message)}</div>`; });
-      watchlistTargets.forEach(target => { target.innerHTML = `<div class="campaign-error">Watchlist evidence unavailable: ${escapeHtml(error.message)}</div>`; });
-      if (agreementsTarget) agreementsTarget.innerHTML = `<div class="campaign-error" style="margin:16px">Agreement register unavailable: ${escapeHtml(error.message)}</div>`;
-    }
+      const response=await fetch('assets/campaigns/view.json',{cache:'no-store'});
+      if(!response.ok)throw new Error(`Campaign view HTTP ${response.status}`);
+      const data=await response.json();
+      if(!Array.isArray(data.campaigns)||data.campaigns.length!==3)throw new Error('Invalid campaign view');
+      const prepared=data.campaigns.map(campaign=>{
+        const id=campaignMatterIds[campaign.campaign_id];
+        if(!id||!Array.isArray(campaign.all_posts)||campaign.all_posts.some(post=>!post||typeof post!=='object'||(post.graphics!=null&&!Array.isArray(post.graphics)))||!Array.isArray(campaign.milestones)||!campaign.current_stage?.label||typeof campaign.latest_change!=='string'||!Array.isArray(campaign.open_verification)||campaign.open_verification.some(item=>typeof item!=='string')||(campaign.source_boundary!=null&&typeof campaign.source_boundary!=='string'))throw new Error('Invalid campaign view');
+        return{id,campaign,patch:{stage:campaign.current_stage.label,position:campaign.current_stage.label,latest:campaign.latest_change,next:campaign.open_verification.join('; '),verify:[...campaign.open_verification],boundary:campaign.source_boundary||matters.find(item=>item.id===id).boundary}};
+      });
+      campaignSources.clear();
+      for(const item of prepared){campaignSources.set(item.id,item.campaign);Object.assign(matters.find(matter=>matter.id===item.id),item.patch)}
+      renderRows();if(selectedId)openMatter(selectedId,false);
+    } catch (error) { console.warn('Campaign feed unavailable; static matter fallbacks retained.',error); }
   }
 
-  async function initialiseMedia() {
-    const mediaTarget = document.querySelector('[data-media-feed]');
-    if (!mediaTarget) return;
+  async function initialiseFwc() {
     try {
-      const response = await fetch('assets/media/view.json', { cache: 'no-store' });
-      if (!response.ok) throw new Error(`Media view HTTP ${response.status}`);
-      const data = await response.json();
-      if (!Array.isArray(data.items) || data.item_count !== data.items.length || data.open_count !== data.items.filter(item => item.access === 'open').length || data.paywalled_count !== data.items.filter(item => item.access === 'paywalled').length) throw new Error('Invalid media view');
-      renderMedia(mediaTarget, data);
-      document.querySelector('[data-media-summary]').textContent = `${data.item_count} reports · ${data.open_count} open · ${data.paywalled_count} paywalled`;
-      setCoverageStatus('[data-media-coverage]', `${data.item_count} reviewed reports · ${data.open_count} publicly readable · ${data.paywalled_count} paywalled`);
-    } catch (error) {
-      mediaTarget.innerHTML = `<div class="campaign-error" style="margin:16px">Media feed unavailable: ${escapeHtml(error.message)}</div>`;
-      document.querySelector('[data-media-summary]').textContent = 'Feed unavailable';
-      setCoverageStatus('[data-media-coverage]', 'Collection unavailable · existing dashboard sections unaffected', 'partial');
-    }
+      const response=await fetch('assets/fwc/view.json',{cache:'no-store'});
+      if(!response.ok)throw new Error(`FWC view HTTP ${response.status}`);
+      const data=await response.json();
+      if(!Array.isArray(data.campaigns)||!data.agreements||!Array.isArray(data.agreements.clusters)||!Array.isArray(data.agreements.secondary)||data.agreements.direct_count!==data.agreements.clusters.flatMap(cluster=>cluster.matters).length||data.agreements.secondary_count!==data.agreements.secondary.length)throw new Error('Invalid FWC view');
+      const preparedSources=new Map(),dynamicApprovals=[];
+      for(const campaign of data.campaigns){
+        const id=campaignMatterIds[campaign.campaign_id];
+        if(!id||!campaign.events||typeof campaign.events!=='object')throw new Error('Invalid FWC campaign view');
+        for(const links of Object.values(campaign.events)){
+          if(!Array.isArray(links))throw new Error('Invalid FWC event links');
+          for(const link of links){
+            if(!link||typeof link!=='object'||!Array.isArray(link.official_records)||(link.facts_established!=null&&!Array.isArray(link.facts_established))||(link.not_established!=null&&!Array.isArray(link.not_established)))throw new Error('Invalid FWC evidence link');
+            if(link.status_label!=='Agreement approved')continue;
+            for(const record of link.official_records){
+              if(record.record_type!=='approved_agreement')continue;
+              if(!safeFwcUrl(record.source_url)||typeof record.matter_no!=='string'||typeof record.citation!=='string'||typeof record.date!=='string')throw new Error('Invalid approved agreement record');
+              const fallback=staticApprovedAgreements.find(item=>item.matterNo===record.matter_no);
+              if(!fallback&&typeof link.summary!=='string')throw new Error('Approved agreement title unavailable');
+              dynamicApprovals.push({matterNo:record.matter_no,approvalRecord:record.citation,title:fallback?.title||link.summary,approvalDate:record.date,sourceUrl:record.source_url,matterId:id});
+            }
+          }
+        }
+        preparedSources.set(id,campaign);
+      }
+      const validAgreement=item=>item&&typeof item.matter_no==='string'&&typeof item.title==='string'&&typeof item.status==='string'&&typeof item.lodged_at==='string'&&item.lodged_at.length>=16&&safeFwcUrl(item.source_url);
+      if(data.agreements.clusters.some(cluster=>!cluster||typeof cluster.cluster_id!=='string'||typeof cluster.title!=='string'||!Array.isArray(cluster.matters)||cluster.matters.some(item=>!validAgreement(item)))||data.agreements.secondary.some(item=>!validAgreement(item)))throw new Error('Invalid FWC agreement register');
+      const preparedClusters=data.agreements.clusters.map(cluster=>({id:cluster.cluster_id,title:cluster.title,matters:cluster.matters.map(item=>({matterNo:item.matter_no,title:item.title,status:item.status,lodgedAt:item.lodged_at,sourceUrl:item.source_url}))}));
+      const preparedBroader=data.agreements.secondary.map(item=>({matterNo:item.matter_no,title:item.title,status:item.status,lodgedAt:item.lodged_at,sourceUrl:item.source_url}));
+      fwcSources.clear();for(const [id,campaign] of preparedSources)fwcSources.set(id,campaign);
+      approvedAgreements=dynamicApprovals.filter((item,index,items)=>items.findIndex(other=>other.matterNo===item.matterNo)===index);
+      agreementClusters=preparedClusters;broaderWatchAgreements=preparedBroader;
+      renderAgreementRail();if(selectedId)renderSourceRecords(selectedId);
+    } catch (error) { console.warn('FWC feed unavailable; static agreement and evidence fallbacks retained.',error); }
+  }
+
+  async function initialiseWatchlist() {
+    try {
+      const response=await fetch('assets/watchlist/view.json',{cache:'no-store'});
+      if(!response.ok)throw new Error(`Watchlist view HTTP ${response.status}`);
+      const data=await response.json();
+      if(!Array.isArray(data.matters)||data.matters.some(matter=>!['fortescue','rio','chevron'].includes(matter.watchlist_id)||!Array.isArray(matter.posts)||matter.posts.some(post=>!post||typeof post!=='object'||(post.graphics!=null&&!Array.isArray(post.graphics)))))throw new Error('Invalid watchlist view');
+      const prepared=new Map(data.matters.map(matter=>[matter.watchlist_id,matter]));
+      watchlistSources.clear();for(const [id,matter] of prepared)watchlistSources.set(id,matter);
+      if(selectedId)renderSourceRecords(selectedId);
+    } catch (error) { console.warn('Watchlist feed unavailable; static matter fallbacks retained.',error); }
   }
 
   async function initialiseCompanyFeed() {
-    const companyTarget = document.querySelector('[data-company-feed]');
-    if (!companyTarget) return;
     try {
-      const response = await fetch('assets/company/view.json', { cache: 'no-store' });
-      if (!response.ok) throw new Error(`Company view HTTP ${response.status}`);
-      const data = await response.json();
-      if (!Array.isArray(data.items) || data.item_count !== data.items.length || data.company_count !== new Set(data.items.map(item => item.asx_code)).size || data.price_sensitive_count !== data.items.filter(item => item.price_sensitive === true).length) throw new Error('Invalid company view');
-      renderCompanyFeed(companyTarget, data);
-      document.querySelector('[data-company-summary]').textContent = `${data.item_count} disclosures · ${data.company_count} issuers`;
-      setCoverageStatus('[data-company-coverage]', `${data.item_count} reviewed disclosures · ${data.company_count} watched issuers`);
-    } catch (error) {
-      companyTarget.innerHTML = `<div class="campaign-error" style="margin:16px">Company feed unavailable: ${escapeHtml(error.message)}</div>`;
-      document.querySelector('[data-company-summary]').textContent = 'Feed unavailable';
-      setCoverageStatus('[data-company-coverage]', 'Collection unavailable · existing dashboard sections unaffected', 'partial');
-    }
+      const response=await fetch('assets/company/view.json',{cache:'no-store'});
+      if(!response.ok)throw new Error(`Company view HTTP ${response.status}`);
+      const data=await response.json();
+      if(!Array.isArray(data.items) || data.item_count !== data.items.length || data.company_count !== new Set(data.items.map(item=>item.asx_code)).size || data.price_sensitive_count !== data.items.filter(item=>item.price_sensitive===true).length)throw new Error('Invalid company view');
+      companyContext=data.items.filter(item=>safeAsxUrl(item.asx_url)).map(companyContextItem);rebuildContext();
+    } catch (error) { console.warn('Company feed unavailable; static company context retained.',error); }
   }
-  initialiseCampaigns();
-  initialiseMedia();
-  initialiseCompanyFeed();
+
+  async function initialiseMedia() {
+    try {
+      const response=await fetch('assets/media/view.json',{cache:'no-store'});
+      if(!response.ok)throw new Error(`Media view HTTP ${response.status}`);
+      const data=await response.json();
+      if(!Array.isArray(data.items) || data.item_count !== data.items.length || data.open_count !== data.items.filter(item=>item.access==='open').length || data.paywalled_count !== data.items.filter(item=>item.access==='paywalled').length)throw new Error('Invalid media view');
+      mediaContext=data.items.filter(item=>safeMediaUrl(item.url)).map(mediaContextItem);rebuildContext();
+    } catch (error) { console.warn('Media feed unavailable; static media context retained.',error); }
+  }
+
+rows.addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(b)openMatter(b.dataset.id,true,b)});companyFilter.addEventListener('change',renderRows);statusFilter.addEventListener('change',renderRows);document.getElementById('backToMatters').addEventListener('click',()=>closeMatter());document.getElementById('contextToggle').addEventListener('click',()=>{contextExpanded=!contextExpanded;renderContext()});document.querySelectorAll('[data-view-target]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.viewTarget)));document.addEventListener('click',e=>{const b=e.target.closest('[data-matter-id]');if(b){e.preventDefault();openMatter(b.dataset.matterId,true,b)}});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&selectedId)closeMatter()});window.addEventListener('popstate',()=>{const match=location.hash.match(/^#matter-(.+)$/);if(match)openMatter(match[1],false);else if(selectedId)closeMatter(false,true)});matchMedia('(min-width:701px)').addEventListener('change',syncResponsiveDisclosures);
+renderAgreementRail();renderRows();renderContext();syncResponsiveDisclosures();const initial=location.hash.match(/^#matter-(.+)$/);if(initial)openMatter(initial[1],false);
+  Promise.allSettled([initialiseCampaigns(),initialiseFwc(),initialiseWatchlist(),initialiseCompanyFeed(),initialiseMedia()]);
 </script>
 
 <div id="automation-publication-status" style="margin:24px auto;max-width:1100px;padding:12px 16px;border:1px solid rgba(255,255,255,.15);border-radius:8px;text-align:center;font:12px/1.4 system-ui;color:#aab4c3;background:#101722">
-  Automated publication verified · 2026-08-23T02:08:11.049Z
+  Automated publication verified · 2026-08-23T10:26:48.749Z
 </div>
-</body>
-</html>
+</body></html>
